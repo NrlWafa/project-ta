@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\landingpage\BerandaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+
+Route::get('/', [BerandaController::class,"index"] );
 
 Route::get('/admin/home', function () {
     return view('admin/home');
 });
+
