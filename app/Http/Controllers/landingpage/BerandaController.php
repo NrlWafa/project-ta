@@ -9,6 +9,6 @@ class BerandaController extends Controller
 {
     public function index()
     {
-        return view("page.landingpage.beranda");
+        return view("landingpage.beranda");
     }
 }

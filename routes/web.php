@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\HomeAdminController;
 use App\Http\Controllers\landingpage\BerandaController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BerandaController::class,"index"] );
 
-Route::get('/admin/home', function () {
-    return view('admin/home');
-});
+Route::get('admin', [HomeAdminController::class,"index"] );
+
+
 
