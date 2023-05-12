@@ -9,34 +9,24 @@
       <div class="container d-flex align-items-center">
   
         <div class="logo me-auto">
-          <h1><a href="index.html">Scaffold</a></h1>
+          <h1><a href="index.html">PT Yaza Pratama</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
   
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+            <li><a class="nav-link scrollto " href="#portfolio">Blog</a></li>
+            <li><a class="nav-link scrollto" href="#services">Layanan</a></li>
+            <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-                <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
+                <li><a class="nav-link scrollto" href="#about">Profil Perusahaan</a></li>
+                <li><a class="nav-link scrollto" href="#testimonials">Formasi Pekerjaan</a></li>
+                <li><a class="nav-link scrollto" href="#team">Galeri</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -60,7 +50,7 @@
             <div>
               <h1>We design digital products that help grow businesses</h1>
               <h2>We are team of talented designers making websites with Bootstrap</h2>
-              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+              <a href="#about" class="btn-get-started scrollto">Log In</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
@@ -83,18 +73,12 @@
             </div>
             <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
               <div class="content pt-4 pt-lg-0">
-                <h3>Learn more about us</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperd</li>
-                </ul>
+                <h3>Profil Perusahaan</h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate tera noden carma palorp mades tera.
+                  PT Yaza Pratama adalah perusahaan yang bergerak di bidang Penyediaan Jasa Tenaga Alih Daya serta berbadan Hukum dan berlokasi di Jalan Soetoyo S. Komplek Rajawali No. 634 Banjarmasin, Kalimantan Selatan.
+                </p>
+                <p>
+                  PT Yaza Pratama berdiri sejak tahun 2003 dan telah lebih 18 tahun berkarya dan berperan aktif dalam Penyediaan Jasa Tenaga Alih Daya diberbagai Instansi, baik Pemerintah, BUMN, Swasta maupun Perorangan. Banyak pengalaman dan proses pembelajaran yang telah dilewati dari tahun ke tahun yang membawa perusahaan terus tumbuh dan berkembang sesuai dengan rencana strategis perusahaan.
                 </p>
               </div>
             </div>
@@ -112,26 +96,21 @@
               <ul class="nav nav-tabs flex-column">
                 <li class="nav-item" data-aos="fade-up">
                   <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-                    <h4>Modi sit est</h4>
-                    <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+                    <h4>Visi</h4>
+                    <p>Memegang teguh komitmen untuk melaksanakan kegiatan usaha yang kompetitif dan menguntungkan menuju pertumbuhan usaha yang berkesinambungan.
+                      </p>
                   </a>
                 </li>
                 <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="100">
                   <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-                    <h4>Unde praesentium sed</h4>
-                    <p>Voluptas vel esse repudiandae quo excepturi.</p>
-                  </a>
-                </li>
-                <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-                    <h4>Pariatur explicabo vel</h4>
-                    <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
-                  </a>
-                </li>
-                <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="300">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
-                    <h4>Nostrum qui quasi</h4>
-                    <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
+                    <h4>Misi</h4>
+
+                    <ul>
+                      <li><i></i><p>Berperan serta dalam pembangunan dengan melaksanakan kegiatan usaha di bidang Penyediaan Jasa Tenaga Kerja (Outsourching) sesuai dengan permintaan perusahaan.</p></li>
+                      <li><i></i><p>Memberikan pelayanan bagi Pelanggan dengan kondisi yang terbaik, kompetitif dan saling menguntungkan.</p></li>
+                      <li><i></i><p>Menyelaraskan pertumbuhan usaha yang terus meningkat untuk menjamin berkesinambungan usaha dengan menempatkan sumber daya manusia sebagai aset perusahaan.</p></li>
+                      <li><i></i><p>Menunjang program pengembangan dana pemilik saham/investor.</p></li>
+                    </ul>
                   </a>
                 </li>
               </ul>
@@ -148,16 +127,6 @@
                     <img src="{{ asset('LandingPage-Template/assets/img/features-2.png') }}" alt="" class="img-fluid">
                   </figure>
                 </div>
-                <div class="tab-pane" id="tab-3">
-                  <figure>
-                    <img src="{{ asset('LandingPage-Template/assets/img/features-3.png') }}" alt="" class="img-fluid">
-                  </figure>
-                </div>
-                <div class="tab-pane" id="tab-4">
-                  <figure>
-                    <img src="{{ asset('LandingPage-Template/assets/img/features-4.png') }}" alt="" class="img-fluid">
-                  </figure>
-                </div>
               </div>
             </div>
           </div>
@@ -170,8 +139,8 @@
         <div class="container">
   
           <div class="section-title" data-aos="fade-up">
-            <h2>Services</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>Layanan</h2>
+            <p>Dengan menjunjung tinggi Motto Kebersamaan, Tanggung Jawab dan Profesionalisme dalam menjalankan tugas, Kami akan memberikan Pelayanan yang terbaik - We give serve better.</p>
           </div>
   
           <div class="row">
@@ -594,91 +563,6 @@
         </div>
       </section><!-- End Clients Section -->
   
-      <!-- ======= Pricing Section ======= -->
-      <section id="pricing" class="pricing section-bg">
-        <div class="container">
-  
-          <div class="section-title" data-aos="fade-up">
-            <h2>Pricing</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="box" data-aos="zoom-in">
-                <h3>Free</h3>
-                <h4><sup>$</sup>0<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li class="na">Pharetra massa</li>
-                  <li class="na">Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-              <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-                <h3>Business</h3>
-                <h4><sup>$</sup>19<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li class="na">Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-              <div class="box" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Developer</h3>
-                <h4><sup>$</sup>29<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li>Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-              <div class="box" data-aos="zoom-in" data-aos-delay="300">
-                <span class="advanced">Advanced</span>
-                <h3>Ultimate</h3>
-                <h4><sup>$</sup>49<span> / month</span></h4>
-                <ul>
-                  <li>Aida dere</li>
-                  <li>Nec feugiat nisl</li>
-                  <li>Nulla at volutpat dola</li>
-                  <li>Pharetra massa</li>
-                  <li>Massa ultricies mi</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Pricing Section -->
-  
       <!-- ======= F.A.Q Section ======= -->
       <section id="faq" class="faq">
         <div class="container">
@@ -753,7 +637,7 @@
         <div class="container">
   
           <div class="section-title" data-aos="fade-up">
-            <h2>Contact Us</h2>
+            <h2>Kontak Kami</h2>
           </div>
   
           <div class="row">
@@ -762,20 +646,20 @@
               <div class="info">
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>Alamat:</h4>
+                  <p>Jalan Soetoyo S., Komplek Rajawali, No. 634, Teluk Dalam, Kota Banjarmasin</p>
                 </div>
   
                 <div class="email">
                   <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <h4>E-Mail:</h4>
+                  <p>yaza_pratama@yahoo.com</p>
                 </div>
   
                 <div class="phone">
                   <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
+                  <h4>Telepon:</h4>
+                  <p>(0511)-3367428</p>
                 </div>
   
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
@@ -787,28 +671,28 @@
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
+                    <label for="name">Nama</label>
                     <input type="text" name="name" class="form-control" id="name" required>
                   </div>
                   <div class="form-group col-md-6 mt-3 mt-md-0">
-                    <label for="name">Your Email</label>
+                    <label for="name">E-Mail</label>
                     <input type="email" class="form-control" name="email" id="email" required>
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <label for="name">Subject</label>
+                  <label for="name">Subjek</label>
                   <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
                 <div class="form-group mt-3">
-                  <label for="name">Message</label>
+                  <label for="name">Pesan</label>
                   <textarea class="form-control" name="message" rows="10" required></textarea>
                 </div>
                 <div class="my-3">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Mengirim</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Pesan Anda telah terkirim. Terima kasih!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit">Kirim Pesan</button></div>
               </form>
             </div>
   
@@ -827,18 +711,17 @@
   
             <div class="col-lg-3 col-md-6">
               <div class="footer-info">
-                <h3>Scaffold</h3>
+                <h3>PT Yaza Pratama</h3>
                 <p>
-                  A108 Adam Street <br>
-                  NY 535022, USA<br><br>
-                  <strong>Phone:</strong> +1 5589 55488 55<br>
-                  <strong>Email:</strong> info@example.com<br>
+                  Jalan Soetoyo S., Komplek Rajawali,<br>
+                  No. 634, Teluk Dalam, Kota Banjarmasin<br><br>
+                  <strong>Telepon:</strong> (0511)-3367428<br>
+                  <strong>E-Mail:</strong> yaza_pratama@yahoo.com<br>
                 </p>
                 <div class="social-links mt-3">
                   <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                   <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                  <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                  <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
                   <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
               </div>
@@ -881,14 +764,7 @@
   
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; Copyright <strong><span>PT Yaza Pratama</span></strong>. All Rights Reserved
         </div>
       </div>
     </footer><!-- End Footer -->

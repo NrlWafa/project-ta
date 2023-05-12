@@ -85,6 +85,7 @@ return new class extends Migration
             $table->string('no_bpjs_ket')->length(20);
             $table->string('no_bpjs_kes')->length(20);
             $table->string('jabatan_lamaran',100);
+            $table->string('foto_ktp',100);
             $table->string('foto_kk',100);
             $table->string('foto_kta',100);
             $table->string('foto_npwp',100);
