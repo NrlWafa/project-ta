@@ -3,8 +3,11 @@
 use App\Http\Controllers\admin\HomeAdminController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\landingpage\BerandaController;
+use App\Http\Controllers\landingpage\BlogController;
 use App\Http\Controllers\landingpage\FormasiPekerjaanController;
 use App\Http\Controllers\landingpage\GaleriController;
+use App\Http\Controllers\landingpage\KontakController;
+use App\Http\Controllers\landingpage\LayananController;
 use App\Http\Controllers\landingpage\ProfilPerusahaanController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,9 +28,13 @@ use Illuminate\Support\Facades\Route;
 
 // Landingpage
 Route::get('/', [BerandaController::class,"index"] );
+Route::get('Layanan', [LayananController::class,"index"] );
+Route::get('Blog', [BlogController::class,"index"] );
 Route::get('profil-perusahaan', [ProfilPerusahaanController::class,"index"] );
 Route::get('formasi-pekerjaan', [FormasiPekerjaanController::class,"index"] );
 Route::get('Galeri', [GaleriController::class,"index"] );
+Route::get('Kontak', [KontakController::class,"index"] );
+
 
 
 // Admin
