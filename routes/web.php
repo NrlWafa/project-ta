@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\admin\HomeAdminController;
+use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\landingpage\BerandaController;
+use App\Http\Controllers\landingpage\FormasiPekerjaanController;
+use App\Http\Controllers\landingpage\GaleriController;
+use App\Http\Controllers\landingpage\ProfilPerusahaanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +23,17 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
-
+// Landingpage
 Route::get('/', [BerandaController::class,"index"] );
+Route::get('profil-perusahaan', [ProfilPerusahaanController::class,"index"] );
+Route::get('formasi-pekerjaan', [FormasiPekerjaanController::class,"index"] );
+Route::get('Galeri', [GaleriController::class,"index"] );
 
+
+// Admin
 Route::get('admin', [HomeAdminController::class,"index"] );
+Route::get('Login', [LoginController::class,"index"] );
+
 
 
 

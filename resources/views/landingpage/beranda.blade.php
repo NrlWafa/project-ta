@@ -22,10 +22,14 @@
             <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a class="nav-link scrollto" href="#about">Profil Perusahaan</a></li>
-                <li><a class="nav-link scrollto" href="#testimonials">Formasi Pekerjaan</a></li>
-                <li><a class="nav-link scrollto" href="#team">Galeri</a></li>
+                <li><a class="nav-link scrollto" href="formasi-pekerjaan" target="_blank">Formasi Pekerjaan</a></li>
+                <li><a class="nav-link scrollto" href="Galeri" target="_blank">Galeri</a></li>
               </ul>
             </li>
+
+
+
+
             <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -34,7 +38,7 @@
         <div class="header-social-links d-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
         </div>
   
@@ -48,9 +52,9 @@
         <div class="row">
           <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
             <div>
-              <h1>We design digital products that help grow businesses</h1>
-              <h2>We are team of talented designers making websites with Bootstrap</h2>
-              <a href="#about" class="btn-get-started scrollto">Log In</a>
+              <h1>Perusahaan Penyedia Jasa Tenaga Alih Daya</h1>
+              <h2>Kami akan memberikan Pelayanan yang terbaik We give serve better.</h2>
+              <a href="Login" target="_blank" class="btn-get-started scrollto">Log In</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
@@ -79,6 +83,7 @@
                 </p>
                 <p>
                   PT Yaza Pratama berdiri sejak tahun 2003 dan telah lebih 18 tahun berkarya dan berperan aktif dalam Penyediaan Jasa Tenaga Alih Daya diberbagai Instansi, baik Pemerintah, BUMN, Swasta maupun Perorangan. Banyak pengalaman dan proses pembelajaran yang telah dilewati dari tahun ke tahun yang membawa perusahaan terus tumbuh dan berkembang sesuai dengan rencana strategis perusahaan.
+                  <a href="/profil-perusahaan" target="_blank" class="btn-get-started">Detail</a>
                 </p>
               </div>
             </div>
@@ -471,7 +476,7 @@
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/yaza_pratama/"><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
@@ -487,7 +492,7 @@
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/yaza_pratama/"><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
@@ -730,7 +735,7 @@
             <div class="col-lg-2 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>

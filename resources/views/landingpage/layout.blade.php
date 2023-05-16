@@ -47,7 +47,8 @@
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  
+    {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
   </div>
 <!-- Vendor JS Files -->
 <script src="{{ asset('LandingPage-Template/assets/vendor/aos/aos.js') }}"></script>
