@@ -67,8 +67,7 @@
         </nav><!-- .navbar -->
   
         <div class="header-social-links d-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.facebook.com/groups/507934266239777" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
         </div>
@@ -121,8 +120,7 @@
               <strong>E-Mail:</strong> yaza_pratama@yahoo.com<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.facebook.com/groups/507934266239777" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
@@ -130,30 +128,27 @@
         </div>
 
         <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Navigasi</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/">Beranda</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="Blog">Blog</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="Layanan">Layanan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="Kontak">Kontak</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>Profil</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="profil-perusahaan">Profil Perusahaan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="formasi-pekerjaan">Formasi Pekerjaan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="Galeri">Galeri</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <h4>Terhubung Dengan Kami</h4>
+          <p>Kami memahami bahwa kritik dan saran konstruktif dapat membantu kami dalam meningkatkan kualitas layanan dan operasional perusahaan.</p>
           <form action="" method="post">
             <input type="email" name="email"><input type="submit" value="Subscribe">
           </form>

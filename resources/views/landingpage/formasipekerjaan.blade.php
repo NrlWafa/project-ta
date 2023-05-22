@@ -4,7 +4,9 @@
 
       {{-- Foto Awal --}}
       <div class="col-lg-12">
-        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
+        <center>
+        <img src="{{ asset('LandingPage-Template/assets/img/Team.jpeg') }}" >
+        </center>
       </div>
       
      <!-- ======= F.A.Q Section ======= -->

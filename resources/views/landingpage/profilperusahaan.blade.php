@@ -3,7 +3,9 @@
 @section('content')
      {{-- Foto Awal --}}
        <div class="col-lg-12">
-        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
+        <center>
+        <img src="{{ asset('LandingPage-Template/assets/img/Team.jpeg') }}" >
+        </center>
       </div>
       <!-- ======= About Section ======= -->
       <section id="about" class="about">

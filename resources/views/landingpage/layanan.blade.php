@@ -9,39 +9,39 @@
   
           <div class="section-title" data-aos="fade-up">
             <h2>Layanan</h2>
-            <p>Dengan menjunjung tinggi Motto Kebersamaan, Tanggung Jawab dan Profesionalisme dalam menjalankan tugas, Kami akan memberikan Pelayanan yang terbaik - We give serve better.</p>
+            <p>PT Yaza Pratama menawarkan berbagai layanan untuk membantu perusahaan dalam mengelola sumber daya manusia yang dibutuhkan. Berikut adalah beberapa layanan yang Kami sediakan :</p>
           </div>
   
           <div class="row">
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
               <div class="icon-box icon-box-pink">
                 <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
+                <h2 class="title"><a href="">Rekrutmen & Seleksi Karyawan</a></h2>
+                <p class="description">Membantu dalam proses rekrutmen dan seleksi karyawan, seperti menyaring pelamar, melakukan wawancara pelamar, dan menyeleksi kandidat yang sesuai dengan kebutuhan perusahaan.</p>
               </div>
             </div>
   
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box icon-box-cyan">
                 <div class="icon"><i class="bx bx-file"></i></div>
-                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+                <h2 class="title"><a href="">Penyediaan Karyawan Kontrak</a></h2>
+                <p class="description">Menyediakan karyawan kontrak untuk jangka waktu tertentu. Ini berguna dalam situasi di mana perusahaan membutuhkan tenaga kerja tambahan untuk proyek sementara, tanpa harus melakukan perekrutan jangka panjang.</p>
               </div>
             </div>
   
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon-box icon-box-green">
                 <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+                <h2 class="title"><a href="">Pelatihan & Pengembangan</a></h2>
+                <p class="description">Menyediakan program pelatihan dan pengembangan untuk karyawan. Ini membantu meningkatkan keterampilan dan pengetahuan karyawan, sehingga mereka dapat lebih efektif dalam melakukan pekerjaan.</p>
               </div>
             </div>
   
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon-box icon-box-blue">
                 <div class="icon"><i class="bx bx-world"></i></div>
-                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                <h2 class="title"><a href="">Manajemen Kinerja & Administrasi</a></h2>
+                <p class="description">Membantu dalam manajemen kinerja karyawan dan mengelola administrasi terkait sumber daya manusia, termasuk penggajian, pengelolaan tunjangan, manajemen cuti, dan administrasi kepegawaian lainnya.</p>
               </div>
             </div>
   
@@ -55,57 +55,57 @@
                 <div class="container">
           
                   <div class="section-title" data-aos="fade-up">
-                    <h2>Clients</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Klien Kami</h2>
+                    <p>PT Yaza Pratama telah melayani berbagai jenis klien dari berbagai sektor industri. Klien-klien ini mencakup perusahaan besar, perusahaan skala menengah, dan bahkan bisnis start-up. Berikut adalah beberapa klien yang telah bekerja sama dengan Kami :</p>
                   </div>
           
                   <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_Bank_Kalsel.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-2.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_BNI.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-3.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_BPJS_Ketenagakerjaan.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-4.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_PLN.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in" data-aos-delay="250">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-5.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_DPMPTSP.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-6.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_Kalsel_Ventura.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6">
                       <div class="client-logo" data-aos="zoom-in" data-aos-delay="350">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-7.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_BPS.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
                     <div class="col-lg-3 col-md-4 col-xs-6" data-aos="zoom-in" data-aos-delay="400">
                       <div class="client-logo">
-                        <img src="{{ asset('LandingPage-Template/assets/img/clients/client-8.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('LandingPage-Template/assets/img/layanan/Logo_Bisma_Dharma.png') }}" class="img-fluid" alt="">
                       </div>
                     </div>
           
