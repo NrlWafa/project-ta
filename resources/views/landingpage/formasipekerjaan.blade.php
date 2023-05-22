@@ -2,6 +2,11 @@
 
 @section('content')
 
+      {{-- Foto Awal --}}
+      <div class="col-lg-12">
+        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
+      </div>
+      
      <!-- ======= F.A.Q Section ======= -->
      <section id="faq" class="faq">
       <div class="container">

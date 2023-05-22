@@ -1,7 +1,10 @@
 @extends('landingpage.layout')
 
 @section('content')
-
+     {{-- Foto Awal --}}
+       <div class="col-lg-12">
+        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
+      </div>
       <!-- ======= About Section ======= -->
       <section id="about" class="about">
         <div class="container">

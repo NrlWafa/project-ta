@@ -50,18 +50,18 @@
   
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+            <li><a class="nav-link scrollto" href="#hero">Beranda</a></li>
             <li><a class="nav-link scrollto" href="Blog">Blog</a></li>
-            <li><a class="nav-link scrollto" href="Layanan" target="_blank">Layanan</a></li>
+            <li><a class="nav-link scrollto" href="Layanan" >Layanan</a></li>
             {{-- <li><a class="nav-link scrollto" href="#services">Layanan</a></li> --}}
             <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a class="nav-link scrollto" href="profil-perusahaan">Profil Perusahaan</a></li>
-                <li><a class="nav-link scrollto" href="formasi-pekerjaan" target="_blank">Formasi Pekerjaan</a></li>
-                <li><a class="nav-link scrollto" href="Galeri" target="_blank">Galeri</a></li>
+                <li><a class="nav-link scrollto" href="formasi-pekerjaan">Formasi Pekerjaan</a></li>
+                <li><a class="nav-link scrollto" href="Galeri">Galeri</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="Kontak" target="_blank">Kontak</a></li>
+            <li><a class="nav-link scrollto" href="Kontak">Kontak</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -76,10 +76,7 @@
       </div>
     </header><!-- End Header -->
 
-    {{-- Foto Awal --}}
-      <div class="col-lg-12">
-        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
-      </div>
+    
 </body>
 
 <body>
