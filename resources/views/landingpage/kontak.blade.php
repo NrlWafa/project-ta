@@ -4,9 +4,7 @@
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact section-bg">
         <div class="container">
-  
           <div class="section-title" data-aos="fade-up">
-            <h2>Kontak Kami</h2>
           </div>
   
           <div class="row">

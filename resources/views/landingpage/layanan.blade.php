@@ -6,8 +6,8 @@
      <!-- ======= Services Section ======= -->
      <section id="services" class="services section-bg">
         <div class="container">
-  
           <div class="section-title" data-aos="fade-up">
+            <h2></h2>
             <h2>Layanan</h2>
             <p>PT Yaza Pratama menawarkan berbagai layanan untuk membantu perusahaan dalam mengelola sumber daya manusia yang dibutuhkan. Berikut adalah beberapa layanan yang Kami sediakan :</p>
           </div>

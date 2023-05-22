@@ -4,10 +4,10 @@
 
       {{-- Foto Awal --}}
       <div class="col-lg-12">
-        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
+        <center><img src="{{ asset('LandingPage-Template/assets/img/Team.jpeg') }}" ></center>
       </div>
       
-      <!-- ======= Portfolio Section ======= -->
+
       <section id="portfolio" class="portfolio">
         <div class="container">
   
@@ -115,5 +115,5 @@
           </div>
   
         </div>
-      </section><!-- End Portfolio Section -->
+      </section>
 @endsection
