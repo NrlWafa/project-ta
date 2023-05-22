@@ -2,6 +2,6 @@
 
 @section('content')
 
-Ini Home
+Ini Data Pengguna
   
 @endsection

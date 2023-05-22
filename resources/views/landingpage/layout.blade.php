@@ -75,12 +75,19 @@
   
       </div>
     </header><!-- End Header -->
+
+    {{-- Foto Awal --}}
+      <div class="col-lg-12">
+        <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" >
+      </div>
 </body>
 
 <body>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 @yield('content')
+
+
 
 <div class="credits">
     <!-- All the links in the footer should remain intact. -->

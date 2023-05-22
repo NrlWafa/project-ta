@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admin\DataPelamarController;
+use App\Http\Controllers\admin\DataPenggunaController;
 use App\Http\Controllers\admin\HomeAdminController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\landingpage\BerandaController;
@@ -40,6 +42,9 @@ Route::get('Kontak', [KontakController::class,"index"] );
 // Admin
 Route::get('admin', [HomeAdminController::class,"index"] );
 Route::get('Login', [LoginController::class,"index"] );
+Route::get('data-pengguna', [DataPenggunaController::class,"index"] );
+Route::get('data-pelamar', [DataPelamarController::class,"index"] );
+
 
 
 
