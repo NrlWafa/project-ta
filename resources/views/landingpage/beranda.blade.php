@@ -1,8 +1,7 @@
 @extends('landingpage.layout')
 
 @section('content')
-<body>
-   
+<body> 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
       <div class="container">

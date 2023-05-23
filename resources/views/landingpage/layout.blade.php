@@ -10,13 +10,13 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('LandingPage-Template/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('LandingPage-Template/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('LandingPage-Template/assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('LandingPage-Template/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+<!-- Vendor CSS Files -->
   <link href="{{ asset('LandingPage-Template/assets/vendor/aos/aos.css') }}" rel="stylesheet">
   <link href="{{ asset('LandingPage-Template/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('LandingPage-Template/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -37,23 +37,22 @@
 </head>
 
 <body>
-  <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
       <div class="container d-flex align-items-center">
   
         <div class="logo me-auto">
-          <h1><a href="index.html">PT Yaza Pratama</a></h1>
+          <h1><a href="/">PT Yaza Pratama</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
-  
+
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="nav-link scrollto" href="#hero">Beranda</a></li>
+            <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
             <li><a class="nav-link scrollto" href="Blog">Blog</a></li>
             <li><a class="nav-link scrollto" href="Layanan" >Layanan</a></li>
-            {{-- <li><a class="nav-link scrollto" href="#services">Layanan</a></li> --}}
+
             <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a class="nav-link scrollto" href="profil-perusahaan">Profil Perusahaan</a></li>
@@ -71,7 +70,6 @@
           <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
         </div>
-  
       </div>
     </header><!-- End Header -->
 
@@ -93,6 +91,7 @@
   
     {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
   </div>
+  
 <!-- Vendor JS Files -->
 <script src="{{ asset('LandingPage-Template/assets/vendor/aos/aos.js') }}"></script>
 <script src="{{ asset('LandingPage-Template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -104,6 +103,8 @@
 <!-- Template Main JS File -->
 <script src="{{ asset('LandingPage-Template/assets/js/main.js') }}"></script>
 </body>
+
+
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="footer-top">
