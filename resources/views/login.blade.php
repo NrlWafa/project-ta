@@ -1,7 +1,3 @@
-@extends('admin.layout')
-
-@section('content')
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +20,6 @@
 </head>
 
 <body class="bg-white font-family-karla h-screen">
-
     <div class="w-full flex flex-wrap">
 
         <!-- Login Section -->
@@ -68,6 +63,3 @@
 </body>
 
 </html>
-
-
-@endsection

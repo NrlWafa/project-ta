@@ -1,6 +1,41 @@
 @extends('landingpage.layout')
 
 @section('content')
+<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center">
+  
+        <div class="logo me-auto">
+          <h1><a href="/">PT Yaza Pratama</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto" href="/">Beranda</a></li>
+            <li><a class="nav-link scrollto" href="Blog">Blog</a></li>
+            <li><a class="nav-link scrollto" href="Layanan" >Layanan</a></li>
+
+            <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a class="nav-link scrollto" href="profil-perusahaan">Profil Perusahaan</a></li>
+                <li><a class="nav-link scrollto" href="formasi-pekerjaan">Formasi Pekerjaan</a></li>
+                <li><a class="nav-link scrollto" href="Galeri">Galeri</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="Kontak">Kontak</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <div class="header-social-links d-flex align-items-center">
+          <a href="https://www.facebook.com/groups/507934266239777" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+      </div>
+    </header><!-- End Header -->
 
       <!-- ======= Team Section ======= -->
       <section id="team" class="team">

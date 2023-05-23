@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\admin\DataPelamarController;
-use App\Http\Controllers\admin\DataPenggunaController;
-use App\Http\Controllers\admin\HomeAdminController;
+use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\LoginController;
+use App\Http\Controllers\admin\PelamarController;
+use App\Http\Controllers\admin\PenggunaController;
 use App\Http\Controllers\landingpage\BerandaController;
 use App\Http\Controllers\landingpage\BlogController;
 use App\Http\Controllers\landingpage\FormasiPekerjaanController;
@@ -50,10 +50,10 @@ Route::get('Kontak', [KontakController::class,"index"] );
 
 
 // Admin
-Route::get('admin', [HomeAdminController::class,"index"] );
+Route::get('admin', [DashboardController::class,"index"] );
 Route::get('Login', [LoginController::class,"index"] );
-Route::get('data-pengguna', [DataPenggunaController::class,"index"] );
-Route::get('data-pelamar', [DataPelamarController::class,"index"] );
+Route::get('Pengguna', [PenggunaController::class,"index"] );
+Route::get('Pelamar', [PelamarController::class,"index"] );
 
 
 

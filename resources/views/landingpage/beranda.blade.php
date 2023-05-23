@@ -2,6 +2,43 @@
 
 @section('content')
 <body> 
+<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center">
+  
+        <div class="logo me-auto">
+          <h1><a href="/">PT Yaza Pratama</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
+            <li><a class="nav-link scrollto" href="Blog">Blog</a></li>
+            <li><a class="nav-link scrollto" href="Layanan" >Layanan</a></li>
+
+            <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a class="nav-link scrollto" href="profil-perusahaan">Profil Perusahaan</a></li>
+                <li><a class="nav-link scrollto" href="formasi-pekerjaan">Formasi Pekerjaan</a></li>
+                <li><a class="nav-link scrollto" href="Galeri">Galeri</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="Kontak">Kontak</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <div class="header-social-links d-flex align-items-center">
+          <a href="https://www.facebook.com/groups/507934266239777" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+      </div>
+    </header><!-- End Header -->
+
+
     <!-- ======= Hero Section ======= -->
     <section id="hero">
       <div class="container">
@@ -10,7 +47,7 @@
             <div>
               <h1>Perusahaan Penyedia Jasa Tenaga Alih Daya</h1>
               <h2>Kami akan memberikan Pelayanan yang terbaik We give serve better.</h2>
-              <a href="Login" target="_blank" class="btn-get-started scrollto">Log In</a>
+              <a href="Login" class="btn-get-started scrollto">Log In</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
@@ -95,11 +132,10 @@
   
           <div class="row" data-aos="zoom-in">
             <div class="col-lg-9 text-center text-lg-start">
-              <h3>Call To Action</h3>
-              <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>PT Yaza Pratama dengan antusias membuka lowongan pekerjaan menarik dan menawarkan kesempatan bergabung dengan tim Kami. Kami mencari individu yang berbakat, berdedikasi, dan bersemangat untuk berkontribusi dalam mencapai visi dan misi perusahaan.</p>
             </div>
             <div class="col-lg-3 cta-btn-container text-center">
-              <a class="cta-btn align-middle" href="#">Call To Action</a>
+              <a class="cta-btn align-middle" href="Login">Ajukan Lamaran</a>
             </div>
           </div>
   

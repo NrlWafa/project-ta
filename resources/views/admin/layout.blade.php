@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css') }}">
+    
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet"
         href="{{ asset('AdminLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
@@ -41,10 +42,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Beranda</a>
       </li>
     </ul>
- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown user-menu">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                         <img src="{{ asset('AdminLTE/dist/img/user2-160x160.jpg') }}" alt="User Image"
@@ -69,7 +70,7 @@
         <!-- /.navbar -->
       
        <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-light-blue elevation-4">
+        <aside class="main-sidebar sidebar-light-blue elevation-4">
             <a href="/" class="brand-link" style="background-color: blue">
                 <img src="{{ asset('AdminLTE/dist/img/user2-160x160.jpg') }}" alt="User Image"
                     class="brand-image img-circle elevation-3" style="opacity: ">
@@ -84,7 +85,7 @@
                         data-accordion="false">
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
-                            <a href="admin" class="nav-link ">
+                            <a href="admin" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -92,7 +93,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                            <a href="data-pengguna" class="nav-link ">
+                            <a href="Pengguna" class="nav-link">
                                 <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>
                                     Data Pengguna
@@ -100,7 +101,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="data-pelamar" class="nav-link ">
+                            <a href="Pelamar" class="nav-link">
                                 <i class="nav-icon fas fa-book-medical"></i>
                                 <p>
                                     Data Pelamar
@@ -139,9 +140,6 @@
     </div>
     <!-- ./wrapper -->
     
-
-       
-
     <!-- jQuery -->
     <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->
