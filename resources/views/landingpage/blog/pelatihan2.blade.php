@@ -11,7 +11,7 @@
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-                  <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-1.jpg') }}" alt="">
+                  <img src="{{ asset('LandingPage-Template/assets/img/blog/pelatihan2.jpg') }}" alt="">
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -19,17 +19,17 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Berita information</h3>
+              <h3>Berita</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Kategori</strong>: Pelatihan</li>
+                <li><strong>Tempat</strong>: PLN UIW KSKT</li>
+                <li><strong>Tanggal</strong>: 22 Januari, 2021</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Pelatihan Satpam</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                Pelatihan Satpam PT Yaza Pratama, penempatan PLN UIW KSKT yang rutin setiap bulan dan langsung dihadiri serta dipantau oleh K3L PLN UIW KSKT.
               </p>
             </div>
           </div>

@@ -11,7 +11,7 @@
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-                  <img src="{{ asset('LandingPage-Template/assets/img/blog/blog1.jpg') }}" alt="">
+                  <img src="{{ asset('LandingPage-Template/assets/img/blog/pelatihan1.jpg') }}" alt="">
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -21,15 +21,15 @@
             <div class="portfolio-info">
               <h3>Berita</h3>
               <ul>
-                <li><strong>Kategori</strong>: Event</li>
-                <li><strong>Tempat</strong>: Banjarmasin</li>
-                <li><strong>Tanggal</strong>: 01 Mei, 2023</li>
+                <li><strong>Kategori</strong>: Pelatihan</li>
+                <li><strong>Tempat</strong>: PLN Wilayah Kalimantan Selatan dan Tengah</li>
+                <li><strong>Tanggal</strong>: 09 Februari, 2022</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>GM UID KSKT Menyapa</h2>
+              <h2>Arahan Satuan Pengamanan</h2>
               <p>
-                Satuan Pengamanan mengikuti acara GM UID KSKT Menyapa dan juga Perpisahan Purna Tugas Bapak Suhadi sebagai Manager K3L.
+                General Manager PLN UIW KSKT, Bapak Tony Bellamy, memberikan arahan kepada Satuan Pengamanan agar selalu memberikan pelayanan terbaik dan juga memberikan keamanan dalam lingkungan PLN UIW KSKT.
               </p>
             </div>
           </div>
