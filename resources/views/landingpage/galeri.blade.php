@@ -8,56 +8,38 @@
   
           <div class="section-title" data-aos="fade-up">
             <h2></h2>
-            <h2>Team</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>Sertifikat</h2>
+            <p>Sertifikat ini adalah hasil dari komitmen dan dedikasi PT Yaza Pratama dalam memberikan kualitas terbaik kepada klien. Kami memastikan bahwa layanan yang ada telah memenuhi standar yang ketat guna memberikan kepuasan maksimal kepada klien Kami.</p>
           </div>
   
           <div class="row">
   
             <div class="col-lg-4 col-md-6">
               <div class="member" data-aos="zoom-in">
-                <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/galeri/Penghargaan1.png') }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
+                  <h4>ISO 9001:2015</h4>
+                  <span>VRC INTERNATIONAL</span>
                 </div>
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6">
               <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/team/team-2.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/galeri/Penghargaan2.png') }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/yaza_pratama/"><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
+                  <h4>ISO 14001:2015</h4>
+                  <span>VRC INTERNATIONAL</span>
                 </div>
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6">
               <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/team/team-3.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/galeri/Penghargaan3.png') }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/yaza_pratama/"><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
+                  <h4>ISO 45001:2018</h4>
+                  <span>VRC INTERNATIONAL</span>
                 </div>
               </div>
             </div>
@@ -73,7 +55,7 @@
   
           <div class="section-title" data-aos="fade-up">
             <h2>Galeri</h2>
-            <p>..............................</p>
+            
           </div>
   
           <div class="row">
@@ -90,78 +72,79 @@
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/galeri/event1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Event 1</h4>
-                  <p>Nama Event</p>
+                  <h4>Peduli Bencana Banjir</h4>
+                  <p>Barabai</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pelatihan 3"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('LandingPage-Template/assets/img/galeri/event1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pembagian Bantuan dari Direktur PT Yaza Pratama, Ibu Kumala Sari, kepada karyawannya yang berada di Barabai."><i class="bx bx-plus"></i></a>
                 </div>
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/galeri/sdm1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>SDM 1</h4>
-                  <p>Nama SDM</p>
+                  <h4>Kunjungan Direktur Utama PT Yaza Pratama</h4>
+                  <p>PLN UPDL Banjarbaru</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Rekrutmen 2"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('LandingPage-Template/assets/img/galeri/sdm1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kunjungan Direktur Utama PT Yaza Pratama, Ibu Kumala Sari, ke PLN UPDL Banjarbaru dalam rangka menjalin silahturahmi, baik dengan user dan juga bertemu dengan teman-teman tenaga alih daya."><i class="bx bx-plus"></i></a>
                 </div>
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/galeri/event2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Event 2</h4>
-                  <p>Nama Event</p>
+                  <h4>Audit BUJP Triwulan Ke-II</h4>
+                  <p>PLN UID KSKT</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pelatihan 2"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('LandingPage-Template/assets/img/galeri/event2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Audit BUJP Triwulan Ke-II Tahun 2023 di PLN UID KSKT bersama K3L."><i class="bx bx-plus"></i></a>
                 </div>
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/galeri/sdm2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>SDM 2</h4>
-                  <p>Nama SDM</p>
+                  <h4>Latihan Gabungan Binsik Satpam</h4>
+                  <p>PLN Wilayah Kalimantan Selatan dan Tengah</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Rekrutmen 1"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('LandingPage-Template/assets/img/galeri/sdm2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Latihan Gabungan Binsik Satpam PLN UID KSKT dan PLN UPDL Banjarbaru."><i class="bx bx-plus"></i></a>
                 </div>
               </div>
             </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>SDM 3</h4>
-                  <p>Nama SDM</p>
-                </div>
-                <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Rekrutmen 3"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
+
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/galeri/event3.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Event 3</h4>
-                  <p>Nama Event</p>
+                  <h4>Latihan Rutin Satpam</h4>
+                  <p>PLN Sektor Pembangkitan Barito</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pelatihan 3"><i class="bx bx-plus"></i></a>                </div>
+                  <a href="{{ asset('LandingPage-Template/assets/img/galeri/event3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Latihan Rutin Satpam PT Yaza Pratama yang bertugas di wilayah PLN Sektor Pembangkitan Barito."><i class="bx bx-plus"></i></a>                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="{{ asset('LandingPage-Template/assets/img/galeri/sdm3.jpg') }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Kunjungan Rutin</h4>
+                  <p>UP3 Barabai</p>
+                </div>
+                <div class="portfolio-links">
+                  <a href="{{ asset('LandingPage-Template/assets/img/galeri/sdm3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kunjungan rutin dari Koordinator PT Yaza Pratama, Bapak Robby Cahyadi, ke UP3 Barabai untuk briefing Satpam dan Cleaning Service."><i class="bx bx-plus"></i></a>
+                </div>
               </div>
             </div>
   

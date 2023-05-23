@@ -13,7 +13,6 @@
   
           <div class="section-title" data-aos="fade-up">
             <h2>Blog</h2>
-            <p>..............................</p>
           </div>
   
           <div class="row">
@@ -44,13 +43,13 @@
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/blog/pelatihan1.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Rekrutmen 1</h4>
-                  <p>Nama Rekrutmen</p>
+                  <h4>Pengarahan Satuan Pengamanan</h4>
+                  <p>PLN UIW KSKT</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Rekrutmen 2"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('LandingPage-Template/assets/img/blog/pelatihan1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Arahan Satuan Pengamanan"><i class="bx bx-plus"></i></a>
                   <a href="Rekrutmen1" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -58,13 +57,13 @@
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-wrap">
-                <img src="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('LandingPage-Template/assets/img/blog/pelatihan2.jpg') }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Pelatihan 2</h4>
-                  <p>Nama Pelatihan</p>
+                  <h4>Pelatihan Satpam</h4>
+                  <p>PLN Wilayah Kalimantan Selatan dan Tengah</p>
                 </div>
                 <div class="portfolio-links">
-                  <a href="{{ asset('LandingPage-Template/assets/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pelatihan 2"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset('LandingPage-Template/assets/img/blog/pelatihan2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pelatihan Satpam"><i class="bx bx-plus"></i></a>
                   <a href="Pelatihan2" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
