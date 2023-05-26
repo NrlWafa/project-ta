@@ -9,6 +9,8 @@ class PelamarController extends Controller
 {
     public function index()
     {
-        return view("admin.pelamar.index");
+        return view("admin.pelamar.index", [
+            "title" => "Data Pelamar"
+        ]);
     }
 }

@@ -2,6 +2,6 @@
 
 @section('content')
 
-Ini Halaman Dashboard
+Ini Halaman Dashboard Admin
   
 @endsection

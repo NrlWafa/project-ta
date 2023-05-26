@@ -1,7 +1,5 @@
 @extends('admin.layout')
 
 @section('content')
-
-Ini Data Pelamar
-  
+Ini Halaman Pelamar
 @endsection

@@ -11,6 +11,7 @@ use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
 use App\Http\Controllers\landingpage\LayananController;
 use App\Http\Controllers\landingpage\ProfilPerusahaanController;
+use App\Http\Controllers\user\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,10 +29,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
-// Landingpage
+// LandingPage
 Route::get('/', [BerandaController::class,"index"] );
 Route::get('Layanan', [LayananController::class,"index"] );
 
+// LandingPage Blog
 Route::get('Blog', [BlogController::class,"index"] );
 Route::get('Pelatihan1', [BlogController::class,"pelatihan1"] );
 Route::get('Pelatihan2', [BlogController::class,"pelatihan2"] );
@@ -40,8 +42,7 @@ Route::get('Rekrutmen1', [BlogController::class,"rekrutmen1"] );
 Route::get('Rekrutmen2', [BlogController::class,"rekrutmen2"] );
 Route::get('Rekrutmen3', [BlogController::class,"rekrutmen3"] );
 
-
-
+// LandingPage
 Route::get('profil-perusahaan', [ProfilPerusahaanController::class,"index"] );
 Route::get('formasi-pekerjaan', [FormasiPekerjaanController::class,"index"] );
 Route::get('Galeri', [GaleriController::class,"index"] );
@@ -53,9 +54,11 @@ Route::get('Kontak', [KontakController::class,"index"] );
 Route::get('admin', [DashboardController::class,"index"] );
 Route::get('Login', [LoginController::class,"index"] );
 Route::get('Pengguna', [PenggunaController::class,"index"] );
-Route::get('Pelamar', [PelamarController::class,"index"] );
+Route::get('Daftar-Pelamar', [PelamarController::class,"index"] );
 
 
-
+// User
+Route::get('User', [UserController::class,"index"] );
+Route::get('Ajukan-Lamaran', [UserController::class,"pendaftar"] );
 
 

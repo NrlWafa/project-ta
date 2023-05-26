@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Admin</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -76,24 +76,24 @@
                     class="brand-image img-circle elevation-3" style="opacity: ">
                 <span class="brand-text font-weight:500" style="color: white">PT Yaza Pratama</span>
             </a>
-   
 
-      <!-- Sidebar Menu -->
-        <div class="sidebar">
+            <!-- Sidebar -->
+            <div class="sidebar">
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
-                            <a href="admin" class="nav-link active">
+                            <a href="admin" class="nav-link {{ $title === 'Dashboard' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
                                 </p>
                             </a>
                         </li>
-                            <li class="nav-item">
-                            <a href="Pengguna" class="nav-link">
+                        <li class="nav-item">
+                            <a href="Pengguna"
+                                class="nav-link {{ $title === 'Data Pengguna' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>
                                     Data Pengguna
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="Pelamar" class="nav-link">
+                            <a href="Daftar-Pelamar" class="nav-link {{ $title === 'Data Pelamar' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-book-medical"></i>
                                 <p>
                                     Data Pelamar
@@ -110,8 +110,10 @@
                         </li>
                     </ul>
                 </nav>
-        </div>
-    </aside>
+            </div>
+        </aside>
+
+
 
             <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
