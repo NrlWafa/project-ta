@@ -52,7 +52,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="member" data-aos="zoom-in">
                 <div class="pic"><img src="{{ asset('LandingPage-Template/assets/img/galeri/Penghargaan1.png') }}" class="img-fluid" alt=""></div>
-                <div class="member-info">
+                       <div class="member-info">
                   <h4>ISO 9001:2015</h4>
                   <span>VRC INTERNATIONAL</span>
                 </div>
