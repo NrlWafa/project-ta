@@ -86,7 +86,7 @@
                         data-accordion="false">
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
-                            <a href="User" class="nav-link {{ $title === 'Dashboard User' ? 'active' : '' }}">
+                            <a href="Dashboard" class="nav-link {{ $title === 'Dashboard User' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -159,6 +159,22 @@
     <script src="{{ asset('AdminLTE/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('AdminLTE/dist/js/pages/dashboard.js') }}"></script>
+
+
+    @yield('script')
+    <script>
+        $(function() {
+            $('#table2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
 </body>
 
 

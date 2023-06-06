@@ -60,7 +60,7 @@ Route::get('Daftar-Pelamar', [PelamarController::class,"index"] );
 
 
 // User
-Route::get('User', [UserController::class,"index"] );
+Route::get('Dashboard', [UserController::class,"index"] );
 Route::get('Ajukan-Lamaran', [UserController::class,"pendaftar"] );
 
 
