@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css') }}">
-    
+
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet"
         href="{{ asset('AdminLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
@@ -34,17 +34,18 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-<!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Beranda</a>
-      </li>
-    </ul>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/" class="nav-link">Beranda</a>
+                </li>
+            </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown user-menu">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -68,17 +69,17 @@
             </ul>
         </nav>
         <!-- /.navbar -->
-      
-       <!-- Main Sidebar Container -->
+
+        <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-light-blue elevation-4">
             <a href="/" class="brand-link" style="background-color: blue">
                 <img src="{{ asset('AdminLTE/dist/img/user2-160x160.jpg') }}" alt="User Image"
                     class="brand-image img-circle elevation-3" style="opacity: ">
                 <span class="brand-text font-weight:500" style="color: white">PT Yaza Pratama</span>
             </a>
-   
 
-        <!-- Sidebar -->
+
+            <!-- Sidebar -->
             <div class="sidebar">
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -92,21 +93,12 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="Ajukan-Lamaran"
-                                class="nav-link {{ $title === 'Daftar Pekerjaan' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    Ajukan Lamaran
-                                </p>
-                            </a>
-                        </li>
                     </ul>
                 </nav>
             </div>
         </aside>
 
-            <!-- Content Wrapper. Contains page content -->
+        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <!-- /.content-header -->
@@ -132,7 +124,7 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-    
+
     <!-- jQuery -->
     <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -171,6 +163,3 @@
 
 
 </html>
-
-
-

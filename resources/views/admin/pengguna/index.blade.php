@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Data Pelamar</h3>
+            <h3 class="card-title">Data Pengguna</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">

@@ -83,7 +83,7 @@
             <div class="social-links mt-3">
               <a href="https://www.facebook.com/groups/507934266239777" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/yaza_pratama/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
         </div>

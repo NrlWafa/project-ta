@@ -13,4 +13,13 @@ class DashboardController extends Controller
             "title" => "Dashboard"
         ]);
     }
+
+     public function detailpelamar()
+    {
+        return view("admin.dashboard.detail-pelamar", [
+            "title" => "Dashboard"
+        ]);
+    }
+
+    
 }

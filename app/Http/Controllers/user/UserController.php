@@ -16,7 +16,7 @@ class UserController extends Controller
 
      public function pendaftar()
     {
-        return view("user.lamar-pekerjaan.index", [
+        return view("user.dashboard.index", [
             "title" => "Daftar Pekerjaan"
         ]);
     }
