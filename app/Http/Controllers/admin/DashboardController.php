@@ -14,7 +14,7 @@ class DashboardController extends Controller
         ]);
     }
 
-     public function detailpelamar()
+     public function dashboarddetailpelamar()
     {
         return view("admin.dashboard.detail-pelamar", [
             "title" => "Dashboard"

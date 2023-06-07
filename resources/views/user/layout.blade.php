@@ -111,9 +111,9 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; PT Yaza Pratama</strong>
+            <strong>Copyright &copy; By Hana Sayyida Fitri & Nurul Wafa</strong>
             <div class="float-right d-none d-sm-inline-block">
-                TA - Politeknik Negeri Banjarmasin
+                TA- Politeknik Negeri Banjarmasin
             </div>
         </footer>
 

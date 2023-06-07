@@ -465,7 +465,7 @@
             </div>
 
             <div class="card-footer">
-                <a href="admin" class="btn btn-danger">Kembali</a>
+                <a href="Daftar-Pelamar" class="btn btn-danger">Kembali</a>
             </div>
         </div>
     </div>

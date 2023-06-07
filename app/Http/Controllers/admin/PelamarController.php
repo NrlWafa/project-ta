@@ -13,4 +13,11 @@ class PelamarController extends Controller
             "title" => "Data Pelamar"
         ]);
     }
+
+    public function pelamar()
+    {
+        return view("admin.pelamar.detail", [
+            "title" => "Data Pelamar"
+        ]);
+    }
 }

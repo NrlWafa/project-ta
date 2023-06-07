@@ -52,11 +52,13 @@ Route::get('Kontak', [KontakController::class,"index"] );
 
 // Admin
 Route::get('admin', [DashboardController::class,"index"] );
-Route::get('Detail-Pelamar', [DashboardController::class,"detailpelamar"] );
+Route::get('Dashboard-Detail-Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
 
 Route::get('Login', [LoginController::class,"index"] );
 Route::get('Pengguna', [PenggunaController::class,"index"] );
+
 Route::get('Daftar-Pelamar', [PelamarController::class,"index"] );
+Route::get('Detail-Data-Pelamar', [PelamarController::class,"pelamar"] );
 
 
 // User

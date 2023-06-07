@@ -91,7 +91,7 @@
                         {{-- @foreach ($user as $item) --}}
                         <tr>
 
-                            <td><a href="Detail-Pelamar" class="btn-sm btn-primary">Lihat
+                            <td><a href="Dashboard-Detail-Pelamar" class="btn-sm btn-primary">Lihat
                                     Detail</a>
                             </td>
                         </tr>
