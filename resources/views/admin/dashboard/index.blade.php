@@ -70,8 +70,6 @@
         </div>
         <!-- /.row -->
 
-
-
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Data Pelamar</h3>
@@ -84,13 +82,17 @@
                             <th>ID</th>
                             <th>Nama</th>
                             <th>Formasi Pekerjaan</th>
+                            <th>Tanggal</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         {{-- @foreach ($user as $item) --}}
                         <tr>
-
+                            <td>Tes</td>
+                            <td>Tes</td>
+                            <td>Tes</td>
+                            <td>Tes</td>
                             <td><a href="Dashboard-Detail-Pelamar" class="btn-sm btn-primary">Lihat
                                     Detail</a>
                             </td>

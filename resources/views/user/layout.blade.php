@@ -61,7 +61,7 @@
                             </p>
                         </li>
                         <li class="user-footer">
-                            <a href="/user/profile" class="btn btn-default btn-flat">Profile</a>
+                            <a href="Profil-User" class="btn btn-default btn-flat">Profile</a>
                             <a href="/logout" class="btn btn-default btn-flat float-right">Logout</a>
                         </li>
                     </ul>
@@ -86,7 +86,8 @@
                         data-accordion="false">
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
-                            <a href="Dashboard" class="nav-link {{ $title === 'Dashboard User' ? 'active' : '' }}">
+                            <a href="Dashboard-User"
+                                class="nav-link {{ $title === 'Dashboard-User' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard

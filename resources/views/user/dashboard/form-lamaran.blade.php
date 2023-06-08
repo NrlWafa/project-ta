@@ -512,7 +512,7 @@
                     <!-- /.card-body -->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Simpan</button>
-                        <a href="Dashboard" class="btn btn-danger">Batal</a>
+                        <a href="Dashboard-User" class="btn btn-danger">Batal</a>
                     </div>
                 </form>
             </div>

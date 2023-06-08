@@ -51,6 +51,7 @@ Route::get('Kontak', [KontakController::class,"index"] );
 
 
 // Admin
+Route::get('Profil-Admin', [DashboardController::class,"profile"] );
 Route::get('admin', [DashboardController::class,"index"] );
 Route::get('Dashboard-Detail-Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
 
@@ -62,7 +63,8 @@ Route::get('Detail-Data-Pelamar', [PelamarController::class,"pelamar"] );
 
 
 // User
-Route::get('Dashboard', [UserController::class,"index"] );
+Route::get('Profil-User', [UserController::class,"profil"] );
+Route::get('Dashboard-User', [UserController::class,"index"] );
 Route::get('Ajukan-Lamaran', [UserController::class,"pendaftar"] );
 
 
