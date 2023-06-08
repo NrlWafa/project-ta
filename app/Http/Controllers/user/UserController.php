@@ -10,14 +10,14 @@ class UserController extends Controller
      public function index()
     {
         return view("user.dashboard.index", [
-            "title" => "Dashboard-User"
+            "title" => "User"
         ]);
     }
 
      public function pendaftar()
     {
         return view("user.dashboard.form-lamaran", [
-            "title" => "Dashboard-User"
+            "title" => "User"
         ]);
     }
 

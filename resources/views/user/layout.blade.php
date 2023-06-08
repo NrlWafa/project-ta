@@ -86,8 +86,7 @@
                         data-accordion="false">
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
-                            <a href="Dashboard-User"
-                                class="nav-link {{ $title === 'Dashboard-User' ? 'active' : '' }}">
+                            <a href="User" class="nav-link {{ $title === 'User' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard

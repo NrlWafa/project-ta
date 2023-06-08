@@ -21,7 +21,7 @@
                                 alt="User profile picture">
                         </div>
                         <h3 class="profile-username text-center mb-3 mt-3">Nama User</h3>
-                        <a href="Dashboard-User" class="btn btn-primary btn-block"><b>Kembali</b></a>
+                        <a href="User" class="btn btn-primary btn-block"><b>Kembali</b></a>
 
                     </div>
                 </div>
