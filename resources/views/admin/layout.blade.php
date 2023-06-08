@@ -85,7 +85,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-light-blue elevation-4">
             <a href="/" class="brand-link" style="background-color: blue">
-                <img src="{{ asset('AdminLTE/dist/img/yazapratama_logo.png') }}" alt="User Image"
+                <img src="{{ asset('AdminLTE/dist/img/yazapratama-logo.png') }}" alt="User Image"
                     class="brand-image img-circle elevation-3" style="opacity: ">
                 <span class="brand-text font-weight:500" style="color: white">PT Yaza Pratama</span>
             </a>
