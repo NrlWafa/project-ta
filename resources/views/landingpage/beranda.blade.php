@@ -163,10 +163,10 @@
                 <div class="container">
 
                     <div class="section-title" data-aos="fade-up">
-                        <h2>Testimonials</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                            sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        <h2>Testimoni</h2>
+                        Dengan menyediakan layanan yang unggul dan memperoleh testimoni yang positif, PT Yaza Pratama selalu
+                        berinovasi
+                        dalam memberikan pelayanan yang terbaik dan berkualitas tinggi kepada para klien kami.</p>
                     </div>
 
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -176,9 +176,11 @@
                                 <div class="testimonial-item">
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                        rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                        risus at semper.
+                                        Kami sangat puas dengan layanan yang diberikan oleh PT Yaza Pratama.
+                                        Mereka telah membantu kami mengurangi beban administrasi dan biaya operasional
+                                        dengan efisien. Tim yang profesional dan berpengalaman menjalankan
+                                        tugas-tugas yang kami delegasikan dengan sangat baik. Kami sangat merekomendasikan
+                                        jasa outsourcing mereka.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                     <img src="{{ asset('LandingPage-Template/assets/img/testimonials/testimonials-1.jpg') }}"
@@ -192,9 +194,11 @@
                                 <div class="testimonial-item">
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                        cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                        legam anim culpa.
+                                        Sebagai perusahaan yang sedang berkembang, kami mencari solusi untuk memperkuat
+                                        SDM kami. Memilih perusahaan ini adalah keputusan yang tepat. PT
+                                        Yaza Pratama telah membantu kami menemukan karyawan
+                                        berkualitas dengan cepat dan mempersingkat waktu perekrutan. Layanan mereka sangat
+                                        responsif dan membantu kami fokus pada inti bisnis kami.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                     <img src="{{ asset('LandingPage-Template/assets/img/testimonials/testimonials-2.jpg') }}"
@@ -208,9 +212,11 @@
                                 <div class="testimonial-item">
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                        veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                        minim.
+                                        Outsourcing menjadi solusi yang efektif bagi kami dalam mengelola proses keuangan
+                                        dan akuntansi kami. PT Yaza Pratama tidak hanya menyediakan tim ahli yang
+                                        berpengalaman, tetapi juga sistem dan teknologi terkini yang membantu kami
+                                        meningkatkan efisiensi. Mereka adalah mitra yang andal dan sangat berharga bagi
+                                        kami.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                     <img src="{{ asset('LandingPage-Template/assets/img/testimonials/testimonials-3.jpg') }}"
@@ -224,31 +230,17 @@
                                 <div class="testimonial-item">
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                        fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                        dolore labore illum veniam.
+                                        Perusahaan ini telah menjadi mitra penting bagi kami. Dengan mengandalkan jasa
+                                        outsourcing mereka, kami dapat memberikan
+                                        dukungan pelanggan yang konsisten dan berkualitas tinggi. Tim mereka telah
+                                        membuktikan kemampuan mereka dalam menangani berbagai permintaan dan menjaga tingkat
+                                        kepuasan pelanggan yang tinggi.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                     <img src="{{ asset('LandingPage-Template/assets/img/testimonials/testimonials-4.jpg') }}"
                                         class="testimonial-img" alt="">
                                     <h3>Matt Brandon</h3>
                                     <h4>Freelancer</h4>
-                                </div>
-                            </div><!-- End testimonial item -->
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                        veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                        culpa fore nisi cillum quid.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <img src="{{ asset('LandingPage-Template/assets/img/testimonials/testimonials-5.jpg') }}"
-                                        class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
                                 </div>
                             </div><!-- End testimonial item -->
 

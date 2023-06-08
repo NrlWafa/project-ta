@@ -26,7 +26,8 @@
         <div class="w-full md:w-1/2 flex flex-col">
 
             <div class="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24">
-                <a href="#"><img src="{{ asset('AdminLTE/dist/img/ta.png') }}" alt="User Image"></a>
+                <a href="#"><img src="{{ asset('AdminLTE/dist/img/yazapratama_logo.png') }}" alt="User Image"
+                        height="90px" width="90px"></a>
             </div>
 
             <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
@@ -55,8 +56,7 @@
 
         <!-- Image Section -->
         <div class="w-1/2 shadow-2xl">
-            <img class="object-cover w-full h-screen hidden md:block"
-                src="{{ asset('AdminLTE/dist/img/wahan.jpg') }}">
+            <img class="object-cover w-full h-screen hidden md:block" src="{{ asset('AdminLTE/dist/img/wahan.jpg') }}">
         </div>
     </div>
 
