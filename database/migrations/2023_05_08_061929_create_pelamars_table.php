@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('tempat_lahir',100);
             $table->date('tanggal_lahir');
             $table->enum('status_perkawinan',['Belum Kawin','Kawin']);
-            $table->string('agama',50);
+            $table->enum('agama',['Islam','Kristen/Protestan','Katolik','Hindu','Budha','Konghucu']);
             $table->string('alamat_ktp',100);
             $table->string('alamat_dom',100);
             $table->string('kel',100);
@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('no_ktp')->length(20);
             $table->integer('tinggi_badan')->length(15);
             $table->integer('berat_badan')->length(15);
-            $table->string('uk_baju',10);
+            $table->enum('uk_baju',['S','M','L','XL','XXL','3XL','4XL']);
             $table->integer('uk_celana')->length(10);
             $table->integer('uk_sepatu')->length(10);
             $table->string('nama_pasangan',100);
@@ -59,7 +59,7 @@ return new class extends Migration
             $table->string('pekerjaan_ibu',100);
             $table->string('alamat_ibu',100);
             $table->string('no_hp_ibu')->length(15);
-            $table->string('gol_dar',10);
+            $table->enum('gol_dar',['A','B','AB','O']);
             $table->string('pend_formal',50);
             $table->string('tmp_pend',100);
             $table->integer('thn_pend')->length(20);
@@ -68,13 +68,13 @@ return new class extends Migration
             $table->string('tmp_pend_non',100);
             $table->integer('thn_pend_non')->length(20);
             $table->string('jurusan_pend_non',100);
-            $table->string('riwayat_pekerjaan',100);
+            $table->string('nama_perusahaan',100);
             $table->string('bidang_usaha',100);
             $table->string('jabatan',100);
             $table->integer('tahun_masuk')->length(20);
             $table->string('alasan_keluar',100);
             $table->string('riwayat_penyakit',100);
-            $table->string('rs',50);
+            $table->enum('rs',['YA','TIDAK']);
             $table->integer('lama_dirawat')->length(20);
             $table->string('bahasa_dikuasai',50);
             $table->string('organisasi',100);
@@ -84,7 +84,7 @@ return new class extends Migration
             $table->string('no_npwp')->length(20);
             $table->string('no_bpjs_ket')->length(20);
             $table->string('no_bpjs_kes')->length(20);
-            $table->string('jabatan_lamaran',100);
+            $table->enum('jabatan_lamaran',['Satpam','Cleaning Service','Administrasi','Driver','Helper','Teknisi','Operator']);
             $table->string('foto_ktp',100);
             $table->string('foto_kk',100);
             $table->string('foto_kta',100);
