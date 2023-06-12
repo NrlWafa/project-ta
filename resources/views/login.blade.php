@@ -47,6 +47,7 @@
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
+                    <a href="send-email" type="submit" class="btn btn-default btn-flat float-right">Log In</a>
 
                     <input type="submit" value="Log In"
                         class="bg-black text-white font-bold text-lg hover:bg-blue-700 p-2 mt-8">

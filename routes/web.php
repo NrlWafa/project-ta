@@ -1,18 +1,19 @@
 <?php
 
-use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\SendEmail;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\admin\PelamarController;
 use App\Http\Controllers\admin\PenggunaController;
-use App\Http\Controllers\landingpage\BerandaController;
+use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\landingpage\BlogController;
-use App\Http\Controllers\landingpage\FormasiPekerjaanController;
 use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
+use App\Http\Controllers\landingpage\BerandaController;
 use App\Http\Controllers\landingpage\LayananController;
+use App\Http\Controllers\landingpage\FormasiPekerjaanController;
 use App\Http\Controllers\landingpage\ProfilPerusahaanController;
-use App\Http\Controllers\user\UserController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ use Illuminate\Support\Facades\Route;
 // LandingPage
 Route::get('/', [BerandaController::class,"index"] );
 Route::get('Layanan', [LayananController::class,"index"] );
+
 
 // LandingPage Blog
 Route::get('Blog', [BlogController::class,"index"] );
@@ -69,5 +71,8 @@ Route::get('Detail-Data-Pelamar', [PelamarController::class,"pelamar"] );
 Route::get('Profil-User', [UserController::class,"profil"] );
 Route::get('User', [UserController::class,"index"] );
 Route::get('Ajukan-Lamaran', [UserController::class,"pendaftar"] );
+
+//Test Sending Email
+Route::get('send-email', [SendEmail::class, "index"]);
 
 
