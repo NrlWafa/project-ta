@@ -3,21 +3,35 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Pelamar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PelamarController extends Controller
 {
     public function index()
     {
-        return view("admin.pelamar.index", [
+        $pelamar = Pelamar::all();
+
+        return view("admin.pelamar.index",compact('pelamar'),  [
             "title" => "Data Pelamar"
         ]);
     }
 
     public function pelamar()
     {
-        return view("admin.pelamar.detail", [
+        $pelamar = Pelamar::all();
+    
+        return view("admin.pelamar.detail",compact('pelamar'), [
             "title" => "Data Pelamar"
         ]);
     }
+
+     public function hapus_data($id_user)
+    {
+        DB::table('Pelamar')->where('id_user', $id_user)->delete();
+        return redirect('Daftar_Pelamar');
+    }
+
+  
 }

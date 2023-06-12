@@ -59,18 +59,25 @@ Route::get('SignIn', [LoginController::class,"signin"] );
 // Admin
 Route::get('Profil-Admin', [DashboardController::class,"profile"] );
 Route::get('admin', [DashboardController::class,"index"] );
-Route::get('Dashboard-Detail-Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
+Route::get('Dashboard_Detail_Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
 
 Route::get('Pengguna', [PenggunaController::class,"index"] );
 
-Route::get('Daftar-Pelamar', [PelamarController::class,"index"] );
-Route::get('Detail-Data-Pelamar', [PelamarController::class,"pelamar"] );
+Route::get('Daftar_Pelamar', [PelamarController::class,"index"] );
+Route::get('Detail_Data_Pelamar', [PelamarController::class,"pelamar"] );
+Route::get('hapus-data/{id}', [PelamarController::class,"hapus_data"] );
+
+
+
+
 
 
 // User
 Route::get('Profil-User', [UserController::class,"profil"] );
 Route::get('User', [UserController::class,"index"] );
-Route::get('Ajukan-Lamaran', [UserController::class,"pendaftar"] );
+Route::get('Form_Lamaran', [UserController::class,"pendaftar"] );
+Route::post('store', [UserController::class,"store"] );
+
 
 //Test Sending Email
 Route::get('send-email', [SendEmail::class, "index"]);

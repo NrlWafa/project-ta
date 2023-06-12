@@ -21,18 +21,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($user as $item) --}}
-                            <tr>
-                                <td>Tes</td>
-                                <td>Tes</td>
-                                <td>Tes</td>
-                                <td>Tes</td>
-                                <td><a href="Detail-Data-Pelamar" class="btn-sm btn-primary">Lihat
-                                        Detail</a>
-                                    <a href="" class="btn-sm btn-danger">Hapus</a>
-                                </td>
-                            </tr>
-                            {{-- @endforeach --}}
+                            @foreach ($pelamar as $pel)
+                                <tr>
+                                    <td>{{ $pel->id_user }}</td>
+                                    <td>{{ $pel->nama_lengkap }}</td>
+                                    <td>{{ $pel->jabatan_lamaran }}</td>
+                                    <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
+                                    <td><a href="Detail_Data_Pelamar" class="btn-sm btn-primary">Lihat
+                                            Detail</a>
+                                        <a href="#" class="btn-sm btn-danger delete"
+                                            data-id="{{ $pel->id_user }}">Hapus</a>
+
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
 
                     </table>
@@ -43,20 +45,32 @@
     </div>
 @endsection
 
-
 @section('script')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(function() {
-            function time() {
-                var d = new Date();
-                var s = d.getSeconds();
-                var m = d.getMinutes();
-                var h = d.getHours();
-                $('.time_interval').text(("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(
-                    -2));
-            }
-            time()
-            setInterval(time, 1000);
-        });
+            $('.delete').click(function() {
+                var bmiid = $(this).attr('data-id');
+                Swal.fire({
+                    title: 'Yakin?',
+                    text: "Hapus data ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    showConfirmButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, hapus!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "hapus_data/" + id_user + ""
+                        Swal.fire(
+                            'Terhapus!',
+                            'Data berhasil terhapus',
+                            'success'
+                        )
+                    }
+                })
+            })
+        })
     </script>
 @endsection

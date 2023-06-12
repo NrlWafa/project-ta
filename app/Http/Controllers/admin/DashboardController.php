@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Pelamar;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,17 +15,20 @@ class DashboardController extends Controller
         ]);
     }
 
-
     public function index()
     {
-        return view("admin.dashboard.index", [
+       $pelamar = Pelamar::all();
+
+        return view("admin.dashboard.index",compact('pelamar'), [
             "title" => "Dashboard"
         ]);
     }
 
      public function dashboarddetailpelamar()
     {
-        return view("admin.dashboard.detail-pelamar", [
+        $pelamar = Pelamar::all();
+
+        return view("admin.dashboard.detail-pelamar",compact('pelamar'), [
             "title" => "Dashboard"
         ]);
     }

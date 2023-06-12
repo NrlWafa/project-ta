@@ -87,17 +87,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($user as $item) --}}
-                        <tr>
-                            <td>Tes</td>
-                            <td>Tes</td>
-                            <td>Tes</td>
-                            <td>Tes</td>
-                            <td><a href="Dashboard-Detail-Pelamar" class="btn-sm btn-primary">Lihat
-                                    Detail</a>
-                            </td>
-                        </tr>
-                        {{-- @endforeach --}}
+                        @foreach ($pelamar as $pel)
+                            <tr>
+                                <td>{{ $pel->id_user }}</td>
+                                <td>{{ $pel->nama_lengkap }}</td>
+                                <td>{{ $pel->jabatan_lamaran }}</td>
+                                <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
+                                <td><a href="Dashboard_Detail_Pelamar" class="btn-sm btn-primary">Lihat
+                                        Detail</a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
 
                 </table>

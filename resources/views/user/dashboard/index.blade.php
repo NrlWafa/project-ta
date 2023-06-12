@@ -43,7 +43,7 @@
             </div>
             <!-- /.col -->
             <div class="col-md-12">
-                <a href="Ajukan-Lamaran" class="btn btn-primary btn-block">Ajukan Lamaran</a>
+                <a href="Form_Lamaran" class="btn btn-primary btn-block">Ajukan Lamaran</a>
             </div>
         </div>
     </div>
