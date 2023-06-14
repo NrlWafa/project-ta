@@ -48,13 +48,13 @@ return new class extends Migration
             $table->string('anak2',100);
             $table->string('anak3',100);
             $table->string('nama_ayh',100);
-            $table->string('tmp_lahir__ayh',100);
+            $table->string('tmp_lahir_ayh',100);
             $table->date('tgl_lahir_ayh');
             $table->string('pekerjaan_ayh',100);
             $table->string('alamat_ayh',100);
             $table->string('no_hp_ayh')->length(15);
             $table->string('nama_ibu',100);
-            $table->string('tmp_lahir__ibu',100);
+            $table->string('tmp_lahir_ibu',100);
             $table->date('tgl_lahir_ibu');
             $table->string('pekerjaan_ibu',100);
             $table->string('alamat_ibu',100);
