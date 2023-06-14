@@ -36,14 +36,14 @@
                     {{ csrf_field() }}
                     <div class="flex flex-col pt-4">
                         <label for="username" class="text-lg">Username</label>
-                        <input type="text" name="nik" placeholder="Masukkan Username"
+                        <input type="text" name="nama" placeholder="Masukkan Username"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
 
                     <div class="flex flex-col pt-4">
-                        <label for="password" class="text-lg">E-Mail</label>
-                        <input type="password" name="password" placeholder="Masukkan E-Mail"
+                        <label for="email" class="text-lg">E-Mail</label>
+                        <input type="text" name="email" placeholder="Masukkan E-Mail"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>

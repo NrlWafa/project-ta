@@ -9,5 +9,5 @@ class Orang extends Model
 {
     use HasFactory;
 
-    // protected $table = 'Orang';
+    protected $table = 'Orangs';
 }

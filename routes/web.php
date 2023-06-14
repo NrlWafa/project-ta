@@ -12,6 +12,7 @@ use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
 use App\Http\Controllers\landingpage\BerandaController;
 use App\Http\Controllers\landingpage\LayananController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\landingpage\FormasiPekerjaanController;
 use App\Http\Controllers\landingpage\ProfilPerusahaanController;
 
@@ -51,9 +52,10 @@ Route::get('Galeri', [GaleriController::class,"index"] );
 Route::get('Kontak', [KontakController::class,"index"] );
 
 
-// Login
+// Login dan SignIn
 Route::get('Login', [LoginController::class,"index"] );
 Route::get('SignIn', [LoginController::class,"signin"] );
+Route::post('SignIn', [LoginController::class,"signinProses"] );
 
 
 // Admin
@@ -68,10 +70,6 @@ Route::get('Detail_Data_Pelamar', [PelamarController::class,"pelamar"] );
 Route::get('hapus-data/{id}', [PelamarController::class,"hapus_data"] );
 
 
-
-
-
-
 // User
 Route::get('Profil-User', [UserController::class,"profil"] );
 Route::get('User', [UserController::class,"index"] );
@@ -81,5 +79,25 @@ Route::post('store', [UserController::class,"store"] );
 
 //Test Sending Email
 Route::get('send-email', [SendEmail::class, "index"]);
+
+//Verifikasi Email
+
+
+Route::get('/login', function () {
+    return 'ini halaman login';
+})->name('login');
+
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+    return redirect('profil.index');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::get('profil.index', function () {
+    return 'ini halaman profil, penanda user sudah login dan terverifikasi.';
+})->middleware(['auth', 'verified']);
 
 
