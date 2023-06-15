@@ -15,22 +15,63 @@
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>E-Mail</th>
+                                <th>Level</th>
+                                <th>Tanggal</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Trident</td>
-                                <td>AOL browser (AOL desktop)</td>
-                                <td>Win XP</td>
-                                <td>
-                                    <a href="" class="btn-sm btn-danger">Hapus</a>
-                                </td>
-                            </tr>
+                            @foreach ($user as $us)
+                                <tr>
+                                    <td>{{ $us->id }}</td>
+                                    <td>{{ $us->nama }}</td>
+                                    <td>{{ $us->email }}</td>
+
+                                    <td>{{ $us->id_level }}</td>
+                                    {{-- Belum kawa ngambil data level_name di tabel level --}}
+
+                                    <td>{{ date('d F Y', strtotime($us->created_at)) }}</td>
+                                    <td>
+                                        <a href="#" class="btn-sm btn-danger delete"
+                                            data-id="{{ $us->id }}">Hapus</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+
                     </table>
                 </div>
                 <!-- /.card-body -->
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(function() {
+            $('.delete').click(function() {
+                var id = $(this).attr('data-id');
+                Swal.fire({
+                    title: 'Yakin?',
+                    text: "Hapus data ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    showConfirmButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, hapus!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "Data_Pengguna/" + id + ""
+                        Swal.fire(
+                            'Terhapus!',
+                            'Data berhasil terhapus',
+                            'success'
+                        )
+                    }
+                })
+            })
+        })
+    </script>
 @endsection

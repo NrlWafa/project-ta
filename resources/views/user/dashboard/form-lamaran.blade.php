@@ -11,7 +11,8 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form action="User" method="POST">
+
+                <form action={{ url('user/store') }} method="POST">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
@@ -143,12 +144,6 @@
                             <label>Ukuran Sepatu</label>
                             <input type="text" class="form-control" name="uk_sepatu"
                                 placeholder="Masukkan Ukuran Sepatu 'Khusus Satpam'">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" class="form-control" placeholder="Masukkan Email">
                         </div>
 
 
@@ -508,6 +503,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">

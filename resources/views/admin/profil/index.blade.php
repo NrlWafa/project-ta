@@ -33,16 +33,16 @@
                     </div>
                     <div class="card-body">
                         <strong>Nama Lengkap</strong>
-                        <p class="text-muted"></p>
+                        <p class="text-muted">{{ $user->nama }}</p>
                         <hr>
                         <strong>E-Mail</strong>
-                        <p class="text-muted"></p>
+                        <p class="text-muted">{{ $user->email }}</p>
                         <hr>
                         <strong>Alamat</strong>
-                        <p class="text-muted"></p>
+                        <p class="text-muted">{{ $pelamar->alamat }}</p>
                         <hr>
                         <strong>Tanggal Lahir</strong>
-                        <p class="text-muted"></p>
+                        <p class="text-muted">{{ date('d F Y', strtotime($pelamar->tgl_lahir)) }}</p>
                         <hr>
                     </div>
                 </div>

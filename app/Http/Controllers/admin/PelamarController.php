@@ -27,9 +27,9 @@ class PelamarController extends Controller
         ]);
     }
 
-     public function hapus_data($id_user)
+     public function hapus_data($id)
     {
-        DB::table('Pelamar')->where('id_user', $id_user)->delete();
+        DB::table('Pelamar')->where('id', $id)->delete();
         return redirect('Daftar_Pelamar');
     }
 

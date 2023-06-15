@@ -19,6 +19,7 @@ class UserController extends Controller
 
      public function index()
     {
+        
         return view("user.dashboard.index", [
             "title" => "User"
         ]);
@@ -32,13 +33,11 @@ class UserController extends Controller
         ]);
     }
 
-    public function user_simpan(Request $req)
+    public function store(Request $req)
     {
     
         Pelamar::create($req->except(['_token','submit']));
         return redirect('User');
-       
-
     }
  
     

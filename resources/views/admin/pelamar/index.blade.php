@@ -16,6 +16,7 @@
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>Formasi Pekerjaan</th>
+                                <th>No Telp</th>
                                 <th>Tanggal</th>
                                 <th>Aksi</th>
                             </tr>
@@ -25,13 +26,18 @@
                                 <tr>
                                     <td>{{ $pel->id_user }}</td>
                                     <td>{{ $pel->nama_lengkap }}</td>
+
+
+                                    {{-- Belum bisa ngambil data email dari tabel user --}}
+
                                     <td>{{ $pel->jabatan_lamaran }}</td>
+                                    <td>{{ $pel->no_hp }}</td>
                                     <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
                                     <td><a href="Detail_Data_Pelamar" class="btn-sm btn-primary">Lihat
                                             Detail</a>
-                                        <a href="#" class="btn-sm btn-danger delete"
-                                            data-id="{{ $pel->id_user }}">Hapus</a>
 
+                                        <a href="#" class="btn-sm btn-danger delete"
+                                            data-id="{{ $pel->id }}">Hapus</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -50,7 +56,7 @@
     <script>
         $(function() {
             $('.delete').click(function() {
-                var bmiid = $(this).attr('data-id');
+                var id = $(this).attr('data-id');
                 Swal.fire({
                     title: 'Yakin?',
                     text: "Hapus data ini",
@@ -62,7 +68,7 @@
                     confirmButtonText: 'Ya, hapus!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location = "hapus_data/" + id_user + ""
+                        window.location = "Daftar_Pelamar/" + id + ""
                         Swal.fire(
                             'Terhapus!',
                             'Data berhasil terhapus',

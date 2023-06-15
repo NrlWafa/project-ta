@@ -74,7 +74,7 @@
                         </li>
                         <li class="user-footer">
                             <a href="Profil-Admin" class="btn btn-default btn-flat">Profile</a>
-                            <a href="/logout" class="btn btn-default btn-flat float-right">Logout</a>
+                            <a href="Logout" class="btn btn-default btn-flat float-right">Logout</a>
                         </li>
                     </ul>
                 </li>

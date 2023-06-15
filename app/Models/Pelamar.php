@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Pelamar extends Model
 {
     use HasFactory;
+    
 
     protected $table = 'Pelamar';
     protected $guarded = [];

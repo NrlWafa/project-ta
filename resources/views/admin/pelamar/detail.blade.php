@@ -105,12 +105,6 @@
 
 
 
-                        <div class="form-group">
-                            <label>E-Mail</label>
-                            <input type="text" class="form-control" readonly>
-                        </div>
-
-
 
 
                         {{-- DATA PASANGAN --}}
@@ -340,15 +334,15 @@
                         </div>
                     @endforeach
 
-                    {{-- DATA FOTO FOTO --}}
+
                     <!-- /.card-body -->
 
                 </div>
                 <!-- /.card -->
             </div>
 
-            <div class="row
-                            px">
+            {{-- DATA FOTO FOTO --}}
+            <div class="row px">
                 <div class="col-md-4">
                     <div class="card card-outline card-primary">
                         <div class="card-header">
@@ -365,7 +359,7 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('foto/bukti/' . $pel->foto_kk) }}" alt=""
+                                        <img src="{{ asset('foto/foto_kk/' . $pel->foto_kk) }}" alt=""
                                             height="250px" width="380px">
                                     </td>
                                 </tr>
@@ -392,7 +386,7 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('foto/bukti/' . $pel->foto_kta) }}" alt=""
+                                        <img src="{{ asset('foto/foto_kta/' . $pel->foto_kta) }}" alt=""
                                             height="250px" width="380px">
                                     </td>
                                 </tr>
@@ -419,7 +413,7 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('foto/bukti/' . $pel->foto_npwp) }}" alt=""
+                                        <img src="{{ asset('foto/foto_npwp/' . $pel->foto_npwp) }}" alt=""
                                             height="250px" width="380px">
                                     </td>
                                 </tr>
@@ -448,7 +442,7 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('foto/bukti/' . $pel->pas_foto) }}" alt=""
+                                        <img src="{{ asset('foto/pas_foto/' . $pel->pas_foto) }}" alt=""
                                             height="250px" width="380px">
                                     </td>
                                 </tr>
@@ -475,7 +469,7 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('foto/bukti/' . $pel->foto_ktp) }}" alt=""
+                                        <img src="{{ asset('foto/foto_ktp/' . $pel->foto_ktp) }}" alt=""
                                             height="250px" width="380px">
                                     </td>
                                 </tr>

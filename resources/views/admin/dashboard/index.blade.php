@@ -82,6 +82,7 @@
                             <th>ID</th>
                             <th>Nama</th>
                             <th>Formasi Pekerjaan</th>
+                            <th>No Telp</th>
                             <th>Tanggal</th>
                             <th>Aksi</th>
                         </tr>
@@ -92,6 +93,7 @@
                                 <td>{{ $pel->id_user }}</td>
                                 <td>{{ $pel->nama_lengkap }}</td>
                                 <td>{{ $pel->jabatan_lamaran }}</td>
+                                <td>{{ $pel->no_hp }}</td>
                                 <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
                                 <td><a href="Dashboard_Detail_Pelamar" class="btn-sm btn-primary">Lihat
                                         Detail</a>

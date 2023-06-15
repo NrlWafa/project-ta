@@ -32,32 +32,35 @@
 
             <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
                 <p class="text-center text-3xl font-weight-bold">PT Yaza Pratama</p>
-                <form class="flex flex-col pt-3 md:pt-8" method="POST">
-                    {{ csrf_field() }}
+                <form class="flex flex-col pt-3 md:pt-8" action={{ url('user/create') }} method="POST">
+                    @csrf
                     <div class="flex flex-col pt-4">
-                        <label for="username" class="text-lg">Username</label>
-                        <input type="text" name="nama" placeholder="Masukkan Username"
+                        <label for="nama" class="text-lg">Username</label>
+                        <input type="text" value="{{ Session::get('nama') }}" name="nama"
+                            placeholder="Masukkan Username"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
 
                     <div class="flex flex-col pt-4">
                         <label for="email" class="text-lg">E-Mail</label>
-                        <input type="text" name="email" placeholder="Masukkan E-Mail"
+                        <input type="email" value="{{ Session::get('email') }}" name="email"
+                            placeholder="Masukkan E-Mail"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
 
                     <div class="flex flex-col pt-4">
                         <label for="password" class="text-lg">Password</label>
-                        <input type="password" name="password" placeholder="Masukkan Password"
+                        <input type="password" value="{{ Session::get('password') }}" name="password"
+                            placeholder="Masukkan Password"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
 
-                    <input type="submit" value="Sign In"
-                        class="bg-black text-white font-bold text-lg hover:bg-blue-700 p-2 mt-8">
-
+                    <button name="submit" type="submit"
+                        class="text-center bg-black text-white font-bold text-lg hover:bg-blue-700 p-2 mt-8">Sign
+                        In</button>
 
                     <p class="text-center"> Sudah memiliki akun? <strong><a href="Login">Log In</a></strong> </p>
                 </form>

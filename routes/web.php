@@ -54,8 +54,21 @@ Route::get('Kontak', [KontakController::class,"index"] );
 
 // Login dan SignIn
 Route::get('Login', [LoginController::class,"index"] );
+Route::post('user/login', [LoginController::class,"login"] );
+
+
+// Sign In
 Route::get('SignIn', [LoginController::class,"signin"] );
+Route::post('user/create', [LoginController::class,"create"] );
 Route::post('SignIn', [LoginController::class,"signinProses"] );
+
+//Test Sending Email
+Route::get('send-email', [SendEmail::class, "index"]);
+
+// Logout
+Route::get('Logout', [LoginController::class,"logout"] );
+
+
 
 
 // Admin
@@ -64,40 +77,25 @@ Route::get('admin', [DashboardController::class,"index"] );
 Route::get('Dashboard_Detail_Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
 
 Route::get('Pengguna', [PenggunaController::class,"index"] );
+Route::get('Data_Pengguna/{id}', [PenggunaController::class,"hapus_data_pengguna"] );
+
 
 Route::get('Daftar_Pelamar', [PelamarController::class,"index"] );
 Route::get('Detail_Data_Pelamar', [PelamarController::class,"pelamar"] );
-Route::get('hapus-data/{id}', [PelamarController::class,"hapus_data"] );
+Route::get('Daftar_Pelamar/{id}', [PelamarController::class,"hapus_data"] );
+
+
+
+
 
 
 // User
 Route::get('Profil-User', [UserController::class,"profil"] );
 Route::get('User', [UserController::class,"index"] );
 Route::get('Form_Lamaran', [UserController::class,"pendaftar"] );
-Route::post('store', [UserController::class,"store"] );
+Route::post('user/store', [UserController::class,"store"] );
 
 
-//Test Sending Email
-Route::get('send-email', [SendEmail::class, "index"]);
 
 //Verifikasi Email
-
-
-Route::get('/login', function () {
-    return 'ini halaman login';
-})->name('login');
-
-Route::get('/email/verify', function () {
-    return view('auth.verify-email');
-})->middleware('auth')->name('verification.notice');
-
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-    return redirect('profil.index');
-})->middleware(['auth', 'signed'])->name('verification.verify');
-
-Route::get('profil.index', function () {
-    return 'ini halaman profil, penanda user sudah login dan terverifikasi.';
-})->middleware(['auth', 'verified']);
-
 
