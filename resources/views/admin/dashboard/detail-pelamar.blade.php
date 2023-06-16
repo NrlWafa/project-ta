@@ -470,13 +470,23 @@
                                     </td>
                                 </tr>
                             @endforeach
-                        </div>
 
+                            {{-- @foreach ($data as $pel)
+                                <tr>
+                                    <td>
+                                        @if ($pel->foto)
+                                            <img style="max-width:380px;max-height:50px"
+                                                height="250px" width="380px" src="{{ url('foto_ktp') .'/'.$pel->foto_ktp) }}"/>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach --}}
+                        </div>
                         <!-- /.card-body -->
+
                     </div>
                     <!-- /.card -->
                 </div>
-
             </div>
 
             <div class="card-footer">

@@ -26,10 +26,6 @@
                                 <tr>
                                     <td>{{ $pel->id }}</td>
                                     <td>{{ $pel->nama_lengkap }}</td>
-
-
-                                    {{-- Belum bisa ngambil data email dari tabel user --}}
-
                                     <td>{{ $pel->jabatan_lamaran }}</td>
                                     <td>{{ $pel->no_hp }}</td>
                                     <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
