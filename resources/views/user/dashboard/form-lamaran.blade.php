@@ -12,6 +12,106 @@
                 <!-- /.card-header -->
                 <!-- form start -->
 
+                <?php
+                if (isset($_POST['submit'])) {
+                    if (empty($_POST['nama_lengkap'])) {
+                        echo 'Nama Lengkap Harus Diisi!';
+                    } elseif (empty($_POST['nama_panggilan'])) {
+                        echo 'Nama Panggilan Harus Diisi!';
+                    } elseif (empty($_POST['jenis_kelamin'])) {
+                        echo 'Jenis Kelamin Harus Diisi!';
+                    } elseif (empty($_POST['tempat_lahir'])) {
+                        echo 'Tempat Lahir Harus Diisi!';
+                    } elseif (empty($_POST['tanggal_lahir'])) {
+                        echo 'Tanggal Lahir Harus Diisi!';
+                    } elseif (empty($_POST['status_perkawinan'])) {
+                        echo 'Status Perkawinan Harus Diisi!';
+                    } elseif (empty($_POST['agama'])) {
+                        echo 'Agama Harus Diisi!';
+                    } elseif (empty($_POST['alamat_ktp'])) {
+                        echo 'Alamat KTP Harus Diisi!';
+                    } elseif (empty($_POST['alamat_dom'])) {
+                        echo 'Alamat Domisili Harus Diisi!';
+                    } elseif (empty($_POST['kel'])) {
+                        echo 'Kelurahan Harus Diisi!';
+                    } elseif (empty($_POST['kec'])) {
+                        echo 'Kecamatan Harus Diisi!';
+                    } elseif (empty($_POST['kab_kota'])) {
+                        echo 'Kabupaten/Kota Harus Diisi!';
+                    } elseif (empty($_POST['provinsi'])) {
+                        echo 'Provinsi Harus Diisi!';
+                    } elseif (empty($_POST['no_hp'])) {
+                        echo 'Nomor Handphone Harus Diisi!';
+                    } elseif (empty($_POST['no_ktp'])) {
+                        echo 'Nomor KTP Harus Diisi!';
+                    } elseif (empty($_POST['nama_ayh'])) {
+                        echo 'Nama Ayah Harus Diisi!';
+                    } elseif (empty($_POST['tmp_lahir_ayh'])) {
+                        echo 'Tempat Lahir Ayah Harus Diisi!';
+                    } elseif (empty($_POST['tgl_lahir_ayh'])) {
+                        echo 'Tanggal Lahir Ayah Harus Diisi!';
+                    } elseif (empty($_POST['pekerjaan_ayh'])) {
+                        echo 'Pekerjaan Ayah Harus Diisi!';
+                    } elseif (empty($_POST['alamat_ayh'])) {
+                        echo 'Alamat Lengkap Ayah Harus Diisi!';
+                    } elseif (empty($_POST['no_hp_ayh'])) {
+                        echo 'Nomor Handphone Ayah Harus Diisi!';
+                    } elseif (empty($_POST['nama_ibu'])) {
+                        echo 'Nama Ibu Harus Diisi!';
+                    } elseif (empty($_POST['tmp_lahir_ibu'])) {
+                        echo 'Tempat Lahir Ibu Harus Diisi!';
+                    } elseif (empty($_POST['tgl_lahir_ibu'])) {
+                        echo 'Tanggal Lahir Ibu Harus Diisi!';
+                    } elseif (empty($_POST['pekerjaan_ibu'])) {
+                        echo 'Pekerjaan Ibu Harus Diisi!';
+                    } elseif (empty($_POST['alamat_ibu'])) {
+                        echo 'Alamat Lengkap Ibu Harus Diisi!';
+                    } elseif (empty($_POST['no_hp_ibu'])) {
+                        echo 'Nomor Handphone Ibu Harus Diisi!';
+                    } elseif (empty($_POST['pend_formal'])) {
+                        echo 'Nama Pendidikan Formal Harus Diisi!';
+                    } elseif (empty($_POST['tmp_pend'])) {
+                        echo 'Tempat Pendidikan Formal Harus Diisi!';
+                    } elseif (empty($_POST['thn_pend'])) {
+                        echo 'Tahun Pendidikan Harus Diisi!';
+                    } elseif (empty($_POST['jurusan_pend'])) {
+                        echo 'Jurusan Pendidikan Harus Diisi!';
+                    } elseif (empty($_POST['nm_kontak'])) {
+                        echo 'Nama Kontak Harus Diisi!';
+                    } elseif (empty($_POST['no_kontak'])) {
+                        echo 'Nomor Handphone Kontak Harus Diisi!';
+                    } elseif (empty($_POST['hubungan'])) {
+                        echo 'Hubungan Kekeluargaan Dengan Kontak Harus Diisi!';
+                    } elseif (empty($_POST['no_npwp'])) {
+                        echo 'Nomor NPWP Harus Diisi!';
+                    } elseif (empty($_POST['no_bpjs_ket'])) {
+                        echo 'Nomor BPJS Ketenagakerjaan Harus Diisi!';
+                    } elseif (empty($_POST['no_bpjs_kes'])) {
+                        echo 'Nomor BPJS Kesehatan Harus Diisi!';
+                    } elseif (empty($_POST['jabatan_lamaran'])) {
+                        echo 'Jabatan yang Dilamar Harus Diisi!';
+                    } elseif (empty($_POST['foto_kk'])) {
+                        echo 'Foto Kartu Keluarga Harus Diisi!';
+                    } elseif (empty($_POST['foto_kta'])) {
+                        echo 'Foto KTA Harus Diisi!';
+                    } elseif (empty($_POST['foto_npwp'])) {
+                        echo 'Foto NPWP Harus Diisi!';
+                    } elseif (empty($_POST['pas_foto'])) {
+                        echo 'Pas Foto Harus Diisi!';
+                    } elseif (empty($_POST['foto_ktp'])) {
+                        echo 'Foto KTP Harus Diisi!';
+                    } else {
+                        # code...
+                    }
+                    // $nama_lengkap = $_POST['nama_lengkap'];
+                    // $nama_panggilan = $_POST['nama_panggilan'];
+                
+                    // if ($nama_lengkap == '') {
+                    //     echo 'Nama Harus Diisi!';
+                    // }
+                }
+                ?>
+
                 <form method="POST" action={{ url('user/store') }} enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
@@ -19,6 +119,7 @@
                             <label>Nama Lengkap*</label>
                             <input type="text" class="form-control" name="nama_lengkap"
                                 placeholder="Masukkan Nama Lengkap">
+
                         </div>
                         <div class="form-group">
                             <label>id_user</label>
@@ -99,7 +200,7 @@
                             <input type="text" class="form-control" name="provinsi" placeholder="Masukkan Provinsi">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handhphone*</label>
+                            <label>Nomor Handphone*</label>
                             <input type="text" class="form-control" name="no_hp"
                                 placeholder="Masukkan Nomor Handphone">
                         </div>
@@ -429,7 +530,7 @@
                             <input type="text" class="form-control" name="no_npwp" placeholder="Masukkan Nomor NPWP">
                         </div>
                         <div class="form-group">
-                            <label>Nomor BPJS Ketenaga Kerjaan*</label>
+                            <label>Nomor BPJS Ketenagakerjaan*</label>
                             <input type="text" class="form-control" name="no_bpjs_ket"
                                 placeholder="Masukkan Nomor BPJS Ketenaga Kerjaan">
                         </div>
