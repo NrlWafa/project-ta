@@ -355,12 +355,8 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        @if ($pel->foto_kk)
-                                            <img style="max-width:380px;max-height:250px"
-                                                src="{{ url('foto_kk') . '/' . $pel->foto_kk }}" />
-                                        @endif
-
-
+                                        <img src="{{ asset('foto/foto_kk/' . $pel->foto_kk) }}" alt=""
+                                            height="250px" width="380px">
                                     </td>
                                 </tr>
                             @endforeach

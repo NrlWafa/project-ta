@@ -24,7 +24,7 @@
                         <tbody>
                             @foreach ($pelamar as $pel)
                                 <tr>
-                                    <td>{{ $pel->id_user }}</td>
+                                    <td>{{ $pel->id }}</td>
                                     <td>{{ $pel->nama_lengkap }}</td>
 
 

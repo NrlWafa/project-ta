@@ -92,7 +92,7 @@
                     <tbody>
                         @foreach ($pelamar as $pel)
                             <tr>
-                                <td>{{ $pel->id_user }}</td>
+                                <td>{{ $pel->id }}</td>
                                 <td>{{ $pel->nama_lengkap }}</td>
                                 <td>{{ $pel->jabatan_lamaran }}</td>
                                 <td>{{ $pel->no_hp }}</td>

@@ -4,8 +4,10 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pelamar;
+use Faker\Core\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File as FacadesFile;
 
 class PelamarController extends Controller
 {
@@ -29,6 +31,21 @@ class PelamarController extends Controller
 
      public function hapus_data($id)
     {
+        // $data = Pelamar::where('id', $id)->first();
+        // FacadesFile::delete(public_path('foto_kk') . '/' . $data->foto_kk);
+
+        //  $data = Pelamar::where('id', $id)->first();
+        // FacadesFile::delete(public_path('foto_kta') . '/' . $data->foto_lta);
+
+        //  $data = Pelamar::where('id', $id)->first();
+        // FacadesFile::delete(public_path('foto_npwp') . '/' . $data->foto_npwp);
+
+        //  $data = Pelamar::where('id', $id)->first();
+        // FacadesFile::delete(public_path('pas_foto') . '/' . $data->pas_foto);
+
+        //  $data = Pelamar::where('id', $id)->first();
+        // FacadesFile::delete(public_path('foto_ktp') . '/' . $data->foto_ktp);
+
         DB::table('Pelamar')->where('id', $id)->delete();
         return redirect('Daftar_Pelamar');
     }

@@ -556,7 +556,7 @@
 
                         {{-- DATA FOTO FOTO --}}
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto Kartu Keluarga*</label>
+                            <label for="foto">Foto Kartu Keluarga*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk"
@@ -566,7 +566,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto KTA*</label>
+                            <label for="foto">Foto KTA*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kta" id="foto_kta"
@@ -576,7 +576,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto NPWP*</label>
+                            <label for="foto">Foto NPWP*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_npwp" id="foto_npwp"
@@ -586,7 +586,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Pas Foto*</label>
+                            <label for="foto">Pas Foto*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="pas_foto" id="pas_foto"
@@ -596,7 +596,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto KTP*</label>
+                            <label for="foto">Foto KTP*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_ktp" id="foto_ktp"

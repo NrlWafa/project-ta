@@ -62,46 +62,45 @@ class UserController extends Controller
         // );
     
         Pelamar::create($req->except(['_token','submit']));
-        // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
+        return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
 
-        // Kartu Keluarga
-        $foto_kk = $req->file('foto_kk');
-        $foto_ekstensi = $foto_kk->extension();
-        $foto_kk_nama = date('ymdhis').".". $foto_ekstensi;
-        $foto_kk->move(public_path('foto_kk'), $foto_kk_nama);
+        // // Kartu Keluarga
+        // $foto_kk = $req->file('foto_kk');
+        // $foto_ekstensi = $foto_kk->extension();
+        // $foto_kk_nama = date('ymdhis').".". $foto_ekstensi;
+        // $foto_kk->move(public_path('foto_kk'), $foto_kk_nama);
 
-        // KTA
-        $foto_kta = $req->file('foto_kta');
-        $foto_ekstensi = $foto_kta->extension();
-        $foto_kta_nama = date('ymdhis').".". $foto_ekstensi;
-        $foto_kta->move(public_path('foto_kta'), $foto_kta_nama);
+        // // KTA
+        // $foto_kta = $req->file('foto_kta');
+        // $foto_ekstensi = $foto_kta->extension();
+        // $foto_kta_nama = date('ymdhis').".". $foto_ekstensi;
+        // $foto_kta->move(public_path('foto_kta'), $foto_kta_nama);
 
-        // NPWP
-        $foto_npwp = $req->file('foto_npwp');
-        $foto_ekstensi = $foto_npwp->extension();
-        $foto_npwp_nama = date('ymdhis').".". $foto_ekstensi;
-        $foto_npwp->move(public_path('foto_npwp'), $foto_npwp_nama);
+        // // NPWP
+        // $foto_npwp = $req->file('foto_npwp');
+        // $foto_ekstensi = $foto_npwp->extension();
+        // $foto_npwp_nama = date('ymdhis').".". $foto_ekstensi;
+        // $foto_npwp->move(public_path('foto_npwp'), $foto_npwp_nama);
 
-        // PAS FOTO
-        $pas_foto = $req->file('pas_foto');
-        $foto_ekstensi = $pas_foto->extension();
-        $pas_foto_nama = date('ymdhis').".". $foto_ekstensi;
-        $pas_foto->move(public_path('pas_foto'), $pas_foto_nama);
+        // // PAS FOTO
+        // $pas_foto = $req->file('pas_foto');
+        // $foto_ekstensi = $pas_foto->extension();
+        // $pas_foto_nama = date('ymdhis').".". $foto_ekstensi;
+        // $pas_foto->move(public_path('pas_foto'), $pas_foto_nama);
 
-        // KTP
-        $foto_ktp = $req->file('foto_ktp');
-        $foto_ekstensi = $foto_ktp->extension();
-        $foto_ktp_nama = date('ymdhis').".". $foto_ekstensi;
-        $foto_ktp->move(public_path('foto_ktp'), $foto_ktp_nama);
+        // // KTP
+        // $foto_file = $req->file('foto_ktp');
+        // $foto_ekstensi = $foto_file->extension();
+        // $foto_ktp_nama = date('ymdhis').".". $foto_ekstensi;
+        // $foto_file->move(public_path('foto_ktp'), $foto_ktp_nama);
 
 
-        $data = [
-            'foto_kk' => $foto_kk_nama,
-            'foto_kta' => $foto_kta_nama,
-            'foto_npwp' => $foto_npwp_nama,
-            'pas_foto' => $pas_foto_nama,
-            'foto_ktp' => $foto_ktp_nama
-         ];
-
+        // $data = [
+        //     'foto_kk' => $foto_kk_nama,
+        //     'foto_kta' => $foto_kta_nama,
+        //     'foto_npwp' => $foto_npwp_nama,
+        //     'pas_foto' => $pas_foto_nama,
+        //     'foto_ktp' => $foto_ktp_nama
+        //  ];
     }
 }
