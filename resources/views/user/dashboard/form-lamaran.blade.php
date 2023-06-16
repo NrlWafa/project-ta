@@ -12,11 +12,11 @@
                 <!-- /.card-header -->
                 <!-- form start -->
 
-                <form action={{ url('user/store') }} method="POST">
+                <form method="POST" action={{ url('user/store') }} enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Nama Lengkap</label>
+                            <label>Nama Lengkap*</label>
                             <input type="text" class="form-control" name="nama_lengkap"
                                 placeholder="Masukkan Nama Lengkap">
                         </div>
@@ -25,12 +25,12 @@
                             <input type="text" class="form-control" name="id_user" placeholder="Masukkan Nama Lengkap">
                         </div>
                         <div class="form-group">
-                            <label>Nama Panggilan</label>
+                            <label>Nama Panggilan*</label>
                             <input type="text" class="form-control" name="nama_panggilan"
                                 placeholder="Masukkan Nama Panggilan">
                         </div>
                         <div class="form-group">
-                            <label>Jenis Kelamin</label>
+                            <label>Jenis Kelamin*</label>
                             <select class="custom-select rounded-0" name="jenis_kelamin">
                                 <option>Pilih Jenis Kelamin</option>
                                 <option>Perempuan</option>
@@ -38,21 +38,21 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Tempat Lahir</label>
+                            <label>Tempat Lahir*</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" name="tempat_lahir"
                                     placeholder="Masukkan Tempat Lahir">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Tanggal Lahir</label>
+                            <label>Tanggal Lahir*</label>
                             <div class="input-group">
                                 <input type="date" name="tanggal_lahir" class="form-control"
                                     data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Status Perkawinan</label>
+                            <label>Status Perkawinan*</label>
                             <select class="custom-select rounded-0" name="status_perkawinan">
                                 <option>Pilih Status Perkawinan</option>
                                 <option>Belum Kawin</option>
@@ -60,7 +60,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Agama</label>
+                            <label>Agama*</label>
                             <select class="custom-select rounded-0" name="agama">
                                 <option>Pilih Agama</option>
                                 <option>Islam</option>
@@ -72,34 +72,34 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Alamat KTP</label>
+                            <label>Alamat KTP*</label>
                             <input type="text" class="form-control" name="alamat_ktp"
                                 placeholder="Masukkan Alamat Sesuai KTP">
                         </div>
                         <div class="form-group">
-                            <label>Alamat Domisili</label>
+                            <label>Alamat Domisili*</label>
                             <input type="text" class="form-control" name="alamat_dom"
                                 placeholder="Masukkan Alamat Domisili">
                         </div>
                         <div class="form-group">
-                            <label>Kelurahan</label>
+                            <label>Kelurahan*</label>
                             <input type="text" class="form-control" name="kel" placeholder="Masukkan Kelurahan">
                         </div>
                         <div class="form-group">
-                            <label>Kecamatan</label>
+                            <label>Kecamatan*</label>
                             <input type="text" class="form-control" name="kec" placeholder="Masukkan Kecamatan">
                         </div>
                         <div class="form-group">
-                            <label>Kabupaten/Kota</label>
+                            <label>Kabupaten/Kota*</label>
                             <input type="text" class="form-control" name="kab_kota"
                                 placeholder="Masukkan Kabupaten/Kota">
                         </div>
                         <div class="form-group">
-                            <label>Provinsi</label>
+                            <label>Provinsi*</label>
                             <input type="text" class="form-control" name="provinsi" placeholder="Masukkan Provinsi">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handhphone</label>
+                            <label>Nomor Handhphone*</label>
                             <input type="text" class="form-control" name="no_hp"
                                 placeholder="Masukkan Nomor Handphone">
                         </div>
@@ -109,9 +109,10 @@
                                 placeholder="Masukkan Nomor Telp Rumah">
                         </div>
                         <div class="form-group">
-                            <label>Nomor KTP</label>
+                            <label>Nomor KTP*</label>
                             <input type="text" class="form-control" name="no_ktp" placeholder="Masukkan Nomor KTP">
                         </div>
+                        <label>KHUSUS FORMASI PEKERJAAN UNTUK SATPAM WAJIB DISI</label>
                         <div class="form-group">
                             <label>Tinggi Badan</label>
                             <input type="text" class="form-control" name="tinggi_badan"
@@ -205,36 +206,36 @@
 
 
                         {{-- DATA ORANG TUA (AYAH) --}}
-                        <label>DATA ORANG TUA</label>
+                        <label>DATA ORANG TUA*</label>
                         <div class="form-group">
-                            <label>Nama Ayah</label>
+                            <label>Nama Ayah*</label>
                             <input type="text" class="form-control" name="nama_ayh"
                                 placeholder="Masukkan Nama Lengkap Ayah">
                         </div>
                         <div class="form-group">
-                            <label>Tempat Lahir Ayah</label>
-                            <input type="text" class="form-control" name="tmp_lahir__ayh"
+                            <label>Tempat Lahir Ayah*</label>
+                            <input type="text" class="form-control" name="tmp_lahir_ayh"
                                 placeholder="Masukkan Tempat Lahir Ayah">
                         </div>
                         <div class="form-group">
-                            <label>Tanggal Lahir Ayah</label>
+                            <label>Tanggal Lahir Ayah*</label>
                             <div class="input-group">
                                 <input type="date" name="tgl_lahir_ayh" class="form-control"
                                     data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Pekerjaan Ayah</label>
+                            <label>Pekerjaan Ayah*</label>
                             <input type="text" class="form-control" name="pekerjaan_ayh"
                                 placeholder="Masukkan Pekerjaan Ayah">
                         </div>
                         <div class="form-group">
-                            <label>Alamat Lengkap Ayah</label>
+                            <label>Alamat Lengkap Ayah*</label>
                             <input type="text" class="form-control" name="alamat_ayh"
                                 placeholder="Masukkan Alamat Lengkap Ayah">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handhpone Ayah</label>
+                            <label>Nomor Handhpone Ayah*</label>
                             <input type="text" class="form-control" name="no_hp_ayh"
                                 placeholder="Masukkan Nomor Handhpone Ayah">
                         </div>
@@ -243,41 +244,41 @@
 
                         {{-- DATA ORANG TUA (IBU) --}}
                         <div class="form-group">
-                            <label>Nama Ibu</label>
+                            <label>Nama Ibu*</label>
                             <input type="text" class="form-control" name="nama_ibu"
                                 placeholder="Masukkan Nama Lengkap Ibu">
                         </div>
                         <div class="form-group">
-                            <label>Tempat Lahir Ibu</label>
-                            <input type="text" class="form-control" name="tmp_lahir__ibu"
+                            <label>Tempat Lahir Ibu*</label>
+                            <input type="text" class="form-control" name="tmp_lahir_ibu"
                                 placeholder="Masukkan Tempat Lahir Ibu">
                         </div>
                         <div class="form-group">
-                            <label>Tanggal Lahir Ibu</label>
+                            <label>Tanggal Lahir Ibu*</label>
                             <div class="input-group">
                                 <input type="date" name="tgl_lahir_ibu" class="form-control"
                                     data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Pekerjaan Ibu</label>
+                            <label>Pekerjaan Ibu*</label>
                             <input type="text" class="form-control" name="pekerjaan_ibu"
                                 placeholder="Masukkan Pekerjaan Ibu">
                         </div>
                         <div class="form-group">
-                            <label>Alamat Lengkap Ibu</label>
+                            <label>Alamat Lengkap Ibu*</label>
                             <input type="text" class="form-control" name="alamat_ibu"
                                 placeholder="Masukkan Alamat Lengkap Ibu">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handhpone Ibu</label>
+                            <label>Nomor Handhpone Ibu*</label>
                             <input type="text" class="form-control" name="no_hp_ibu"
                                 placeholder="Masukkan Nomor Handhpone Ibu">
                         </div>
 
 
                         {{-- DATA PRIBADI --}}
-                        <label>DATA PELAMAR</label>
+                        <label>DATA PELAMAR*</label>
                         <div class="form-group">
                             <label>Golongan Darah</label>
                             <select class="custom-select rounded-0" name="gol_dar">
@@ -292,23 +293,23 @@
                         {{-- DATA PENDIDIKAN FORMAL --}}
                         <label>DATA PENDIDIKAN FORMAL</label>
                         <div class="form-group">
-                            <label>Nama Pendidikan Formal</label>
+                            <label>Nama Pendidikan Formal*</label>
                             <input type="text" class="form-control" name="pend_formal"
                                 placeholder="Masukkan Nama Pendidikan Formal">
                         </div>
                         <div class="form-group">
-                            <label>Tempat Pendidikan Formal</label>
+                            <label>Tempat Pendidikan Formal*</label>
                             <input type="text" class="form-control" name="tmp_pend"
                                 placeholder="Masukkan Tempat Pendidikan Formal">
                         </div>
                         <div class="form-group">
-                            <label>Tahun Pendidikan</label>
+                            <label>Tahun Pendidikan*</label>
                             <input type="text" class="form-control" name="thn_pend"
                                 placeholder="Masukkan Tahun Pendidikan Formal">
                         </div>
 
                         <div class="form-group">
-                            <label>Jurusan Pendidikan</label>
+                            <label>Jurusan Pendidikan*</label>
                             <input type="text" class="form-control" name="jurusan_pend"
                                 placeholder="Masukkan Jurusan Pendidikan Formal">
                         </div>
@@ -340,7 +341,7 @@
 
 
                         {{-- DATA PEKERJAAN --}}
-                        <label>DATA RIWAYAT PEKERJAAN</label>
+                        <label>DATA RIWAYAT PEKERJAAN DIISI JIKA PERNAH BEKERJA SEBELUMNYA</label>
                         <div class="form-group">
                             {{-- PADA DATABASE BELUM DIGANTI NAMANYA MASIH RIWAYAR_PEKERJAAN --}}
                             <label>Nama Perusahaan</label>
@@ -404,19 +405,19 @@
 
 
                         {{-- DATA KONTAK --}}
-                        <label>Kontak Keluarga yang Bisa Dihubungi</label>
+                        <label>KONTAK KELUARGA YANG BISA DIHUBUNGI</label>
                         <div class="form-group">
-                            <label>Nama Kontak</label>
+                            <label>Nama Kontak*</label>
                             <input type="text" class="form-control" name="nm_kontak"
                                 placeholder="Masukkan Nama Kontak yang Bisa Dihubungi dalam Keadaan Tertentu">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handphone Kontak</label>
+                            <label>Nomor Handphone Kontak*</label>
                             <input type="text" class="form-control" name="no_kontak"
                                 placeholder="Masukkan Nomor Handphone">
                         </div>
                         <div class="form-group">
-                            <label>Hubungan 'Kekeluargaan Dengan Kontak'</label>
+                            <label>Hubungan 'Kekeluargaan Dengan Kontak'*</label>
                             <input type="text" class="form-control" name="hubungan"
                                 placeholder="Hubungan Anda Dengan Kentak Sebagai">
                         </div>
@@ -424,21 +425,21 @@
 
                         {{-- DATA PRIBADI --}}
                         <div class="form-group">
-                            <label>Nomor NPWP</label>
+                            <label>Nomor NPWP*</label>
                             <input type="text" class="form-control" name="no_npwp" placeholder="Masukkan Nomor NPWP">
                         </div>
                         <div class="form-group">
-                            <label>Nomor BPJS Ketenaga Kerjaan</label>
+                            <label>Nomor BPJS Ketenaga Kerjaan*</label>
                             <input type="text" class="form-control" name="no_bpjs_ket"
                                 placeholder="Masukkan Nomor BPJS Ketenaga Kerjaan">
                         </div>
                         <div class="form-group">
-                            <label>Nomor BPJS Kesehatan</label>
+                            <label>Nomor BPJS Kesehatan*</label>
                             <input type="text" class="form-control" name="no_bpjs_kes"
                                 placeholder="Masukkan Nomor BPJS Kesehatan">
                         </div>
                         <div class="form-group">
-                            <label>Jabatan yang Dilamar</label>
+                            <label>Jabatan yang Dilamar*</label>
                             <select class="custom-select rounded-0" name="jabatan_lamaran">
                                 <option>Pilih Jabatan</option>
                                 <option>Satpam</option>
@@ -454,56 +455,91 @@
 
                         {{-- DATA FOTO FOTO --}}
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto Kartu Keluarga</label>
+                            <label for="exampleInputFile">Foto Kartu Keluarga*</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="foto_kk"
+                                    <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk"
                                         placeholder="Upload Foto" required>
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto KTA</label>
+                            <label for="exampleInputFile">Foto KTA*</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="foto_kta"
+                                    <input type="file" class="custom-file-input" name="foto_kta" id="foto_kta"
                                         placeholder="Upload Foto" required>
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto NPWP</label>
+                            <label for="exampleInputFile">Foto NPWP*</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="foto_npwp"
+                                    <input type="file" class="custom-file-input" name="foto_npwp" id="foto_npwp"
                                         placeholder="Upload Foto" required>
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Pas Foto</label>
+                            <label for="exampleInputFile">Pas Foto*</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="pas_foto"
+                                    <input type="file" class="custom-file-input" name="pas_foto" id="pas_foto"
                                         placeholder="Upload Foto" required>
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Foto KTP</label>
+                            <label for="exampleInputFile">Foto KTP*</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="foto_ktp"
+                                    <input type="file" class="custom-file-input" name="foto_ktp" id="foto_ktp"
                                         placeholder="Upload Foto" required>
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
                         </div>
 
+                        {{-- <div class="mb-3">
+                            <label for="foto" class="form-label">Foto Kartu Keluarga*</label>
+                            <input type="file" class="form-control" name="foto_kk" id="foto_kk">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="foto" class="form-label">Foto KTA*</label>
+                            <input type="file" class="form-control" name="foto_kta" id="foto_kta">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="foto" class="form-label">Foto NPWP*</label>
+                            <input type="file" class="form-control" name="foto_npwp" id="foto_npwp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="foto" class="form-label">Pas Foto*</label>
+                            <input type="file" class="form-control" name="pas_foto" id="pas_foto">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="foto" class="form-label">Foto KTP*</label>
+                            <input type="file" class="form-control" name="foto_ktp" id="foto_ktp">
+                        </div> --}}
+
+                        <p><strong>
+                                Perhatikan Data yang Disi! </strong></p>
+
+                        <p> Kami ingin mengingatkan Anda untuk sangat berhati-hati dan memperhatikan data yang Anda
+                            masukkan.
+                            Mengingat
+                            bahwa Anda hanya diberikan satu kesempatan untuk memasukkan data. </p>
+                        <p>Sebelum mengirimkan data Anda, pastikan untuk melakukan
+                            pengecekan menyeluruh. Periksa setiap
+                            detail yang Anda masukkan dan pastikan semuanya akurat dan lengkap.</p>
 
                     </div>
                     <!-- /.card-body -->
@@ -512,6 +548,7 @@
                         <a href="User" class="btn btn-danger">Batal</a>
                     </div>
                 </form>
+
             </div>
             <!-- /.card -->
         </div>

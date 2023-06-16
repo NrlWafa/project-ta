@@ -160,7 +160,7 @@
                         </div>
                         <div class="form-group">
                             <label>Tempat Lahir Ayah</label>
-                            <input type="text" class="form-control" value="{{ $pel->tmp_lahir__ayh }}" readonly>
+                            <input type="text" class="form-control" value="{{ $pel->tmp_lahir_ayh }}" readonly>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir Ayah</label>
@@ -186,7 +186,7 @@
                         </div>
                         <div class="form-group">
                             <label>Tempat Lahir Ibu</label>
-                            <input type="text" class="form-control" value="{{ $pel->tmp_lahir__ibu }}" readonly>
+                            <input type="text" class="form-control" value="{{ $pel->tmp_lahir_ibu }}" readonly>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir Ibu</label>
@@ -218,7 +218,7 @@
 
                         <div class="form-group">
                             <label>Pendidikan Formal</label>
-                            <input type="text" class="form-control" value="{{ $pel->pen_formal }}" readonly>
+                            <input type="text" class="form-control" value="{{ $pel->pend_formal }}" readonly>
                         </div>
                         <div class="form-group">
                             <label>Tempat Pendidikan Formal</label>

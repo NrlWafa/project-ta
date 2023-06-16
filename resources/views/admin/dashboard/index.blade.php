@@ -49,6 +49,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total User</span>
+                        {{-- <span class="info-box-number"> {{ $user }} </span> --}}
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -61,6 +62,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total Admin</span>
+                        {{-- <span class="info-box-number"> {{ $admin }} </span> --}}
                     </div>
                     <!-- /.info-box-content -->
                 </div>

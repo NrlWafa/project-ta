@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\admin\PelamarController;
 use App\Http\Controllers\admin\PenggunaController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\ProfilController;
 use App\Http\Controllers\landingpage\BlogController;
 use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
@@ -15,6 +16,7 @@ use App\Http\Controllers\landingpage\LayananController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\landingpage\FormasiPekerjaanController;
 use App\Http\Controllers\landingpage\ProfilPerusahaanController;
+use App\Http\Controllers\user\ProfilUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +67,11 @@ Route::post('SignIn', [LoginController::class,"signinProses"] );
 //Test Sending Email
 Route::get('send-email', [SendEmail::class, "index"]);
 
+
+//Verifikasi Email
+
+
+
 // Logout
 Route::get('Logout', [LoginController::class,"logout"] );
 
@@ -72,7 +79,7 @@ Route::get('Logout', [LoginController::class,"logout"] );
 
 
 // Admin
-Route::get('Profil-Admin', [DashboardController::class,"profile"] );
+Route::get('Profil-Admin', [ProfilController::class,"profil"] );
 Route::get('admin', [DashboardController::class,"index"] );
 Route::get('Dashboard_Detail_Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
 
@@ -87,15 +94,12 @@ Route::get('Daftar_Pelamar/{id}', [PelamarController::class,"hapus_data"] );
 
 
 
-
-
 // User
-Route::get('Profil-User', [UserController::class,"profil"] );
+Route::get('Profil-User', [ProfilUserController::class,"user_profil"] );
 Route::get('User', [UserController::class,"index"] );
 Route::get('Form_Lamaran', [UserController::class,"pendaftar"] );
 Route::post('user/store', [UserController::class,"store"] );
 
 
 
-//Verifikasi Email
 

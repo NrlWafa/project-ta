@@ -185,7 +185,7 @@
                         </div>
                         <div class="form-group">
                             <label>Tempat Lahir Ibu</label>
-                            <input type="text" class="form-control" value="{{ $pel->tmp_lahir__ibu }}" readonly>
+                            <input type="text" class="form-control" value="{{ $pel->tmp_lahir_ibu }}" readonly>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir Ibu</label>
@@ -217,7 +217,7 @@
 
                         <div class="form-group">
                             <label>Pendidikan Formal</label>
-                            <input type="text" class="form-control" value="{{ $pel->pen_formal }}" readonly>
+                            <input type="text" class="form-control" value="{{ $pel->pend_formal }}" readonly>
                         </div>
                         <div class="form-group">
                             <label>Tempat Pendidikan Formal</label>
@@ -355,8 +355,12 @@
                             @foreach ($pelamar as $pel)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('foto/foto_kk/' . $pel->foto_kk) }}" alt=""
-                                            height="250px" width="380px">
+                                        @if ($pel->foto_kk)
+                                            <img style="max-width:380px;max-height:250px"
+                                                src="{{ url('foto_kk') . '/' . $pel->foto_kk }}" />
+                                        @endif
+
+
                                     </td>
                                 </tr>
                             @endforeach

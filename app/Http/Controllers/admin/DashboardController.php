@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function profile()
+    public function profil()
     {
         return view("admin.profil.index", [
             "title" => "Profile"

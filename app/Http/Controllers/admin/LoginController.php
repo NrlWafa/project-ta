@@ -25,7 +25,13 @@ class LoginController extends Controller
         $req->validate([
             'email'=>'required',
             'password'=>'required'
-        ]);
+        ] 
+        
+        // ,[
+        //     'email.unique' => 'Silahkan masukkan email yang valid',
+        //     'password.required' => 'Password Wajib diisi!',
+        // ]
+        );
 
         $infologin = [
             'email'=>$req->email,
@@ -38,7 +44,6 @@ class LoginController extends Controller
         }
         else{
             //Jika otentikasi gagal
-            // return 'Gagal';
             return redirect('Login')->withErrors('Username dan Password yang dimasukkan tidak valid');
         }
     }

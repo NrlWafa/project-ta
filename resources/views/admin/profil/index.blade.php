@@ -20,7 +20,7 @@
                             <img class="profile-user-img img-fluid img-circle" src="/AdminLTE/dist/img/user4-128x128.jpg"
                                 alt="User profile picture">
                         </div>
-                        <h3 class="profile-username text-center mb-3 mt-3">Nama User</h3>
+                        {{-- <h3 class="profil-nama text-center mb-3 mt-3">{{ $profil->nama }}</h3> --}}
                         <a href="admin" class="btn btn-primary btn-block"><b>Kembali</b></a>
 
                     </div>
@@ -33,10 +33,10 @@
                     </div>
                     <div class="card-body">
                         <strong>Nama Lengkap</strong>
-                        <p class="text-muted">{{ $user->nama }}</p>
+                        <p class="text-muted"> {{ $profil->nama }}</p>
                         <hr>
                         <strong>E-Mail</strong>
-                        <p class="text-muted">{{ $user->email }}</p>
+                        <p class="text-muted">{{ $profil->email }}</p>
                         <hr>
                         <strong>Alamat</strong>
                         <p class="text-muted">{{ $pelamar->alamat }}</p>
