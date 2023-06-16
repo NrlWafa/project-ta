@@ -29,7 +29,13 @@ class PelamarController extends Controller
         ]);
     }
 
-     public function hapus_data($id)
+    public function store(Request $request){
+        $validated = $request->validate([
+            'id_user' => 'unique:pelamar'
+        ]);
+    }
+
+    public function hapus_data($id)
     {
         // $data = Pelamar::where('id', $id)->first();
         // FacadesFile::delete(public_path('foto_kk') . '/' . $data->foto_kk);

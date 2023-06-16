@@ -68,15 +68,8 @@ Route::post('SignIn', [LoginController::class,"signinProses"] );
 Route::get('send-email', [SendEmail::class, "index"]);
 
 
-//Verifikasi Email
-
-
-
 // Logout
 Route::get('Logout', [LoginController::class,"logout"] );
-
-
-
 
 // Admin
 Route::get('Profil-Admin', [ProfilController::class,"profil"] );
@@ -87,6 +80,7 @@ Route::get('Pengguna', [PenggunaController::class,"index"] );
 Route::get('Data_Pengguna/{id}', [PenggunaController::class,"hapus_data_pengguna"] );
 
 
+// Pelamar
 Route::get('Daftar_Pelamar', [PelamarController::class,"index"] );
 Route::get('Detail_Data_Pelamar', [PelamarController::class,"pelamar"] );
 Route::get('Daftar_Pelamar/{id}', [PelamarController::class,"hapus_data"] );
