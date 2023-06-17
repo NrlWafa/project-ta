@@ -22,36 +22,46 @@ class LoginController extends Controller
     {
         FacadesSession::flash('email', $req->email);
 
-        $req->validate([
-            'email'=>'required',
-            'password'=>'required'
-        ] 
-        
-        // ,[
-        //     'email.unique' => 'Silahkan masukkan email yang valid',
-        //     'password.required' => 'Password Wajib diisi!',
-        // ]
+        $req->validate(
+            [
+                'email' => 'required',
+                'password' => 'required',
+
+            ],
+            [
+                'email.unique' => 'Silahkan masukkan email yang valid',
+                'password.required' => 'Password Wajib diisi!',
+            ]
         );
 
         $infologin = [
-            'email'=>$req->email,
-            'password'=>$req->password
+            'email' => $req->email,
+            'password' => $req->password
         ];
 
-        if(Auth::attempt($infologin)){
-            //Jika otentikasi sukses
-            return redirect('User')->with('Success','Anda Berhasil Login');
-        }
-        else{
+        $User = User::where('email', $req->email)->first();
+        $UserLevel = $User->id_level ?? 0;
+
+
+        if (Auth::attempt($infologin)) {
+            // dd($req->id_level);
+            if ($UserLevel == 1) {
+                //Jika otentikasi sukses sebagai admin
+                return redirect('admin')->with('Success', 'Anda Berhasil Login sebagai Admin');
+            } else {
+                //Jika otentikasi sukses sebagai user
+                return redirect('User')->with('Success', 'Anda Berhasil Login');
+            }
+        } else {
             //Jika otentikasi gagal
-            return redirect('Login')->withErrors('Username dan Password yang dimasukkan tidak valid');
+            return redirect('Login')->withErrors('Username atau Password yang Anda masukkan tidak valid!');
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('Login')->with('Success','Anda Berhasil Logout'); 
+        return redirect('Login')->with('Success', 'Anda Berhasil Logout');
     }
 
 
@@ -66,9 +76,9 @@ class LoginController extends Controller
         FacadesSession::flash('nama', $req->nama);
         FacadesSession::flash('email', $req->email);
         $req->validate([
-            'nama'=>'required',
-            'email'=>'required|email|unique:user', //untuk mencek apakah email yg dibuat valid atau tidak, sudh ada atau belum
-            'password'=>'required|min:6' //Jumlah password minimal 6 
+            'nama' => 'required',
+            'email' => 'required|email|unique:user', //untuk mencek apakah email yg dibuat valid atau tidak, sudh ada atau belum
+            'password' => 'required|min:6' //Jumlah password minimal 6 
         ], [
             'nama.required' => 'Nama Wajib diisi!',
             'email.required' => 'Email Wajib diisi!',
@@ -82,28 +92,39 @@ class LoginController extends Controller
         $data = [
             'nama' => $req->nama,
             'email' => $req->email,
-            'password' => Hash::make($req->password)
+            'password' => Hash::make($req->password),
+            'id_level' => 2
+
         ];
 
         // Memasukkan data sigin kedalam tabel user
         User::create($data);
 
 
+
         $infologin = [
-            'email'=>$req->email,
-            'password'=>$req->password
+            'email' => $req->email,
+            'password' => $req->password
         ];
 
-        if(Auth::attempt($infologin)){
-            //Jika otentikasi sukses
-            return redirect('User')->with('Success',Auth::user()->nama . 'Anda Berhasil Login');
-        }
-        else{
+        $User = User::where('email', $req->email)->first();
+        $UserLevel = $User->id_level;
+        if (Auth::attempt($infologin)) {
+            // dd($req->id_level);
+            if ($UserLevel == 2) {
+                //Jika otentikasi sukses sebagai admin
+                return redirect('User')->with('Success', 'Anda Berhasil Login');
+            } else {
+                //Jika otentikasi sukses sebagai user
+                return redirect('admin')->with('Success', 'Anda Berhasil Login sebagai Admin');
+            }
+        } else {
+
             //Jika otentikasi gagal
-            // return 'Gagal';
-            return redirect('Login')->withErrors('Username dan Password yang dimasukkan tidak valid');
+            return redirect('Login')->withErrors('Username atau Password yang Anda masukkan tidak valid');
         }
     }
+
 
     public function signinProses(Request $request)
     {

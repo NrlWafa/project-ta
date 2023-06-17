@@ -8,26 +8,41 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-     public function profil()
+    public function profil()
     {
-        return view("user.profil.index",
-         [
-            "title" => "Profile"
-        ]);
+        // Cek hak akses jika dia bukan User, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 2) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
+        return view(
+            "user.profil.index",
+            [
+                "title" => "Profile"
+            ]
+        );
     }
 
 
-     public function index()
+    public function index()
     {
-        
+        // Cek hak akses jika dia bukan User, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 2) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         return view("user.dashboard.index", [
             "title" => "User"
         ]);
     }
 
-     public function pendaftar()
+    public function pendaftar()
     {
-        
+        // Cek hak akses jika dia bukan User, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 2) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         return view("user.dashboard.form-lamaran", [
             "title" => "User"
         ]);
@@ -35,15 +50,25 @@ class UserController extends Controller
 
     public function store(Request $req)
     {
+        // Cek hak akses jika dia bukan User, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 2) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
+        Pelamar::create($req->except(['_token', 'submit']));
+        return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
+
         // $req->validate([
+        //     'nama_lengkap'=>'required', 
         //     'foto_kk' => 'required|mimes:jpeg,jpg,png',
         //     'foto_kta' => 'required|mimes:jpeg,jpg,png',
         //     'foto_npwp' => 'required|mimes:jpeg,jpg,png',
         //     'pas_foto' => 'required|mimes:jpeg,jpg,png',
         //     'foto_ktp' => 'required|mimes:jpeg,jpg,png'
-                                  
+
 
         // ],[
+        //     'nama.required' => 'Nama Wajib diisi!',
         //     'foto_kk.required' => 'Silahkan masukkan foto',
         //     'foto_kk.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
 
@@ -55,14 +80,13 @@ class UserController extends Controller
 
         //     'pas_foto.required' => 'Silahkan masukkan foto',
         //     'pas_foto.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
-            
+
         //     'foto_ktp.required' => 'Silahkan masukkan foto',
         //     'foto_ktp.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG'
         // ]
         // );
-    
-        Pelamar::create($req->except(['_token','submit']));
-        return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
+
+
 
         // // Kartu Keluarga
         // $foto_kk = $req->file('foto_kk');
@@ -96,11 +120,17 @@ class UserController extends Controller
 
 
         // $data = [
+        //     'nama_lengkap' => $req->input('nama_lengkap'),
         //     'foto_kk' => $foto_kk_nama,
         //     'foto_kta' => $foto_kta_nama,
         //     'foto_npwp' => $foto_npwp_nama,
         //     'pas_foto' => $pas_foto_nama,
         //     'foto_ktp' => $foto_ktp_nama
         //  ];
+
+        // Pelamar::create($data);
+        // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
+
+
     }
 }

@@ -34,66 +34,60 @@ use App\Http\Controllers\user\ProfilUserController;
 // });
 
 // LandingPage
-Route::get('/', [BerandaController::class,"index"] );
-Route::get('Layanan', [LayananController::class,"index"] );
+Route::get('/', [BerandaController::class, "index"]);
+Route::get('Layanan', [LayananController::class, "index"]);
 
 
 // LandingPage Blog
-Route::get('Blog', [BlogController::class,"index"] );
-Route::get('Pelatihan1', [BlogController::class,"pelatihan1"] );
-Route::get('Pelatihan2', [BlogController::class,"pelatihan2"] );
-Route::get('Pelatihan3', [BlogController::class,"pelatihan3"] );
-Route::get('Rekrutmen1', [BlogController::class,"rekrutmen1"] );
-Route::get('Rekrutmen2', [BlogController::class,"rekrutmen2"] );
-Route::get('Rekrutmen3', [BlogController::class,"rekrutmen3"] );
+Route::get('Blog', [BlogController::class, "index"]);
+Route::get('Pelatihan1', [BlogController::class, "pelatihan1"]);
+Route::get('Pelatihan2', [BlogController::class, "pelatihan2"]);
+Route::get('Pelatihan3', [BlogController::class, "pelatihan3"]);
+Route::get('Rekrutmen1', [BlogController::class, "rekrutmen1"]);
+Route::get('Rekrutmen2', [BlogController::class, "rekrutmen2"]);
+Route::get('Rekrutmen3', [BlogController::class, "rekrutmen3"]);
 
 // LandingPage
-Route::get('profil-perusahaan', [ProfilPerusahaanController::class,"index"] );
-Route::get('formasi-pekerjaan', [FormasiPekerjaanController::class,"index"] );
-Route::get('Galeri', [GaleriController::class,"index"] );
-Route::get('Kontak', [KontakController::class,"index"] );
+Route::get('profil-perusahaan', [ProfilPerusahaanController::class, "index"]);
+Route::get('formasi-pekerjaan', [FormasiPekerjaanController::class, "index"]);
+Route::get('Galeri', [GaleriController::class, "index"]);
+Route::get('Kontak', [KontakController::class, "index"]);
 
 
 // Login dan SignIn
-Route::get('Login', [LoginController::class,"index"] );
-Route::post('user/login', [LoginController::class,"login"] );
+Route::get('Login', [LoginController::class, "index"])->name('login');
+Route::post('user/login', [LoginController::class, "login"]);
 
 
 // Sign In
-Route::get('SignIn', [LoginController::class,"signin"] );
-Route::post('user/create', [LoginController::class,"create"] );
-Route::post('SignIn', [LoginController::class,"signinProses"] );
+Route::get('SignIn', [LoginController::class, "signin"]);
+Route::post('user/create', [LoginController::class, "create"]);
+Route::post('SignIn', [LoginController::class, "signinProses"]);
 
 //Test Sending Email
 Route::get('send-email', [SendEmail::class, "index"]);
 
 
 // Logout
-Route::get('Logout', [LoginController::class,"logout"] );
+Route::get('Logout', [LoginController::class, "logout"]);
 
-// Admin
-Route::get('Profil-Admin', [ProfilController::class,"profil"] );
-Route::get('admin', [DashboardController::class,"index"] );
-Route::get('Dashboard_Detail_Pelamar', [DashboardController::class,"dashboarddetailpelamar"] );
+Route::middleware('auth')->group(function () {
+    // Admin
+    Route::get('Profil-Admin', [ProfilController::class, "profil"]);
+    Route::get('admin', [DashboardController::class, "index"]);
+    Route::get('Dashboard_Detail_Pelamar', [DashboardController::class, "dashboarddetailpelamar"]);
 
-Route::get('Pengguna', [PenggunaController::class,"index"] );
-Route::get('Data_Pengguna/{id}', [PenggunaController::class,"hapus_data_pengguna"] );
+    Route::get('Pengguna', [PenggunaController::class, "index"]);
+    Route::get('Data_Pengguna/{id}', [PenggunaController::class, "hapus_data_pengguna"]);
 
+    // Pelamar
+    Route::get('Daftar_Pelamar', [PelamarController::class, "index"]);
+    Route::get('Detail_Data_Pelamar', [PelamarController::class, "pelamar"]);
+    Route::get('Daftar_Pelamar/{id}', [PelamarController::class, "hapus_data"]);
 
-// Pelamar
-Route::get('Daftar_Pelamar', [PelamarController::class,"index"] );
-Route::get('Detail_Data_Pelamar', [PelamarController::class,"pelamar"] );
-Route::get('Daftar_Pelamar/{id}', [PelamarController::class,"hapus_data"] );
-
-
-
-
-// User
-Route::get('Profil-User', [ProfilUserController::class,"user_profil"] );
-Route::get('User', [UserController::class,"index"] );
-Route::get('Form_Lamaran', [UserController::class,"pendaftar"] );
-Route::post('user/store', [UserController::class,"store"] );
-
-
-
-
+    // User
+    Route::get('Profil-User', [ProfilUserController::class, "user_profil"]);
+    Route::get('User', [UserController::class, "index"]);
+    Route::get('Form_Lamaran', [UserController::class, "pendaftar"]);
+    Route::post('user/store', [UserController::class, "store"]);
+});

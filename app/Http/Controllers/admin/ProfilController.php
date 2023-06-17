@@ -8,8 +8,15 @@ use Illuminate\Http\Request;
 
 class ProfilController extends Controller
 {
-    
-    public function profil(){
+
+
+    public function profil()
+    {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         $profil = Profil::detail_profil(session('auth')->id);
         return view('admin.profil.index', compact('profil'), [
             "title" => "Profile"

@@ -13,23 +13,39 @@ class PelamarController extends Controller
 {
     public function index()
     {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         $pelamar = Pelamar::all();
 
-        return view("admin.pelamar.index",compact('pelamar'),  [
+        return view("admin.pelamar.index", compact('pelamar'),  [
             "title" => "Data Pelamar"
         ]);
     }
 
     public function pelamar()
     {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         $pelamar = Pelamar::all();
-    
-        return view("admin.pelamar.detail",compact('pelamar'), [
+
+        return view("admin.pelamar.detail", compact('pelamar'), [
             "title" => "Data Pelamar"
         ]);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         $validated = $request->validate([
             'id_user' => 'unique:pelamar'
         ]);
@@ -37,6 +53,11 @@ class PelamarController extends Controller
 
     public function hapus_data($id)
     {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         // $data = Pelamar::where('id', $id)->first();
         // FacadesFile::delete(public_path('foto_kk') . '/' . $data->foto_kk);
 
@@ -61,29 +82,28 @@ class PelamarController extends Controller
 
         // Mendefinisikan variabel yang akan digunakan untuk menyimpan pesan error
         $errors = [];
-        
+
         // Memeriksa apakah form telah disubmit
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        
+
             // Memeriksa apakah field 'nama_lengkap' kosong
-        if (empty($_POST['nama_lengkap'])) {
-            $errors[] = 'Nama Lengkap tidak boleh kosong.';
-        }
+            if (empty($_POST['nama_lengkap'])) {
+                $errors[] = 'Nama Lengkap tidak boleh kosong.';
+            }
 
-        // Memeriksa apakah field 'nama_panggilan' kosong
-        if (empty($_POST['nama_panggilan'])) {
-            $errors[] = 'Nama Panggilan tidak boleh kosong.';
-        }
+            // Memeriksa apakah field 'nama_panggilan' kosong
+            if (empty($_POST['nama_panggilan'])) {
+                $errors[] = 'Nama Panggilan tidak boleh kosong.';
+            }
 
-        // Memeriksa apakah terdapat error
-        if (count($errors) === 0) {
-        
-        // Proses penyimpanan data atau tindakan lain yang diperlukan
-        // jika validasi sukses
-        echo "Data telah berhasil disimpan.";
-        exit; // Menghentikan eksekusi skrip setelah berhasil disimpan
+            // Memeriksa apakah terdapat error
+            if (count($errors) === 0) {
+
+                // Proses penyimpanan data atau tindakan lain yang diperlukan
+                // jika validasi sukses
+                echo "Data telah berhasil disimpan.";
+                exit; // Menghentikan eksekusi skrip setelah berhasil disimpan
+            }
+        }
     }
-}
-    }
-  
 }

@@ -10,6 +10,11 @@ class DashboardController extends Controller
 {
     public function profil()
     {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
         return view("admin.profil.index", [
             "title" => "Profile"
         ]);
@@ -17,21 +22,29 @@ class DashboardController extends Controller
 
     public function index()
     {
-       $pelamar = Pelamar::all();
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
 
-        return view("admin.dashboard.index",compact('pelamar'), [
-            "title" => "Dashboard"
-        ]);
-    }
-
-     public function dashboarddetailpelamar()
-    {
         $pelamar = Pelamar::all();
 
-        return view("admin.dashboard.detail-pelamar",compact('pelamar'), [
+        return view("admin.dashboard.index", compact('pelamar'), [
             "title" => "Dashboard"
         ]);
     }
 
-    
+    public function dashboarddetailpelamar()
+    {
+        // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+        if (auth()->user()->id_level != 1) {
+            return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+        }
+
+        $pelamar = Pelamar::all();
+
+        return view("admin.dashboard.detail-pelamar", compact('pelamar'), [
+            "title" => "Dashboard"
+        ]);
+    }
 }
