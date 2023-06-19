@@ -17,7 +17,7 @@ class ProfilController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        $profil = Profil::detail_profil(session('auth')->id);
+        $profil = Profil::detail_profil(auth()->user()->id);
         return view('admin.profil.index', compact('profil'), [
             "title" => "Profile"
         ]);

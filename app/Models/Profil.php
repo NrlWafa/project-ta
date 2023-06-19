@@ -10,11 +10,11 @@ class profil extends Model
 {
     // use HasFactory;
 
-    public static function detail_profil($id){
+    public static function detail_profil($id)
+    {
         return DB::table('user')
             ->where('id', $id)
             ->select('id', 'nama', 'email')
             ->first();
     }
-    
 }

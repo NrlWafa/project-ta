@@ -17,10 +17,11 @@
                 <div class="card card-primary card-outline">
                     <div class="card-body box-profile">
                         <div class="text-center">
-                            <img class="profile-user-img img-fluid img-circle" src="/AdminLTE/dist/img/user4-128x128.jpg"
-                                alt="User profile picture">
+                            <img class="profile-user-img img-fluid img-circle"
+                                src="{{ asset('pas_foto/' . $pelamar->pas_foto) ?? '/AdminLTE/dist/img/user4-128x128.jpg' }}"
+                                alt="User profile picture" style="height: 150px;width:150px;object-fit:fill;">
                         </div>
-                        <h3 class="profile-username text-center mb-3 mt-3">Nama User</h3>
+                        <h3 class="profile-username text-center mb-3 mt-3">{{ auth()->user()->nama }}</h3>
                         <a href="User" class="btn btn-primary btn-block"><b>Kembali</b></a>
 
                     </div>
@@ -39,10 +40,14 @@
                         <p class="text-muted">{{ $profil->email }}</p>
                         <hr>
                         <strong>Alamat</strong>
-                        <p class="text-muted">{{ $pelamar->alamat }}</p>
+                        <p class="text-muted">
+                            {{ $pelamar->alamat_dom ?? 'Alamat akan terisi ketika lamaran telah diajukan.' }}
+                        </p>
                         <hr>
                         <strong>Tanggal Lahir</strong>
-                        <p class="text-muted">{{ date('d F Y', strtotime($pelamar->tgl_lahir)) }}</p>
+                        <p class="text-muted">
+                            {{ isset($pelamar->tanggal_lahir) ? date('d F Y', strtotime($pelamar->tanggal_lahir)) : 'Tanggal Lahir akan terisi ketika lamaran telah diajukan.' }}
+                        </p>
                         <hr>
                     </div>
                 </div>

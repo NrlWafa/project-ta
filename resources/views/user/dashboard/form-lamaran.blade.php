@@ -112,23 +112,31 @@
                 }
                 ?>
 
+
                 <form method="POST" action={{ url('user/store') }} enctype="multipart/form-data">
                     @csrf
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger text-center text-red-500">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <div class="card-body">
                         <div class="form-group">
                             <label>Nama Lengkap*</label>
-                            <input type="text" class="form-control" name="nama_lengkap"
+                            <input type="text" class="form-control" value="{{ old('nama_lengkap') }}" name="nama_lengkap"
                                 placeholder="Masukkan Nama Lengkap">
 
                         </div>
                         <div class="form-group">
-                            <label>id_user</label>
-                            <input type="text" class="form-control" name="id_user" placeholder="Masukkan Nama Lengkap">
-                        </div>
-                        <div class="form-group">
                             <label>Nama Panggilan*</label>
-                            <input type="text" class="form-control" name="nama_panggilan"
-                                placeholder="Masukkan Nama Panggilan">
+                            <input type="text" class="form-control" value="{{ old('nama_panggilan') }}"
+                                name="nama_panggilan" placeholder="Masukkan Nama Panggilan">
                         </div>
                         <div class="form-group">
                             <label>Jenis Kelamin*</label>
@@ -141,15 +149,16 @@
                         <div class="form-group">
                             <label>Tempat Lahir*</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="tempat_lahir"
-                                    placeholder="Masukkan Tempat Lahir">
+                                <input type="text" class="form-control" value="{{ old('tempat_lahir') }}"
+                                    name="tempat_lahir" placeholder="Masukkan Tempat Lahir">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir*</label>
                             <div class="input-group">
-                                <input type="date" name="tanggal_lahir" class="form-control"
-                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                <input type="date" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}"
+                                    class="form-control" data-inputmask-alias="datetime"
+                                    data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
@@ -174,55 +183,59 @@
                         </div>
                         <div class="form-group">
                             <label>Alamat KTP*</label>
-                            <input type="text" class="form-control" name="alamat_ktp"
+                            <input type="text" class="form-control" name="alamat_ktp" value="{{ old('alamat_ktp') }}"
                                 placeholder="Masukkan Alamat Sesuai KTP">
                         </div>
                         <div class="form-group">
                             <label>Alamat Domisili*</label>
-                            <input type="text" class="form-control" name="alamat_dom"
+                            <input type="text" class="form-control" name="alamat_dom" value="{{ old('alamat_dom') }}"
                                 placeholder="Masukkan Alamat Domisili">
                         </div>
                         <div class="form-group">
                             <label>Kelurahan*</label>
-                            <input type="text" class="form-control" name="kel" placeholder="Masukkan Kelurahan">
+                            <input type="text" class="form-control" name="kel" value="{{ old('kel') }}"
+                                placeholder="Masukkan Kelurahan">
                         </div>
                         <div class="form-group">
                             <label>Kecamatan*</label>
-                            <input type="text" class="form-control" name="kec" placeholder="Masukkan Kecamatan">
+                            <input type="text" class="form-control" name="kec" value="{{ old('kec') }}"
+                                placeholder="Masukkan Kecamatan">
                         </div>
                         <div class="form-group">
                             <label>Kabupaten/Kota*</label>
-                            <input type="text" class="form-control" name="kab_kota"
+                            <input type="text" class="form-control" name="kab_kota" value="{{ old('kab_kota') }}"
                                 placeholder="Masukkan Kabupaten/Kota">
                         </div>
                         <div class="form-group">
                             <label>Provinsi*</label>
-                            <input type="text" class="form-control" name="provinsi" placeholder="Masukkan Provinsi">
+                            <input type="text" class="form-control" name="provinsi" value="{{ old('provinsi') }}"
+                                placeholder="Masukkan Provinsi">
                         </div>
                         <div class="form-group">
                             <label>Nomor Handphone*</label>
-                            <input type="text" class="form-control" name="no_hp"
+                            <input type="number" class="form-control" name="no_hp" value="{{ old('no_hp') }}"
                                 placeholder="Masukkan Nomor Handphone">
                         </div>
                         <div class="form-group">
                             <label>Nomor Telp Rumah</label>
-                            <input type="text" class="form-control" name="no_telprumah"
-                                placeholder="Masukkan Nomor Telp Rumah">
+                            <input type="number" class="form-control" name="no_telprumah"
+                                value="{{ old('no_telprumah') }}" placeholder="Masukkan Nomor Telp Rumah">
                         </div>
                         <div class="form-group">
                             <label>Nomor KTP*</label>
-                            <input type="text" class="form-control" name="no_ktp" placeholder="Masukkan Nomor KTP">
+                            <input type="number" class="form-control" name="no_ktp" value="{{ old('no_ktp') }}"
+                                placeholder="Masukkan Nomor KTP">
                         </div>
                         <label>KHUSUS FORMASI PEKERJAAN UNTUK SATPAM WAJIB DISI</label>
                         <div class="form-group">
                             <label>Tinggi Badan</label>
-                            <input type="text" class="form-control" name="tinggi_badan"
-                                placeholder="Masukkan Tinggi Badan Cm">
+                            <input type="number" class="form-control" name="tinggi_badan"
+                                value="{{ old('tinggi_badan') }}" placeholder="Masukkan Tinggi Badan Cm">
                         </div>
                         <div class="form-group">
                             <label>Berat Badan</label>
-                            <input type="text" class="form-control" name="berat_badan"
-                                placeholder="Masukkan Berat Badan Kg">
+                            <input type="number" class="form-control" name="berat_badan"
+                                value="{{ old('berat_badan') }}" placeholder="Masukkan Berat Badan Kg">
                         </div>
                         <div class="form-group">
                             <label>Ukuran Baju</label>
@@ -239,12 +252,12 @@
                         </div>
                         <div class="form-group">
                             <label>Ukuran Celana</label>
-                            <input type="text" class="form-control" name="uk_celana"
+                            <input type="number" class="form-control" name="uk_celana" value="{{ old('uk_celana') }}"
                                 placeholder="Masukkan Ukuran Celana '27,28,..dst'">
                         </div>
                         <div class="form-group">
                             <label>Ukuran Sepatu</label>
-                            <input type="text" class="form-control" name="uk_sepatu"
+                            <input type="number" class="form-control" name="uk_sepatu" value="{{ old('uk_sepatu') }}"
                                 placeholder="Masukkan Ukuran Sepatu 'Khusus Satpam'">
                         </div>
 
@@ -255,53 +268,54 @@
                         <div class="form-group">
                             <label>Nama</label>
                             <input type="text" class="form-control" name="nama_pasangan"
-                                placeholder="Masukkan Nama Pasangan">
+                                value="{{ old('nama_pasangan') }}" placeholder="Masukkan Nama Pasangan">
                         </div>
                         <div class="form-group">
                             <label>Status</label>
                             <input type="text" class="form-control" name="status_psg"
-                                placeholder="Masukkan Status Pasangan">
+                                value="{{ old('status_psg') }}" placeholder="Masukkan Status Pasangan">
                         </div>
                         <div class="form-group">
                             <label>Tempat Lahir</label>
                             <input type="text" class="form-control" name="tmp_lahir_psg"
-                                placeholder="Masukkan Tempat Lahir Pasangan">
+                                value="{{ old('tmp_lahir_psg') }}" placeholder="Masukkan Tempat Lahir Pasangan">
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir</label>
                             <div class="input-group">
-                                <input type="date" name="tgl_lahir_psg" class="form-control"
-                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                <input type="date" name="tgl_lahir_psg" value="{{ old('tgl_lahir_psg') }}"
+                                    class="form-control" data-inputmask-alias="datetime"
+                                    data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Pekerjaan</label>
                             <input type="text" class="form-control" name="pekerjaan_psg"
-                                placeholder="Masukkan Pekerjaan Pasangan">
+                                value="{{ old('pekerjaan_psg') }}" placeholder="Masukkan Pekerjaan Pasangan">
                         </div>
                         <div class="form-group">
                             <label>Alamat Lengkap</label>
                             <input type="text" class="form-control" name="alamat_psg"
-                                placeholder="Masukkan Alamat Lengkap Pasangan">
+                                value="{{ old('alamat_psg') }}" placeholder="Masukkan Alamat Lengkap Pasangan">
                         </div>
                         <div class="form-group">
                             <label>Nomor Handhpone</label>
-                            <input type="text" class="form-control" name="no_hp_psg"
+                            <input type="number" class="form-control" name="no_hp_psg" value="{{ old('no_hp_psg') }}"
                                 placeholder="Masukkan Nomor Handhpone Pasangan">
                         </div>
                         <div class="form-group">
                             <label>Nama Anak</label>
-                            <input type="text" class="form-control" name="anak1"
+                            <input type="text" class="form-control" name="anak1" value="{{ old('anak1') }}"
                                 placeholder="Masukkan Nama Anak Ke-1">
                         </div>
                         <div class="form-group">
                             <label>Nama Anak</label>
-                            <input type="text" class="form-control" name="anak2"
+                            <input type="text" class="form-control" name="anak2" value="{{ old('anak2') }}"
                                 placeholder="Masukkan Nama Anak Ke-2">
                         </div>
                         <div class="form-group">
                             <label>Nama Anak</label>
-                            <input type="text" class="form-control" name="anak3"
+                            <input type="text" class="form-control" name="anak3" value="{{ old('anak3') }}"
                                 placeholder="Masukkan Nama Anak Ke-3">
                         </div>
 
@@ -310,34 +324,35 @@
                         <label>DATA ORANG TUA*</label>
                         <div class="form-group">
                             <label>Nama Ayah*</label>
-                            <input type="text" class="form-control" name="nama_ayh"
+                            <input type="text" class="form-control" name="nama_ayh" value="{{ old('nama_ayh') }}"
                                 placeholder="Masukkan Nama Lengkap Ayah">
                         </div>
                         <div class="form-group">
                             <label>Tempat Lahir Ayah*</label>
                             <input type="text" class="form-control" name="tmp_lahir_ayh"
-                                placeholder="Masukkan Tempat Lahir Ayah">
+                                value="{{ old('tmp_lahir_ayh') }}" placeholder="Masukkan Tempat Lahir Ayah">
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir Ayah*</label>
                             <div class="input-group">
-                                <input type="date" name="tgl_lahir_ayh" class="form-control"
-                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                <input type="date" name="tgl_lahir_ayh" value="{{ old('tgl_lahir_ayh') }}"
+                                    class="form-control" data-inputmask-alias="datetime"
+                                    data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Pekerjaan Ayah*</label>
                             <input type="text" class="form-control" name="pekerjaan_ayh"
-                                placeholder="Masukkan Pekerjaan Ayah">
+                                value="{{ old('pekerjaan_ayh') }}" placeholder="Masukkan Pekerjaan Ayah">
                         </div>
                         <div class="form-group">
                             <label>Alamat Lengkap Ayah*</label>
                             <input type="text" class="form-control" name="alamat_ayh"
-                                placeholder="Masukkan Alamat Lengkap Ayah">
+                                value="{{ old('alamat_ayh') }}" placeholder="Masukkan Alamat Lengkap Ayah">
                         </div>
                         <div class="form-group">
                             <label>Nomor Handhpone Ayah*</label>
-                            <input type="text" class="form-control" name="no_hp_ayh"
+                            <input type="number" class="form-control" name="no_hp_ayh" value="{{ old('no_hp_ayh') }}"
                                 placeholder="Masukkan Nomor Handhpone Ayah">
                         </div>
 
@@ -346,40 +361,41 @@
                         {{-- DATA ORANG TUA (IBU) --}}
                         <div class="form-group">
                             <label>Nama Ibu*</label>
-                            <input type="text" class="form-control" name="nama_ibu"
+                            <input type="text" class="form-control" name="nama_ibu" value="{{ old('nama_ibu') }}"
                                 placeholder="Masukkan Nama Lengkap Ibu">
                         </div>
                         <div class="form-group">
                             <label>Tempat Lahir Ibu*</label>
                             <input type="text" class="form-control" name="tmp_lahir_ibu"
-                                placeholder="Masukkan Tempat Lahir Ibu">
+                                value="{{ old('tmp_lahir_ibu') }}" placeholder="Masukkan Tempat Lahir Ibu">
                         </div>
                         <div class="form-group">
                             <label>Tanggal Lahir Ibu*</label>
                             <div class="input-group">
-                                <input type="date" name="tgl_lahir_ibu" class="form-control"
-                                    data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                <input type="date" name="tgl_lahir_ibu" value="{{ old('tgl_lahir_ibu') }}"
+                                    class="form-control" data-inputmask-alias="datetime"
+                                    data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Pekerjaan Ibu*</label>
                             <input type="text" class="form-control" name="pekerjaan_ibu"
-                                placeholder="Masukkan Pekerjaan Ibu">
+                                value="{{ old('pekerjaan_ibu') }}" placeholder="Masukkan Pekerjaan Ibu">
                         </div>
                         <div class="form-group">
                             <label>Alamat Lengkap Ibu*</label>
                             <input type="text" class="form-control" name="alamat_ibu"
-                                placeholder="Masukkan Alamat Lengkap Ibu">
+                                value="{{ old('alamat_ibu') }}" placeholder="Masukkan Alamat Lengkap Ibu">
                         </div>
                         <div class="form-group">
                             <label>Nomor Handhpone Ibu*</label>
-                            <input type="text" class="form-control" name="no_hp_ibu"
+                            <input type="number" class="form-control" name="no_hp_ibu" value="{{ old('no_hp_ibu') }}"
                                 placeholder="Masukkan Nomor Handhpone Ibu">
                         </div>
 
 
                         {{-- DATA PRIBADI --}}
-                        <label>DATA PELAMAR*</label>
+                        <label>DATA PELAMAR</label>
                         <div class="form-group">
                             <label>Golongan Darah</label>
                             <select class="custom-select rounded-0" name="gol_dar">
@@ -396,23 +412,23 @@
                         <div class="form-group">
                             <label>Nama Pendidikan Formal*</label>
                             <input type="text" class="form-control" name="pend_formal"
-                                placeholder="Masukkan Nama Pendidikan Formal">
+                                value="{{ old('pend_formal') }}" placeholder="Masukkan Nama Pendidikan Formal">
                         </div>
                         <div class="form-group">
                             <label>Tempat Pendidikan Formal*</label>
-                            <input type="text" class="form-control" name="tmp_pend"
+                            <input type="text" class="form-control" name="tmp_pend" value="{{ old('tmp_pend') }}"
                                 placeholder="Masukkan Tempat Pendidikan Formal">
                         </div>
                         <div class="form-group">
                             <label>Tahun Pendidikan*</label>
-                            <input type="text" class="form-control" name="thn_pend"
+                            <input type="number" class="form-control" name="thn_pend" value="{{ old('thn_pend') }}"
                                 placeholder="Masukkan Tahun Pendidikan Formal">
                         </div>
 
                         <div class="form-group">
                             <label>Jurusan Pendidikan*</label>
                             <input type="text" class="form-control" name="jurusan_pend"
-                                placeholder="Masukkan Jurusan Pendidikan Formal">
+                                value="{{ old('jurusan_pend') }}" placeholder="Masukkan Jurusan Pendidikan Formal">
                         </div>
 
 
@@ -421,22 +437,23 @@
                         <div class="form-group">
                             <label>Nama Pendidikan Non Formal</label>
                             <input type="text" class="form-control" name="pend_nonformal"
-                                placeholder="Masukkan Nama Pendidikan Non Formal">
+                                value="{{ old('pend_nonformal') }}" placeholder="Masukkan Nama Pendidikan Non Formal">
                         </div>
                         <div class="form-group">
                             <label>Tempat Pendidikan Non Formal</label>
                             <input type="text" class="form-control" name="tmp_pend_non"
-                                placeholder="Masukkan Tempat Pendidikan Non Formal">
+                                value="{{ old('tmp_pend_non') }}" placeholder="Masukkan Tempat Pendidikan Non Formal">
                         </div>
                         <div class="form-group">
                             <label>Tahun Pendidikan</label>
-                            <input type="text" class="form-control" name="thn_pend_non"
-                                placeholder="Masukkan Tahun Pendidikan Non Formal">
+                            <input type="number" class="form-control" name="thn_pend_non"
+                                value="{{ old('thn_pend_non') }}" placeholder="Masukkan Tahun Pendidikan Non Formal">
                         </div>
 
                         <div class="form-group">
                             <label>Jurusan Pendidikan</label>
                             <input type="text" class="form-control" name="jurusan_pend_non"
+                                value="{{ old('jurusan_pend_non') }}"
                                 placeholder="Masukkan Jurusan Pendidikan Non Formal">
                         </div>
 
@@ -447,26 +464,27 @@
                             {{-- PADA DATABASE BELUM DIGANTI NAMANYA MASIH RIWAYAR_PEKERJAAN --}}
                             <label>Nama Perusahaan</label>
                             <input type="text" class="form-control" name="nama_perusahaan"
-                                placeholder="Masukkan Nama Perusahaan">
+                                value="{{ old('nama_perusahaan') }}" placeholder="Masukkan Nama Perusahaan">
                         </div>
                         <div class="form-group">
                             <label>Bidang Usaha</label>
                             <input type="text" class="form-control" name="bidang_usaha"
-                                placeholder="Masukkan Bidang Usaha">
+                                value="{{ old('bidang_usaha') }}" placeholder="Masukkan Bidang Usaha">
                         </div>
                         <div class="form-group">
                             <label>Jabatan</label>
-                            <input type="text" class="form-control" name="jabatan" placeholder="Masukkan Jabatan">
+                            <input type="text" class="form-control" name="jabatan" value="{{ old('jabatan') }}"
+                                placeholder="Masukkan Jabatan">
                         </div>
                         <div class="form-group">
                             <label>Tahun Masuk</label>
-                            <input type="text" class="form-control" name="tahun_masuk"
-                                placeholder="Masukkan Tahun Masuk">
+                            <input type="number" class="form-control" name="tahun_masuk"
+                                value="{{ old('tahun_masuk') }}" placeholder="Masukkan Tahun Masuk">
                         </div>
                         <div class="form-group">
                             <label>Alasan Keluar</label>
                             <input type="text" class="form-control" name="alasan_keluar"
-                                placeholder="Masukkan Alasan Keluar">
+                                value="{{ old('alasan_keluar') }}" placeholder="Masukkan Alasan Keluar">
                         </div>
 
 
@@ -474,6 +492,7 @@
                         <div class="form-group">
                             <label>Riwayat Penyakit</label>
                             <input type="text" class="form-control" name="riwayat_penyakit"
+                                value="{{ old('riwayat_penyakit') }}"
                                 placeholder="Masukkan Riwayat Penyakit yang Pernah diderita">
                         </div>
                         <div class="form-group">
@@ -487,8 +506,8 @@
                         </div>
                         <div class="form-group">
                             <label>Lama Dirawat</label>
-                            <input type="text" class="form-control" name="lama_dirawat"
-                                placeholder="Berapa Lama Pernah Dirawat">
+                            <input type="number" class="form-control" name="lama_dirawat"
+                                value="{{ old('lama_dirawat') }}" placeholder="Berapa Lama Pernah Dirawat">
                         </div>
 
 
@@ -496,12 +515,12 @@
                         <div class="form-group">
                             <label>Bahasa yang DiKuasai</label>
                             <input type="text" class="form-control" name="bahasa_dikuasai"
-                                placeholder="Masukkan Bahasa yang Anda Kuasai">
+                                value="{{ old('bahasa_dikuasai') }}" placeholder="Masukkan Bahasa yang Anda Kuasai">
                         </div>
                         <div class="form-group">
                             <label>Organisasi</label>
                             <input type="text" class="form-control" name="organisasi"
-                                placeholder="Masukkan Organisasi yang Pernah Diikuti">
+                                value="{{ old('organisasi') }}" placeholder="Masukkan Organisasi yang Pernah Diikuti">
                         </div>
 
 
@@ -509,35 +528,36 @@
                         <label>KONTAK KELUARGA YANG BISA DIHUBUNGI</label>
                         <div class="form-group">
                             <label>Nama Kontak*</label>
-                            <input type="text" class="form-control" name="nm_kontak"
+                            <input type="text" class="form-control" name="nm_kontak" value="{{ old('nm_kontak') }}"
                                 placeholder="Masukkan Nama Kontak yang Bisa Dihubungi dalam Keadaan Tertentu">
                         </div>
                         <div class="form-group">
                             <label>Nomor Handphone Kontak*</label>
-                            <input type="text" class="form-control" name="no_kontak"
+                            <input type="number" class="form-control" name="no_kontak" value="{{ old('no_kontak') }}"
                                 placeholder="Masukkan Nomor Handphone">
                         </div>
                         <div class="form-group">
                             <label>Hubungan 'Kekeluargaan Dengan Kontak'*</label>
-                            <input type="text" class="form-control" name="hubungan"
+                            <input type="text" class="form-control" name="hubungan" value="{{ old('hubungan') }}"
                                 placeholder="Hubungan Anda Dengan Kentak Sebagai">
                         </div>
 
 
                         {{-- DATA PRIBADI --}}
                         <div class="form-group">
-                            <label>Nomor NPWP*</label>
-                            <input type="text" class="form-control" name="no_npwp" placeholder="Masukkan Nomor NPWP">
+                            <label>Nomor NPWP</label>
+                            <input type="number" class="form-control" name="no_npwp" value="{{ old('no_npwp') }}"
+                                placeholder="Masukkan Nomor NPWP">
                         </div>
                         <div class="form-group">
                             <label>Nomor BPJS Ketenagakerjaan*</label>
-                            <input type="text" class="form-control" name="no_bpjs_ket"
-                                placeholder="Masukkan Nomor BPJS Ketenaga Kerjaan">
+                            <input type="number" class="form-control" name="no_bpjs_ket"
+                                value="{{ old('no_bpjs_ket') }}" placeholder="Masukkan Nomor BPJS Ketenaga Kerjaan">
                         </div>
                         <div class="form-group">
                             <label>Nomor BPJS Kesehatan*</label>
-                            <input type="text" class="form-control" name="no_bpjs_kes"
-                                placeholder="Masukkan Nomor BPJS Kesehatan">
+                            <input type="number" class="form-control" name="no_bpjs_kes"
+                                value="{{ old('no_bpjs_kes') }}" placeholder="Masukkan Nomor BPJS Kesehatan">
                         </div>
                         <div class="form-group">
                             <label>Jabatan yang Dilamar*</label>
@@ -560,7 +580,7 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk"
-                                        placeholder="Upload Foto" required>
+                                        placeholder="Upload Foto">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
@@ -570,7 +590,7 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kta" id="foto_kta"
-                                        placeholder="Upload Foto" required>
+                                        placeholder="Upload Foto">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
@@ -580,7 +600,7 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_npwp" id="foto_npwp"
-                                        placeholder="Upload Foto" required>
+                                        placeholder="Upload Foto">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
@@ -590,7 +610,7 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="pas_foto" id="pas_foto"
-                                        placeholder="Upload Foto" required>
+                                        placeholder="Upload Foto">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
@@ -600,7 +620,7 @@
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_ktp" id="foto_ktp"
-                                        placeholder="Upload Foto" required>
+                                        placeholder="Upload Foto">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>

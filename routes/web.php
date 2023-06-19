@@ -75,14 +75,14 @@ Route::middleware('auth')->group(function () {
     // Admin
     Route::get('Profil-Admin', [ProfilController::class, "profil"]);
     Route::get('admin', [DashboardController::class, "index"]);
-    Route::get('Dashboard_Detail_Pelamar', [DashboardController::class, "dashboarddetailpelamar"]);
+    Route::get('Dashboard_Detail_Pelamar/{id}', [DashboardController::class, "dashboarddetailpelamar"]);
 
     Route::get('Pengguna', [PenggunaController::class, "index"]);
     Route::get('Data_Pengguna/{id}', [PenggunaController::class, "hapus_data_pengguna"]);
 
     // Pelamar
     Route::get('Daftar_Pelamar', [PelamarController::class, "index"]);
-    Route::get('Detail_Data_Pelamar', [PelamarController::class, "pelamar"]);
+    Route::get('Detail_Data_Pelamar/{id}', [PelamarController::class, "pelamar"]);
     Route::get('Daftar_Pelamar/{id}', [PelamarController::class, "hapus_data"]);
 
     // User

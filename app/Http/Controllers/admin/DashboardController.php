@@ -34,14 +34,13 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function dashboarddetailpelamar()
+    public function dashboarddetailpelamar($id)
     {
         // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
         if (auth()->user()->id_level != 1) {
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
-
-        $pelamar = Pelamar::all();
+        $pelamar = Pelamar::find($id);
 
         return view("admin.dashboard.detail-pelamar", compact('pelamar'), [
             "title" => "Dashboard"

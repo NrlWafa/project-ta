@@ -55,7 +55,7 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/" class="nav-link">Beranda</a>
+                    <a href="{{ url('/') }}" class="nav-link">Beranda</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -73,8 +73,8 @@
                             </p>
                         </li>
                         <li class="user-footer">
-                            <a href="Profil-Admin" class="btn btn-default btn-flat">Profile</a>
-                            <a href="Logout" class="btn btn-default btn-flat float-right">Logout</a>
+                            <a href="{{ url('Profil-Admin') }}" class="btn btn-default btn-flat">Profile</a>
+                            <a href="{{ url('Logout') }}" class="btn btn-default btn-flat float-right">Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -84,7 +84,7 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-light-blue elevation-4">
-            <a href="/" class="brand-link" style="background-color: blue">
+            <a href="{{ url('/') }}"class="brand-link" style="background-color: blue">
                 <img src="{{ asset('AdminLTE/dist/img/yazapratama-logo.png') }}" alt="User Image"
                     class="brand-image img-circle elevation-3" style="opacity: ">
                 <span class="brand-text font-weight:500" style="color: white">PT Yaza Pratama</span>
@@ -97,7 +97,8 @@
                         data-accordion="false">
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
-                            <a href="admin" class="nav-link {{ $title === 'Dashboard' ? 'active' : '' }}">
+                            <a href="{{ url('admin') }}"
+                                class="nav-link {{ $title === 'Dashboard' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -105,7 +106,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="Pengguna" class="nav-link {{ $title === 'Data Pengguna' ? 'active' : '' }}">
+                            <a href="{{ url('Pengguna') }}"
+                                class="nav-link {{ $title === 'Data Pengguna' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>
                                     Data Pengguna
@@ -113,7 +115,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="Daftar_Pelamar" class="nav-link {{ $title === 'Data Pelamar' ? 'active' : '' }}">
+                            <a href="{{ url('Daftar_Pelamar') }}"
+                                class="nav-link {{ $title === 'Data Pelamar' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-book-medical"></i>
                                 <p>
                                     Data Pelamar

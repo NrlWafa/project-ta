@@ -34,6 +34,17 @@
                 <p class="text-center text-3xl font-weight-bold">PT Yaza Pratama</p>
                 <form class="flex flex-col pt-3 md:pt-8" action={{ url('user/create') }} method="POST">
                     @csrf
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger text-center text-red-500">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <div class="flex flex-col pt-4">
                         <label for="nama" class="text-lg">Username</label>
                         <input type="text" value="{{ Session::get('nama') }}" name="nama"

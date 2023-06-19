@@ -97,7 +97,8 @@
                                 <td>{{ $pel->jabatan_lamaran }}</td>
                                 <td>{{ $pel->no_hp }}</td>
                                 <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
-                                <td><a href="Dashboard_Detail_Pelamar" class="btn-sm btn-primary">Lihat
+                                <td><a href="{{ url('Dashboard_Detail_Pelamar/' . $pel->id) }}"
+                                        class="btn-sm btn-primary">Lihat
                                         Detail</a>
                                 </td>
                             </tr>
