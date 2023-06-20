@@ -26,8 +26,8 @@
                                     <td>{{ $us->id }}</td>
                                     <td>{{ $us->nama }}</td>
                                     <td>{{ $us->email }}</td>
+                                    <td>{{ $us->level_name }}</td>
 
-                                    <td>{{ $us->id_level }}</td>
                                     {{-- Belum kawa ngambil data level_name di tabel level --}}
 
                                     <td>{{ date('d F Y', strtotime($us->created_at)) }}</td>

@@ -97,13 +97,13 @@ class UserController extends Controller
                 'tgl_lahir_ayh' => 'required',
                 'pekerjaan_ayh' => 'required',
                 'alamat_ayh' => 'required',
-                'no_hp_ayh' => 'required',
+                'no_hp_ayh' => 'nullable',
                 'nama_ibu' => 'required',
                 'tmp_lahir_ibu' => 'required',
                 'tgl_lahir_ibu' => 'required',
                 'pekerjaan_ibu' => 'required',
                 'alamat_ibu' => 'required',
-                'no_hp_ibu' => 'required',
+                'no_hp_ibu' => 'nullable',
                 'gol_dar' => 'nullable',
                 'pend_formal' => 'required',
                 'tmp_pend' => 'required',
@@ -131,7 +131,7 @@ class UserController extends Controller
                 'no_bpjs_kes' => 'nullable',
                 'jabatan_lamaran' => 'required',
                 'foto_kk' => 'required|mimes:jpeg,jpg,png',
-                'foto_kta' => 'required|mimes:jpeg,jpg,png',
+                'foto_kta' => 'nullable|mimes:jpeg,jpg,png',
                 'foto_npwp' => 'nullable|mimes:jpeg,jpg,png',
                 'pas_foto' => 'required|mimes:jpeg,jpg,png',
                 'foto_ktp' => 'required|mimes:jpeg,jpg,png'
@@ -139,64 +139,59 @@ class UserController extends Controller
 
             ],
             [
-                // 'nama_lengkap.required' => 'Nama Wajib diisi!',
-                // 'nama_lengkap.required' => 'Foto tidak boleh kosong',
-                // 'nama_panggilan.required' => 'Nama Wajib diisi!',
-                // 'nama_panggilan.required' => 'Foto tidak boleh kosong',
-                // 'jenis_kelamin.required' => 'Nama Wajib diisi!',
-                // 'jenis_kelamin.required' => 'Foto tidak boleh kosong',
-                // 'tempat_lahir.required' => 'Nama Wajib diisi!',
-                // 'tempat_lahir.required' => 'Foto tidak boleh kosong',
-                // 'tanggal_lahir.required' => 'Nama Wajib diisi!',
-                // 'tanggal_lahir.required' => 'Foto tidak boleh kosong',
-                // 'status_perkawinan.required' => 'Nama Wajib diisi!',
-                // 'status_perkawinan.required' => 'Foto tidak boleh kosong',
-                // 'agama.required' => 'Nama Wajib diisi!',
-                // 'agama.required' => 'Foto tidak boleh kosong',
-                // 'alamat_ktp.required' => 'Nama Wajib diisi!',
-                // 'alamat_ktp.required' => 'Foto tidak boleh kosong',
-                // 'alamat_dom.required' => 'Nama Wajib diisi!',
-                // 'alamat_dom.required' => 'Foto tidak boleh kosong',
-                // 'kel.required' => 'Nama Wajib diisi!',
-                // 'kel.required' => 'Foto tidak boleh kosong',
-                // 'kec.required' => 'Nama Wajib diisi!',
-                // 'kec.required' => 'Foto tidak boleh kosong',
-                // 'kab_kota.required' => 'Nama Wajib diisi!',
-                // 'kab_kota.required' => 'Foto tidak boleh kosong',
-                // 'provinsi.required' => 'Nama Wajib diisi!',
-                // 'provinsi.required' => 'Foto tidak boleh kosong',
-                // 'no_hp.required' => 'Nama Wajib diisi!',
-                // 'no_hp.required' => 'Foto tidak boleh kosong',
-                // 'nama_ayh.required' => 'Nama Wajib diisi!',
-                // 'nama_ayh.required' => 'Foto tidak boleh kosong',
-                // 'tmp_lahir_ayh.required' => 'Nama Wajib diisi!',
-                // 'tmp_lahir_ayh.required' => 'Foto tidak boleh kosong',
+                'nama_lengkap.required' => 'Nama Lengkap Wajib diisi!',
+                'nama_panggilan.required' => 'Nama Panggilan Wajib diisi!',
+                'jenis_kelamin.required' => 'Jenis Kelamin Wajib dipilih!',
+                'tempat_lahir.required' => 'Tempat Lahir Wajib diisi!',
+                'tanggal_lahir.required' => 'Tanggal Lahir Wajib diisi!',
 
+                'status_perkawinan.required' => 'Status Perkawinan Wajib dipilih!',
 
-
-
-
-
-
+                'agama.required' => 'Agama Wajib dipilih!',
+                'alamat_ktp.required' => 'Alamat KTP Wajib diisi!',
+                'alamat_dom.required' => 'Alamat Domisili Wajib diisi!',
+                'kel.required' => 'Kelurahan Wajib diisi!',
+                'kec.required' => 'Kecamatan Wajib diisi!',
+                'kab_kota.required' => 'Kabupaten/Kota Wajib diisi!',
+                'provinsi.required' => 'Provinsi Wajib diisi!',
+                'no_hp.required' => 'Nomor Handphone Wajib diisi!',
+                'no_ktp.required' => 'Nomor KTP Wajib diisi!',
+                'nama_ayh.required' => 'Nama Ayah Wajib diisi!',
+                'tmp_lahir_ayh.required' => 'Tempat Lahir Ayah Wajib diisi!',
+                'tgl_lahir_ayh.required' => 'Tanggal Lahir Ayah Wajib diisi!',
+                'pekerjaan_ayh.required' => 'Pekerjaan Ayah Wajib diisi!',
+                'alamat_ayh.required' => 'Alamat Ayah Wajib diisi!',
+                'nama_ibu.required' => 'Nama Ibu Wajib diisi!',
+                'tmp_lahir_ibu.required' => 'Tempat Lahir Ibu Wajib diisi!',
+                'tgl_lahir_ibu.required' => 'Tanggal Lahir Ibu Wajib diisi!',
+                'pekerjaan_ibu.required' => 'Pekerjaan Ibu Wajib diisi!',
+                'alamat_ibu.required' => 'Alamat Ibu Wajib diisi!',
+                'pend_formal.required' => 'Tempat Pendidikan Formal Wajib diisi!',
+                'tmp_pend.required' => 'Tempat Pendidikan Formal Wajib diisi!',
+                'thn_pend.required' => 'Tahun Pendidikan Formal Wajib diisi!',
+                'jurusan_pend.required' => 'Jurusan Pendidikan Formal Wajib diisi!',
+                'nm_kontak.required' => 'Nama Kontak yang Bisa Dihubungi Wajib diisi!',
+                'no_kontak.required' => 'Nomor Kontak yang Bisa Dihubungi Wajib diisi!',
+                'hubungan.required' => 'Hubungan Kekeluargaan dengan Kontak Wajib diisi!',
+                'jabatan_lamaran.required' => 'Jabatan yang Dilamar Wajib dipilih!',
 
 
                 'nama.required' => 'Nama Wajib diisi!',
-                'foto_kk.required' => 'Foto tidak boleh kosong',
+                'foto_kk.required' => 'Foto Kartu Keluarga tidak boleh kosong!',
                 'foto_kk.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
 
-                'foto_kta.required' => 'Foto tidak boleh kosong',
                 'foto_kta.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
 
                 'foto_npwp.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
 
-                'pas_foto.required' => 'Foto tidak boleh kosong',
+                'pas_foto.required' => 'Pas Foto tidak boleh kosong!',
                 'pas_foto.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
 
-                'foto_ktp.required' => 'Foto tidak boleh kosong',
+                'foto_ktp.required' => 'Foto KTP tidak boleh kosong!',
                 'foto_ktp.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG'
             ]
         );
-
+        // dd($req);
 
 
         // Kartu Keluarga
@@ -206,16 +201,40 @@ class UserController extends Controller
         $foto_kk->move(public_path('foto_kk'), $foto_kk_nama);
 
         // KTA
+        // $foto_kta = $req->file('foto_kta');
+        // $foto_ekstensi = $foto_kta->extension();
+        // $foto_kta_nama = date('ymdhis') . "." . $foto_ekstensi;
+        // $foto_kta->move(public_path('foto_kta'), $foto_kta_nama);
+
+
         $foto_kta = $req->file('foto_kta');
-        $foto_ekstensi = $foto_kta->extension();
-        $foto_kta_nama = date('ymdhis') . "." . $foto_ekstensi;
-        $foto_kta->move(public_path('foto_kta'), $foto_kta_nama);
+
+        if ($foto_kta) {
+            $foto_ekstensi = $foto_kta->extension();
+            $foto_kta_nama = date('ymdhis') . "." . $foto_ekstensi;
+            $foto_kta->move(public_path('foto_kta'), $foto_kta_nama);
+        } else {
+            // Lakukan tindakan alternatif jika foto tidak diunggah
+            $foto_kta_nama = null; // Atau berikan nilai default sesuai kebutuhan
+        }
 
         // NPWP
+        // $foto_npwp = $req->file('foto_npwp');
+        // $foto_ekstensi = $foto_npwp->extension();
+        // $foto_npwp_nama = date('ymdhis') . "." . $foto_ekstensi;
+        // $foto_npwp->move(public_path('foto_npwp'), $foto_npwp_nama);
+
         $foto_npwp = $req->file('foto_npwp');
-        $foto_ekstensi = $foto_npwp->extension();
-        $foto_npwp_nama = date('ymdhis') . "." . $foto_ekstensi;
-        $foto_npwp->move(public_path('foto_npwp'), $foto_npwp_nama);
+
+        if ($foto_npwp) {
+            $foto_ekstensi = $foto_npwp->extension();
+            $foto_npwp_nama = date('ymdhis') . "." . $foto_ekstensi;
+            $foto_npwp->move(public_path('foto_npwp'), $foto_npwp_nama);
+        } else {
+            // Tindakan yang perlu diambil jika tidak ada file yang diunggah (null)
+            // Lakukan tindakan alternatif jika foto tidak diunggah
+            $foto_npwp_nama = null; // Atau berikan nilai default sesuai kebutuhan
+        }
 
         // PAS FOTO
         $pas_foto = $req->file('pas_foto');
@@ -251,6 +270,8 @@ class UserController extends Controller
             'tinggi_badan' => $req->input('tinggi_badan'),
             'berat_badan' => $req->input('berat_badan'),
             'uk_baju' => $req->input('uk_baju'),
+
+
             'uk_celana' => $req->input('uk_celana'),
             'uk_sepatu' => $req->input('uk_sepatu'),
             'nama_pasangan' => $req->input('nama_pasangan'),

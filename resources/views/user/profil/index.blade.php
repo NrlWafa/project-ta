@@ -17,9 +17,10 @@
                 <div class="card card-primary card-outline">
                     <div class="card-body box-profile">
                         <div class="text-center">
+
                             <img class="profile-user-img img-fluid img-circle"
-                                src="{{ asset('pas_foto/' . $pelamar->pas_foto) ?? '/AdminLTE/dist/img/user4-128x128.jpg' }}"
-                                alt="User profile picture" style="height: 150px;width:150px;object-fit:fill;">
+                                src="{{ asset('pas_foto/' . ($pelamar->pas_foto ?? 'default.jpg')) }}" alt=""
+                                style="height: 150px; width: 150px; object-fit: fill;">
                         </div>
                         <h3 class="profile-username text-center mb-3 mt-3">{{ auth()->user()->nama }}</h3>
                         <a href="User" class="btn btn-primary btn-block"><b>Kembali</b></a>

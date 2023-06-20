@@ -81,7 +81,7 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>ID User</th>
                             <th>Nama</th>
                             <th>Formasi Pekerjaan</th>
                             <th>No Telp</th>
@@ -92,7 +92,7 @@
                     <tbody>
                         @foreach ($pelamar as $pel)
                             <tr>
-                                <td>{{ $pel->id }}</td>
+                                <td>{{ $pel->id_user }}</td>
                                 <td>{{ $pel->nama_lengkap }}</td>
                                 <td>{{ $pel->jabatan_lamaran }}</td>
                                 <td>{{ $pel->no_hp }}</td>

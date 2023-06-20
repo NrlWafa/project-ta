@@ -18,10 +18,12 @@
                     <div class="card-body box-profile">
                         <div class="text-center">
                             <img class="profile-user-img img-fluid img-circle" src="/AdminLTE/dist/img/user4-128x128.jpg"
-                                alt="User profile picture">
+                                alt="User profile picture" style="height: 150px;width:150px;object-fit:fill;">
                         </div>
-                        {{-- <h3 class="profil-nama text-center mb-3 mt-3">{{ $profil->nama }}</h3> --}}
+
+                        <h5 class="profil-nama text-center mb-3 mt-3">{{ $profil->nama }}</h5>
                         <a href="admin" class="btn btn-primary btn-block"><b>Kembali</b></a>
+
 
                     </div>
                 </div>

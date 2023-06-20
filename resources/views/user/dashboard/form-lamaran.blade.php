@@ -10,109 +10,8 @@
                     <h3 class="card-title">Form Pendaftaran</h3>
                 </div>
                 <!-- /.card-header -->
+
                 <!-- form start -->
-
-                <?php
-                if (isset($_POST['submit'])) {
-                    if (empty($_POST['nama_lengkap'])) {
-                        echo 'Nama Lengkap Harus Diisi!';
-                    } elseif (empty($_POST['nama_panggilan'])) {
-                        echo 'Nama Panggilan Harus Diisi!';
-                    } elseif (empty($_POST['jenis_kelamin'])) {
-                        echo 'Jenis Kelamin Harus Diisi!';
-                    } elseif (empty($_POST['tempat_lahir'])) {
-                        echo 'Tempat Lahir Harus Diisi!';
-                    } elseif (empty($_POST['tanggal_lahir'])) {
-                        echo 'Tanggal Lahir Harus Diisi!';
-                    } elseif (empty($_POST['status_perkawinan'])) {
-                        echo 'Status Perkawinan Harus Diisi!';
-                    } elseif (empty($_POST['agama'])) {
-                        echo 'Agama Harus Diisi!';
-                    } elseif (empty($_POST['alamat_ktp'])) {
-                        echo 'Alamat KTP Harus Diisi!';
-                    } elseif (empty($_POST['alamat_dom'])) {
-                        echo 'Alamat Domisili Harus Diisi!';
-                    } elseif (empty($_POST['kel'])) {
-                        echo 'Kelurahan Harus Diisi!';
-                    } elseif (empty($_POST['kec'])) {
-                        echo 'Kecamatan Harus Diisi!';
-                    } elseif (empty($_POST['kab_kota'])) {
-                        echo 'Kabupaten/Kota Harus Diisi!';
-                    } elseif (empty($_POST['provinsi'])) {
-                        echo 'Provinsi Harus Diisi!';
-                    } elseif (empty($_POST['no_hp'])) {
-                        echo 'Nomor Handphone Harus Diisi!';
-                    } elseif (empty($_POST['no_ktp'])) {
-                        echo 'Nomor KTP Harus Diisi!';
-                    } elseif (empty($_POST['nama_ayh'])) {
-                        echo 'Nama Ayah Harus Diisi!';
-                    } elseif (empty($_POST['tmp_lahir_ayh'])) {
-                        echo 'Tempat Lahir Ayah Harus Diisi!';
-                    } elseif (empty($_POST['tgl_lahir_ayh'])) {
-                        echo 'Tanggal Lahir Ayah Harus Diisi!';
-                    } elseif (empty($_POST['pekerjaan_ayh'])) {
-                        echo 'Pekerjaan Ayah Harus Diisi!';
-                    } elseif (empty($_POST['alamat_ayh'])) {
-                        echo 'Alamat Lengkap Ayah Harus Diisi!';
-                    } elseif (empty($_POST['no_hp_ayh'])) {
-                        echo 'Nomor Handphone Ayah Harus Diisi!';
-                    } elseif (empty($_POST['nama_ibu'])) {
-                        echo 'Nama Ibu Harus Diisi!';
-                    } elseif (empty($_POST['tmp_lahir_ibu'])) {
-                        echo 'Tempat Lahir Ibu Harus Diisi!';
-                    } elseif (empty($_POST['tgl_lahir_ibu'])) {
-                        echo 'Tanggal Lahir Ibu Harus Diisi!';
-                    } elseif (empty($_POST['pekerjaan_ibu'])) {
-                        echo 'Pekerjaan Ibu Harus Diisi!';
-                    } elseif (empty($_POST['alamat_ibu'])) {
-                        echo 'Alamat Lengkap Ibu Harus Diisi!';
-                    } elseif (empty($_POST['no_hp_ibu'])) {
-                        echo 'Nomor Handphone Ibu Harus Diisi!';
-                    } elseif (empty($_POST['pend_formal'])) {
-                        echo 'Nama Pendidikan Formal Harus Diisi!';
-                    } elseif (empty($_POST['tmp_pend'])) {
-                        echo 'Tempat Pendidikan Formal Harus Diisi!';
-                    } elseif (empty($_POST['thn_pend'])) {
-                        echo 'Tahun Pendidikan Harus Diisi!';
-                    } elseif (empty($_POST['jurusan_pend'])) {
-                        echo 'Jurusan Pendidikan Harus Diisi!';
-                    } elseif (empty($_POST['nm_kontak'])) {
-                        echo 'Nama Kontak Harus Diisi!';
-                    } elseif (empty($_POST['no_kontak'])) {
-                        echo 'Nomor Handphone Kontak Harus Diisi!';
-                    } elseif (empty($_POST['hubungan'])) {
-                        echo 'Hubungan Kekeluargaan Dengan Kontak Harus Diisi!';
-                    } elseif (empty($_POST['no_npwp'])) {
-                        echo 'Nomor NPWP Harus Diisi!';
-                    } elseif (empty($_POST['no_bpjs_ket'])) {
-                        echo 'Nomor BPJS Ketenagakerjaan Harus Diisi!';
-                    } elseif (empty($_POST['no_bpjs_kes'])) {
-                        echo 'Nomor BPJS Kesehatan Harus Diisi!';
-                    } elseif (empty($_POST['jabatan_lamaran'])) {
-                        echo 'Jabatan yang Dilamar Harus Diisi!';
-                    } elseif (empty($_POST['foto_kk'])) {
-                        echo 'Foto Kartu Keluarga Harus Diisi!';
-                    } elseif (empty($_POST['foto_kta'])) {
-                        echo 'Foto KTA Harus Diisi!';
-                    } elseif (empty($_POST['foto_npwp'])) {
-                        echo 'Foto NPWP Harus Diisi!';
-                    } elseif (empty($_POST['pas_foto'])) {
-                        echo 'Pas Foto Harus Diisi!';
-                    } elseif (empty($_POST['foto_ktp'])) {
-                        echo 'Foto KTP Harus Diisi!';
-                    } else {
-                        # code...
-                    }
-                    // $nama_lengkap = $_POST['nama_lengkap'];
-                    // $nama_panggilan = $_POST['nama_panggilan'];
-                
-                    // if ($nama_lengkap == '') {
-                    //     echo 'Nama Harus Diisi!';
-                    // }
-                }
-                ?>
-
-
                 <form method="POST" action={{ url('user/store') }} enctype="multipart/form-data">
                     @csrf
 
@@ -240,14 +139,14 @@
                         <div class="form-group">
                             <label>Ukuran Baju</label>
                             <select class="custom-select rounded-0" name="uk_baju">
-                                <option>Pilih Ukuran</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-                                <option>XXL</option>
-                                <option>3XL</option>
-                                <option>4XL</option>
+                                <option value="">Pilih Ukuran</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                                <option value="3XL">3XL</option>
+                                <option value="4XL">4XL</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -351,7 +250,7 @@
                                 value="{{ old('alamat_ayh') }}" placeholder="Masukkan Alamat Lengkap Ayah">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handhpone Ayah*</label>
+                            <label>Nomor Handhpone Ayah</label>
                             <input type="number" class="form-control" name="no_hp_ayh" value="{{ old('no_hp_ayh') }}"
                                 placeholder="Masukkan Nomor Handhpone Ayah">
                         </div>
@@ -388,7 +287,7 @@
                                 value="{{ old('alamat_ibu') }}" placeholder="Masukkan Alamat Lengkap Ibu">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handhpone Ibu*</label>
+                            <label>Nomor Handhpone Ibu</label>
                             <input type="number" class="form-control" name="no_hp_ibu" value="{{ old('no_hp_ibu') }}"
                                 placeholder="Masukkan Nomor Handhpone Ibu">
                         </div>
@@ -399,11 +298,11 @@
                         <div class="form-group">
                             <label>Golongan Darah</label>
                             <select class="custom-select rounded-0" name="gol_dar">
-                                <option>Pilih Golongan Darah</option>
-                                <option>A</option>
-                                <option>B</option>
-                                <option>AB</option>
-                                <option>O</option>
+                                <option value="">Pilih Golongan Darah</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="AB">AB</option>
+                                <option value="O">O</option>
                             </select>
                         </div>
 
@@ -497,7 +396,7 @@
                         </div>
                         <div class="form-group">
                             {{-- PADA DATABASE NAMANYA RS --}}
-                            <label>Pernah di rawat di Rumah Sakit</label>
+                            <label>Pernah di rawat di Rumah Sakit*</label>
                             <select class="custom-select rounded-0" name="rs">
                                 <option>Pilih</option>
                                 <option>Ya</option>
@@ -550,12 +449,12 @@
                                 placeholder="Masukkan Nomor NPWP">
                         </div>
                         <div class="form-group">
-                            <label>Nomor BPJS Ketenagakerjaan*</label>
+                            <label>Nomor BPJS Ketenagakerjaan</label>
                             <input type="number" class="form-control" name="no_bpjs_ket"
                                 value="{{ old('no_bpjs_ket') }}" placeholder="Masukkan Nomor BPJS Ketenaga Kerjaan">
                         </div>
                         <div class="form-group">
-                            <label>Nomor BPJS Kesehatan*</label>
+                            <label>Nomor BPJS Kesehatan</label>
                             <input type="number" class="form-control" name="no_bpjs_kes"
                                 value="{{ old('no_bpjs_kes') }}" placeholder="Masukkan Nomor BPJS Kesehatan">
                         </div>
@@ -586,7 +485,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="foto">Foto KTA*</label>
+                            <label for="foto">Foto Kartu Tanda Anggota</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kta" id="foto_kta"
@@ -596,7 +495,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="foto">Foto NPWP*</label>
+                            <label for="foto">Foto NPWP</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_npwp" id="foto_npwp"
@@ -621,7 +520,7 @@
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_ktp" id="foto_ktp"
                                         placeholder="Upload Foto">
-                                    <label class="custom-file-label">Pilih Foto</label>
+                                    <label class="custom-file-label" for="foto_ktp">Pilih Foto</label>
                                 </div>
                             </div>
                         </div>
@@ -674,4 +573,23 @@
             <!-- /.card -->
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.js"
+        integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {{-- Loties --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script>
+        document.getElementById('submit').onclick = function() {
+            Swal.fire({
+                position: 'center',
+                imageUrl: 'https://unsplash.it/400/200',
+                imageWidth: 400,
+                imageHeight: 200,
+                title: 'Data berhasil tersimpan',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    </script>
 @endsection
