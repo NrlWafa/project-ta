@@ -474,56 +474,97 @@
 
 
                         {{-- DATA FOTO FOTO --}}
+                        {{-- <div class="form-group">
+                            <label for="foto_kk">Foto Kartu Keluarga*</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk">
+                                    <label class="custom-file-label">Pilih Foto</label>
+                                </div>
+                            </div>
+                        </div> --}}
+
                         <div class="form-group">
-                            <label for="foto">Foto Kartu Keluarga*</label>
+                            <label for="foto_kk">Foto Kartu Keluarga*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk"
-                                        placeholder="Upload Foto">
+                                        onchange="showSelectedFoto(event, 'foto_kk_preview')">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
+                            <img id="foto_kk_preview" src="#" alt=""
+                                style="max-width: 200px; max-height: 200px;">
                         </div>
+
                         <div class="form-group">
-                            <label for="foto">Foto Kartu Tanda Anggota</label>
+                            <label for="foto_kta">Foto Kartu Tanda Anggota</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_kta" id="foto_kta"
-                                        placeholder="Upload Foto">
+                                        onchange="showSelectedFoto(event, 'foto_kta_preview')">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
+                            <img id="foto_kta_preview" src="#" alt=""
+                                style="max-width: 200px; max-height: 200px;">
                         </div>
+
                         <div class="form-group">
-                            <label for="foto">Foto NPWP</label>
+                            <label for="foto_npwp">Foto NPWP</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_npwp" id="foto_npwp"
-                                        placeholder="Upload Foto">
+                                        onchange="showSelectedFoto(event, 'foto_npwp_preview')">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
+                            <img id="foto_npwp_preview" src="#" alt=""
+                                style="max-width: 200px; max-height: 200px;">
                         </div>
+
                         <div class="form-group">
-                            <label for="foto">Pas Foto*</label>
+                            <label for="pas_foto">Pas Foto*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="pas_foto" id="pas_foto"
-                                        placeholder="Upload Foto">
+                                        onchange="showSelectedFoto(event, 'pas_foto_preview')">
                                     <label class="custom-file-label">Pilih Foto</label>
                                 </div>
                             </div>
+                            <img id="pas_foto_preview" src="#" alt=""
+                                style="max-width: 200px; max-height: 200px;">
                         </div>
+
                         <div class="form-group">
-                            <label for="foto">Foto KTP*</label>
+                            <label for="foto_ktp">Foto KTP*</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="foto_ktp" id="foto_ktp"
-                                        placeholder="Upload Foto">
+                                        onchange="showSelectedFoto(event, 'foto_ktp_preview')">
                                     <label class="custom-file-label" for="foto_ktp">Pilih Foto</label>
                                 </div>
                             </div>
+                            <img id="foto_ktp_preview" src="#" alt=""
+                                style="max-width: 200px; max-height: 200px;">
                         </div>
+
+                        <!-- Tambahkan kode script JavaScript berikut -->
+                        <script>
+                            function showSelectedFoto(event, previewId) {
+                                const input = event.target;
+                                if (input.files && input.files[0]) {
+                                    const reader = new FileReader();
+                                    reader.onload = function(e) {
+                                        const preview = document.getElementById(previewId);
+                                        preview.setAttribute('src', e.target.result);
+                                    }
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                        </script>
+
+
 
                         {{-- <div class="mb-3">
                             <label for="foto" class="form-label">Foto Kartu Keluarga*</label>
@@ -564,7 +605,8 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary" name="submit">Simpan</button>
+                        <button type="submit" class="btn btn-primary" id="save">Simpan</button>
+
                         <a href="User" class="btn btn-danger">Batal</a>
                     </div>
                 </form>
@@ -580,7 +622,9 @@
     {{-- Loties --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
     <script>
-        document.getElementById('submit').onclick = function() {
+        // var slideSource = document.getElementById('slideSource');
+
+        document.getElementById('save').onclick = function() {
             Swal.fire({
                 position: 'center',
                 imageUrl: 'https://unsplash.it/400/200',
@@ -588,7 +632,7 @@
                 imageHeight: 200,
                 title: 'Data berhasil tersimpan',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2000
             })
         }
     </script>

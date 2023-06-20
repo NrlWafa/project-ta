@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Pelamar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -28,6 +29,7 @@ class DashboardController extends Controller
         }
 
         $pelamar = Pelamar::all();
+
 
         return view("admin.dashboard.index", compact('pelamar'), [
             "title" => "Dashboard"
