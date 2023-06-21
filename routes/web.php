@@ -8,6 +8,7 @@ use App\Http\Controllers\admin\PelamarController;
 use App\Http\Controllers\admin\PenggunaController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\ProfilController;
+use App\Http\Controllers\admin\VerificationController;
 use App\Http\Controllers\landingpage\BlogController;
 use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
@@ -62,7 +63,30 @@ Route::post('user/login', [LoginController::class, "login"]);
 // Sign In
 Route::get('SignIn', [LoginController::class, "signin"]);
 Route::post('user/create', [LoginController::class, "create"]);
-Route::post('SignIn', [LoginController::class, "signinProses"]);
+
+Route::post('SignIn', [LoginController::class, "create"]);
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+// Route untuk redirect link verifikasi
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+
+    // Setelah klik link  verifikasi akan diarahkan ke dashboard User
+    return redirect('Login');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::get('User', function () {
+    return 'Akun Anda telah terverifikasi';
+})->middleware(['auth', 'verified']);
+
+
+
+// Route::get('/email/verify/{id}/{hash}', [VerificationController::class, "verify"])
+//     ->name('verification.verify');
+
 
 //Test Sending Email
 Route::get('send-email', [SendEmail::class, "index"]);

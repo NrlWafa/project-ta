@@ -9,6 +9,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Session as FacadesSession;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -88,6 +89,8 @@ class LoginController extends Controller
             'password.min' => 'Minimum password yang diizinkan adalah 6 karakter'
         ]);
 
+
+
         // Memanggil data
         $data = [
             'nama' => $req->nama,
@@ -98,7 +101,13 @@ class LoginController extends Controller
         ];
 
         // Memasukkan data sigin kedalam tabel user
-        User::create($data);
+        $user = User::create($data);
+
+        event(new Registered($user));
+
+        Auth::login($user);
+
+        return redirect('/email/verify');
 
 
 
@@ -125,19 +134,26 @@ class LoginController extends Controller
         }
     }
 
-
-    public function signinProses(Request $request)
+    protected function authenticated(Request $request, $user)
     {
-        $user = User::create([
-            'nama' => $request->email,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect('/email/verify');
+        if (!$user->hasVerifiedEmail()) {
+            $user->sendEmailVerificationNotification();
+        }
     }
+
+
+    // public function signinProses(Request $req)
+    // {
+    //     $user = User::create([
+    //         'nama' => $req->nama,
+    //         'email' => $req->email,
+    //         'password' => Hash::make($req->password)
+    //     ]);
+
+    //     event(new Registered($user));
+
+    //     Auth::login($user);
+
+    //     return redirect('/email/verify');
+    // }
 }

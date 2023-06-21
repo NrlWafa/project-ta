@@ -17,7 +17,8 @@
 
 <body>
     <div class="main">
-        Email Verifikasi sudah dikirim ke Email Anda. Silahkan klik link berikut.
+        Email Verifikasi sudah dikirim ke Email Anda. Silahkan cek Email Anda untuk melakukan verifikasi akun agar bisa
+        Login.
     </div>
 </body>
 
