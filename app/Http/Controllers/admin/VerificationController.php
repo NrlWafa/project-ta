@@ -28,6 +28,7 @@ class VerificationController extends Controller
             // Lakukan tindakan lain yang diperlukan setelah verifikasi
             // Misalnya, mengirimkan notifikasi, memberikan akses, dll.
             // dd('berhasil');
+            dd($request->user());
 
             return redirect('/')->with('status', 'Email verified successfully.');
         }

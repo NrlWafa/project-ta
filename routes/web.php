@@ -108,7 +108,9 @@ Route::middleware('auth')->group(function () {
     Route::get('Daftar_Pelamar', [PelamarController::class, "index"]);
     Route::get('Detail_Data_Pelamar/{id}', [PelamarController::class, "pelamar"]);
     Route::get('Daftar_Pelamar/{id}', [PelamarController::class, "hapus_data"]);
+});
 
+Route::middleware(['auth', 'verified'])->group(function () {
     // User
     Route::get('Profil-User', [ProfilUserController::class, "user_profil"]);
     Route::get('User', [UserController::class, "index"]);

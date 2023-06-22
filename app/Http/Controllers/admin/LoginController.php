@@ -89,26 +89,17 @@ class LoginController extends Controller
             'password.min' => 'Minimum password yang diizinkan adalah 6 karakter'
         ]);
 
-
-
         // Memanggil data
         $data = [
             'nama' => $req->nama,
             'email' => $req->email,
             'password' => Hash::make($req->password),
             'id_level' => 2
-
         ];
+
 
         // Memasukkan data sigin kedalam tabel user
         $user = User::create($data);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect('/email/verify');
-
 
 
         $infologin = [
@@ -121,8 +112,12 @@ class LoginController extends Controller
         if (Auth::attempt($infologin)) {
             // dd($req->id_level);
             if ($UserLevel == 2) {
+                event(new Registered($user));
+                Auth::login($user);
+                return redirect('/email/verify');
+
                 //Jika otentikasi sukses sebagai admin
-                return redirect('User')->with('Success', 'Anda Berhasil Login');
+                // return redirect('User')->with('Success', 'Anda Berhasil Login');
             } else {
                 //Jika otentikasi sukses sebagai user
                 return redirect('admin')->with('Success', 'Anda Berhasil Login sebagai Admin');
