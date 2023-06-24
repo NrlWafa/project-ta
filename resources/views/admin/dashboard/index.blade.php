@@ -62,10 +62,15 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Total User</span>
                         {{-- <span class="info-box-number">{{ $user->where('level_name', 'user')->count() }}</span> --}}
+
+                        <!-- Menampilkan jumlah admin -->
+                        <span class="info-box-number">{{ $user }}</span>
+
                     </div>
                     <!-- /.info-box-content -->
                 </div>
                 <!-- /.info-box -->
+
             </div>
 
             <div class="col-12 col-sm-6 col-md-3">
@@ -74,6 +79,9 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Total Admin</span>
+                        <span class="info-box-number">{{ $admin }}</span>
+
+                        <!-- Menampilkan jumlah pengguna -->
                         {{-- <span class="info-box-number"> {{ $admin }} </span> --}}
                     </div>
                     <!-- /.info-box-content -->
