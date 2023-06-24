@@ -16,19 +16,28 @@
                                 <th>Nama</th>
                                 <th>E-Mail</th>
                                 <th>Level</th>
+                                <th>Verifikasi E-mail</th>
                                 <th>Tanggal</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+
                             @foreach ($user as $us)
                                 <tr>
+
                                     <td>{{ $us->id }}</td>
                                     <td>{{ $us->nama }}</td>
                                     <td>{{ $us->email }}</td>
                                     <td>{{ $us->level_name }}</td>
+                                    <td>
+                                        @if ($us->email_verified_at)
+                                            {{ date('d F Y', strtotime($us->email_verified_at)) }}
+                                        @else
+                                            Akun Belum Terverifikasi
+                                        @endif
+                                    </td>
 
-                                    {{-- Belum kawa ngambil data level_name di tabel level --}}
 
                                     <td>{{ date('d F Y', strtotime($us->created_at)) }}</td>
                                     <td>

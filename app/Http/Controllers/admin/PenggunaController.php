@@ -21,7 +21,7 @@ class PenggunaController extends Controller
         // $user = User::all();
         $user = DB::table('User')
             ->join('level', 'User.id_level', '=', 'level.id')
-            ->select('User.id', 'User.nama', 'User.email', 'level.level_name', 'User.created_at')
+            ->select('User.id', 'User.nama', 'User.email', 'level.level_name', 'User.created_at', 'User.email_verified_at')
             ->get();
 
         return view("admin.pengguna.index", compact('user'), [

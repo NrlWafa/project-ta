@@ -20,8 +20,9 @@ class UsertableSeeders extends Seeder
         DB::table('user')->insert([
             'id_level' => '1',
             'nama' => 'Wafa',
-            'email' => 'nurulwafa123@gmail.com',
+            'email' => 'nurulwaffa.app123@gmail.com',
             'password' => Hash::make('123456'),
+            'email_verified_at' => date("Y-m-d"),
             'created_at' => date("Y-m-d"),
             'updated_at' => date("Y-m-d")
         ]);
