@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        {{-- Foto kaya awal --}}
+
         <!-- Image Section -->
         {{-- <div class="w-1/2 shadow-2xl">
             <img class="object-cover w-full h-screen hidden md:block" src="{{ asset('AdminLTE/dist/img/pt.jpg') }}">
@@ -89,6 +89,58 @@
         </div> --}}
 
         {{-- Tulisan diatas foto --}}
+        {{-- <div class="w-1/2 shadow-2xl" style="position: relative;">
+            <img class="object-cover w-full h-screen hidden md:block" src="{{ asset('AdminLTE/dist/img/pt.jpg') }}"
+                style="opacity: 0.5">
+            <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-4xl"
+                style="z-index: 999;">Untuk mengajukan lamaran, Anda perlu memiliki akun Pelamar terlebih dahulu. Jika
+                belum memiliki akun, Anda dapat melakukan pendaftaran dengan cara membuat akun
+                pelamar dengan mengikuti langkah-langkah berikut:</p>
+            <ol>
+                <li>1. Buka halaman registrasi (Sign In). Isi username, alamat e-mail, dan password
+                    yang akan digunakan. Kemudian klik tombol Sign In. Pastikan alamat e-mail yang
+                    didaftarkan adalah alamat yang valid agar pelamar dapat melakukan aktivasi
+                    melalui link verifikasi yang dikirimkan ke e-mail yang didaftarkan.</li>
+                <li>2. Kemudian akan muncul pesan pemberitahuan yang berisi link verifikasi untuk
+                    aktivasi akun pelamar. Klik tombol Verify Email Address. Pastikan untuk
+                    memeriksa folder "Spam" atau "Promosi" jika Anda tidak menemukan email tersebut
+                    di kotak masuk utama.</li>
+                <li>3. Setelah mengeklik link verifikasi, pelamar akan diarahkan kembali ke halaman
+                    registrasi untuk melakukan Login. Masukkan e-mail dan password yang telah
+                    terdaftar, lalu klik tombol Login.</li>
+                <li>4. Setelah berhasil masuk ke akun Anda, Anda sekarang dapat mengajukan lamaran
+                    dengan mengeklik tombol Ajukan Lamaran. Isi form lamaran dengan data diri Anda.
+                </li>
+            </ol>
+        </div> --}}
+
+        <div class="w-1/2 shadow-2xl" style="position: relative;">
+            <img class="object-cover w-full h-screen hidden md:block" src="{{ asset('AdminLTE/dist/img/pt.png') }}">
+            {{-- <div style="position: absolute; top: 50%; left: 35%; transform: translate(-50%, -50%); z-index: 999;">
+                <p class="text-black text-sm font-bold">Untuk mengajukan lamaran, Anda perlu memiliki akun Pelamar
+                    terlebih dahulu. Jika belum memiliki akun, Anda dapat melakukan pendaftaran dengan cara membuat akun
+                    pelamar dengan mengikuti langkah-langkah berikut:</p>
+                <ol class="text-black text-base">
+                    <li>Buka halaman registrasi (Sign In). Isi username, alamat e-mail, dan password
+                        yang akan digunakan. Kemudian klik tombol Sign In. Pastikan alamat e-mail yang
+                        didaftarkan adalah alamat yang valid agar pelamar dapat melakukan aktivasi
+                        melalui link verifikasi yang dikirimkan ke e-mail yang didaftarkan.</li>
+                    <li>Kemudian akan muncul pesan pemberitahuan yang berisi link verifikasi untuk
+                        aktivasi akun pelamar. Klik tombol Verify Email Address. Pastikan untuk
+                        memeriksa folder "Spam" atau "Promosi" jika Anda tidak menemukan email tersebut
+                        di kotak masuk utama.</li>
+                    <li>Setelah mengeklik link verifikasi, pelamar akan diarahkan kembali ke halaman
+                        registrasi untuk melakukan Login. Masukkan e-mail dan password yang telah
+                        terdaftar, lalu klik tombol Login.</li>
+                    <li>Setelah berhasil masuk ke akun Anda, Anda sekarang dapat mengajukan lamaran
+                        dengan mengeklik tombol Ajukan Lamaran. Isi form lamaran dengan data diri Anda.
+                    </li>
+                </ol>
+            </div> --}}
+        </div>
+
+
+
         {{-- <div class="relative">
             <img src="{{ asset('AdminLTE/dist/img/pt.jpg') }}" alt="Foto"
                 class="object-cover w-full h-screen hidden md:block">
@@ -103,9 +155,9 @@
                 <p> Coba Aja</p>
             </div>
         </div> --}}
-        <div class="w-1/2 shadow-2xl flex flex-col justify-center items-center">
+        {{-- <div class="w-1/2 shadow-2xl flex flex-col justify-center items-center">
             {{-- <div class="object-cover w-full h-screen hidden md:block"> --}}
-            <div class="card-body">
+        {{-- <div class="card-body">
                 <p>Untuk mengajukan lamaran, Anda perlu memiliki akun Pelamar terlebih dahulu. Jika
                     belum memiliki akun, Anda dapat melakukan pendaftaran dengan cara membuat akun
                     pelamar dengan mengikuti langkah-langkah berikut:</p>
@@ -127,7 +179,7 @@
                 </ol>
             </div>
 
-        </div>
+        </div> --}} --}}
 
         {{-- <div class="relative flex justify-center items-center w-full h-screen">
             <p class="text-center text-white text-4xl">Coba Aja</p>
