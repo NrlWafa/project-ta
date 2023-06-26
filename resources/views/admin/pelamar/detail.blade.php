@@ -101,12 +101,53 @@
                         <label>Ukuran Sepatu</label>
                         <input type="text" class="form-control" value="{{ $pelamar->uk_sepatu }}" readonly>
                     </div>
+                    <div class="form-group">
+                        <label>Golongan Darah</label>
+                        <input type="text" class="form-control" value="{{ $pelamar->gol_dar }}" readonly>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Data Pasangan</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Status</th>
+                                        <th>Tempat Lahir</th>
+                                        <th>Tanggal Lahir</th>
+                                        <th>Pekerjaan</th>
+                                        <th>Alamat Lengkap</th>
+                                        <th>Nomor Handphone</th>
+                                        <th>Nama Anak Ke-1</th>
+                                        <th>Nama Anak Ke-2</th>
+                                        <th>Nama Anak Ke-3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $pelamar->nama_pasangan }}</td>
+                                        <td>{{ $pelamar->status_psg }}</td>
+                                        <td>{{ $pelamar->tmp_lahir_psg }}</td>
+                                        <td>{{ $pelamar->tgl_lahir_psg }}</td>
+                                        <td>{{ $pelamar->pekerjaan_psg }}</td>
+                                        <td>{{ $pelamar->alamat_psg }}</td>
+                                        <td>{{ $pelamar->no_hp_psg }}</td>
+                                        <td>{{ $pelamar->anak1 }}</td>
+                                        <td>{{ $pelamar->anak2 }}</td>
+                                        <td>{{ $pelamar->anak3 }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
 
 
-
-
-                    {{-- DATA PASANGAN --}}
+                    {{-- DATA PASANGAN
                     <label>DATA PASANGAN HANYA UNTUK YANG SUDAH MENIKAH 'SUAMI/ISTRI'</label>
 
                     <div class="form-group">
@@ -148,10 +189,139 @@
                     <div class="form-group">
                         <label>Nama Anak Ke-3</label>
                         <input type="text" class="form-control" value="{{ $pelamar->anak3 }}" readonly>
+                    </div> --}}
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Data Orang Tua</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+
+                                        <th>Nama</th>
+                                        <th>Status</th>
+                                        <th>Tempat Lahir</th>
+                                        <th>Tanggal Lahir</th>
+                                        <th>Pekerjaan</th>
+                                        <th>Alamat</th>
+                                        <th>No Telp</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>{{ $pelamar->nama_ayh }}</td>
+                                        <td>{{ $pelamar->tmp_lahir_ayh }}</td>
+                                        <td>{{ $pelamar->tgl_lahir_ayh }}</td>
+                                        <td>{{ $pelamar->pekerjaan_ayh }}</td>
+                                        <td>{{ $pelamar->alamat_ayh }}</td>
+                                        <td>{{ $pelamar->no_hp_ayh }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ $pelamar->nama_ibu }}</td>
+                                        <td>{{ $pelamar->tmp_lahir_ibu }}</td>
+                                        <td>{{ $pelamar->tgl_lahir_ibu }}</td>
+                                        <td>{{ $pelamar->pekerjaan_ibu }}</td>
+                                        <td>{{ $pelamar->alamat_ibu }}</td>
+                                        <td>{{ $pelamar->no_hp_ibu }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Riwayat Pendidikan Formal</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Pendidikan Formal</th>
+                                        <th>Tempat Pendidikan</th>
+                                        <th>Tahun Pendidikan</th>
+                                        <th>Jurusan Pendidikan</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $pelamar->pend_formal }}</td>
+                                        <td>{{ $pelamar->tmp_pend }}</td>
+                                        <td>{{ $pelamar->thn_pend }}</td>
+                                        <td>{{ $pelamar->jurusan_pend }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Riwayat Pendidikan Non Formal</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Pendidikan Non Formal</th>
+                                        <th>Tempat Pendidikan</th>
+                                        <th>Tahun Pendidikan</th>
+                                        <th>Jurusan Pendidikan</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $pelamar->pend_nonformal }}</td>
+                                        <td>{{ $pelamar->tmp_pend_non }}</td>
+                                        <td>{{ $pelamar->thn_pend_non }}</td>
+                                        <td>{{ $pelamar->jurusan_pend_non }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Riwayat Pekerjaan</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Nama Perusahaan</th>
+                                        <th>Bidang Usaha</th>
+                                        <th>Jabatan</th>
+                                        <th>Tahun Masuk</th>
+                                        <th>Alasan Keluar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $pelamar->nama_perusahaan }}</td>
+                                        <td>{{ $pelamar->bidang_usaha }}</td>
+                                        <td>{{ $pelamar->jabatan }}</td>
+                                        <td>{{ $pelamar->tahun_masuk }}</td>
+                                        <td>{{ $pelamar->alasan_keluar }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     {{-- DATA ORANG TUA (AYAH) --}}
-                    <label>DATA ORANG TUA</label>
+                    {{-- <label>DATA ORANG TUA</label>
 
                     <div class="form-group">
                         <label>Nama Ayah</label>
@@ -179,7 +349,7 @@
                     </div>
 
                     {{-- DATA ORANG TUA (IBU) --}}
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label>Nama Ibu</label>
                         <input type="text" class="form-control" value="{{ $pelamar->nama_ibu }}" readonly>
                     </div>
@@ -202,17 +372,13 @@
                     <div class="form-group">
                         <label>Nomor Handphone Ibu</label>
                         <input type="text" class="form-control" value="{{ $pelamar->no_hp_ibu }}" readonly>
-                    </div>
+                    </div> --}}
 
 
                     {{-- DATA PRIBADI --}}
-                    <label>DATA PELAMAR</label>
-                    <div class="form-group">
-                        <label>Golongan Darah</label>
-                        <input type="text" class="form-control" value="{{ $pelamar->gol_dar }}" readonly>
-                    </div>
 
-                    {{-- DATA PENDIDIKAN FORMAL --}}
+
+                    {{-- DATA PENDIDIKAN FORMAL
                     <label>DATA PENDIDIKAN FORMAL</label>
 
                     <div class="form-group">
@@ -232,7 +398,7 @@
                         <input type="text" class="form-control" value="{{ $pelamar->jurusan_pend }}" readonly>
                     </div>
 
-                    {{-- DATA PENDIDIKAN NON FORMAL --}}
+                    DATA PENDIDIKAN NON FORMAL
                     <label>DATA PENDIDIKAN NON FORMAL</label>
                     <div class="form-group">
                         <label>Pendidikan Non Formal</label>
@@ -252,7 +418,7 @@
                     </div>
 
 
-                    {{-- DATA PEKERJAAN --}}
+                    DATA PEKERJAAN
                     <label>DATA RIWAYAT PEKERJAAN</label>
                     <div class="form-group">
                         <label>Nama Perusahaan</label>
@@ -273,7 +439,7 @@
                     <div class="form-group">
                         <label>Alasan Keluar</label>
                         <input type="text" class="form-control" value="{{ $pelamar->alasan_keluar }}" readonly>
-                    </div>
+                    </div> --}}
 
                     {{-- DATA RIWAYAT PENYAKIT --}}
                     <div class="form-group">
@@ -338,6 +504,13 @@
                 </div>
                 <!-- /.card -->
             </div>
+
+
+
+
+
+
+
 
             {{-- DATA FOTO FOTO --}}
             <div class="row px">
@@ -457,6 +630,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <tr>
+
                                 <td>
                                     <img src="{{ asset('foto_ktp/' . $pelamar->foto_ktp) }}" alt=""
                                         height="250px" width="380px">
@@ -469,6 +643,9 @@
                     <!-- /.card -->
                 </div>
             </div>
+
+
+
 
             <div class="card-footer">
                 <a href="{{ url('Daftar_Pelamar') }}" class="btn btn-danger">Kembali</a>
