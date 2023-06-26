@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Level;
+use App\Models\Pelamar;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,9 +19,10 @@ class PenggunaController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        // $user = User::all();
         $user = DB::table('User')
+
             ->join('level', 'User.id_level', '=', 'level.id')
+            // ->join('pelamar', 'User.id', '=', 'pelamar.id_user')
             ->select('User.id', 'User.nama', 'User.email', 'level.level_name', 'User.created_at', 'User.email_verified_at')
             ->get();
 
@@ -36,7 +38,10 @@ class PenggunaController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        DB::table('User')->where('id', $id)->delete();
+        // Ketika akun User dihapus maka data yang diinput user sebagai form lamaran ikut terhapus
+        Pelamar::where('id_user', $id)->delete();
+        // Hapus akun User
+        User::where('id', $id)->delete();
         return redirect('Pengguna');
     }
 

@@ -104,6 +104,7 @@ Route::middleware('auth')->group(function () {
     Route::get('Pengguna', [PenggunaController::class, "index"]);
     Route::get('Data_Pengguna/{id}', [PenggunaController::class, "hapus_data_pengguna"]);
 
+
     // Pelamar
     Route::get('Daftar_Pelamar', [PelamarController::class, "index"]);
     Route::get('Detail_Data_Pelamar/{id}', [PelamarController::class, "pelamar"]);

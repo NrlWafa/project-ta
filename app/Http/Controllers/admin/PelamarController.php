@@ -61,7 +61,6 @@ class PelamarController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-
         $pelamar = Pelamar::find($id);
         FacadesFile::delete(public_path('foto_kk/' . $pelamar->foto_kk));
         FacadesFile::delete(public_path('foto_kta/' . $pelamar->foto_kta));

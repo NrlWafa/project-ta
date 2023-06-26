@@ -77,11 +77,14 @@ class UserController extends Controller
                 'no_hp' => 'required',
                 'no_telprumah' => 'nullable',
                 'no_ktp' => 'required',
+                'satpam' => 'nullable',
                 'tinggi_badan' => 'nullable',
                 'berat_badan' => 'nullable',
                 'uk_baju' => 'nullable',
                 'uk_celana' => 'nullable',
                 'uk_sepatu' => 'nullable',
+                'sim' => 'nullable',
+                'komp' => 'nullable',
                 'nama_pasangan' => 'nullable',
                 'status_psg' => 'nullable',
                 'tmp_lahir_psg' => 'nullable',
@@ -118,6 +121,7 @@ class UserController extends Controller
                 'jabatan' => 'nullable',
                 'tahun_masuk' => 'nullable',
                 'alasan_keluar' => 'nullable',
+                'lama_kerja' => 'required',
                 'riwayat_penyakit' => 'nullable',
                 'rs' => 'nullable',
                 'lama_dirawat' => 'nullable',
@@ -144,9 +148,7 @@ class UserController extends Controller
                 'jenis_kelamin.required' => 'Jenis Kelamin Wajib dipilih!',
                 'tempat_lahir.required' => 'Tempat Lahir Wajib diisi!',
                 'tanggal_lahir.required' => 'Tanggal Lahir Wajib diisi!',
-
                 'status_perkawinan.required' => 'Status Perkawinan Wajib dipilih!',
-
                 'agama.required' => 'Agama Wajib dipilih!',
                 'alamat_ktp.required' => 'Alamat KTP Wajib diisi!',
                 'alamat_dom.required' => 'Alamat Domisili Wajib diisi!',
@@ -173,8 +175,9 @@ class UserController extends Controller
                 'nm_kontak.required' => 'Nama Kontak yang Bisa Dihubungi Wajib diisi!',
                 'no_kontak.required' => 'Nomor Kontak yang Bisa Dihubungi Wajib diisi!',
                 'hubungan.required' => 'Hubungan Kekeluargaan dengan Kontak Wajib diisi!',
-                'jabatan_lamaran.required' => 'Jabatan yang Dilamar Wajib dipilih!',
+                'lama_kerja.required' => 'Pengalaman Kerja Wajib diisi!',
 
+                'jabatan_lamaran.required' => 'Jabatan yang Dilamar Wajib dipilih!',
 
                 'nama.required' => 'Nama Wajib diisi!',
                 'foto_kk.required' => 'Foto Kartu Keluarga tidak boleh kosong!',
@@ -267,6 +270,8 @@ class UserController extends Controller
             'no_hp' => $req->input('no_hp'),
             'no_telprumah' => $req->input('no_telprumah'),
             'no_ktp' => $req->input('no_ktp'),
+            'satpam' => $req->input('satpam'),
+
             'tinggi_badan' => $req->input('tinggi_badan'),
             'berat_badan' => $req->input('berat_badan'),
             'uk_baju' => $req->input('uk_baju'),
@@ -274,6 +279,9 @@ class UserController extends Controller
 
             'uk_celana' => $req->input('uk_celana'),
             'uk_sepatu' => $req->input('uk_sepatu'),
+            'sim' => $req->input('sim'),
+            'komp' => $req->input('komp'),
+
             'nama_pasangan' => $req->input('nama_pasangan'),
             'status_psg' => $req->input('status_psg'),
             'tmp_lahir_psg' => $req->input('tmp_lahir_psg'),
@@ -310,6 +318,8 @@ class UserController extends Controller
             'jabatan' => $req->input('jabatan'),
             'tahun_masuk' => $req->input('tahun_masuk'),
             'alasan_keluar' => $req->input('alasan_keluar'),
+            'lama_dirawat' => $req->input('lama_dirawat'),
+
             'riwayat_penyakit' => $req->input('riwayat_penyakit'),
             'rs' => $req->input('rs'),
             'lama_dirawat' => $req->input('lama_dirawat'),

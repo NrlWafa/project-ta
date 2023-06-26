@@ -125,16 +125,40 @@
                             <input type="number" class="form-control" name="no_ktp" value="{{ old('no_ktp') }}"
                                 placeholder="Masukkan Nomor KTP">
                         </div>
+
+
                         <label>KHUSUS FORMASI PEKERJAAN UNTUK SATPAM WAJIB DISI</label>
+                        {{-- PERHITUNGAN --}}
                         <div class="form-group">
+                            <label>Pendidikan Satpam</label>
+                            <select class="custom-select rounded-0" name="satpam">
+                                <option value="">Pilih Pendidikan</option>
+                                <option value="Tidak Ada">Tidak Ada</option>
+                                <option value="Gada Pratama">Gada Pratama</option>
+                                <option value="Gada Madya">Gada Madya</option>
+                                <option value="Gada Utama">Gada Utama</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tinggi Badan</label>
+                            <select class="custom-select rounded-0" name="tinggi_badan">
+                                <option value="">Pilih Tinggi Badan</option>
+                                <option value="Kurang Dari 160 Cm">Kurang Dari 160 Cm</option>
+                                <option value="160 - 185 Cm">160 - 185 Cm</option>
+                                <option value="Lebih Dari 185 Cm">Lebih Dari 185 Cm</option>
+                            </select>
+                        </div>
+                        {{-- <div class="form-group">
                             <label>Tinggi Badan</label>
                             <input type="number" class="form-control" name="tinggi_badan"
                                 value="{{ old('tinggi_badan') }}" placeholder="Masukkan Tinggi Badan Cm">
-                        </div>
+                        </div> --}}
+
                         <div class="form-group">
                             <label>Berat Badan</label>
                             <input type="number" class="form-control" name="berat_badan"
-                                value="{{ old('berat_badan') }}" placeholder="Masukkan Berat Badan Kg">
+                                value="{{ old('berat_badan') }}" placeholder="Masukkan Berat Badan ...Cm">
                         </div>
                         <div class="form-group">
                             <label>Ukuran Baju</label>
@@ -160,10 +184,31 @@
                                 placeholder="Masukkan Ukuran Sepatu 'Khusus Satpam'">
                         </div>
 
+                        {{-- PERHITUNGAN --}}
+                        <label>KHUSUS FORMASI PEKERJAAN UNTUK DRIVER WAJIB DIISI</label>
+                        <div class="form-group">
+                            <label>SIM</label>
+                            <select class="custom-select rounded-0" name="sim">
+                                <option value="">Pilih</option>
+                                <option value="A">A</option>
+                                <option value="B1">B1</option>
+                                <option value="B2">B2</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                        <label>KHUSUS FORMASI PEKERJAAN UNTUK ADMIN, OPERATOR, HELPER, TEKNISI WAJIB DIISI</label>
+                        <div class="form-group">
+                            <label>Mampu Mengoperasikan Komputer 'MS Office'</label>
+                            <select class="custom-select rounded-0" name="komp">
+                                <option value="">Pilih</option>
+                                <option value="Ya">Ya</option>
+                                <option value="Tidak">Tidak</option>
+                            </select>
+                        </div>
+
 
                         {{-- DATA PASANGAN --}}
                         <label>DATA PASANGAN HANYA UNTUK YANG SUDAH MENIKAH 'SUAMI/ISTRI'</label>
-
                         <div class="form-group">
                             <label>Nama</label>
                             <input type="text" class="form-control" name="nama_pasangan"
@@ -307,16 +352,30 @@
                         </div>
 
                         {{-- DATA PENDIDIKAN FORMAL --}}
+                        {{-- PERHITUNGAN --}}
                         <label>DATA PENDIDIKAN FORMAL</label>
                         <div class="form-group">
+                            <label>Pendidikan Formal*</label>
+                            <select class="custom-select rounded-0" name="pend_formal">
+                                <option>Pilih Pendidikan Formal</option>
+                                <option>SLTA</option>
+                                <option>D3</option>
+                                <option>S1</option>
+                                <option>S2</option>
+                                <option>S3</option>
+                            </select>
+                        </div>
+
+                        {{-- <div class="form-group">
                             <label>Nama Pendidikan Formal*</label>
                             <input type="text" class="form-control" name="pend_formal"
                                 value="{{ old('pend_formal') }}" placeholder="Masukkan Nama Pendidikan Formal">
-                        </div>
+                        </div> --}}
+
                         <div class="form-group">
                             <label>Tempat Pendidikan Formal*</label>
                             <input type="text" class="form-control" name="tmp_pend" value="{{ old('tmp_pend') }}"
-                                placeholder="Masukkan Tempat Pendidikan Formal">
+                                placeholder="Masukkan Tempat Pendidikan Formal 'SMA Negeri 1 Banjarmasin'">
                         </div>
                         <div class="form-group">
                             <label>Tahun Pendidikan*</label>
@@ -332,16 +391,26 @@
 
 
                         {{-- DATA PENDIDIKAN NON FORMAL --}}
+                        {{-- PERHITUNGAN --}}
                         <label>DATA PENDIDIKAN NON FORMAL</label>
                         <div class="form-group">
+                            <label>Pendidikan Non Formal</label>
+                            <select class="custom-select rounded-0" name="pend_nonformal">
+                                <option value="">Pilih</option>
+                                <option value="Ada">Ada</option>
+                                <option value="Tidak Ada">Tidak Ada</option>
+                            </select>
+                        </div>
+                        {{-- <div class="form-group">
                             <label>Nama Pendidikan Non Formal</label>
                             <input type="text" class="form-control" name="pend_nonformal"
                                 value="{{ old('pend_nonformal') }}" placeholder="Masukkan Nama Pendidikan Non Formal">
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label>Tempat Pendidikan Non Formal</label>
                             <input type="text" class="form-control" name="tmp_pend_non"
-                                value="{{ old('tmp_pend_non') }}" placeholder="Masukkan Tempat Pendidikan Non Formal">
+                                value="{{ old('tmp_pend_non') }}"
+                                placeholder="Masukkan Tempat Pendidikan Non Formal 'Lembaga Kursus Citra Banua'">
                         </div>
                         <div class="form-group">
                             <label>Tahun Pendidikan</label>
@@ -385,7 +454,18 @@
                             <input type="text" class="form-control" name="alasan_keluar"
                                 value="{{ old('alasan_keluar') }}" placeholder="Masukkan Alasan Keluar">
                         </div>
-
+                        {{-- PERHITUNGAN --}}
+                        <div class="form-group">
+                            <label>Pengalaman Kerja*</label>
+                            <select class="custom-select rounded-0" name="lama_kerja">
+                                <option value="">Pilih</option>
+                                <option value="Ada">0 Bulan</option>
+                                <option value="1-6 Bulan">1-6 Bulan</option>
+                                <option value="7-12 Bulan">7-12 Bulan</option>
+                                <option value="13-18 Bulan">13-18 Bulan</option>
+                                <option value="19-24 Bulan">19-24 Bulan</option>
+                            </select>
+                        </div>
 
                         {{-- DATA RIWAYAT PENYAKIT --}}
                         <div class="form-group">
@@ -471,6 +551,9 @@
                                 <option>Operator</option>
                             </select>
                         </div>
+
+
+
 
 
                         {{-- DATA FOTO FOTO --}}

@@ -12,7 +12,7 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>ID User</th>
                                 <th>Nama</th>
                                 <th>E-Mail</th>
                                 <th>Level</th>
@@ -25,7 +25,6 @@
 
                             @foreach ($user as $us)
                                 <tr>
-
                                     <td>{{ $us->id }}</td>
                                     <td>{{ $us->nama }}</td>
                                     <td>{{ $us->email }}</td>
@@ -37,8 +36,6 @@
                                             Akun Belum Terverifikasi
                                         @endif
                                     </td>
-
-
                                     <td>{{ date('d F Y', strtotime($us->created_at)) }}</td>
                                     <td>
                                         <a href="#" class="btn-sm btn-danger delete"

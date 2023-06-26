@@ -20,7 +20,10 @@ return new class extends Migration
             $table->string('nama_panggilan', 100);
             $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
             $table->string('tempat_lahir');
+
+            // Perhitungan
             $table->date('tanggal_lahir');
+
             $table->enum('status_perkawinan', ['Belum Kawin', 'Kawin']);
             $table->enum('agama', ['Islam', 'Kristen/Protestan', 'Katolik', 'Hindu', 'Budha', 'Konghucu']);
             $table->string('alamat_ktp', 100);
@@ -32,11 +35,16 @@ return new class extends Migration
             $table->string('no_hp')->length(15);
             $table->string('no_telprumah')->length(15)->nullable();
             $table->string('no_ktp')->length(20);
-            $table->integer('tinggi_badan')->length(15)->nullable();
+
+            // Khusus Satpam
+            $table->enum('satpam', ['Tidak Ada', 'Gada Pratama', 'Gada Madya', 'Gada Utama'])->nullable();
+            $table->enum('tinggi_badan', ['Kurang Dari 160 Cm', '160-185 Cm', 'Lebih Dari 185 Cm'])->nullable();
+
             $table->integer('berat_badan')->length(15)->nullable();
             $table->enum('uk_baju', ['S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'])->nullable();
             $table->integer('uk_celana')->length(10)->nullable();
             $table->integer('uk_sepatu')->length(10)->nullable();
+
             $table->string('nama_pasangan', 100)->nullable();
             $table->string('status_psg', 50)->nullable();
             $table->string('tmp_lahir_psg', 100)->nullable();
@@ -60,11 +68,16 @@ return new class extends Migration
             $table->string('alamat_ibu', 100);
             $table->string('no_hp_ibu')->length(15)->nullable();
             $table->enum('gol_dar', ['A', 'B', 'AB', 'O'])->nullable();
-            $table->string('pend_formal', 50);
+
+            // Perhitungan 
+            $table->enum('pend_formal', ['SLTA', 'D3', 'S1', 'S2', 'S3']);
+
             $table->string('tmp_pend', 100);
             $table->integer('thn_pend')->length(20);
             $table->string('jurusan_pend', 100);
-            $table->string('pend_nonformal', 50)->nullable();
+
+            // Perhitungan
+            $table->enum('pend_nonformal', ['Ada', 'Tidak Ada'])->nullable();
             $table->string('tmp_pend_non', 100)->nullable();
             $table->integer('thn_pend_non')->length(20)->nullable();
             $table->string('jurusan_pend_non', 100)->nullable();
@@ -73,6 +86,17 @@ return new class extends Migration
             $table->string('jabatan', 100)->nullable();
             $table->integer('tahun_masuk')->length(20)->nullable();
             $table->string('alasan_keluar', 100)->nullable();
+
+            // Perhitungan
+            $table->enum('lama_kerja', ['0 Bulan', '1-6 Bulan', '7-12 Bulan', '13-18 Bulan', '19-24 Bulan']);
+
+            // Perhitungan Admin, Teknisi, Helper, Operator
+            $table->enum('komp', ['Ya', 'Tidak'])->nullable();
+
+            // Perhitungan khusus draiver
+            $table->enum('sim', ['A', 'B1', 'B2', 'B3', 'C'])->nullable();
+
+
             $table->string('riwayat_penyakit', 100)->nullable();
             $table->enum('rs', ['YA', 'TIDAK']);
             $table->integer('lama_dirawat')->length(20)->nullable();

@@ -16,7 +16,7 @@
                                 <th>ID User</th>
                                 <th>Nama</th>
                                 <th>Formasi Pekerjaan</th>
-                                <th>No Telp</th>
+                                <th>No Handphone</th>
                                 <th>Tanggal</th>
                                 <th>Aksi</th>
                             </tr>
