@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\user;
 
+use App\Models\Admin;
+use App\Models\Driver;
+use App\Models\Helper;
 use App\Models\Satpam;
 use App\Models\Pelamar;
+use App\Models\Teknisi;
+use App\Models\Operator;
 use Illuminate\Http\Request;
+use App\Models\CleaningService;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
@@ -341,11 +347,94 @@ class UserController extends Controller
             'iterasi' => $req->input('iterasi'),
         ];
 
+        $dataCleaningService = [
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
+        $dataTeknisi = [
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'komp' => $req->input('komp'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
+        $dataHelper = [
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'komp' => $req->input('komp'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
+        $dataOperator = [
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'komp' => $req->input('komp'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
+        $dataDriver = [
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'sim' => $req->input('sim'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
+        $dataAdmin = [
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'komp' => $req->input('komp'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
         // Pelamar::create($data);
         // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
         try {
             Pelamar::create($data);
             Satpam::create($dataSatpam);
+            CleaningService::create($dataCleaningService);
+            Teknisi::create($dataTeknisi);
+            Helper::create($dataHelper);
+            Operator::create($dataOperator);
+            Driver::create($dataDriver);
+            Admin::create($dataAdmin);
             return redirect('User')->with('Success', 'Pelamar berhasil dibuat');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors('Terjadi kesalahan saat membuat pelamar: ' . $e->getMessage());

@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('satpam', function (Blueprint $table) {
+        Schema::create('teknisi', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_pelamar')->constrained('pelamar');
             $table->enum('pend_formal', ['SLTA', 'D3', 'S1', 'S2', 'S3']);
             $table->enum('pend_nonformal', ['Ada', 'Tidak Ada'])->nullable();
             $table->enum('usia', ['18-24 Tahun', '25-30 Tahun', '31-35 Tahun'])->nullable();
             $table->enum('lama_kerja', ['0 Bulan', '1-6 Bulan', '7-12 Bulan', '13-18 Bulan', '19-24 Bulan']);
-            $table->enum('satpam', ['Tidak Ada', 'Gada Pratama', 'Gada Madya', 'Gada Utama'])->nullable();
-            $table->enum('tinggi_badan', ['Kurang Dari 160 Cm', '160-185 Cm', 'Lebih Dari 185 Cm'])->nullable();
+            $table->enum('komp', ['Ya', 'Tidak'])->nullable();
             $table->double('jarak_c1')->nullable();
             $table->double('jarak_c2')->nullable();
             $table->integer('iterasi')->nullable();
@@ -36,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('satpam');
+        Schema::dropIfExists('teknisi');
     }
 };
