@@ -23,6 +23,7 @@ return new class extends Migration
 
             // Perhitungan
             $table->date('tanggal_lahir');
+            $table->enum('usia', ['18-24 Tahun', '25-30 Tahun', '31-50 Tahun'])->nullable();
 
             $table->enum('status_perkawinan', ['Belum Kawin', 'Kawin']);
             $table->enum('agama', ['Islam', 'Kristen/Protestan', 'Katolik', 'Hindu', 'Budha', 'Konghucu']);
@@ -78,6 +79,7 @@ return new class extends Migration
 
             // Perhitungan
             $table->enum('pend_nonformal', ['Ada', 'Tidak Ada'])->nullable();
+
             $table->string('tmp_pend_non', 100)->nullable();
             $table->integer('thn_pend_non')->length(20)->nullable();
             $table->string('jurusan_pend_non', 100)->nullable();
@@ -95,7 +97,6 @@ return new class extends Migration
 
             // Perhitungan khusus draiver
             $table->enum('sim', ['A', 'B1', 'B2', 'B3', 'C'])->nullable();
-
 
             $table->string('riwayat_penyakit', 100)->nullable();
             $table->enum('rs', ['YA', 'TIDAK']);

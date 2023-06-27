@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>ID User</label>
-                        <input type="text" class="form-control" value="{{ $pelamar->id_user }}" readonly>
+                        <input type="text" class="form-control" value="{{ $pelamar->id_pelamar }}" readonly>
                     </div>
                     <div class="form-group">
                         <label>Nama Lengkap</label>

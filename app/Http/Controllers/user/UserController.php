@@ -66,6 +66,9 @@ class UserController extends Controller
                 'jenis_kelamin' => 'required',
                 'tempat_lahir' => 'required',
                 'tanggal_lahir' => 'required',
+
+                'usia' => 'required',
+
                 'status_perkawinan' => 'required',
                 'agama' => 'required',
                 'alamat_ktp' => 'required',
@@ -148,6 +151,7 @@ class UserController extends Controller
                 'jenis_kelamin.required' => 'Jenis Kelamin Wajib dipilih!',
                 'tempat_lahir.required' => 'Tempat Lahir Wajib diisi!',
                 'tanggal_lahir.required' => 'Tanggal Lahir Wajib diisi!',
+                'usia.required' => 'Usia Saat Mengajukan Lamaran Wajib diisi!',
                 'status_perkawinan.required' => 'Status Perkawinan Wajib dipilih!',
                 'agama.required' => 'Agama Wajib dipilih!',
                 'alamat_ktp.required' => 'Alamat KTP Wajib diisi!',
@@ -259,6 +263,7 @@ class UserController extends Controller
             'jenis_kelamin' => $req->input('jenis_kelamin'),
             'tempat_lahir' => $req->input('tempat_lahir'),
             'tanggal_lahir' => $req->input('tanggal_lahir'),
+            'usia' => $req->input('usia'),
             'status_perkawinan' => $req->input('status_perkawinan'),
             'agama' => $req->input('agama'),
             'alamat_ktp' => $req->input('alamat_ktp'),
@@ -270,9 +275,11 @@ class UserController extends Controller
             'no_hp' => $req->input('no_hp'),
             'no_telprumah' => $req->input('no_telprumah'),
             'no_ktp' => $req->input('no_ktp'),
-            'satpam' => $req->input('satpam'),
 
+            'satpam' => $req->input('satpam'),
             'tinggi_badan' => $req->input('tinggi_badan'),
+
+
             'berat_badan' => $req->input('berat_badan'),
             'uk_baju' => $req->input('uk_baju'),
 
@@ -305,7 +312,9 @@ class UserController extends Controller
             'alamat_ibu' => $req->input('alamat_ibu'),
             'no_hp_ibu' => $req->input('no_hp_ibu'),
             'gol_dar' => $req->input('gol_dar'),
+
             'pend_formal' => $req->input('pend_formal'),
+
             'tmp_pend' => $req->input('tmp_pend'),
             'thn_pend' => $req->input('thn_pend'),
             'jurusan_pend' => $req->input('jurusan_pend'),
@@ -318,7 +327,7 @@ class UserController extends Controller
             'jabatan' => $req->input('jabatan'),
             'tahun_masuk' => $req->input('tahun_masuk'),
             'alasan_keluar' => $req->input('alasan_keluar'),
-            'lama_dirawat' => $req->input('lama_dirawat'),
+            'lama_kerja' => $req->input('lama_kerja'),
 
             'riwayat_penyakit' => $req->input('riwayat_penyakit'),
             'rs' => $req->input('rs'),
@@ -340,11 +349,27 @@ class UserController extends Controller
             'foto_ktp' => $foto_ktp_nama
         ];
 
+        $dataSatpam = [
+            'no' => $req->input('no'),
+            'id_pelamar' => auth()->user()->id_pelamar,
+            'pend_formal' => $req->input('pend_formal'),
+            'pend_nonformal' => $req->input('pend_nonformal'),
+            'usia' => $req->input('usia'),
+            'satpam' => $req->input('satpam'),
+            'tinggi_badan' => $req->input('tinggi_badan'),
+            'lama_kerja' => $req->input('lama_kerja'),
+            'jarak_c1' => $req->input('jarak_c1'),
+            'jarak_c2' => $req->input('jarak_c2'),
+            'iterasi' => $req->input('iterasi'),
+        ];
+
+
         // Pelamar::create($data);
         // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
 
         try {
             Pelamar::create($data);
+            Pelamar::create($dataSatpam);
             return redirect('User')->with('Success', 'Pelamar berhasil dibuat');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors('Terjadi kesalahan saat membuat pelamar: ' . $e->getMessage());

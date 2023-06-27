@@ -41,8 +41,8 @@
                             <label>Jenis Kelamin*</label>
                             <select class="custom-select rounded-0" name="jenis_kelamin">
                                 <option>Pilih Jenis Kelamin</option>
+                                <option>Laki-Laki</option>
                                 <option>Perempuan</option>
-                                <option>Laki-laki</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -59,6 +59,15 @@
                                     class="form-control" data-inputmask-alias="datetime"
                                     data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Usia Saat Mengajukan Lamaran*</label>
+                            <select class="custom-select rounded-0" name="usia">
+                                <option>Pilih Usia</option>
+                                <option>18-24 Tahun</option>
+                                <option>25-30 Tahun</option>
+                                <option>31-35 Tahun</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Status Perkawinan*</label>
@@ -137,9 +146,9 @@
                                 <option value="Gada Pratama">Gada Pratama</option>
                                 <option value="Gada Madya">Gada Madya</option>
                                 <option value="Gada Utama">Gada Utama</option>
-
                             </select>
                         </div>
+
                         <div class="form-group">
                             <label>Tinggi Badan</label>
                             <select class="custom-select rounded-0" name="tinggi_badan">
@@ -149,11 +158,6 @@
                                 <option value="Lebih Dari 185 Cm">Lebih Dari 185 Cm</option>
                             </select>
                         </div>
-                        {{-- <div class="form-group">
-                            <label>Tinggi Badan</label>
-                            <input type="number" class="form-control" name="tinggi_badan"
-                                value="{{ old('tinggi_badan') }}" placeholder="Masukkan Tinggi Badan Cm">
-                        </div> --}}
 
                         <div class="form-group">
                             <label>Berat Badan</label>
@@ -552,21 +556,6 @@
                             </select>
                         </div>
 
-
-
-
-
-                        {{-- DATA FOTO FOTO --}}
-                        {{-- <div class="form-group">
-                            <label for="foto_kk">Foto Kartu Keluarga*</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk">
-                                    <label class="custom-file-label">Pilih Foto</label>
-                                </div>
-                            </div>
-                        </div> --}}
-
                         <div class="form-group">
                             <label for="foto_kk">Foto Kartu Keluarga*</label>
                             <div class="input-group">
@@ -649,30 +638,7 @@
 
 
 
-                        {{-- <div class="mb-3">
-                            <label for="foto" class="form-label">Foto Kartu Keluarga*</label>
-                            <input type="file" class="form-control" name="foto_kk" id="foto_kk">
-                        </div>
 
-                        <div class="mb-3">
-                            <label for="foto" class="form-label">Foto KTA*</label>
-                            <input type="file" class="form-control" name="foto_kta" id="foto_kta">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="foto" class="form-label">Foto NPWP*</label>
-                            <input type="file" class="form-control" name="foto_npwp" id="foto_npwp">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="foto" class="form-label">Pas Foto*</label>
-                            <input type="file" class="form-control" name="pas_foto" id="pas_foto">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="foto" class="form-label">Foto KTP*</label>
-                            <input type="file" class="form-control" name="foto_ktp" id="foto_ktp">
-                        </div> --}}
 
                         <p><strong>
                                 Perhatikan Data yang Disi! </strong></p>
