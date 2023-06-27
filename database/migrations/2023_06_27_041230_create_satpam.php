@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('satpam', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_pelamar');
+            // $table->bigInteger('id_pelamar');
+            $table->foreignId('id_pelamar')->constrained('pelamar');
             // Perhitungan 
             $table->enum('pend_formal', ['SLTA', 'D3', 'S1', 'S2', 'S3']);
             // Perhitungan

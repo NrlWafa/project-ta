@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\user;
 
-use App\Http\Controllers\Controller;
+use App\Models\Satpam;
 use App\Models\Pelamar;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -142,8 +143,6 @@ class UserController extends Controller
                 'foto_npwp' => 'nullable|mimes:jpeg,jpg,png',
                 'pas_foto' => 'required|mimes:jpeg,jpg,png',
                 'foto_ktp' => 'required|mimes:jpeg,jpg,png'
-
-
             ],
             [
                 'nama_lengkap.required' => 'Nama Lengkap Wajib diisi!',
@@ -180,26 +179,19 @@ class UserController extends Controller
                 'no_kontak.required' => 'Nomor Kontak yang Bisa Dihubungi Wajib diisi!',
                 'hubungan.required' => 'Hubungan Kekeluargaan dengan Kontak Wajib diisi!',
                 'lama_kerja.required' => 'Pengalaman Kerja Wajib diisi!',
-
                 'jabatan_lamaran.required' => 'Jabatan yang Dilamar Wajib dipilih!',
-
                 'nama.required' => 'Nama Wajib diisi!',
                 'foto_kk.required' => 'Foto Kartu Keluarga tidak boleh kosong!',
                 'foto_kk.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
-
                 'foto_kta.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
-
                 'foto_npwp.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
-
                 'pas_foto.required' => 'Pas Foto tidak boleh kosong!',
                 'pas_foto.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
-
                 'foto_ktp.required' => 'Foto KTP tidak boleh kosong!',
                 'foto_ktp.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG'
             ]
         );
         // dd($req);
-
 
         // Kartu Keluarga
         $foto_kk = $req->file('foto_kk');
@@ -207,15 +199,7 @@ class UserController extends Controller
         $foto_kk_nama = date('ymdhis') . "." . $foto_ekstensi;
         $foto_kk->move(public_path('foto_kk'), $foto_kk_nama);
 
-        // KTA
-        // $foto_kta = $req->file('foto_kta');
-        // $foto_ekstensi = $foto_kta->extension();
-        // $foto_kta_nama = date('ymdhis') . "." . $foto_ekstensi;
-        // $foto_kta->move(public_path('foto_kta'), $foto_kta_nama);
-
-
         $foto_kta = $req->file('foto_kta');
-
         if ($foto_kta) {
             $foto_ekstensi = $foto_kta->extension();
             $foto_kta_nama = date('ymdhis') . "." . $foto_ekstensi;
@@ -224,12 +208,6 @@ class UserController extends Controller
             // Lakukan tindakan alternatif jika foto tidak diunggah
             $foto_kta_nama = null; // Atau berikan nilai default sesuai kebutuhan
         }
-
-        // NPWP
-        // $foto_npwp = $req->file('foto_npwp');
-        // $foto_ekstensi = $foto_npwp->extension();
-        // $foto_npwp_nama = date('ymdhis') . "." . $foto_ekstensi;
-        // $foto_npwp->move(public_path('foto_npwp'), $foto_npwp_nama);
 
         $foto_npwp = $req->file('foto_npwp');
 
@@ -350,8 +328,8 @@ class UserController extends Controller
         ];
 
         $dataSatpam = [
-            'no' => $req->input('no'),
-            'id_pelamar' => auth()->user()->id_pelamar,
+            'id' => $req->input('id'),
+            'id_pelamar' => auth()->user()->id,
             'pend_formal' => $req->input('pend_formal'),
             'pend_nonformal' => $req->input('pend_nonformal'),
             'usia' => $req->input('usia'),
@@ -363,13 +341,11 @@ class UserController extends Controller
             'iterasi' => $req->input('iterasi'),
         ];
 
-
         // Pelamar::create($data);
         // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
-
         try {
             Pelamar::create($data);
-            Pelamar::create($dataSatpam);
+            Satpam::create($dataSatpam);
             return redirect('User')->with('Success', 'Pelamar berhasil dibuat');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors('Terjadi kesalahan saat membuat pelamar: ' . $e->getMessage());

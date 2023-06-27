@@ -123,6 +123,15 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Satpam') }}"
+                                class="nav-link {{ $title === 'Data Satpam' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    Data Satpam
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

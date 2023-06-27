@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('pelamar', function (Blueprint $table) {
             $table->id();
+            
             $table->integer('id_user')->length(10);
             $table->string('nama_lengkap', 100);
             $table->string('nama_panggilan', 100);

@@ -2,14 +2,16 @@
 
 use App\Http\Controllers\SendEmail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SatpamController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\admin\LoginController;
+use App\Http\Controllers\admin\ProfilController;
 use App\Http\Controllers\admin\PelamarController;
 use App\Http\Controllers\admin\PenggunaController;
 use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\ProfilController;
-use App\Http\Controllers\admin\VerificationController;
+use App\Http\Controllers\user\ProfilUserController;
 use App\Http\Controllers\landingpage\BlogController;
+use App\Http\Controllers\admin\VerificationController;
 use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
 use App\Http\Controllers\landingpage\BerandaController;
@@ -17,7 +19,6 @@ use App\Http\Controllers\landingpage\LayananController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\landingpage\FormasiPekerjaanController;
 use App\Http\Controllers\landingpage\ProfilPerusahaanController;
-use App\Http\Controllers\user\ProfilUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,6 +110,9 @@ Route::middleware('auth')->group(function () {
     Route::get('Daftar_Pelamar', [PelamarController::class, "index"]);
     Route::get('Detail_Data_Pelamar/{id}', [PelamarController::class, "pelamar"]);
     Route::get('Daftar_Pelamar/{id}', [PelamarController::class, "hapus_data"]);
+
+    Route::get('Satpam', [SatpamController::class, "index"]);
+
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

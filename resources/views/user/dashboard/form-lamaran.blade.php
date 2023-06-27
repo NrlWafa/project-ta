@@ -154,7 +154,7 @@
                             <select class="custom-select rounded-0" name="tinggi_badan">
                                 <option value="">Pilih Tinggi Badan</option>
                                 <option value="Kurang Dari 160 Cm">Kurang Dari 160 Cm</option>
-                                <option value="160 - 185 Cm">160 - 185 Cm</option>
+                                <option value="160-185 Cm">160-185 Cm</option>
                                 <option value="Lebih Dari 185 Cm">Lebih Dari 185 Cm</option>
                             </select>
                         </div>
