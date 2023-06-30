@@ -54,6 +54,23 @@ class PelamarController extends Controller
         ]);
     }
 
+    // public function hapus_data($id)
+    // {
+    //     // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
+    //     if (auth()->user()->id_level != 1) {
+    //         return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
+    //     }
+
+    //     $pelamar = Pelamar::find($id);
+    //     FacadesFile::delete(public_path('foto_kk/' . $pelamar->foto_kk));
+    //     FacadesFile::delete(public_path('foto_kta/' . $pelamar->foto_kta));
+    //     FacadesFile::delete(public_path('foto_npwp/' . $pelamar->foto_npwp));
+    //     FacadesFile::delete(public_path('pas_foto/' . $pelamar->pas_foto));
+    //     FacadesFile::delete(public_path('foto_ktp/' . $pelamar->foto_ktp));
+    //     $pelamar->delete();
+    //     return redirect('Daftar_Pelamar');
+    // }
+
     public function hapus_data($id)
     {
         // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
@@ -62,14 +79,29 @@ class PelamarController extends Controller
         }
 
         $pelamar = Pelamar::find($id);
+
+        // Hapus data pada tabel pelamar
+        $pelamar->delete();
+
+        // Hapus data pada tabel perhitungan berdasarkan relasi dengan pelamar
+        $pelamar->admin()->delete();
+        $pelamar->cleaningservice()->delete();
+        $pelamar->driver()->delete();
+        $pelamar->helper()->delete();
+        $pelamar->operator()->delete();
+        $pelamar->satpam()->delete();
+        $pelamar->teknisi()->delete();
+
+        // Hapus file-file foto yang terkait
         FacadesFile::delete(public_path('foto_kk/' . $pelamar->foto_kk));
         FacadesFile::delete(public_path('foto_kta/' . $pelamar->foto_kta));
         FacadesFile::delete(public_path('foto_npwp/' . $pelamar->foto_npwp));
         FacadesFile::delete(public_path('pas_foto/' . $pelamar->pas_foto));
         FacadesFile::delete(public_path('foto_ktp/' . $pelamar->foto_ktp));
-        $pelamar->delete();
+
         return redirect('Daftar_Pelamar');
     }
+
 
     public function validasi_form()
     {

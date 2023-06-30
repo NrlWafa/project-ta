@@ -2,16 +2,22 @@
 
 use App\Http\Controllers\SendEmail;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SatpamController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\admin\LoginController;
 use App\Http\Controllers\admin\ProfilController;
 use App\Http\Controllers\admin\PelamarController;
 use App\Http\Controllers\admin\PenggunaController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\perhitungan\AdminController;
+use App\Http\Controllers\admin\perhitungan\CleaningServicController;
+use App\Http\Controllers\admin\perhitungan\CleaningServiceController;
+use App\Http\Controllers\admin\perhitungan\DriverController;
+use App\Http\Controllers\admin\perhitungan\HelperController;
+use App\Http\Controllers\admin\perhitungan\OperatorController;
+use App\Http\Controllers\admin\perhitungan\SatpamController as PerhitunganSatpamController;
+use App\Http\Controllers\admin\perhitungan\TeknisiController;
 use App\Http\Controllers\user\ProfilUserController;
 use App\Http\Controllers\landingpage\BlogController;
-use App\Http\Controllers\admin\VerificationController;
 use App\Http\Controllers\landingpage\GaleriController;
 use App\Http\Controllers\landingpage\KontakController;
 use App\Http\Controllers\landingpage\BerandaController;
@@ -102,6 +108,7 @@ Route::middleware('auth')->group(function () {
     Route::get('admin', [DashboardController::class, "index"]);
     Route::get('Dashboard_Detail_Pelamar/{id}', [DashboardController::class, "dashboarddetailpelamar"]);
 
+    // Pengguna
     Route::get('Pengguna', [PenggunaController::class, "index"]);
     Route::get('Data_Pengguna/{id}', [PenggunaController::class, "hapus_data_pengguna"]);
 
@@ -111,9 +118,31 @@ Route::middleware('auth')->group(function () {
     Route::get('Detail_Data_Pelamar/{id}', [PelamarController::class, "pelamar"]);
     Route::get('Daftar_Pelamar/{id}', [PelamarController::class, "hapus_data"]);
 
-    Route::get('Satpam', [SatpamController::class, "index"]);
 
+    // Data Perhitungan 
+    Route::get('Data_Admin', [AdminController::class, "index"]);
+    Route::get('Data_Admin/{id}', [AdminController::class, "hapus_data_admin"]);
+
+    Route::get('Data_CleaningService', [CleaningServiceController::class, "index"]);
+    Route::get('Data_CleaningService/{id}', [CleaningServiceController::class, "hapus_data_cs"]);
+
+    Route::get('Data_Driver', [DriverController::class, "index"]);
+    Route::get('Data_Driver/{id}', [DriverController::class, "hapus_data_driver"]);
+
+    Route::get('Data_Helper', [HelperController::class, "index"]);
+    Route::get('Data_Helper/{id}', [HelperController::class, "hapus_data_helper"]);
+
+    Route::get('Data_Operator', [OperatorController::class, "index"]);
+    Route::get('Data_Operator/{id}', [OperatorController::class, "hapus_data_operator"]);
+
+    Route::get('Data_Satpam', [PerhitunganSatpamController::class, "index"]);
+    Route::get('Data_Satpam/{id}', [PerhitunganSatpamController::class, "hapus_data_satpam"]);
+
+    Route::get('Data_Teknisi', [TeknisiController::class, "index"]);
+    Route::get('Data_Teknisi/{id}', [TeknisiController::class, "hapus_data_teknisi"]);
 });
+
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // User

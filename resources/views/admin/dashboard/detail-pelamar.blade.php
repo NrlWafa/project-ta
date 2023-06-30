@@ -10,11 +10,10 @@
                     <h3 class="card-title">Detail Data Pelamar</h3>
                 </div>
 
-
                 <div class="card-body">
                     <div class="form-group">
                         <label>ID User</label>
-                        <input type="text" class="form-control" value="{{ $pelamar->id_pelamar }}" readonly>
+                        <input type="text" class="form-control" value="{{ $pelamar->id_user }}" readonly>
                     </div>
                     <div class="form-group">
                         <label>Nama Lengkap</label>
@@ -105,6 +104,14 @@
                         <input type="text" class="form-control" value="{{ $pelamar->no_bpjs_kes }}" readonly>
                     </div>
                     <div class="form-group">
+                        <label>SIM</label>
+                        <input type="text" class="form-control" value="{{ $pelamar->sim }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Mampu Mengoperasikan Komputer 'MS Office'</label>
+                        <input type="text" class="form-control" value="{{ $pelamar->komp }}" readonly>
+                    </div>
+                    <div class="form-group">
                         <label>Jabatan yang Dilamar</label>
                         <input type="text" class="form-control" value="{{ $pelamar->jabatan_lamaran }}" readonly>
                     </div>
@@ -122,6 +129,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Pendidikan Satpam</th>
                                 <th>Tinggi Badan</th>
                                 <th>Berat Badan</th>
                                 <th>Ukuran Baju</th>
@@ -131,6 +139,7 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td>{{ $pelamar->satpam }}</td>
                                 <td>{{ $pelamar->tinggi_badan }}</td>
                                 <td>{{ $pelamar->berat_badan }}</td>
                                 <td>{{ $pelamar->uk_baju }}</td>
@@ -264,7 +273,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th> Pendidikan Non Formal</th>
+                                <th>Pendidikan Non Formal</th>
                                 <th>Tempat Pendidikan</th>
                                 <th>Tahun Pendidikan</th>
                                 <th>Jurusan Pendidikan</th>
@@ -298,6 +307,7 @@
                                 <th>Jabatan</th>
                                 <th>Tahun Masuk</th>
                                 <th>Alasan Keluar</th>
+                                <th>Pengalaman Kerja</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -307,6 +317,8 @@
                                 <td>{{ $pelamar->jabatan }}</td>
                                 <td>{{ $pelamar->tahun_masuk }}</td>
                                 <td>{{ $pelamar->alasan_keluar }}</td>
+                                <td>{{ $pelamar->lama_kerja }}</td>
+
                             </tr>
                         </tbody>
                     </table>
@@ -482,7 +494,6 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <tr>
-
                                 <td>
                                     <img src="{{ asset('foto_ktp/' . $pelamar->foto_ktp) }}" alt=""
                                         height="250px" width="380px">
@@ -490,15 +501,36 @@
                             </tr>
                         </div>
 
-                        <!-- /.card-body -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title ">Bukti Pendidikan Non Formal</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                            <!-- /.card-tools -->
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <tr>
+                                <td>
+                                    <img src="{{ asset('bukti_pend_non/' . $pelamar->bukti_pend_non) }}" alt=""
+                                        height="250px" width="380px">
+                                </td>
+                            </tr>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <a href="{{ url('admin') }}" class="btn btn-danger">Kembali</a>
                 </div>
             </div>
-
-            <div class="card-footer">
-                <a href="{{ url('admin') }}" class="btn btn-danger">Kembali</a>
-            </div>
         </div>
-    </div>
-@endsection
+    @endsection

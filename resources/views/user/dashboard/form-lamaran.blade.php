@@ -398,18 +398,13 @@
                         {{-- PERHITUNGAN --}}
                         <label>DATA PENDIDIKAN NON FORMAL</label>
                         <div class="form-group">
-                            <label>Pendidikan Non Formal</label>
+                            <label>Pendidikan Non Formal*</label>
                             <select class="custom-select rounded-0" name="pend_nonformal">
                                 <option value="">Pilih</option>
                                 <option value="Ada">Ada</option>
                                 <option value="Tidak Ada">Tidak Ada</option>
                             </select>
                         </div>
-                        {{-- <div class="form-group">
-                            <label>Nama Pendidikan Non Formal</label>
-                            <input type="text" class="form-control" name="pend_nonformal"
-                                value="{{ old('pend_nonformal') }}" placeholder="Masukkan Nama Pendidikan Non Formal">
-                        </div> --}}
                         <div class="form-group">
                             <label>Tempat Pendidikan Non Formal</label>
                             <input type="text" class="form-control" name="tmp_pend_non"
@@ -428,6 +423,19 @@
                                 value="{{ old('jurusan_pend_non') }}"
                                 placeholder="Masukkan Jurusan Pendidikan Non Formal">
                         </div>
+                        <div class="form-group">
+                            <label for="bukti_pend_non">Upload Bukti Pendidikan Non Formal</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="bukti_pend_non"
+                                        id="bukti_pend_non" onchange="showSelectedFoto(event, 'bukti_pend_non_preview')">
+                                    <label class="custom-file-label" for="bukti_pend_no">Pilih Foto</label>
+                                </div>
+                            </div>
+                            <img id="bukti_pend_non_preview" src="#" alt=""
+                                style="max-width: 200px; max-height: 200px;">
+                        </div>
+
 
 
                         {{-- DATA PEKERJAAN --}}
@@ -463,7 +471,7 @@
                             <label>Pengalaman Kerja*</label>
                             <select class="custom-select rounded-0" name="lama_kerja">
                                 <option value="">Pilih</option>
-                                <option value="Ada">0 Bulan</option>
+                                <option value="0 Bulan">0 Bulan</option>
                                 <option value="1-6 Bulan">1-6 Bulan</option>
                                 <option value="7-12 Bulan">7-12 Bulan</option>
                                 <option value="13-18 Bulan">13-18 Bulan</option>

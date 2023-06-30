@@ -15,11 +15,18 @@ return new class extends Migration
     {
         Schema::create('driver', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_pelamar')->constrained('pelamar');
+            $table->integer('id_pelamar')->length(11);
+
+            // $table->foreignId('id_pelamar')->constrained('pelamar');
+            // $table->unsignedBigInteger('id_pelamar');
+            // $table->foreign('id_pelamar')
+            //     ->references('id')
+            //     ->on('pelamar')
+            //     ->onDelete('cascade');
             $table->enum('pend_formal', ['SLTA', 'D3', 'S1', 'S2', 'S3']);
             $table->enum('pend_nonformal', ['Ada', 'Tidak Ada'])->nullable();
             $table->enum('usia', ['18-24 Tahun', '25-30 Tahun', '31-35 Tahun'])->nullable();
-            $table->enum('lama_kerja', ['0 Bulan', '1-6 Bulan', '7-12 Bulan', '13-18 Bulan', '19-24 Bulan']);
+            $table->enum('lama_kerja', ['0 Bulan', '1-6 Bulan', '7-12 Bulan', '13-18 Bulan', '19-24 Bulan'])->nullable();
             $table->enum('sim', ['A', 'B1', 'B2', 'C'])->nullable();
             $table->double('jarak_c1')->nullable();
             $table->double('jarak_c2')->nullable();

@@ -123,15 +123,71 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-header">PERHITUNGAN</li>
                         <li class="nav-item">
-                            <a href="{{ url('Satpam') }}"
-                                class="nav-link {{ $title === 'Data Satpam' ? 'active' : '' }}">
+                            <a href="{{ url('Data_Admin') }}"
+                                class="nav-link {{ $title === 'P. Admin' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>
-                                    Data Satpam
+                                    P. Admin
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Data_CleaningService') }}"
+                                class="nav-link {{ $title === 'P. Cleaning Service' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    P. Cleaning Service
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Data_Driver') }}"
+                                class="nav-link {{ $title === 'P. Driver' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    P. Driver
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Data_Helper') }}"
+                                class="nav-link {{ $title === 'P. Helper' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    P. Helper
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Data_Operator') }}"
+                                class="nav-link {{ $title === 'P. Operator' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    P. Operator
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Data_Satpam') }}"
+                                class="nav-link {{ $title === 'P. Satpam' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    P. Satpam
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('Data_Teknisi') }}"
+                                class="nav-link {{ $title === 'P. Teknisi' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    P. Teknisi
+                                </p>
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
             </div>

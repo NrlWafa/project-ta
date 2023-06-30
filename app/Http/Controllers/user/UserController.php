@@ -55,13 +55,14 @@ class UserController extends Controller
         ]);
     }
 
+
+
     public function store(Request $req)
     {
         // Cek hak akses jika dia bukan User, maka akan diarahkan ke Landingpage
         if (auth()->user()->id_level != 2) {
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
-
 
         // Pelamar::create($req->except(['_token', 'submit']));
         // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
@@ -122,10 +123,12 @@ class UserController extends Controller
                 'tmp_pend' => 'required',
                 'thn_pend' => 'required',
                 'jurusan_pend' => 'required',
-                'pend_nonformal' => 'nullable',
+                'pend_nonformal' => 'required',
                 'tmp_pend_non' => 'nullable',
                 'thn_pend_non' => 'nullable',
                 'jurusan_pend_non' => 'nullable',
+                'bukti_pend_non' => 'nullable',
+
                 'nama_perusahaan' => 'nullable',
                 'bidang_usaha' => 'nullable',
                 'jabatan' => 'nullable',
@@ -177,16 +180,20 @@ class UserController extends Controller
                 'tgl_lahir_ibu.required' => 'Tanggal Lahir Ibu Wajib diisi!',
                 'pekerjaan_ibu.required' => 'Pekerjaan Ibu Wajib diisi!',
                 'alamat_ibu.required' => 'Alamat Ibu Wajib diisi!',
-                'pend_formal.required' => 'Tempat Pendidikan Formal Wajib diisi!',
+                'pend_formal.required' => 'Pendidikan Formal Wajib diisi!',
                 'tmp_pend.required' => 'Tempat Pendidikan Formal Wajib diisi!',
                 'thn_pend.required' => 'Tahun Pendidikan Formal Wajib diisi!',
                 'jurusan_pend.required' => 'Jurusan Pendidikan Formal Wajib diisi!',
+                'pend_nonformal.required' => 'Pendidikan Non Formal Wajib diisi!',
+
                 'nm_kontak.required' => 'Nama Kontak yang Bisa Dihubungi Wajib diisi!',
                 'no_kontak.required' => 'Nomor Kontak yang Bisa Dihubungi Wajib diisi!',
                 'hubungan.required' => 'Hubungan Kekeluargaan dengan Kontak Wajib diisi!',
                 'lama_kerja.required' => 'Pengalaman Kerja Wajib diisi!',
                 'jabatan_lamaran.required' => 'Jabatan yang Dilamar Wajib dipilih!',
                 'nama.required' => 'Nama Wajib diisi!',
+
+                'bukti_pend_non.mimes' => 'Bukti hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
                 'foto_kk.required' => 'Foto Kartu Keluarga tidak boleh kosong!',
                 'foto_kk.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
                 'foto_kta.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG',
@@ -198,6 +205,20 @@ class UserController extends Controller
             ]
         );
         // dd($req);
+
+
+        $bukti_pend_non = $req->file('bukti_pend_non');
+
+        if ($bukti_pend_non) {
+            $foto_ekstensi = $bukti_pend_non->extension();
+            $bukti_pend_non_nama = date('ymdhis') . "." . $foto_ekstensi;
+            $bukti_pend_non->move(public_path('bukti_pend_non'), $bukti_pend_non_nama);
+        } else {
+            // Tindakan yang perlu diambil jika tidak ada file yang diunggah (null)
+            // Lakukan tindakan alternatif jika foto tidak diunggah
+            $bukti_pend_non_nama = null; // Atau berikan nilai default sesuai kebutuhan
+        }
+
 
         // Kartu Keluarga
         $foto_kk = $req->file('foto_kk');
@@ -298,14 +319,15 @@ class UserController extends Controller
             'gol_dar' => $req->input('gol_dar'),
 
             'pend_formal' => $req->input('pend_formal'),
-
             'tmp_pend' => $req->input('tmp_pend'),
             'thn_pend' => $req->input('thn_pend'),
             'jurusan_pend' => $req->input('jurusan_pend'),
+
             'pend_nonformal' => $req->input('pend_nonformal'),
             'tmp_pend_non' => $req->input('tmp_pend_non'),
             'thn_pend_non' => $req->input('thn_pend_non'),
             'jurusan_pend_non' => $req->input('jurusan_pend_non'),
+
             'nama_perusahaan' => $req->input('nama_perusahaan'),
             'bidang_usaha' => $req->input('bidang_usaha'),
             'jabatan' => $req->input('jabatan'),
@@ -326,6 +348,7 @@ class UserController extends Controller
             'no_bpjs_kes' => $req->input('no_bpjs_kes'),
             'jabatan_lamaran' => $req->input('jabatan_lamaran'),
 
+            'bukti_pend_non' => $bukti_pend_non_nama,
             'foto_kk' => $foto_kk_nama,
             'foto_kta' => $foto_kta_nama,
             'foto_npwp' => $foto_npwp_nama,
@@ -333,6 +356,7 @@ class UserController extends Controller
             'foto_ktp' => $foto_ktp_nama
         ];
 
+        // Perhitungan
         $dataSatpam = [
             'id' => $req->input('id'),
             'id_pelamar' => auth()->user()->id,
@@ -435,7 +459,7 @@ class UserController extends Controller
             Operator::create($dataOperator);
             Driver::create($dataDriver);
             Admin::create($dataAdmin);
-            return redirect('User')->with('Success', 'Pelamar berhasil dibuat');
+            return redirect('User')->with('Success', 'Anda berhasil mengajukan lamaran');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors('Terjadi kesalahan saat membuat pelamar: ' . $e->getMessage());
         }

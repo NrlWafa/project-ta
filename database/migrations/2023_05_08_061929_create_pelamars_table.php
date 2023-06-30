@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('pelamar', function (Blueprint $table) {
             $table->id();
-            
             $table->integer('id_user')->length(10);
             $table->string('nama_lengkap', 100);
             $table->string('nama_panggilan', 100);
@@ -24,10 +23,10 @@ return new class extends Migration
 
             // Perhitungan
             $table->date('tanggal_lahir');
-            $table->enum('usia', ['18-24 Tahun', '25-30 Tahun', '31-50 Tahun'])->nullable();
+            $table->enum('usia', ['18-24 Tahun', '25-30 Tahun', '31-35 Tahun'])->nullable();
 
             $table->enum('status_perkawinan', ['Belum Kawin', 'Kawin']);
-            $table->enum('agama', ['Islam', 'Kristen/Protestan', 'Katolik', 'Hindu', 'Budha', 'Konghucu']);
+            $table->enum('agama', ['Islam', 'Kristen/Protestan', 'Katolik', 'Hindu', 'Budha', 'Kong Hu Cu']);
             $table->string('alamat_ktp', 100);
             $table->string('alamat_dom', 100);
             $table->string('kel', 100);
@@ -41,6 +40,7 @@ return new class extends Migration
             // Khusus Satpam
             $table->enum('satpam', ['Tidak Ada', 'Gada Pratama', 'Gada Madya', 'Gada Utama'])->nullable();
             $table->enum('tinggi_badan', ['Kurang Dari 160 Cm', '160-185 Cm', 'Lebih Dari 185 Cm'])->nullable();
+
 
             $table->integer('berat_badan')->length(15)->nullable();
             $table->enum('uk_baju', ['S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'])->nullable();
@@ -84,6 +84,9 @@ return new class extends Migration
             $table->string('tmp_pend_non', 100)->nullable();
             $table->integer('thn_pend_non')->length(20)->nullable();
             $table->string('jurusan_pend_non', 100)->nullable();
+            $table->string('bukti_pend_non', 100)->nullable();
+
+
             $table->string('nama_perusahaan', 100)->nullable();
             $table->string('bidang_usaha', 100)->nullable();
             $table->string('jabatan', 100)->nullable();

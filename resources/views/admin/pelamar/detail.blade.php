@@ -273,7 +273,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th> Pendidikan Non Formal</th>
+                                <th>Pendidikan Non Formal</th>
                                 <th>Tempat Pendidikan</th>
                                 <th>Tahun Pendidikan</th>
                                 <th>Jurusan Pendidikan</th>
@@ -501,15 +501,36 @@
                             </tr>
                         </div>
 
-                        <!-- /.card-body -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title ">Bukti Pendidikan Non Formal</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                            <!-- /.card-tools -->
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <tr>
+                                <td>
+                                    <img src="{{ asset('bukti_pend_non/' . $pelamar->bukti_pend_non) }}" alt=""
+                                        height="250px" width="380px">
+                                </td>
+                            </tr>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <a href="{{ url('Daftar_Pelamar') }}" class="btn btn-danger">Kembali</a>
                 </div>
             </div>
-
-            <div class="card-footer">
-                <a href="{{ url('Daftar_Pelamar') }}" class="btn btn-danger">Kembali</a>
-            </div>
         </div>
-    </div>
-@endsection
+    @endsection
