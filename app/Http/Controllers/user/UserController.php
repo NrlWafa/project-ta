@@ -357,6 +357,7 @@ class UserController extends Controller
         $konversi_s_tinggi_badan = $req->input('tinggi_badan');
         $konversi_s_lama_kerja = $req->input('lama_kerja');
 
+        //Kondisi SATPAM
         if ($konversi_s_pend_formal == "SLTA") {
             $konversi_s_pend_formal = "1";
         } else if ($konversi_s_pend_formal == "D3") {
@@ -413,6 +414,7 @@ class UserController extends Controller
             $konversi_s_lama_kerja = "5";
         }
 
+        //Array (Simpan Data) SATPAM
         $dataSatpam = [
             'id' => $req->input('id'),
             'id_pelamar' => $pelamar->id,
@@ -435,6 +437,7 @@ class UserController extends Controller
         $konversi_cs_usia = $req->input('usia');
         $konversi_cs_lama_kerja = $req->input('lama_kerja');
 
+        //Kondisi CLEANING SERVICE
         if ($konversi_cs_pend_formal == "SLTA") {
             $konversi_cs_pend_formal = "1";
         } else if ($konversi_cs_pend_formal == "D3") {
@@ -473,6 +476,7 @@ class UserController extends Controller
             $konversi_cs_lama_kerja = "5";
         }
 
+        //Array (Simpan Data) CLEANING SERVICE
         $dataCleaningService = [
             'id' => $req->input('id'),
             // 'id_pelamar' => $req->input('id_pelamar'),
@@ -494,6 +498,7 @@ class UserController extends Controller
         $konversi_t_lama_kerja = $req->input('lama_kerja');
         $konversi_t_komp = $req->input('komp');
 
+        //Kondisi TEKNISI
         if ($konversi_t_pend_formal == "SLTA") {
             $konversi_t_pend_formal = "0";
         } else if ($konversi_t_pend_formal == "D3") {
@@ -538,6 +543,7 @@ class UserController extends Controller
             $konversi_t_komp = "2";
         }
 
+        //Array (Simpan Data) TEKNISI
         $dataTeknisi = [
             'id' => $req->input('id'),
             'id_pelamar' => $pelamar->id,
@@ -552,7 +558,6 @@ class UserController extends Controller
         ];
 
 
-
         // Konversi Perhitungan HELPER
         $konversi_h_pend_formal = $req->input('pend_formal');
         $konversi_h_pend_nonformal = $req->input('pend_nonformal');
@@ -560,6 +565,7 @@ class UserController extends Controller
         $konversi_h_lama_kerja = $req->input('lama_kerja');
         $konversi_h_komp = $req->input('komp');
 
+        //Kondisi HELPER
         if ($konversi_h_pend_formal == "SLTA") {
             $konversi_h_pend_formal = "0";
         } else if ($konversi_h_pend_formal == "D3") {
@@ -578,9 +584,7 @@ class UserController extends Controller
             $konversi_h_pend_nonformal = "2";
         }
 
-        if (
-            $konversi_h_usia == "31-35 Tahun"
-        ) {
+        if ($konversi_h_usia == "31-35 Tahun") { 
             $konversi_h_usia = "0";
         } else if ($konversi_h_usia == "25-30 Tahun") {
             $konversi_h_usia = "2";
@@ -606,11 +610,12 @@ class UserController extends Controller
             $konversi_h_komp = "2";
         }
 
+        //Array (Simpan Data) HELPER
         $dataHelper = [
             'id' => $req->input('id'),
             'id_pelamar' => $pelamar->id,
-            'pend_formal' =>  $konversi_h_pend_formal,
-            'pend_nonformal' =>  $konversi_h_pend_nonformal,
+            'pend_formal' => $konversi_h_pend_formal,
+            'pend_nonformal' => $konversi_h_pend_nonformal,
             'usia' => $konversi_h_usia,
             'lama_kerja' => $konversi_h_lama_kerja,
             'komp' => $konversi_h_komp,
@@ -620,44 +625,206 @@ class UserController extends Controller
         ];
 
 
+        // Konversi Perhitungan OPERATOR
+        $konversi_o_pend_formal = $req->input('pend_formal');
+        $konversi_o_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_o_usia = $req->input('usia');
+        $konversi_o_lama_kerja = $req->input('lama_kerja');
+        $konversi_o_komp = $req->input('komp');
 
+        //Kondisi OPERATOR
+        if ($konversi_o_pend_formal == "SLTA") {
+            $konversi_o_pend_formal = "0";
+        } else if ($konversi_o_pend_formal == "D3") {
+            $konversi_o_pend_formal = "1";
+        } else if ($konversi_o_pend_formal == "S1") {
+            $konversi_o_pend_formal = "2";
+        } else if ($konversi_o_pend_formal == "S2") {
+            $konversi_o_pend_formal = "3";
+        } else if ($konversi_o_pend_formal == "S3") {
+            $konversi_o_pend_formal = "4";
+        }
 
+        if ($konversi_o_pend_nonformal == "Tidak Ada") {
+            $konversi_o_pend_nonformal = "1";
+        } else if ($konversi_o_pend_nonformal == "Ada") {
+            $konversi_o_pend_nonformal = "2";
+        }
+
+        if ($konversi_o_usia == "31-35 Tahun") {
+            $konversi_o_usia = "0";
+        } else if ($konversi_o_usia == "25-30 Tahun") {
+            $konversi_o_usia = "2";
+        } else if ($konversi_o_usia == "18-24 Tahun") {
+            $konversi_o_usia = "1";
+        }
+
+        if ($konversi_o_lama_kerja == "0 Bulan") {
+            $konversi_o_lama_kerja = "1";
+        } else if ($konversi_o_lama_kerja == "1-6 Bulan") {
+            $konversi_o_lama_kerja = "2";
+        } else if ($konversi_o_lama_kerja == "7-12 Bulan") {
+            $konversi_o_lama_kerja = "3";
+        } else if ($konversi_o_lama_kerja == "13-18 Bulan") {
+            $konversi_o_lama_kerja = "4";
+        } else if ($konversi_o_lama_kerja == "19-24 Bulan") {
+            $konversi_o_lama_kerja = "5";
+        }
+
+        if ($konversi_o_komp == "Tidak Ada") {
+            $konversi_o_komp = "1";
+        } else if ($konversi_o_komp == "Ada") {
+            $konversi_o_komp = "2";
+        }
+        
+        //Array (Simpan Data) OPERATOR
         $dataOperator = [
             'id' => $req->input('id'),
             'id_pelamar' => $pelamar->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'lama_kerja' => $req->input('lama_kerja'),
-            'komp' => $req->input('komp'),
+            'pend_formal' => $konversi_o_pend_formal,
+            'pend_nonformal' => $konversi_o_pend_nonformal,
+            'usia' => $konversi_o_usia,
+            'lama_kerja' => $konversi_o_lama_kerja,
+            'komp' => $konversi_o_komp,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
         ];
 
+        
+        // Konversi Perhitungan DRIVER
+        $konversi_d_pend_formal = $req->input('pend_formal');
+        $konversi_d_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_d_usia = $req->input('usia');
+        $konversi_d_lama_kerja = $req->input('lama_kerja');
+        $konversi_d_sim = $req->input('sim');
+
+        //Kondisi DRIVER
+        if ($konversi_d_pend_formal == "SLTA") {
+            $konversi_d_pend_formal = "0";
+        } else if ($konversi_d_pend_formal == "D3") {
+            $konversi_d_pend_formal = "1";
+        } else if ($konversi_d_pend_formal == "S1") {
+            $konversi_d_pend_formal = "2";
+        } else if ($konversi_d_pend_formal == "S2") {
+            $konversi_d_pend_formal = "3";
+        } else if ($konversi_d_pend_formal == "S3") {
+            $konversi_d_pend_formal = "4";
+        }
+
+        if ($konversi_d_pend_nonformal == "Tidak Ada") {
+            $konversi_d_pend_nonformal = "1";
+        } else if ($konversi_d_pend_nonformal == "Ada") {
+            $konversi_d_pend_nonformal = "2";
+        }
+
+        if ($konversi_d_usia == "31-35 Tahun") {
+            $konversi_d_usia = "0";
+        } else if ($konversi_d_usia == "25-30 Tahun") {
+            $konversi_d_usia = "2";
+        } else if ($konversi_d_usia == "18-24 Tahun") {
+            $konversi_d_usia = "1";
+        }
+
+        if ($konversi_d_lama_kerja == "0 Bulan") {
+            $konversi_d_lama_kerja = "1";
+        } else if ($konversi_d_lama_kerja == "1-6 Bulan") {
+            $konversi_d_lama_kerja = "2";
+        } else if ($konversi_d_lama_kerja == "7-12 Bulan") {
+            $konversi_d_lama_kerja = "3";
+        } else if ($konversi_d_lama_kerja == "13-18 Bulan") {
+            $konversi_d_lama_kerja = "4";
+        } else if ($konversi_d_lama_kerja == "19-24 Bulan") {
+            $konversi_d_lama_kerja = "5";
+        }
+
+        if ($konversi_d_sim == "A") {
+            $konversi_d_sim = "1";
+        } else if ($konversi_d_sim == "B1") {
+            $konversi_d_sim = "3";
+        } else if ($konversi_d_sim == "B2") {
+            $konversi_d_sim = "4";
+        } else if ($konversi_d_sim == "C") {
+            $konversi_d_sim = "2";
+        }
+
+        //Array (Simpan Data) DRIVER
         $dataDriver = [
             'id' => $req->input('id'),
-            // 'id_pelamar' => auth()->user()->id,
             'id_pelamar' => $pelamar->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'lama_kerja' => $req->input('lama_kerja'),
-            'sim' => $req->input('sim'),
+            'pend_formal' => $konversi_d_pend_formal,
+            'pend_nonformal' => $konversi_d_pend_nonformal,
+            'usia' => $req-> $konversi_d_usia,
+            'lama_kerja' => $konversi_d_lama_kerja,
+            'sim' => $konversi_d_sim,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
         ];
 
+        
+        // Konversi Perhitungan ADMIN
+        $konversi_a_pend_formal = $req->input('pend_formal');
+        $konversi_a_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_a_usia = $req->input('usia');
+        $konversi_a_lama_kerja = $req->input('lama_kerja');
+        $konversi_a_komp = $req->input('komp');
+
+        //Kondisi ADMIN
+        if ($konversi_a_pend_formal == "SLTA") {
+            $konversi_a_pend_formal = "0";
+        } else if ($konversi_a_pend_formal == "D3") {
+            $konversi_a_pend_formal = "1";
+        } else if ($konversi_a_pend_formal == "S1") {
+            $konversi_a_pend_formal = "2";
+        } else if ($konversi_a_pend_formal == "S2") {
+            $konversi_a_pend_formal = "3";
+        } else if ($konversi_a_pend_formal == "S3") {
+            $konversi_a_pend_formal = "4";
+        }
+
+        if ($konversi_a_pend_nonformal == "Tidak Ada") {
+            $konversi_a_pend_nonformal = "1";
+        } else if ($konversi_a_pend_nonformal == "Ada") {
+            $konversi_a_pend_nonformal = "2";
+        }
+
+        if ($konversi_a_usia == "31-35 Tahun") {
+            $konversi_a_usia = "0";
+        } else if ($konversi_a_usia == "25-30 Tahun") {
+            $konversi_a_usia = "2";
+        } else if ($konversi_a_usia == "18-24 Tahun") {
+            $konversi_a_usia = "1";
+        }
+
+        if ($konversi_a_lama_kerja == "0 Bulan") {
+            $konversi_a_lama_kerja = "1";
+        } else if ($konversi_a_lama_kerja == "1-6 Bulan") {
+            $konversi_a_lama_kerja = "2";
+        } else if ($konversi_a_lama_kerja == "7-12 Bulan") {
+            $konversi_a_lama_kerja = "3";
+        } else if ($konversi_a_lama_kerja == "13-18 Bulan") {
+            $konversi_a_lama_kerja = "4";
+        } else if ($konversi_a_lama_kerja == "19-24 Bulan") {
+            $konversi_a_lama_kerja = "5";
+        }
+
+        if ($konversi_a_komp == "Tidak Ada") {
+            $konversi_a_komp = "1";
+        } else if ($konversi_a_komp == "Ada") {
+            $konversi_a_komp = "2";
+        }
+
+        //Array (Simpan Data) ADMIN
         $dataAdmin = [
             'id' => $req->input('id'),
             // 'id_pelamar' => $pelamar->('id'),
             'id_pelamar' => $pelamar->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'lama_kerja' => $req->input('lama_kerja'),
-            'komp' => $req->input('komp'),
+            'pend_formal' => $konversi_a_pend_formal,
+            'pend_nonformal' => $konversi_a_pend_nonformal,
+            'usia' => $konversi_a_usia,
+            'lama_kerja' => $konversi_a_lama_kerja,
+            'komp' => $konversi_a_komp,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
