@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\perhitungan;
 use App\Http\Controllers\Controller;
 use App\Models\Teknisi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeknisiController extends Controller
 {
@@ -15,7 +16,27 @@ class TeknisiController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        $teknisi = Teknisi::all();
+        $teknisi = DB::table('Teknisi')
+            ->join(
+                'pelamar',
+                'Teknisi.id_pelamar',
+                '=',
+                'pelamar.id'
+            )
+            ->select(
+                'Teknisi.id',
+                'Teknisi.id_pelamar',
+                'Teknisi.pend_formal',
+                'Teknisi.pend_nonformal',
+                'Teknisi.usia',
+                'Teknisi.lama_kerja',
+                'Teknisi.komp',
+                'Teknisi.jarak_c1',
+                'Teknisi.jarak_c2',
+                'Teknisi.iterasi',
+                'pelamar.id_user'
+            )
+            ->get();
 
         return view("admin.perhitungan.teknisi", compact('teknisi'),  [
             "title" => "P. Teknisi"

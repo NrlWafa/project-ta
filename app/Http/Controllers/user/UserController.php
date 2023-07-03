@@ -280,20 +280,14 @@ class UserController extends Controller
             'no_hp' => $req->input('no_hp'),
             'no_telprumah' => $req->input('no_telprumah'),
             'no_ktp' => $req->input('no_ktp'),
-
             'satpam' => $req->input('satpam'),
             'tinggi_badan' => $req->input('tinggi_badan'),
-
-
             'berat_badan' => $req->input('berat_badan'),
             'uk_baju' => $req->input('uk_baju'),
-
-
             'uk_celana' => $req->input('uk_celana'),
             'uk_sepatu' => $req->input('uk_sepatu'),
             'sim' => $req->input('sim'),
             'komp' => $req->input('komp'),
-
             'nama_pasangan' => $req->input('nama_pasangan'),
             'status_psg' => $req->input('status_psg'),
             'tmp_lahir_psg' => $req->input('tmp_lahir_psg'),
@@ -317,24 +311,20 @@ class UserController extends Controller
             'alamat_ibu' => $req->input('alamat_ibu'),
             'no_hp_ibu' => $req->input('no_hp_ibu'),
             'gol_dar' => $req->input('gol_dar'),
-
             'pend_formal' => $req->input('pend_formal'),
             'tmp_pend' => $req->input('tmp_pend'),
             'thn_pend' => $req->input('thn_pend'),
             'jurusan_pend' => $req->input('jurusan_pend'),
-
             'pend_nonformal' => $req->input('pend_nonformal'),
             'tmp_pend_non' => $req->input('tmp_pend_non'),
             'thn_pend_non' => $req->input('thn_pend_non'),
             'jurusan_pend_non' => $req->input('jurusan_pend_non'),
-
             'nama_perusahaan' => $req->input('nama_perusahaan'),
             'bidang_usaha' => $req->input('bidang_usaha'),
             'jabatan' => $req->input('jabatan'),
             'tahun_masuk' => $req->input('tahun_masuk'),
             'alasan_keluar' => $req->input('alasan_keluar'),
             'lama_kerja' => $req->input('lama_kerja'),
-
             'riwayat_penyakit' => $req->input('riwayat_penyakit'),
             'rs' => $req->input('rs'),
             'lama_dirawat' => $req->input('lama_dirawat'),
@@ -356,62 +346,285 @@ class UserController extends Controller
             'foto_ktp' => $foto_ktp_nama
         ];
 
-        // Perhitungan
+        $pelamar = Pelamar::create($data);
+
+
+        // Konversi Perhitungan Satpam
+        $konversi_s_pend_formal = $req->input('pend_formal');
+        $konversi_s_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_s_usia = $req->input('usia');
+        $konversi_s_satpam = $req->input('satpam');
+        $konversi_s_tinggi_badan = $req->input('tinggi_badan');
+        $konversi_s_lama_kerja = $req->input('lama_kerja');
+
+        if ($konversi_s_pend_formal == "SLTA") {
+            $konversi_s_pend_formal = "1";
+        } else if ($konversi_s_pend_formal == "D3") {
+            $konversi_s_pend_formal = "2";
+        } else if ($konversi_s_pend_formal == "S1") {
+            $konversi_s_pend_formal = "3";
+        } else if ($konversi_s_pend_formal == "S2") {
+            $konversi_s_pend_formal = "4";
+        } else if ($konversi_s_pend_formal == "S3") {
+            $konversi_s_pend_formal = "5";
+        }
+
+        if ($konversi_s_pend_nonformal == "Tidak Ada") {
+            $konversi_s_pend_nonformal = "1";
+        } else if ($konversi_s_pend_nonformal == "Ada") {
+            $konversi_s_pend_nonformal = "2";
+        }
+
+        if ($konversi_s_usia == "31-35 Tahun") {
+            $konversi_s_usia = "3";
+        } else if ($konversi_s_usia == "25-30 Tahun") {
+            $konversi_s_usia = "2";
+        } else if ($konversi_s_usia == "18-24 Tahun") {
+            $konversi_s_usia = "1";
+        }
+
+        if ($konversi_s_satpam == "Tidak Ada") {
+            $konversi_s_satpam = "1";
+        } else if ($konversi_s_satpam == "Gada Pratama") {
+            $konversi_s_satpam = "2";
+        } else if ($konversi_s_satpam == "Gada Madya") {
+            $konversi_s_satpam = "3";
+        } else if ($konversi_s_satpam == "Gada Utama") {
+            $konversi_s_satpam = "4";
+        }
+
+        if ($konversi_s_tinggi_badan == "Kurang Dari 160 Cm") {
+            $konversi_s_tinggi_badan = "1";
+        } else if ($konversi_s_tinggi_badan == "160-185 Cm") {
+            $konversi_s_tinggi_badan = "2";
+        } else if ($konversi_s_tinggi_badan == "Lebih Dari 185 Cm") {
+            $konversi_s_tinggi_badan = "3";
+        }
+
+        if ($konversi_s_lama_kerja == "0 Bulan") {
+            $konversi_s_lama_kerja = "1";
+        } else if ($konversi_s_lama_kerja == "1-6 Bulan") {
+            $konversi_s_lama_kerja = "2";
+        } else if ($konversi_s_lama_kerja == "7-12 Bulan") {
+            $konversi_s_lama_kerja = "3";
+        } else if ($konversi_s_lama_kerja == "13-18 Bulan") {
+            $konversi_s_lama_kerja = "4";
+        } else if ($konversi_s_lama_kerja == "19-24 Bulan") {
+            $konversi_s_lama_kerja = "5";
+        }
+
         $dataSatpam = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'satpam' => $req->input('satpam'),
-            'tinggi_badan' => $req->input('tinggi_badan'),
-            'lama_kerja' => $req->input('lama_kerja'),
+            'id_pelamar' => $pelamar->id,
+            'pend_formal' => $konversi_s_pend_formal,
+            'pend_nonformal' => $konversi_s_pend_nonformal,
+            'usia' =>  $konversi_s_usia,
+            'satpam' => $konversi_s_satpam,
+            'tinggi_badan' => $konversi_s_tinggi_badan,
+            'lama_kerja' => $konversi_s_lama_kerja,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
         ];
+
+
+
+        // Konversi Perhitungan CLEANING SERVICE
+        $konversi_cs_pend_formal = $req->input('pend_formal');
+        $konversi_cs_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_cs_usia = $req->input('usia');
+        $konversi_cs_lama_kerja = $req->input('lama_kerja');
+
+        if ($konversi_cs_pend_formal == "SLTA") {
+            $konversi_cs_pend_formal = "1";
+        } else if ($konversi_cs_pend_formal == "D3") {
+            $konversi_cs_pend_formal = "2";
+        } else if ($konversi_cs_pend_formal == "S1") {
+            $konversi_cs_pend_formal = "3";
+        } else if ($konversi_cs_pend_formal == "S2") {
+            $konversi_cs_pend_formal = "4";
+        } else if ($konversi_cs_pend_formal == "S3") {
+            $konversi_cs_pend_formal = "5";
+        }
+
+        if ($konversi_cs_pend_nonformal == "Tidak Ada") {
+            $konversi_cs_pend_nonformal = "1";
+        } else if ($konversi_cs_pend_nonformal == "Ada") {
+            $konversi_cs_pend_nonformal = "2";
+        }
+
+        if ($konversi_cs_usia == "31-35 Tahun") {
+            $konversi_cs_usia = "0";
+        } else if ($konversi_cs_usia == "25-30 Tahun") {
+            $konversi_cs_usia = "2";
+        } else if ($konversi_cs_usia == "18-24 Tahun") {
+            $konversi_cs_usia = "1";
+        }
+
+        if ($konversi_cs_lama_kerja == "0 Bulan") {
+            $konversi_cs_lama_kerja = "1";
+        } else if ($konversi_cs_lama_kerja == "1-6 Bulan") {
+            $konversi_cs_lama_kerja = "2";
+        } else if ($konversi_cs_lama_kerja == "7-12 Bulan") {
+            $konversi_cs_lama_kerja = "3";
+        } else if ($konversi_cs_lama_kerja == "13-18 Bulan") {
+            $konversi_cs_lama_kerja = "4";
+        } else if ($konversi_cs_lama_kerja == "19-24 Bulan") {
+            $konversi_cs_lama_kerja = "5";
+        }
 
         $dataCleaningService = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'lama_kerja' => $req->input('lama_kerja'),
+            // 'id_pelamar' => $req->input('id_pelamar'),
+            'id_pelamar' => $pelamar->id,
+            'pend_formal' => $konversi_cs_pend_formal,
+            'pend_nonformal' => $konversi_cs_pend_nonformal,
+            'usia' => $konversi_cs_usia,
+            'lama_kerja' => $konversi_cs_lama_kerja,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
         ];
+
+
+        // Konversi Perhitungan TEKNISI
+        $konversi_t_pend_formal = $req->input('pend_formal');
+        $konversi_t_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_t_usia = $req->input('usia');
+        $konversi_t_lama_kerja = $req->input('lama_kerja');
+        $konversi_t_komp = $req->input('komp');
+
+        if ($konversi_t_pend_formal == "SLTA") {
+            $konversi_t_pend_formal = "0";
+        } else if ($konversi_t_pend_formal == "D3") {
+            $konversi_t_pend_formal = "1";
+        } else if ($konversi_t_pend_formal == "S1") {
+            $konversi_t_pend_formal = "2";
+        } else if ($konversi_t_pend_formal == "S2") {
+            $konversi_t_pend_formal = "3";
+        } else if ($konversi_t_pend_formal == "S3") {
+            $konversi_t_pend_formal = "4";
+        }
+
+        if ($konversi_t_pend_nonformal == "Tidak Ada") {
+            $konversi_t_pend_nonformal = "1";
+        } else if ($konversi_t_pend_nonformal == "Ada") {
+            $konversi_t_pend_nonformal = "2";
+        }
+
+        if ($konversi_t_usia == "31-35 Tahun") {
+            $konversi_t_usia = "0";
+        } else if ($konversi_t_usia == "25-30 Tahun") {
+            $konversi_t_usia = "2";
+        } else if ($konversi_t_usia == "18-24 Tahun") {
+            $konversi_t_usia = "1";
+        }
+
+        if ($konversi_t_lama_kerja == "0 Bulan") {
+            $konversi_t_lama_kerja = "1";
+        } else if ($konversi_t_lama_kerja == "1-6 Bulan") {
+            $konversi_t_lama_kerja = "2";
+        } else if ($konversi_t_lama_kerja == "7-12 Bulan") {
+            $konversi_t_lama_kerja = "3";
+        } else if ($konversi_t_lama_kerja == "13-18 Bulan") {
+            $konversi_t_lama_kerja = "4";
+        } else if ($konversi_t_lama_kerja == "19-24 Bulan") {
+            $konversi_t_lama_kerja = "5";
+        }
+
+        if ($konversi_t_komp == "Tidak Ada") {
+            $konversi_t_komp = "1";
+        } else if ($konversi_t_komp == "Ada") {
+            $konversi_t_komp = "2";
+        }
 
         $dataTeknisi = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'lama_kerja' => $req->input('lama_kerja'),
-            'komp' => $req->input('komp'),
+            'id_pelamar' => $pelamar->id,
+            'pend_formal' =>  $konversi_t_pend_formal,
+            'pend_nonformal' =>   $konversi_t_pend_nonformal,
+            'usia' =>  $konversi_t_usia,
+            'lama_kerja' => $konversi_t_lama_kerja,
+            'komp' => $konversi_t_komp,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
         ];
+
+
+
+        // Konversi Perhitungan HELPER
+        $konversi_h_pend_formal = $req->input('pend_formal');
+        $konversi_h_pend_nonformal = $req->input('pend_nonformal');
+        $konversi_h_usia = $req->input('usia');
+        $konversi_h_lama_kerja = $req->input('lama_kerja');
+        $konversi_h_komp = $req->input('komp');
+
+        if ($konversi_h_pend_formal == "SLTA") {
+            $konversi_h_pend_formal = "0";
+        } else if ($konversi_h_pend_formal == "D3") {
+            $konversi_h_pend_formal = "1";
+        } else if ($konversi_h_pend_formal == "S1") {
+            $konversi_h_pend_formal = "2";
+        } else if ($konversi_h_pend_formal == "S2") {
+            $konversi_h_pend_formal = "3";
+        } else if ($konversi_h_pend_formal == "S3") {
+            $konversi_h_pend_formal = "4";
+        }
+
+        if ($konversi_h_pend_nonformal == "Tidak Ada") {
+            $konversi_h_pend_nonformal = "1";
+        } else if ($konversi_h_pend_nonformal == "Ada") {
+            $konversi_h_pend_nonformal = "2";
+        }
+
+        if (
+            $konversi_h_usia == "31-35 Tahun"
+        ) {
+            $konversi_h_usia = "0";
+        } else if ($konversi_h_usia == "25-30 Tahun") {
+            $konversi_h_usia = "2";
+        } else if ($konversi_h_usia == "18-24 Tahun") {
+            $konversi_h_usia = "1";
+        }
+
+        if ($konversi_h_lama_kerja == "0 Bulan") {
+            $konversi_h_lama_kerja = "1";
+        } else if ($konversi_h_lama_kerja == "1-6 Bulan") {
+            $konversi_h_lama_kerja = "2";
+        } else if ($konversi_h_lama_kerja == "7-12 Bulan") {
+            $konversi_h_lama_kerja = "3";
+        } else if ($konversi_h_lama_kerja == "13-18 Bulan") {
+            $konversi_h_lama_kerja = "4";
+        } else if ($konversi_h_lama_kerja == "19-24 Bulan") {
+            $konversi_h_lama_kerja = "5";
+        }
+
+        if ($konversi_h_komp == "Tidak Ada") {
+            $konversi_h_komp = "1";
+        } else if ($konversi_h_komp == "Ada") {
+            $konversi_h_komp = "2";
+        }
 
         $dataHelper = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
-            'pend_formal' => $req->input('pend_formal'),
-            'pend_nonformal' => $req->input('pend_nonformal'),
-            'usia' => $req->input('usia'),
-            'lama_kerja' => $req->input('lama_kerja'),
-            'komp' => $req->input('komp'),
+            'id_pelamar' => $pelamar->id,
+            'pend_formal' =>  $konversi_h_pend_formal,
+            'pend_nonformal' =>  $konversi_h_pend_nonformal,
+            'usia' => $konversi_h_usia,
+            'lama_kerja' => $konversi_h_lama_kerja,
+            'komp' => $konversi_h_komp,
             'jarak_c1' => $req->input('jarak_c1'),
             'jarak_c2' => $req->input('jarak_c2'),
             'iterasi' => $req->input('iterasi'),
         ];
 
+
+
+
         $dataOperator = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
+            'id_pelamar' => $pelamar->id,
             'pend_formal' => $req->input('pend_formal'),
             'pend_nonformal' => $req->input('pend_nonformal'),
             'usia' => $req->input('usia'),
@@ -424,7 +637,8 @@ class UserController extends Controller
 
         $dataDriver = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
+            // 'id_pelamar' => auth()->user()->id,
+            'id_pelamar' => $pelamar->id,
             'pend_formal' => $req->input('pend_formal'),
             'pend_nonformal' => $req->input('pend_nonformal'),
             'usia' => $req->input('usia'),
@@ -437,7 +651,8 @@ class UserController extends Controller
 
         $dataAdmin = [
             'id' => $req->input('id'),
-            'id_pelamar' => auth()->user()->id,
+            // 'id_pelamar' => $pelamar->('id'),
+            'id_pelamar' => $pelamar->id,
             'pend_formal' => $req->input('pend_formal'),
             'pend_nonformal' => $req->input('pend_nonformal'),
             'usia' => $req->input('usia'),
@@ -448,10 +663,7 @@ class UserController extends Controller
             'iterasi' => $req->input('iterasi'),
         ];
 
-        // Pelamar::create($data);
-        // return redirect('User')->with('sukses', 'Data Berhasil Tersimpan');
         try {
-            Pelamar::create($data);
             Satpam::create($dataSatpam);
             CleaningService::create($dataCleaningService);
             Teknisi::create($dataTeknisi);

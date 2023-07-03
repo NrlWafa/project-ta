@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\perhitungan;
 use App\Http\Controllers\Controller;
 use App\Models\Helper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HelperController extends Controller
 {
@@ -15,7 +16,27 @@ class HelperController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        $helper = Helper::all();
+        $helper = DB::table('Helper')
+            ->join(
+                'pelamar',
+                'Helper.id_pelamar',
+                '=',
+                'pelamar.id'
+            )
+            ->select(
+                'Helper.id',
+                'Helper.id_pelamar',
+                'Helper.pend_formal',
+                'Helper.pend_nonformal',
+                'Helper.usia',
+                'Helper.lama_kerja',
+                'Helper.komp',
+                'Helper.jarak_c1',
+                'Helper.jarak_c2',
+                'Helper.iterasi',
+                'pelamar.id_user'
+            )
+            ->get();
 
         return view("admin.perhitungan.helper", compact('helper'),  [
             "title" => "P. Helper"

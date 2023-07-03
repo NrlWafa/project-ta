@@ -27,7 +27,7 @@
                         <tbody>
                             @foreach ($teknisi as $tek)
                                 <tr>
-                                    <td>{{ $tek->id_pelamar }}</td>
+                                    <td>{{ $tek->id_user }}</td>
                                     <td>{{ $tek->pend_formal }}</td>
                                     <td>{{ $tek->pend_nonformal }}</td>
                                     <td>{{ $tek->usia }}</td>

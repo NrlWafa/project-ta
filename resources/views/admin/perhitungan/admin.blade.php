@@ -27,7 +27,7 @@
                         <tbody>
                             @foreach ($admin as $min)
                                 <tr>
-                                    <td>{{ $min->id_pelamar }}</td>
+                                    <td>{{ $min->id_user }}</td>
                                     <td>{{ $min->pend_formal }}</td>
                                     <td>{{ $min->pend_nonformal }}</td>
                                     <td>{{ $min->usia }}</td>

@@ -27,7 +27,7 @@
                         <tbody>
                             @foreach ($driver as $ver)
                                 <tr>
-                                    <td>{{ $ver->id_pelamar }}</td>
+                                    <td>{{ $ver->id_user }}</td>
                                     <td>{{ $ver->pend_formal }}</td>
                                     <td>{{ $ver->pend_nonformal }}</td>
                                     <td>{{ $ver->usia }}</td>

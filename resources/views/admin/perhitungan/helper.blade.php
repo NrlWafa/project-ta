@@ -28,7 +28,7 @@
                         <tbody>
                             @foreach ($helper as $hel)
                                 <tr>
-                                    <td>{{ $hel->id_pelamar }}</td>
+                                    <td>{{ $hel->id_user }}</td>
                                     <td>{{ $hel->pend_formal }}</td>
                                     <td>{{ $hel->pend_nonformal }}</td>
                                     <td>{{ $hel->usia }}</td>

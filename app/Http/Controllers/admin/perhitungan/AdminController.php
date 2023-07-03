@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\perhitungan;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -15,7 +16,23 @@ class AdminController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        $admin = Admin::all();
+        $admin = DB::table('Admin')
+
+            ->join('pelamar', 'Admin.id_pelamar', '=', 'pelamar.id')
+            ->select(
+                'Admin.id',
+                'Admin.id_pelamar',
+                'Admin.pend_formal',
+                'Admin.pend_nonformal',
+                'Admin.usia',
+                'Admin.lama_kerja',
+                'Admin.komp',
+                'Admin.jarak_c1',
+                'Admin.jarak_c2',
+                'Admin.iterasi',
+                'pelamar.id_user'
+            )
+            ->get();
 
         return view("admin.perhitungan.admin", compact('admin'),  [
             "title" => "P. Admin"

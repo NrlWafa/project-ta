@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\perhitungan;
 use App\Http\Controllers\Controller;
 use App\Models\Operator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OperatorController extends Controller
 {
@@ -15,7 +16,28 @@ class OperatorController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        $operator = Operator::all();
+        $operator = DB::table('Operator')
+
+            ->join(
+                'pelamar',
+                'Operator.id_pelamar',
+                '=',
+                'pelamar.id'
+            )
+            ->select(
+                'Operator.id',
+                'Operator.id_pelamar',
+                'Operator.pend_formal',
+                'Operator.pend_nonformal',
+                'Operator.usia',
+                'Operator.lama_kerja',
+                'Operator.komp',
+                'Operator.jarak_c1',
+                'Operator.jarak_c2',
+                'Operator.iterasi',
+                'pelamar.id_user'
+            )
+            ->get();
 
         return view("admin.perhitungan.operator", compact('operator'),  [
             "title" => "P. Operator"

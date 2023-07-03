@@ -10,10 +10,8 @@ class Pelamar extends Model
 {
     use HasFactory;
 
-
     protected $table = 'Pelamar';
     protected $guarded = [];
-
 
     // Ketika Database yg ada pada pelamar dihapus, maka data yang ada pada tabel perhitungan juga ikut terhapus. 
     // untuk menghubungkan antar tabel

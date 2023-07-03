@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin\perhitungan;
 use App\Http\Controllers\Controller;
 use App\Models\Satpam;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SatpamController extends Controller
 {
@@ -15,7 +16,33 @@ class SatpamController extends Controller
             return redirect('/')->withErrors('Anda tidak memiliki hak akses.');
         }
 
-        $satpam = Satpam::all();
+        $satpam = DB::table('Satpam')
+
+            ->join(
+                'pelamar',
+                'Satpam.id_pelamar',
+                '=',
+                'pelamar.id'
+            )
+            ->select(
+                'Satpam.id',
+                'Satpam.id_pelamar',
+                'Satpam.pend_formal',
+                'Satpam.pend_nonformal',
+                'Satpam.usia',
+                'Satpam.lama_kerja',
+                'Satpam.satpam',
+                'Satpam.tinggi_badan',
+                'Satpam.jarak_c1',
+                'Satpam.jarak_c2',
+                'Satpam.iterasi',
+                'pelamar.id_user',
+                'pelamar.jabatan_lamaran',
+                'pelamar.nama_lengkap'
+
+
+            )
+            ->get();
 
         return view("admin.perhitungan.satpam", compact('satpam'),  [
             "title" => "P. Satpam"

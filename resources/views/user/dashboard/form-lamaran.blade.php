@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label>Jenis Kelamin*</label>
                             <select class="custom-select rounded-0" name="jenis_kelamin">
-                                <option>Pilih Jenis Kelamin</option>
+                                <option value="" selected disabled>Pilih Jenis Kelamin</option>
                                 <option>Laki-Laki</option>
                                 <option>Perempuan</option>
                             </select>
@@ -63,7 +63,7 @@
                         <div class="form-group">
                             <label>Usia Saat Mengajukan Lamaran*</label>
                             <select class="custom-select rounded-0" name="usia">
-                                <option>Pilih Usia</option>
+                                <option value="" selected disabled>Pilih Usia</option>
                                 <option>18-24 Tahun</option>
                                 <option>25-30 Tahun</option>
                                 <option>31-35 Tahun</option>
@@ -72,7 +72,7 @@
                         <div class="form-group">
                             <label>Status Perkawinan*</label>
                             <select class="custom-select rounded-0" name="status_perkawinan">
-                                <option>Pilih Status Perkawinan</option>
+                                <option value="" selected disabled>Pilih Status Perkawinan</option>
                                 <option>Belum Kawin</option>
                                 <option>Kawin</option>
                             </select>
@@ -80,7 +80,7 @@
                         <div class="form-group">
                             <label>Agama*</label>
                             <select class="custom-select rounded-0" name="agama">
-                                <option>Pilih Agama</option>
+                                <option value="" selected disabled>Pilih Agama</option>
                                 <option>Islam</option>
                                 <option>Kristen/Protestan</option>
                                 <option>Katolik</option>
@@ -141,7 +141,7 @@
                         <div class="form-group">
                             <label>Pendidikan Satpam</label>
                             <select class="custom-select rounded-0" name="satpam">
-                                <option value="">Pilih Pendidikan</option>
+                                <option value="" selected disabled>Pilih Pendidikan</option>
                                 <option value="Tidak Ada">Tidak Ada</option>
                                 <option value="Gada Pratama">Gada Pratama</option>
                                 <option value="Gada Madya">Gada Madya</option>
@@ -152,7 +152,7 @@
                         <div class="form-group">
                             <label>Tinggi Badan</label>
                             <select class="custom-select rounded-0" name="tinggi_badan">
-                                <option value="">Pilih Tinggi Badan</option>
+                                <option value="" selected disabled>Pilih Tinggi Badan</option>
                                 <option value="Kurang Dari 160 Cm">Kurang Dari 160 Cm</option>
                                 <option value="160-185 Cm">160-185 Cm</option>
                                 <option value="Lebih Dari 185 Cm">Lebih Dari 185 Cm</option>
@@ -167,7 +167,7 @@
                         <div class="form-group">
                             <label>Ukuran Baju</label>
                             <select class="custom-select rounded-0" name="uk_baju">
-                                <option value="">Pilih Ukuran</option>
+                                <option value="" selected disabled>Pilih Ukuran</option>
                                 <option value="S">S</option>
                                 <option value="M">M</option>
                                 <option value="L">L</option>
@@ -193,7 +193,7 @@
                         <div class="form-group">
                             <label>SIM</label>
                             <select class="custom-select rounded-0" name="sim">
-                                <option value="">Pilih</option>
+                                <option value="" selected disabled>Pilih</option>
                                 <option value="A">A</option>
                                 <option value="B1">B1</option>
                                 <option value="B2">B2</option>
@@ -204,7 +204,7 @@
                         <div class="form-group">
                             <label>Mampu Mengoperasikan Komputer 'MS Office'</label>
                             <select class="custom-select rounded-0" name="komp">
-                                <option value="">Pilih</option>
+                                <option value="" selected disabled>Pilih</option>
                                 <option value="Ya">Ya</option>
                                 <option value="Tidak">Tidak</option>
                             </select>
@@ -347,7 +347,7 @@
                         <div class="form-group">
                             <label>Golongan Darah</label>
                             <select class="custom-select rounded-0" name="gol_dar">
-                                <option value="">Pilih Golongan Darah</option>
+                                <option value="" selected disabled>Pilih Golongan Darah</option>
                                 <option value="A">A</option>
                                 <option value="B">B</option>
                                 <option value="AB">AB</option>
@@ -361,7 +361,7 @@
                         <div class="form-group">
                             <label>Pendidikan Formal*</label>
                             <select class="custom-select rounded-0" name="pend_formal">
-                                <option>Pilih Pendidikan Formal</option>
+                                <option value="" selected disabled>Pilih Pendidikan Formal</option>
                                 <option>SLTA</option>
                                 <option>D3</option>
                                 <option>S1</option>
@@ -400,7 +400,7 @@
                         <div class="form-group">
                             <label>Pendidikan Non Formal*</label>
                             <select class="custom-select rounded-0" name="pend_nonformal">
-                                <option value="">Pilih</option>
+                                <option value="" selected disabled>Pilih</option>
                                 <option value="Ada">Ada</option>
                                 <option value="Tidak Ada">Tidak Ada</option>
                             </select>
@@ -470,7 +470,9 @@
                         <div class="form-group">
                             <label>Pengalaman Kerja*</label>
                             <select class="custom-select rounded-0" name="lama_kerja">
-                                <option value="">Pilih</option>
+                                <option value="" selected disabled>Pilih jika Pengalaman Kerja selaras dengan jabatan
+                                    yang ingin
+                                    dilamar</option>
                                 <option value="0 Bulan">0 Bulan</option>
                                 <option value="1-6 Bulan">1-6 Bulan</option>
                                 <option value="7-12 Bulan">7-12 Bulan</option>
@@ -490,14 +492,14 @@
                             {{-- PADA DATABASE NAMANYA RS --}}
                             <label>Pernah di rawat di Rumah Sakit*</label>
                             <select class="custom-select rounded-0" name="rs">
-                                <option>Pilih</option>
-                                <option>Ya</option>
-                                <option>Tidak</option>
+                                <option value="" selected disabled>Pilih</option>
+                                <option value="Ya">Ya</option>
+                                <option value="Tidak">Tidak</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Lama Dirawat</label>
-                            <input type="number" class="form-control" name="lama_dirawat"
+                            <input type="text" class="form-control" name="lama_dirawat"
                                 value="{{ old('lama_dirawat') }}" placeholder="Berapa Lama Pernah Dirawat">
                         </div>
 
@@ -553,9 +555,9 @@
                         <div class="form-group">
                             <label>Jabatan yang Dilamar*</label>
                             <select class="custom-select rounded-0" name="jabatan_lamaran">
-                                <option>Pilih Jabatan</option>
+                                <option value="" selected disabled>Pilih Jabatan</option>
                                 <option>Satpam</option>
-                                <option>Cleaning Service</option>
+                                <option>CleaningService</option>
                                 <option>Administrasi</option>
                                 <option>Driver</option>
                                 <option>Teknisi</option>

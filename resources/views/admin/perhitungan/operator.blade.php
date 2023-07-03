@@ -28,7 +28,7 @@
                         <tbody>
                             @foreach ($operator as $op)
                                 <tr>
-                                    <td>{{ $op->id_pelamar }}</td>
+                                    <td>{{ $op->id_user }}</td>
                                     <td>{{ $op->pend_formal }}</td>
                                     <td>{{ $op->pend_nonformal }}</td>
                                     <td>{{ $op->usia }}</td>

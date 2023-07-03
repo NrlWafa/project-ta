@@ -13,6 +13,7 @@
                         <thead>
                             <tr>
                                 <th>ID User</th>
+                                {{-- <th>Nama</th> --}}
                                 <th>Pendidikan Formal</th>
                                 <th>Pendidikan Non Formal</th>
                                 <th>Usia</th>
@@ -26,7 +27,8 @@
                         <tbody>
                             @foreach ($cleaningservice as $cs)
                                 <tr>
-                                    <td>{{ $cs->id_pelamar }}</td>
+                                    <td>{{ $cs->id_user }}</td>
+                                    {{-- <td>{{ $cs->nama_lengkap }}</td> --}}
                                     <td>{{ $cs->pend_formal }}</td>
                                     <td>{{ $cs->pend_nonformal }}</td>
                                     <td>{{ $cs->usia }}</td>

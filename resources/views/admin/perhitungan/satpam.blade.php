@@ -5,21 +5,29 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Data Satpam</h3>
-                </div>
 
+                </div>
 
                 <!-- /.card-header -->
                 <div class="card-body">
+                    <td><a href="{{ url('Data_Satpam') }}" class="btn-sm btn-primary">
+                            Konversi</a>
+                    </td>
+                    <td><a href="{{ url('Data_Satpam') }}" class="btn-sm btn-primary">
+                            Tambah</a>
+                    </td>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>ID User</th>
+                                <th>Nama Lengkap</th>
                                 <th>Pendidikan Formal</th>
                                 <th>Pendidikan Non Formal</th>
                                 <th>Usia</th>
                                 <th>Pengalaman Kerja</th>
                                 <th>Pendidikan Satpam</th>
                                 <th>Tinggi Badan</th>
+                                <th>Jabatan yang Dilamar</th>
                                 <th>Jarak C1</th>
                                 <th>Jarak C2</th>
                                 <th>Iterasi</th>
@@ -29,13 +37,15 @@
                         <tbody>
                             @foreach ($satpam as $pam)
                                 <tr>
-                                    <td>{{ $pam->id_pelamar }}</td>
+                                    <td>{{ $pam->id_user }}</td>
+                                    <td>{{ $pam->nama_lengkap }}</td>
                                     <td>{{ $pam->pend_formal }}</td>
                                     <td>{{ $pam->pend_nonformal }}</td>
                                     <td>{{ $pam->usia }}</td>
                                     <td>{{ $pam->lama_kerja }}</td>
                                     <td>{{ $pam->satpam }}</td>
                                     <td>{{ $pam->tinggi_badan }}</td>
+                                    <td>{{ $pam->jabatan_lamaran }}</td>
                                     <td>{{ $pam->jarak_c1 }}</td>
                                     <td>{{ $pam->jarak_c2 }}</td>
                                     <td>{{ $pam->iterasi }}</td>
