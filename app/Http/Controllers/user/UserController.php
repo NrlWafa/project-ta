@@ -204,7 +204,7 @@ class UserController extends Controller
                 'foto_ktp.mimes' => 'Foto hanya diperbolehkan berekstensi JPEG, JPG, dan PNG'
             ]
         );
-        // dd($req);
+
 
 
         $bukti_pend_non = $req->file('bukti_pend_non');
