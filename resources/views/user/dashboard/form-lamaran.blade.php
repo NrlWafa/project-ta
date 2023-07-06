@@ -714,27 +714,4 @@
 
     </div>
     <!-- /.card -->
-    </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.js"
-        integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    {{-- Loties --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
-    <script>
-        // var slideSource = document.getElementById('slideSource');
-
-        document.getElementById('save').onclick = function() {
-            Swal.fire({
-                position: 'center',
-                imageUrl: 'https://unsplash.it/400/200',
-                imageWidth: 400,
-                imageHeight: 200,
-                title: 'Data berhasil tersimpan',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        }
-    </script>
 @endsection

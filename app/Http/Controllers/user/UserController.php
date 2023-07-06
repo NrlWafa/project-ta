@@ -11,7 +11,11 @@ use App\Models\Teknisi;
 use App\Models\Operator;
 use Illuminate\Http\Request;
 use App\Models\CleaningService;
+use Flasher\Prime\FlasherInterface;
 use App\Http\Controllers\Controller;
+use Exception;
+use Illuminate\Support\Facades\Session;
+
 
 class UserController extends Controller
 {
@@ -584,7 +588,7 @@ class UserController extends Controller
             $konversi_h_pend_nonformal = "2";
         }
 
-        if ($konversi_h_usia == "31-35 Tahun") { 
+        if ($konversi_h_usia == "31-35 Tahun") {
             $konversi_h_usia = "0";
         } else if ($konversi_h_usia == "25-30 Tahun") {
             $konversi_h_usia = "2";
@@ -676,7 +680,7 @@ class UserController extends Controller
         } else if ($konversi_o_komp == "Ada") {
             $konversi_o_komp = "2";
         }
-        
+
         //Array (Simpan Data) OPERATOR
         $dataOperator = [
             'id' => $req->input('id'),
@@ -691,7 +695,7 @@ class UserController extends Controller
             'iterasi' => $req->input('iterasi'),
         ];
 
-        
+
         // Konversi Perhitungan DRIVER
         $konversi_d_pend_formal = $req->input('pend_formal');
         $konversi_d_pend_nonformal = $req->input('pend_nonformal');
@@ -754,7 +758,7 @@ class UserController extends Controller
             'id_pelamar' => $pelamar->id,
             'pend_formal' => $konversi_d_pend_formal,
             'pend_nonformal' => $konversi_d_pend_nonformal,
-            'usia' => $req-> $konversi_d_usia,
+            'usia' => $req->$konversi_d_usia,
             'lama_kerja' => $konversi_d_lama_kerja,
             'sim' => $konversi_d_sim,
             'jarak_c1' => $req->input('jarak_c1'),
@@ -762,7 +766,7 @@ class UserController extends Controller
             'iterasi' => $req->input('iterasi'),
         ];
 
-        
+
         // Konversi Perhitungan ADMIN
         $konversi_a_pend_formal = $req->input('pend_formal');
         $konversi_a_pend_nonformal = $req->input('pend_nonformal');
@@ -838,9 +842,34 @@ class UserController extends Controller
             Operator::create($dataOperator);
             Driver::create($dataDriver);
             Admin::create($dataAdmin);
-            return redirect('User')->with('Success', 'Anda berhasil mengajukan lamaran');
+
+
+            Session::flash('success', 'Anda berhasil mengajukan lamaran.');
+
+            return redirect('User');
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors('Terjadi kesalahan saat membuat pelamar: ' . $e->getMessage());
+            // Menyimpan pesan error ke sesi
+            Session::flash('error', 'Terjadi kesalahan saat membuat pelamar: ' . $e->getMessage());
+
+            return redirect()->back();
         }
     }
 }
+
+
+
+    //         $notyf = new notyf();
+    //         $notyf()
+    //             ->duration(8000)
+    //             ->dismissible(true)
+    //             ->ripple(true)
+    //             ->addSuccess('Anda berhasil mengajukan lamaran.');
+    //     } catch (Exception $e) {
+    //         $notyf()
+    //             ->duration(8000)
+    //             ->dismissible(true)
+    //             ->ripple(true)
+    //             ->addError($e->getMessage());
+    //     }
+    //     return redirect()->route('User');
+    // }
