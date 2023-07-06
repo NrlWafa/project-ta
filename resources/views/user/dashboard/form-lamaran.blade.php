@@ -26,18 +26,18 @@
 
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Nama Lengkap*</label>
+                            <label>Nama Lengkap<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" value="{{ old('nama_lengkap') }}" name="nama_lengkap"
                                 placeholder="Masukkan Nama Lengkap">
 
                         </div>
                         <div class="form-group">
-                            <label>Nama Panggilan*</label>
+                            <label>Nama Panggilan<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" value="{{ old('nama_panggilan') }}"
                                 name="nama_panggilan" placeholder="Masukkan Nama Panggilan">
                         </div>
                         <div class="form-group">
-                            <label>Jenis Kelamin*</label>
+                            <label>Jenis Kelamin<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="jenis_kelamin">
                                 <option value="" selected disabled>Pilih Jenis Kelamin</option>
                                 <option>Laki-Laki</option>
@@ -45,14 +45,14 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Tempat Lahir*</label>
+                            <label>Tempat Lahir<span style="color: red;">*</span></label>
                             <div class="input-group">
                                 <input type="text" class="form-control" value="{{ old('tempat_lahir') }}"
                                     name="tempat_lahir" placeholder="Masukkan Tempat Lahir">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Tanggal Lahir*</label>
+                            <label>Tanggal Lahir<span style="color: red;">*</span></label>
                             <div class="input-group">
                                 <input type="date" name="tanggal_lahir" value="{{ old('tanggal_lahir') }}"
                                     class="form-control" data-inputmask-alias="datetime"
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Usia Saat Mengajukan Lamaran*</label>
+                            <label>Usia Saat Mengajukan Lamaran<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="usia">
                                 <option value="" selected disabled>Pilih Usia</option>
                                 <option>18-24 Tahun</option>
@@ -69,7 +69,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Status Perkawinan*</label>
+                            <label>Status Perkawinan<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="status_perkawinan">
                                 <option value="" selected disabled>Pilih Status Perkawinan</option>
                                 <option>Belum Kawin</option>
@@ -77,7 +77,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Agama*</label>
+                            <label>Agama<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="agama">
                                 <option value="" selected disabled>Pilih Agama</option>
                                 <option>Islam</option>
@@ -89,47 +89,47 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Alamat KTP*</label>
+                            <label>Alamat KTP<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" name="alamat_ktp" value="{{ old('alamat_ktp') }}"
                                 placeholder="Masukkan Alamat Sesuai KTP">
                         </div>
                         <div class="form-group">
-                            <label>Alamat Domisili*</label>
+                            <label>Alamat Domisili<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" name="alamat_dom" value="{{ old('alamat_dom') }}"
                                 placeholder="Masukkan Alamat Domisili">
                         </div>
                         <div class="form-group">
-                            <label>Kelurahan*</label>
+                            <label>Kelurahan<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" name="kel" value="{{ old('kel') }}"
                                 placeholder="Masukkan Kelurahan">
                         </div>
                         <div class="form-group">
-                            <label>Kecamatan*</label>
+                            <label>Kecamatan<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" name="kec" value="{{ old('kec') }}"
                                 placeholder="Masukkan Kecamatan">
                         </div>
                         <div class="form-group">
-                            <label>Kabupaten/Kota*</label>
+                            <label>Kabupaten/Kota<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" name="kab_kota" value="{{ old('kab_kota') }}"
                                 placeholder="Masukkan Kabupaten/Kota">
                         </div>
                         <div class="form-group">
-                            <label>Provinsi*</label>
+                            <label>Provinsi<span style="color: red;">*</span></label>
                             <input type="text" class="form-control" name="provinsi" value="{{ old('provinsi') }}"
                                 placeholder="Masukkan Provinsi">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Handphone*</label>
+                            <label>Nomor Handphone<span style="color: red;">*</span></label>
                             <input type="number" class="form-control" name="no_hp" value="{{ old('no_hp') }}"
                                 placeholder="Masukkan Nomor Handphone">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Telp Rumah</label>
+                            <label>Nomor Telepon Rumah</label>
                             <input type="number" class="form-control" name="no_telprumah"
                                 value="{{ old('no_telprumah') }}" placeholder="Masukkan Nomor Telp Rumah">
                         </div>
                         <div class="form-group">
-                            <label>Nomor KTP*</label>
+                            <label>Nomor KTP<span style="color: red;">*</span></label>
                             <input type="number" class="form-control" name="no_ktp" value="{{ old('no_ktp') }}"
                                 placeholder="Masukkan Nomor KTP">
                         </div>
@@ -148,7 +148,7 @@
 
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    <strong>Khusus formasi pekerjaan untuk Satpam wajib diisi</strong>
+                    <strong><span style="color: red;">Khusus pelamar sebagai Satpam wajib diisi!</span></strong>
                 </div>
                 <div class="card-body">
                     {{-- PERHITUNGAN --}}
@@ -207,8 +207,9 @@
             {{-- PERHITUNGAN --}}
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    <strong>Khusus formasi pekerjaan untuk Driver wajib diisi</strong>
+                    <strong><span style="color: red;">Khusus pelamar sebagai Driver wajib diisi!</span></strong>
                 </div>
+
                 <div class="card-body">
                     <div class="form-group">
                         <label>SIM</label>
@@ -225,7 +226,8 @@
 
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    <strong>Khusus formasi pekerjaan untuk Admin, Operator, Helper dan Teknisis wajib diisi</strong>
+                    <strong><span style="color: red;">Khusus pelamar sebagai Admin, Operator, Helper dan Teknisi wajib
+                            diisi!</span></strong>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
@@ -310,17 +312,17 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Nama Ayah*</label>
+                        <label>Nama Ayah<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="nama_ayh" value="{{ old('nama_ayh') }}"
                             placeholder="Masukkan Nama Lengkap Ayah">
                     </div>
                     <div class="form-group">
-                        <label>Tempat Lahir Ayah*</label>
+                        <label>Tempat Lahir Ayah<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="tmp_lahir_ayh"
                             value="{{ old('tmp_lahir_ayh') }}" placeholder="Masukkan Tempat Lahir Ayah">
                     </div>
                     <div class="form-group">
-                        <label>Tanggal Lahir Ayah*</label>
+                        <label>Tanggal Lahir Ayah<span style="color: red;">*</span></label>
                         <div class="input-group">
                             <input type="date" name="tgl_lahir_ayh" value="{{ old('tgl_lahir_ayh') }}"
                                 class="form-control" data-inputmask-alias="datetime"
@@ -328,12 +330,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Pekerjaan Ayah*</label>
+                        <label>Pekerjaan Ayah<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="pekerjaan_ayh"
                             value="{{ old('pekerjaan_ayh') }}" placeholder="Masukkan Pekerjaan Ayah">
                     </div>
                     <div class="form-group">
-                        <label>Alamat Lengkap Ayah*</label>
+                        <label>Alamat Lengkap Ayah<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="alamat_ayh" value="{{ old('alamat_ayh') }}"
                             placeholder="Masukkan Alamat Lengkap Ayah">
                     </div>
@@ -345,17 +347,17 @@
 
                     {{-- DATA ORANG TUA (IBU) --}}
                     <div class="form-group">
-                        <label>Nama Ibu*</label>
+                        <label>Nama Ibu<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="nama_ibu" value="{{ old('nama_ibu') }}"
                             placeholder="Masukkan Nama Lengkap Ibu">
                     </div>
                     <div class="form-group">
-                        <label>Tempat Lahir Ibu*</label>
+                        <label>Tempat Lahir Ibu<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="tmp_lahir_ibu"
                             value="{{ old('tmp_lahir_ibu') }}" placeholder="Masukkan Tempat Lahir Ibu">
                     </div>
                     <div class="form-group">
-                        <label>Tanggal Lahir Ibu*</label>
+                        <label>Tanggal Lahir Ibu<span style="color: red;">*</span></label>
                         <div class="input-group">
                             <input type="date" name="tgl_lahir_ibu" value="{{ old('tgl_lahir_ibu') }}"
                                 class="form-control" data-inputmask-alias="datetime"
@@ -363,12 +365,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Pekerjaan Ibu*</label>
+                        <label>Pekerjaan Ibu<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="pekerjaan_ibu"
                             value="{{ old('pekerjaan_ibu') }}" placeholder="Masukkan Pekerjaan Ibu">
                     </div>
                     <div class="form-group">
-                        <label>Alamat Lengkap Ibu*</label>
+                        <label>Alamat Lengkap Ibu<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="alamat_ibu" value="{{ old('alamat_ibu') }}"
                             placeholder="Masukkan Alamat Lengkap Ibu">
                     </div>
@@ -388,7 +390,7 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Pendidikan Formal*</label>
+                        <label>Pendidikan Formal<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="pend_formal">
                             <option value="" selected disabled>Pilih Pendidikan Formal</option>
                             <option>SLTA</option>
@@ -399,18 +401,18 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Tempat Pendidikan Formal*</label>
+                        <label>Tempat Pendidikan Formal<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="tmp_pend" value="{{ old('tmp_pend') }}"
                             placeholder="Masukkan Tempat Pendidikan Formal 'SMA Negeri 1 Banjarmasin'">
                     </div>
                     <div class="form-group">
-                        <label>Tahun Pendidikan*</label>
+                        <label>Tahun Pendidikan<span style="color: red;">*</span></label>
                         <input type="number" class="form-control" name="thn_pend" value="{{ old('thn_pend') }}"
                             placeholder="Masukkan Tahun Pendidikan Formal">
                     </div>
 
                     <div class="form-group">
-                        <label>Jurusan Pendidikan*</label>
+                        <label>Jurusan Pendidikan<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="jurusan_pend"
                             value="{{ old('jurusan_pend') }}" placeholder="Masukkan Jurusan Pendidikan Formal">
                     </div>
@@ -426,7 +428,7 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Pendidikan Non Formal*</label>
+                        <label>Pendidikan Non Formal<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="pend_nonformal">
                             <option value="" selected disabled>Pilih</option>
                             <option value="Ada">Ada</option>
@@ -500,7 +502,7 @@
                     </div>
                     {{-- PERHITUNGAN --}}
                     <div class="form-group">
-                        <label>Pengalaman Kerja*</label>
+                        <label>Pengalaman Kerja<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="lama_kerja">
                             <option value="" selected disabled>Pilih jika Pengalaman Kerja selaras dengan
                                 jabatan
@@ -527,7 +529,7 @@
                     </div>
                     <div class="form-group">
                         {{-- PADA DATABASE NAMANYA RS --}}
-                        <label>Pernah di rawat di Rumah Sakit*</label>
+                        <label>Pernah dirawat di Rumah Sakit<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="rs">
                             <option value="" selected disabled>Pilih</option>
                             <option value="Ya">Ya</option>
@@ -545,21 +547,21 @@
             {{-- DATA KONTAK --}}
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    <strong>Kontak keluarga yang bisa dihubungi</strong>
+                    <strong>Kontak Keluarga yang Bisa Dihubungi</strong>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Nama Kontak*</label>
+                        <label>Nama Kontak<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="nm_kontak" value="{{ old('nm_kontak') }}"
                             placeholder="Masukkan Nama Kontak yang Bisa Dihubungi dalam Keadaan Tertentu">
                     </div>
                     <div class="form-group">
-                        <label>Nomor Handphone Kontak*</label>
+                        <label>Nomor Handphone Kontak<span style="color: red;">*</span></label>
                         <input type="number" class="form-control" name="no_kontak" value="{{ old('no_kontak') }}"
                             placeholder="Masukkan Nomor Handphone">
                     </div>
                     <div class="form-group">
-                        <label>Hubungan 'Kekeluargaan Dengan Kontak'*</label>
+                        <label>Hubungan Kekeluargaan Dengan Kontak<span style="color: red;">*</span></label>
                         <input type="text" class="form-control" name="hubungan" value="{{ old('hubungan') }}"
                             placeholder="Hubungan Anda Dengan Kentak Sebagai">
                     </div>
@@ -571,7 +573,7 @@
             <div class="card card-primary">
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Bahasa yang DiKuasai</label>
+                        <label>Bahasa yang Dikuasai</label>
                         <input type="text" class="form-control" name="bahasa_dikuasai"
                             value="{{ old('bahasa_dikuasai') }}" placeholder="Masukkan Bahasa yang Anda Kuasai">
                     </div>
@@ -596,7 +598,7 @@
                             placeholder="Masukkan Nomor BPJS Kesehatan">
                     </div>
                     <div class="form-group">
-                        <label>Jabatan yang Dilamar*</label>
+                        <label>Jabatan yang Dilamar<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="jabatan_lamaran">
                             <option value="" selected disabled>Pilih Jabatan</option>
                             <option>Satpam</option>
@@ -610,7 +612,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="foto_kk">Foto Kartu Keluarga*</label>
+                        <label for="foto_kk">Foto Kartu Keluarga<span style="color: red;">*</span></label>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="foto_kk" id="foto_kk"
@@ -649,7 +651,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="pas_foto">Pas Foto*</label>
+                        <label for="pas_foto">Pas Foto<span style="color: red;">*</span></label>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="pas_foto" id="pas_foto"
@@ -662,7 +664,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="foto_ktp">Foto KTP*</label>
+                        <label for="foto_ktp">Foto KTP<span style="color: red;">*</span></label>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="foto_ktp" id="foto_ktp"
@@ -689,7 +691,7 @@
                     </script>
 
                     <p><strong>
-                            Perhatikan Data yang Disi! </strong></p>
+                            Perhatikan Data yang Diisi! </strong></p>
 
                     <p> Kami ingin mengingatkan Anda untuk sangat berhati-hati dan memperhatikan data yang Anda
                         masukkan.

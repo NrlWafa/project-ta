@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('LandingPage-Template/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('LandingPage-Template/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('LandingPage-Template/assets/img/yazapratama_logo.png') }}" rel="icon">
+    <link href="{{ asset('LandingPage-Template/assets/img/yazapratama.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link

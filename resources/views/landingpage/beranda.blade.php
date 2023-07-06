@@ -71,7 +71,7 @@
 
                     <div class="row">
                         <div class="col-lg-6" data-aos="zoom-in">
-                            <img src="{{ asset('LandingPage-Template/assets/img/about.jpg') }}" class="img-fluid"
+                            <img src="{{ asset('LandingPage-Template/assets/img/Team2.jpeg') }}" class="img-fluid"
                                 alt="">
                         </div>
                         <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
@@ -166,7 +166,7 @@
                         <h2>Testimoni</h2>
                         Dengan menyediakan layanan yang unggul dan memperoleh testimoni yang positif, PT Yaza Pratama selalu
                         berinovasi
-                        dalam memberikan pelayanan yang terbaik dan berkualitas tinggi kepada para klien kami.</p>
+                        dalam memberikan pelayanan yang terbaik dan berkualitas tinggi kepada para klien.</p>
                     </div>
 
                     <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
