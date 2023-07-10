@@ -26,25 +26,27 @@
                         </thead>
                         <tbody>
                             @foreach ($driver as $ver)
-                                <tr>
-                                    <td>{{ $ver->id_user }}</td>
-                                    <td>{{ $ver->pend_formal }}</td>
-                                    <td>{{ $ver->pend_nonformal }}</td>
-                                    <td>{{ $ver->usia }}</td>
-                                    <td>{{ $ver->lama_kerja }}</td>
-                                    <td>{{ $ver->sim }}</td>
-                                    <td>{{ $ver->jarak_c1 }}</td>
-                                    <td>{{ $ver->jarak_c2 }}</td>
-                                    <td>{{ $ver->iterasi }}</td>
-                                    {{-- <td>{{ date('d F Y', strtotime($ver->created_at)) }}</td> --}}
+                                @if ($ver->jabatan_lamaran == 'Driver')
+                                    <tr>
+                                        <td>{{ $ver->id_user }}</td>
+                                        <td>{{ $ver->pend_formal }}</td>
+                                        <td>{{ $ver->pend_nonformal }}</td>
+                                        <td>{{ $ver->usia }}</td>
+                                        <td>{{ $ver->lama_kerja }}</td>
+                                        <td>{{ $ver->sim }}</td>
+                                        <td>{{ $ver->jarak_c1 }}</td>
+                                        <td>{{ $ver->jarak_c2 }}</td>
+                                        <td>{{ $ver->iterasi }}</td>
+                                        {{-- <td>{{ date('d F Y', strtotime($ver->created_at)) }}</td> --}}
 
-                                    <td><a href="{{ url('#' . $ver->id_pelamar) }}" class="btn-sm btn-primary">
-                                            Detail</a>
+                                        <td><a href="{{ url('#' . $ver->id_pelamar) }}" class="btn-sm btn-primary">
+                                                Detail</a>
 
-                                        <a href="#" class="btn-sm btn-danger delete"
-                                            data-id="{{ $ver->id }}">Hapus</a>
-                                    </td>
-                                </tr>
+                                            <a href="#" class="btn-sm btn-danger delete"
+                                                data-id="{{ $ver->id }}">Hapus</a>
+                                        </td>
+                                    </tr>
+                                @endif
                             @endforeach
                         </tbody>
 

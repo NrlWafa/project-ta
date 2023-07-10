@@ -27,25 +27,27 @@
                         </thead>
                         <tbody>
                             @foreach ($helper as $hel)
-                                <tr>
-                                    <td>{{ $hel->id_user }}</td>
-                                    <td>{{ $hel->pend_formal }}</td>
-                                    <td>{{ $hel->pend_nonformal }}</td>
-                                    <td>{{ $hel->usia }}</td>
-                                    <td>{{ $hel->lama_kerja }}</td>
-                                    <td>{{ $hel->komp }}</td>
-                                    <td>{{ $hel->jarak_c1 }}</td>
-                                    <td>{{ $hel->jarak_c2 }}</td>
-                                    <td>{{ $hel->iterasi }}</td>
-                                    {{-- <td>{{ date('d F Y', strtotime($hel->created_at)) }}</td> --}}
+                                @if ($hel->jabatan_lamaran == 'Helper')
+                                    <tr>
+                                        <td>{{ $hel->id_user }}</td>
+                                        <td>{{ $hel->pend_formal }}</td>
+                                        <td>{{ $hel->pend_nonformal }}</td>
+                                        <td>{{ $hel->usia }}</td>
+                                        <td>{{ $hel->lama_kerja }}</td>
+                                        <td>{{ $hel->komp }}</td>
+                                        <td>{{ $hel->jarak_c1 }}</td>
+                                        <td>{{ $hel->jarak_c2 }}</td>
+                                        <td>{{ $hel->iterasi }}</td>
+                                        {{-- <td>{{ date('d F Y', strtotime($hel->created_at)) }}</td> --}}
 
-                                    <td><a href="{{ url('#' . $hel->id_pelamar) }}" class="btn-sm btn-primary">
-                                            Detail</a>
+                                        <td><a href="{{ url('#' . $hel->id_pelamar) }}" class="btn-sm btn-primary">
+                                                Detail</a>
 
-                                        <a href="#" class="btn-sm btn-danger delete"
-                                            data-id="{{ $hel->id }}">Hapus</a>
-                                    </td>
-                                </tr>
+                                            <a href="#" class="btn-sm btn-danger delete"
+                                                data-id="{{ $hel->id }}">Hapus</a>
+                                        </td>
+                                    </tr>
+                                @endif
                             @endforeach
                         </tbody>
 

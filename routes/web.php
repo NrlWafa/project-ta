@@ -137,10 +137,13 @@ Route::middleware('auth')->group(function () {
 
     Route::get('Data_Satpam', [PerhitunganSatpamController::class, "index"]);
     Route::get('Data_Satpam/{id}', [PerhitunganSatpamController::class, "hapus_data_satpam"]);
+    Route::get('Data_Akhir_Satpam', [PerhitunganSatpamController::class, "hasil_akhir_satpam"]);
 
     Route::get('Data_Teknisi', [TeknisiController::class, "index"]);
     Route::get('Data_Teknisi/{id}', [TeknisiController::class, "hapus_data_teknisi"]);
 });
+
+//Data Hasil
 
 
 

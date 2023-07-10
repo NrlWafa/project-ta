@@ -34,7 +34,8 @@ class TeknisiController extends Controller
                 'Teknisi.jarak_c1',
                 'Teknisi.jarak_c2',
                 'Teknisi.iterasi',
-                'pelamar.id_user'
+                'pelamar.id_user',
+                'pelamar.jabatan_lamaran',
             )
             ->get();
 

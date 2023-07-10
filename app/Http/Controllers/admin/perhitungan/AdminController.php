@@ -30,7 +30,8 @@ class AdminController extends Controller
                 'Admin.jarak_c1',
                 'Admin.jarak_c2',
                 'Admin.iterasi',
-                'pelamar.id_user'
+                'pelamar.id_user',
+                'pelamar.jabatan_lamaran',
             )
             ->get();
 

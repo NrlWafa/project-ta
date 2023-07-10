@@ -26,25 +26,27 @@
                         </thead>
                         <tbody>
                             @foreach ($teknisi as $tek)
-                                <tr>
-                                    <td>{{ $tek->id_user }}</td>
-                                    <td>{{ $tek->pend_formal }}</td>
-                                    <td>{{ $tek->pend_nonformal }}</td>
-                                    <td>{{ $tek->usia }}</td>
-                                    <td>{{ $tek->lama_kerja }}</td>
-                                    <td>{{ $tek->komp }}</td>
-                                    <td>{{ $tek->jarak_c1 }}</td>
-                                    <td>{{ $tek->jarak_c2 }}</td>
-                                    <td>{{ $tek->iterasi }}</td>
-                                    {{-- <td>{{ date('d F Y', strtotime($tek->created_at)) }}</td> --}}
+                                @if ($tek->jabatan_lamaran == 'Teknisi')
+                                    <tr>
+                                        <td>{{ $tek->id_user }}</td>
+                                        <td>{{ $tek->pend_formal }}</td>
+                                        <td>{{ $tek->pend_nonformal }}</td>
+                                        <td>{{ $tek->usia }}</td>
+                                        <td>{{ $tek->lama_kerja }}</td>
+                                        <td>{{ $tek->komp }}</td>
+                                        <td>{{ $tek->jarak_c1 }}</td>
+                                        <td>{{ $tek->jarak_c2 }}</td>
+                                        <td>{{ $tek->iterasi }}</td>
+                                        {{-- <td>{{ date('d F Y', strtotime($tek->created_at)) }}</td> --}}
 
-                                    <td><a href="{{ url('#' . $tek->id_pelamar) }}" class="btn-sm btn-primary">
-                                            Detail</a>
+                                        <td><a href="{{ url('#' . $tek->id_pelamar) }}" class="btn-sm btn-primary">
+                                                Detail</a>
 
-                                        <a href="#" class="btn-sm btn-danger delete"
-                                            data-id="{{ $tek->id }}">Hapus</a>
-                                    </td>
-                                </tr>
+                                            <a href="#" class="btn-sm btn-danger delete"
+                                                data-id="{{ $tek->id }}">Hapus</a>
+                                        </td>
+                                    </tr>
+                                @endif
                             @endforeach
                         </tbody>
 

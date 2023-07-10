@@ -40,8 +40,12 @@
                             <label>Jenis Kelamin<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="jenis_kelamin">
                                 <option value="" selected disabled>Pilih Jenis Kelamin</option>
-                                <option>Laki-Laki</option>
-                                <option>Perempuan</option>
+                                <option {{ old('jenis_kelamin') == 'Laki-Laki' ? 'selected' : '' }} value="Laki-Laki">
+                                    Laki-Laki
+                                </option>
+                                <option {{ old('jenis_kelamin') == 'Perempuan' ? 'selected' : '' }} value="Perempuan">
+                                    Perempuan
+                                </option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -63,9 +67,12 @@
                             <label>Usia Saat Mengajukan Lamaran<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="usia">
                                 <option value="" selected disabled>Pilih Usia</option>
-                                <option>18-24 Tahun</option>
-                                <option>25-30 Tahun</option>
-                                <option>31-35 Tahun</option>
+                                <option {{ old('usia') == '18-24 Tahun' ? 'selected' : '' }} value="18-24 Tahun">
+                                    18-24 Tahun</option>
+                                <option {{ old('usia') == '25-30 Tahun' ? 'selected' : '' }} value="25-30 Tahun">
+                                    25-30 Tahun</option>
+                                <option {{ old('usia') == '31-35 Tahun' ? 'selected' : '' }} value="31-35 Tahun">
+                                    31-35 Tahun</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -80,12 +87,19 @@
                             <label>Agama<span style="color: red;">*</span></label>
                             <select class="custom-select rounded-0" name="agama">
                                 <option value="" selected disabled>Pilih Agama</option>
-                                <option>Islam</option>
-                                <option>Kristen/Protestan</option>
-                                <option>Katolik</option>
-                                <option>Hindu</option>
-                                <option>Budha</option>
-                                <option>Kong Hu Cu</option>
+                                <option {{ old('agama') == 'Islam' ? 'selected' : '' }} value="Islam">Islam
+                                </option>
+                                <option {{ old('agama') == 'Kristen/Protestan' ? 'selected' : '' }}
+                                    value="Kristen/Protestan"> Kristen/Protestan
+                                </option>
+                                <option {{ old('agama') == 'Katolik' ? 'selected' : '' }} value="Katolik">Katolik
+                                </option>
+                                <option {{ old('agama') == 'Hindu' ? 'selected' : '' }} value="Hindu">Hindu
+                                </option>
+                                <option {{ old('agama') == 'Budha' ? 'selected' : '' }} value="Budha">Budha
+                                </option>
+                                <option {{ old('agama') == 'Kong Hu Cu' ? 'selected' : '' }} value="Kong Hu Cu">Kong Hu Cu
+                                </option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -137,10 +151,10 @@
                             <label>Golongan Darah</label>
                             <select class="custom-select rounded-0" name="gol_dar">
                                 <option value="" selected disabled>Pilih Golongan Darah</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="AB">AB</option>
-                                <option value="O">O</option>
+                                <option {{ old('gol_dar') == 'A' ? 'selected' : '' }} value="A">A</option>
+                                <option {{ old('gol_dar') == 'B' ? 'selected' : '' }} value="B">B</option>
+                                <option {{ old('gol_dar') == 'AB' ? 'selected' : '' }} value="AB">AB</option>
+                                <option {{ old('gol_dar') == 'O' ? 'selected' : '' }} value="O">O</option>
                             </select>
                         </div>
                     </div>
@@ -156,19 +170,31 @@
                         <label>Pendidikan Satpam</label>
                         <select class="custom-select rounded-0" name="satpam">
                             <option value="" selected disabled>Pilih Pendidikan</option>
-                            <option value="Tidak Ada">Tidak Ada</option>
-                            <option value="Gada Pratama">Gada Pratama</option>
-                            <option value="Gada Madya">Gada Madya</option>
-                            <option value="Gada Utama">Gada Utama</option>
+                            <option {{ old('satpam') == 'Tidak Ada' ? 'selected' : '' }} value="Tidak Ada">Tidak Ada
+                            </option>
+                            <option {{ old('satpam') == 'Gada Pratama' ? 'selected' : '' }} value="Gada Pratama">Gada
+                                Pratama
+                            </option>
+                            <option {{ old('satpam') == 'Gada Madya' ? 'selected' : '' }} value="Gada Madya">Gada Madya
+                            </option>
+                            <option {{ old('satpam') == 'Gada Utama' ? 'selected' : '' }} value="Gada Utama">Gada Utama
+                            </option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Tinggi Badan</label>
                         <select class="custom-select rounded-0" name="tinggi_badan">
                             <option value="" selected disabled>Pilih Tinggi Badan</option>
-                            <option value="Kurang Dari 160 Cm">Kurang Dari 160 Cm</option>
-                            <option value="160-185 Cm">160-185 Cm</option>
-                            <option value="Lebih Dari 185 Cm">Lebih Dari 185 Cm</option>
+                            <option {{ old('tinggi_badan') == 'Kurang Dari 160 Cm' ? 'selected' : '' }}
+                                value="Kurang Dari 160 Cm">
+                                Kurang Dari 160 Cm</option>
+                            <option {{ old('tinggi_badan') == '160-185 Cm' ? 'selected' : '' }} value="160-185 Cm">160-185
+                                Cm
+                            </option>
+                            <option {{ old('tinggi_badan') == 'Lebih Dari 185 Cm' ? 'selected' : '' }}
+                                value="Lebih Dari 185 Cm">
+                                Lebih
+                                Dari 185 Cm</option>
                         </select>
                     </div>
 
@@ -181,13 +207,20 @@
                         <label>Ukuran Baju</label>
                         <select class="custom-select rounded-0" name="uk_baju">
                             <option value="" selected disabled>Pilih Ukuran</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="XXL">XXL</option>
-                            <option value="3XL">3XL</option>
-                            <option value="4XL">4XL</option>
+                            <option {{ old('uk_baju') == 'S' ? 'selected' : '' }} value="S">S
+                            </option>
+                            <option {{ old('uk_baju') == 'M' ? 'selected' : '' }} value="M">M
+                            </option>
+                            <option {{ old('uk_baju') == 'L' ? 'selected' : '' }} value="L">L
+                            </option>
+                            <option {{ old('uk_baju') == 'XL' ? 'selected' : '' }} value="XL">XL
+                            </option>
+                            <option {{ old('uk_baju') == 'XXL' ? 'selected' : '' }} value="XXL">XXL
+                            </option>
+                            <option {{ old('uk_baju') == '3XL' ? 'selected' : '' }} value="3XL">3XL
+                            </option>
+                            <option {{ old('uk_baju') == '4XL' ? 'selected' : '' }} value="4XL">4XL
+                            </option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -215,10 +248,10 @@
                         <label>SIM</label>
                         <select class="custom-select rounded-0" name="sim">
                             <option value="" selected disabled>Pilih</option>
-                            <option value="A">A</option>
-                            <option value="B1">B1</option>
-                            <option value="B2">B2</option>
-                            <option value="C">C</option>
+                            <option {{ old('sim') == 'A' ? 'selected' : '' }} value="A">A</option>
+                            <option {{ old('sim') == 'B1' ? 'selected' : '' }} value="B1">B1</option>
+                            <option {{ old('sim') == 'B2' ? 'selected' : '' }} value="B2">B2</option>
+                            <option {{ old('sim') == 'C' ? 'selected' : '' }} value="C">C</option>
                         </select>
                     </div>
                 </div>
@@ -234,8 +267,8 @@
                         <label>Mampu Mengoperasikan Komputer 'MS Office'</label>
                         <select class="custom-select rounded-0" name="komp">
                             <option value="" selected disabled>Pilih</option>
-                            <option value="Ya">Ya</option>
-                            <option value="Tidak">Tidak</option>
+                            <option {{ old('komp') == 'Ya' ? 'selected' : '' }} value="Ya">Ya</option>
+                            <option {{ old('komp') == 'Tidak' ? 'selected' : '' }} value="Tidak">Tidak</option>
                         </select>
                     </div>
                 </div>
@@ -393,11 +426,11 @@
                         <label>Pendidikan Formal<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="pend_formal">
                             <option value="" selected disabled>Pilih Pendidikan Formal</option>
-                            <option>SLTA</option>
-                            <option>D3</option>
-                            <option>S1</option>
-                            <option>S2</option>
-                            <option>S3</option>
+                            <option {{ old('pend_formal') == 'SLTA' ? 'selected' : '' }} value="SLTA">SLTA</option>
+                            <option {{ old('pend_formal') == 'D3' ? 'selected' : '' }} value="D3">D3</option>
+                            <option {{ old('pend_formal') == 'S1' ? 'selected' : '' }} value="S1">S1</option>
+                            <option {{ old('pend_formal') == 'S2' ? 'selected' : '' }} value="S2">S2</option>
+                            <option {{ old('pend_formal') == 'S3' ? 'selected' : '' }} value="S3">S3</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -431,8 +464,10 @@
                         <label>Pendidikan Non Formal<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="pend_nonformal">
                             <option value="" selected disabled>Pilih</option>
-                            <option value="Ada">Ada</option>
-                            <option value="Tidak Ada">Tidak Ada</option>
+                            <option {{ old('pend_noformal') == 'Ada' ? 'selected' : '' }} value="Ada">Ada</option>
+                            <option {{ old('pend_noformal') == 'Tidak Ada' ? 'selected' : '' }} value="Tidak Ada">Tidak
+                                Ada
+                            </option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -466,8 +501,6 @@
                     </div>
                 </div>
             </div>
-
-
 
             {{-- DATA PEKERJAAN --}}
             <div class="card card-outline card-primary">
@@ -508,11 +541,19 @@
                                 jabatan
                                 yang ingin
                                 dilamar</option>
-                            <option value="0 Bulan">0 Bulan</option>
-                            <option value="1-6 Bulan">1-6 Bulan</option>
-                            <option value="7-12 Bulan">7-12 Bulan</option>
-                            <option value="13-18 Bulan">13-18 Bulan</option>
-                            <option value="19-24 Bulan">19-24 Bulan</option>
+                            <option {{ old('lama_kerja') == '0 Bulan' ? 'selected' : '' }} value="0 Bulan">0 Bulan
+                            </option>
+                            <option {{ old('lama_kerja') == '1-6 Bulan' ? 'selected' : '' }} value="1-6 Bulan">1-6 Bulan
+                            </option>
+                            <option {{ old('lama_kerja') == '7-12 Bulan' ? 'selected' : '' }} value="7-12 Bulan">7-12
+                                Bulan
+                            </option>
+                            <option {{ old('lama_kerja') == '13-18 Bulan' ? 'selected' : '' }} value="13-18 Bulan">13-18
+                                Bulan
+                            </option>
+                            <option {{ old('lama_kerja') == '19-24 Bulan' ? 'selected' : '' }} value="19-24 Bulan">19-24
+                                Bulan
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -601,13 +642,24 @@
                         <label>Jabatan yang Dilamar<span style="color: red;">*</span></label>
                         <select class="custom-select rounded-0" name="jabatan_lamaran">
                             <option value="" selected disabled>Pilih Jabatan</option>
-                            <option>Satpam</option>
-                            <option>CleaningService</option>
-                            <option>Administrasi</option>
-                            <option>Driver</option>
-                            <option>Teknisi</option>
-                            <option>Helper</option>
-                            <option>Operator</option>
+                            <option {{ old('jabatan_lamaran') == 'Satpam' ? 'selected' : '' }} value="Satpam">Satpam
+                            </option>
+                            <option {{ old('jabatan_lamaran') == 'CleaningService' ? 'selected' : '' }}
+                                value="CleaningService">
+                                CleaningService</option>
+                            <option {{ old('jabatan_lamaran') == 'Administrasi' ? 'selected' : '' }}
+                                value="Administrasi">
+                                Administrasi
+                            </option>
+                            <option {{ old('jabatan_lamaran') == 'Driver' ? 'selected' : '' }} value="Driver">Driver
+                            </option>
+                            <option {{ old('jabatan_lamaran') == 'Teknisi' ? 'selected' : '' }} value="Teknisi">Teknisi
+                            </option>
+                            <option {{ old('jabatan_lamaran') == 'Helper' ? 'selected' : '' }} value="Helper">Helper
+                            </option>
+                            <option {{ old('jabatan_lamaran') == 'Operator' ? 'selected' : '' }} value="Operator">
+                                Operator
+                            </option>
                         </select>
                     </div>
 

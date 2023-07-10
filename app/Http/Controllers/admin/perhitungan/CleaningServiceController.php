@@ -31,6 +31,8 @@ class CleaningServiceController extends Controller
                 'CleaningService.iterasi',
                 'pelamar.id_user',
                 // 'pelamar.nama_lengkap',
+                'pelamar.jabatan_lamaran',
+
             )
             ->get();
 

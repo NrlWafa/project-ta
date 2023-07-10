@@ -35,7 +35,8 @@ class OperatorController extends Controller
                 'Operator.jarak_c1',
                 'Operator.jarak_c2',
                 'Operator.iterasi',
-                'pelamar.id_user'
+                'pelamar.id_user',
+                'pelamar.jabatan_lamaran',
             )
             ->get();
 

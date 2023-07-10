@@ -34,7 +34,8 @@ class HelperController extends Controller
                 'Helper.jarak_c1',
                 'Helper.jarak_c2',
                 'Helper.iterasi',
-                'pelamar.id_user'
+                'pelamar.id_user',
+                'pelamar.jabatan_lamaran',
             )
             ->get();
 

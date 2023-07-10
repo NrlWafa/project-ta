@@ -35,7 +35,9 @@ class DriverController extends Controller
                 'Driver.jarak_c1',
                 'Driver.jarak_c2',
                 'Driver.iterasi',
-                'pelamar.id_user'
+                'pelamar.id_user',
+                'pelamar.jabatan_lamaran',
+
             )
             ->get();
 

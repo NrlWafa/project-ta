@@ -26,25 +26,27 @@
                         </thead>
                         <tbody>
                             @foreach ($admin as $min)
-                                <tr>
-                                    <td>{{ $min->id_user }}</td>
-                                    <td>{{ $min->pend_formal }}</td>
-                                    <td>{{ $min->pend_nonformal }}</td>
-                                    <td>{{ $min->usia }}</td>
-                                    <td>{{ $min->lama_kerja }}</td>
-                                    <td>{{ $min->komp }}</td>
-                                    <td>{{ $min->jarak_c1 }}</td>
-                                    <td>{{ $min->jarak_c2 }}</td>
-                                    <td>{{ $min->iterasi }}</td>
-                                    {{-- <td>{{ date('d F Y', strtotime($min->created_at)) }}</td> --}}
+                                @if ($min->jabatan_lamaran == 'Admin')
+                                    <tr>
+                                        <td>{{ $min->id_user }}</td>
+                                        <td>{{ $min->pend_formal }}</td>
+                                        <td>{{ $min->pend_nonformal }}</td>
+                                        <td>{{ $min->usia }}</td>
+                                        <td>{{ $min->lama_kerja }}</td>
+                                        <td>{{ $min->komp }}</td>
+                                        <td>{{ $min->jarak_c1 }}</td>
+                                        <td>{{ $min->jarak_c2 }}</td>
+                                        <td>{{ $min->iterasi }}</td>
+                                        {{-- <td>{{ date('d F Y', strtotime($min->created_at)) }}</td> --}}
 
-                                    <td><a href="{{ url('#' . $min->id_pelamar) }}" class="btn-sm btn-primary">
-                                            Detail</a>
+                                        <td><a href="{{ url('#' . $min->id_pelamar) }}" class="btn-sm btn-primary">
+                                                Detail</a>
 
-                                        <a href="#" class="btn-sm btn-danger delete"
-                                            data-id="{{ $min->id }}">Hapus</a>
-                                    </td>
-                                </tr>
+                                            <a href="#" class="btn-sm btn-danger delete"
+                                                data-id="{{ $min->id }}">Hapus</a>
+                                        </td>
+                                    </tr>
+                                @endif
                             @endforeach
                         </tbody>
                     </table>

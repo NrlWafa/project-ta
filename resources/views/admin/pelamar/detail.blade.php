@@ -36,6 +36,10 @@
                         <input type="text" class="form-control" value="{{ $pelamar->tanggal_lahir }}" readonly>
                     </div>
                     <div class="form-group">
+                        <label>Usia Saat Mengajukan Lamaran</label>
+                        <input type="text" class="form-control" value="{{ $pelamar->usia }}" readonly>
+                    </div>
+                    <div class="form-group">
                         <label>Status Perkawinan</label>
                         <input type="text" class="form-control" value="{{ $pelamar->status_perkawinan }}" readonly>
                     </div>
