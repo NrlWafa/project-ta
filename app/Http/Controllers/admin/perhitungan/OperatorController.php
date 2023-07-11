@@ -51,7 +51,17 @@ class OperatorController extends Controller
             )
             ->get();
 
-        return view("admin.perhitungan.operator", compact('operator', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'),  [
+        return view("admin.perhitungan.operator", compact(
+            'operator',
+            'nilaiC1',
+            'nilaiC2',
+            'iterasi',
+            'thresholdC1',
+            'thresholdC2',
+            'thresholdC1_New',
+            'thresholdC2_New',
+            'i'
+        ),  [
             "title" => "P. Operator"
         ]);
     }
@@ -76,7 +86,7 @@ class OperatorController extends Controller
         $status = []; // Array untuk menyimpan status setiap iterasi
 
         while (($thresholdC1_New != $thresholdC1) && (($thresholdC2_New != $thresholdC2))) {
-            $satpam = Satpam::query()
+            $operator = Operator::query()
                 ->join(
                     'pelamar',
                     'operator.id_pelamar',
@@ -174,7 +184,7 @@ class OperatorController extends Controller
                 $pend_nonformal_C2_bobot +
                 $usia_C2_bobot +
                 $lama_kerja_C2_bobot +
-                $komp_C2_bobot ) / 5, 1); // Sesuaikan dengan jumlah kualifikasi yg ada di excel
+                $komp_C2_bobot) / 5, 1); // Sesuaikan dengan jumlah kualifikasi yg ada di excel
             if ($iterasi == 6) {
                 // coding untuk mengatasi iterasi yang terlalu panjang
                 $thresholdC1 = 1;
@@ -184,16 +194,16 @@ class OperatorController extends Controller
                 //unset($pend_formal_C1);
             }
 
-            $operator = DB::table('Operator')
-                ->join('pelamar', 'Operator.id_pelamar', '=', 'pelamar.id')
+            $operator = DB::table('operator')
+                ->join('pelamar', 'operator.id_pelamar', '=', 'pelamar.id')
                 ->select(
-                    'Operator.id',
-                    'Operator.id_pelamar',
-                    'Operator.pend_formal',
-                    'Operator.pend_nonformal',
-                    'Operator.usia',
-                    'Operator.lama_kerja',
-                    'Operator.komp',
+                    'operator.id',
+                    'operator.id_pelamar',
+                    'operator.pend_formal',
+                    'operator.pend_nonformal',
+                    'operator.usia',
+                    'operator.lama_kerja',
+                    'operator.komp',
                     'pelamar.id_user',
                     'pelamar.jabatan_lamaran',
                     'pelamar.nama_lengkap'
