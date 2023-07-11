@@ -125,7 +125,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('Data_CleaningService', [CleaningServiceController::class, "index"]);
     Route::get('Data_CleaningService/{id}', [CleaningServiceController::class, "hapus_data_cs"]);
-    Route::get('Data_Akhir_CS', [CleaningServiceController::class, "hasil_akhir_satpam"]);
+    Route::get('Data_Akhir_CS', [CleaningServiceController::class, "hasil_akhir_CS"]);
 
 
     Route::get('Data_Driver', [DriverController::class, "index"]);
@@ -136,6 +136,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('Data_Operator', [OperatorController::class, "index"]);
     Route::get('Data_Operator/{id}', [OperatorController::class, "hapus_data_operator"]);
+    Route::get('Data_Akhir_Operator', [CleaningServiceController::class, "hasil_akhir_operator"]);
 
     Route::get('Data_Satpam', [PerhitunganSatpamController::class, "index"]);
     Route::get('Data_Satpam/{id}', [PerhitunganSatpamController::class, "hapus_data_satpam"]);
@@ -144,9 +145,6 @@ Route::middleware('auth')->group(function () {
     Route::get('Data_Teknisi', [TeknisiController::class, "index"]);
     Route::get('Data_Teknisi/{id}', [TeknisiController::class, "hapus_data_teknisi"]);
 });
-
-//Data Hasil
-
 
 
 Route::middleware(['auth', 'verified'])->group(function () {

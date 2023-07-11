@@ -63,7 +63,7 @@ class CleaningServiceController extends Controller
         ]);
     }
 
-    public function hasil_akhir_satpam()
+    public function hasil_akhir_CS()
     {
         // Cek hak akses jika dia bukan admin, maka akan diarahkan ke Landingpage
         if (auth()->user()->id_level != 1) {
