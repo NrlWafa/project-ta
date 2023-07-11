@@ -28,7 +28,6 @@
                                 <th>Jarak C1</th>
                                 <th>Jarak C2</th>
                                 <th>Keputusan</th>
-                                <th>Hasil Akhir</th>
                                 <th>Iterasi</th>
                                 {{-- <th>Aksi</th> --}}
                             </tr>
@@ -108,9 +107,6 @@
                                             $status[$i - 1] .
                                             '</td>
                                             <td>' .
-                                            $keputusan .
-                                            '</td>
-                                            <td>' .
                                             $iterasi .
                                             '</td>
                                         </tr>';
@@ -126,6 +122,7 @@
                                     $tinggi_badan_C1_bobot = round(array_sum($tinggi_badan_C1) / count($tinggi_badan_C1), 1);
                                     $nilaiC1 = [$pend_formal_C1_bobot, $pend_nonformal_C1_bobot, $usia_C1_bobot, $lama_kerja_C1_bobot, $satpam_C1_bobot, $tinggi_badan_C1_bobot];
                                     $thresholdC1_New = round(($pend_formal_C1_bobot + $pend_nonformal_C1_bobot + $usia_C1_bobot + $lama_kerja_C1_bobot + $satpam_C1_bobot + $tinggi_badan_C1_bobot) / 6, 1);
+                                
                                     $pend_formal_C2_bobot = round(array_sum($pend_formal_C2) / count($pend_formal_C2), 1);
                                     $pend_nonformal_C2_bobot = round(array_sum($pend_nonformal_C2) / count($pend_nonformal_C2), 1);
                                     $usia_C2_bobot = round(array_sum($usia_C2) / count($usia_C2), 1);
@@ -145,7 +142,6 @@
                                 }
                             @endphp
                         </tbody>
-
                     </table>
                 </div>
                 <!-- /.card-body -->

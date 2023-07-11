@@ -125,6 +125,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('Data_CleaningService', [CleaningServiceController::class, "index"]);
     Route::get('Data_CleaningService/{id}', [CleaningServiceController::class, "hapus_data_cs"]);
+    Route::get('Data_Akhir_CS', [CleaningServiceController::class, "hasil_akhir_satpam"]);
+
 
     Route::get('Data_Driver', [DriverController::class, "index"]);
     Route::get('Data_Driver/{id}', [DriverController::class, "hapus_data_driver"]);
