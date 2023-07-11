@@ -86,41 +86,16 @@
                                 </tr>
                             @endforeach @php $iterasi++; // Increment penghitung iterasi @endphp
                         </tbody>
+
                     </table>
+
 
                 </div>
                 <!-- /.card-body -->
+                <div class="card-footer">
+                    <a href="{{ url('Data_Satpam') }}" class="btn btn-danger">Kembali</a>
+                </div>
             </div>
         </div>
     </div>
-@endsection
-
-@section('script')
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        $(function() {
-            $('.delete').click(function() {
-                var id = $(this).attr('data-id');
-                Swal.fire({
-                    title: 'Yakin?',
-                    text: "Hapus data ini",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    showConfirmButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Ya, hapus!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location = "Data_Satpam/" + id + ""
-                        Swal.fire(
-                            'Terhapus!',
-                            'Data berhasil terhapus',
-                            'success'
-                        )
-                    }
-                })
-            })
-        })
-    </script>
 @endsection

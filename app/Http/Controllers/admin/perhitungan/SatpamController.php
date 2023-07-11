@@ -224,7 +224,7 @@ class SatpamController extends Controller
 
 
 
-            return view("admin.perhitungan.hasil_akhir_satpam", compact('satpam', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
+            return view("admin.perhitungan.hasil_akhir.hasil_akhir_satpam", compact('satpam', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
                 "title" => "P. Satpam"
             ]);
         }

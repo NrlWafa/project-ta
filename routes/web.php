@@ -122,17 +122,18 @@ Route::middleware('auth')->group(function () {
     // Data Perhitungan 
     Route::get('Data_Admin', [AdminController::class, "index"]);
     Route::get('Data_Admin/{id}', [AdminController::class, "hapus_data_admin"]);
+    Route::get('Data_Akhir_Admin', [AdminController::class, "hasil_akhir_admin"]);
 
     Route::get('Data_CleaningService', [CleaningServiceController::class, "index"]);
     Route::get('Data_CleaningService/{id}', [CleaningServiceController::class, "hapus_data_cs"]);
     Route::get('Data_Akhir_CS', [CleaningServiceController::class, "hasil_akhir_CS"]);
-
 
     Route::get('Data_Driver', [DriverController::class, "index"]);
     Route::get('Data_Driver/{id}', [DriverController::class, "hapus_data_driver"]);
 
     Route::get('Data_Helper', [HelperController::class, "index"]);
     Route::get('Data_Helper/{id}', [HelperController::class, "hapus_data_helper"]);
+    Route::get('Data_Akhir_Helper', [HelperController::class, "hasil_akhir_helper"]);
 
     Route::get('Data_Operator', [OperatorController::class, "index"]);
     Route::get('Data_Operator/{id}', [OperatorController::class, "hapus_data_operator"]);

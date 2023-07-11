@@ -10,7 +10,7 @@
 
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <td><a href="{{ url('Data_Akhir_Satpam') }}" class="btn-sm btn-primary">
+                    <td><a href="{{ url('Data_Akhir_Satpam') }}" class="btn btn-primary">
                             Hasil Akhir</a>
                     </td>
                     <table id="example1" class="table table-bordered table-striped">
