@@ -210,7 +210,7 @@ class OperatorController extends Controller
                 )
                 ->get();
 
-            return view("admin.perhitungan.hasil_akhir_operator", compact('satpam', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
+            return view("admin.perhitungan.hasil_akhir.hasil_akhir_operator", compact('satpam', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
                 "title" => "P. Operator"
             ]);
         }
