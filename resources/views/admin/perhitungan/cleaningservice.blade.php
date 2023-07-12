@@ -27,17 +27,51 @@
                                 <th>Keputusan</th>
                                 <th>Hasil Akhir</th>
                                 <th>Iterasi</th>
-                                {{-- <th>Aksi</th> --}}
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @php
+                            @php
                                 while ($thresholdC1_New != $thresholdC1 && $thresholdC2_New != $thresholdC2) {
                                     $j = 0;
                                     $k = 0;
                                 
                                     if ($iterasi != 1) {
                                         $thresholdC1 = $thresholdC1_New;
+                                    }
+                                
+                                    // mendefinisikan variabel-variabel ini dengan menginisialisasi array kosong sebelum penggunaannya
+                                    $pend_formal_C2 = [];
+                                    $pend_nonformal_C2 = [];
+                                    $usia_C2 = [];
+                                    $lama_kerja_C2 = [];
+                                
+                                    // kondisi untuk memeriksa apakah array tersebut kosong atau tidak.
+                                    // Jika array kosong, maka berikan nilai default sebelum melakukan perhitungan
+                                    // akan ada nilai default [0] yang diberikan jika array tersebut kosong, sehingga pembagian tidak akan terjadi dengan nol.
+                                    if (empty($pend_formal_C1)) {
+                                        $pend_formal_C1 = [0];
+                                    }
+                                    if (empty($pend_nonformal_C1)) {
+                                        $pend_nonformal_C1 = [0];
+                                    }
+                                    if (empty($usia_C1)) {
+                                        $usia_C1 = [0];
+                                    }
+                                    if (empty($lama_kerja_C1)) {
+                                        $lama_kerja_C1 = [0];
+                                    }
+                                
+                                    if (empty($pend_formal_C2)) {
+                                        $pend_formal_C2 = [0];
+                                    }
+                                    if (empty($pend_nonformal_C2)) {
+                                        $pend_nonformal_C2 = [0];
+                                    }
+                                    if (empty($usia_C2)) {
+                                        $usia_C2 = [0];
+                                    }
+                                    if (empty($lama_kerja_C2)) {
+                                        $lama_kerja_C2 = [0];
                                     }
                                 
                                     foreach ($cleaningservice as $row) {
@@ -128,7 +162,7 @@
                                         //unset($pend_formal_C1);
                                     }
                                 }
-                            @endphp --}}
+                            @endphp
                         </tbody>
                     </table>
                 </div>

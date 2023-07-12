@@ -111,6 +111,42 @@ class CleaningServiceController extends Controller
                 $thresholdC1 = $thresholdC1_New;
             }
 
+            // mendefinisikan variabel-variabel ini dengan menginisialisasi array kosong sebelum penggunaannya
+            $pend_formal_C2 = [];
+            $pend_nonformal_C2 = [];
+            $usia_C2 = [];
+            $lama_kerja_C2 = [];
+
+            // kondisi untuk memeriksa apakah array tersebut kosong atau tidak.
+            // Jika array kosong, maka berikan nilai default sebelum melakukan perhitungan
+            // akan ada nilai default [0] yang diberikan jika array tersebut kosong, sehingga pembagian tidak akan terjadi dengan nol.
+            if (empty($pend_formal_C1)) {
+                $pend_formal_C1 = [0];
+            }
+            if (empty($pend_nonformal_C1)) {
+                $pend_nonformal_C1 = [0];
+            }
+            if (empty($usia_C1)) {
+                $usia_C1 = [0];
+            }
+            if (empty($lama_kerja_C1)) {
+                $lama_kerja_C1 = [0];
+            }
+
+            if (empty($pend_formal_C2)) {
+                $pend_formal_C2 = [0];
+            }
+            if (empty($pend_nonformal_C2)) {
+                $pend_nonformal_C2 = [0];
+            }
+            if (empty($usia_C2)) {
+                $usia_C2 = [0];
+            }
+            if (empty($lama_kerja_C2)) {
+                $lama_kerja_C2 = [0];
+            }
+
+
             foreach ($cleaningservice as $row) {
                 $jarakC1 = pow($row->pend_formal - $nilaiC1[0], 2) +
                     pow($row->pend_nonformal - $nilaiC1[1], 2) +
@@ -181,17 +217,15 @@ class CleaningServiceController extends Controller
             }
 
 
-            $satpam = DB::table('Satpam')
-                ->join('pelamar', 'Satpam.id_pelamar', '=', 'pelamar.id')
+            $cleaningservice = DB::table('cleaningservice')
+                ->join('pelamar', 'cleaningservice.id_pelamar', '=', 'pelamar.id')
                 ->select(
-                    'Satpam.id',
-                    'Satpam.id_pelamar',
-                    'Satpam.pend_formal',
-                    'Satpam.pend_nonformal',
-                    'Satpam.usia',
-                    'Satpam.lama_kerja',
-                    'Satpam.satpam',
-                    'Satpam.tinggi_badan',
+                    'cleaningservice.id',
+                    'cleaningservice.id_pelamar',
+                    'cleaningservice.pend_formal',
+                    'cleaningservice.pend_nonformal',
+                    'cleaningservice.usia',
+                    'cleaningservice.lama_kerja',
                     'pelamar.id_user',
                     'pelamar.jabatan_lamaran',
                     'pelamar.nama_lengkap'
@@ -200,8 +234,8 @@ class CleaningServiceController extends Controller
 
 
 
-            return view("admin.perhitungan.hasil_akhir_satpam", compact('satpam', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
-                "title" => "P. Satpam"
+            return view("admin.perhitungan.hasil_akhir.hasil_akhir_CS", compact('cleaningservice', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
+                "title" => "P. Cleaning Service"
             ]);
         }
     }

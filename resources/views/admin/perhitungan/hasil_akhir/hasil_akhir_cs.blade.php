@@ -86,6 +86,9 @@
 
                 </div>
                 <!-- /.card-body -->
+                <div class="card-footer">
+                    <a href="{{ url('Data_CleaningService') }}" class="btn btn-danger">Kembali</a>
+                </div>
             </div>
         </div>
     </div>
