@@ -135,6 +135,9 @@ class HelperController extends Controller
             if (empty($lama_kerja_C1)) {
                 $lama_kerja_C1 = [0];
             }
+            if (empty($komp_C1)) {
+                $komp_C1 = [0];
+            }
 
             if (empty($pend_formal_C2)) {
                 $pend_formal_C2 = [0];

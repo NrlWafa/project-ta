@@ -356,7 +356,6 @@ class UserController extends Controller
 
             // Konversi Perhitungan Satpam
             $konversi_s_pend_formal = $req->input('pend_formal');
-
             $konversi_s_pend_nonformal = $req->input('pend_nonformal');
             $konversi_s_usia = $req->input('usia');
             $konversi_s_satpam = $req->input('satpam');
@@ -434,23 +433,6 @@ class UserController extends Controller
                 'jarak_c2' => $req->input('jarak_c2'),
                 'iterasi' => $req->input('iterasi'),
             ];
-
-            // $dataSatpam = [
-            //     'id' => $req->input('id'),
-            //     'id_pelamar' => $pelamar->id,
-            //     'pend_formal' => $req->input('pend_formal'),
-            //     'pend_nonformal' => $req->input('pend_nonformal'),
-            //     'usia' =>  $req->input('usia'),
-            //     'satpam' => $req->input('satpam'),
-            //     'tinggi_badan' => $req->input('tinggi_badan'),
-            //     'lama_kerja' => $req->input('lama_kerja'),
-            //     'jarak_c1' => $req->input('jarak_c1'),
-            //     'jarak_c2' => $req->input('jarak_c2'),
-            //     'iterasi' => $req->input('iterasi'),
-            // ];
-
-
-
 
             // Konversi Perhitungan CLEANING SERVICE
             $konversi_cs_pend_formal = $req->input('pend_formal');

@@ -25,7 +25,6 @@
                                 <th>Jarak C1</th>
                                 <th>Jarak C2</th>
                                 <th>Keputusan</th>
-                                <th>Hasil Akhir</th>
                                 <th>Iterasi</th>
                             </tr>
                         </thead>
@@ -127,9 +126,6 @@
                                             '</td>
                                             <td>' .
                                             $status[$i - 1] .
-                                            '</td>
-                                            <td>' .
-                                            $keputusan .
                                             '</td>
                                             <td>' .
                                             $iterasi .

@@ -134,6 +134,10 @@ class AdminController extends Controller
             if (empty($lama_kerja_C1)) {
                 $lama_kerja_C1 = [0];
             }
+            if (empty($komp_C1)) {
+                $komp_C1 = [0];
+            }
+
 
             if (empty($pend_formal_C2)) {
                 $pend_formal_C2 = [0];
@@ -248,8 +252,6 @@ class AdminController extends Controller
                     'pelamar.nama_lengkap'
                 )
                 ->get();
-
-
 
             return view("admin.perhitungan.hasil_akhir.hasil_akhir_admin", compact('admin', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
                 "title" => "P. Admin"

@@ -74,6 +74,9 @@
                                     if (empty($lama_kerja_C2)) {
                                         $lama_kerja_C2 = [0];
                                     }
+                                    if (empty($komp_C1)) {
+                                        $komp_C1 = [0];
+                                    }
                                     if (empty($komp_C2)) {
                                         $komp_C2 = [0];
                                     }
