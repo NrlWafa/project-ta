@@ -21,7 +21,7 @@ class HelperController extends Controller
         $k = 0;
         $iterasi = 1;
         $nilaiC1 = array("1", "1", "1", "2", "1"); //manual di excel
-        $nilaiC2 = array("5", "2", "2", "5", "2"); //manual di excel
+        $nilaiC2 = array("4", "2", "2", "5", "2"); //manual di excel
         $thresholdC1 = round(array_sum($nilaiC1) / count($nilaiC1), 1);
         $thresholdC2 = round(array_sum($nilaiC2) / count($nilaiC2), 1);
         $thresholdC1_New = 0;
@@ -76,7 +76,7 @@ class HelperController extends Controller
         $k = 0;
         $iterasi = 1;
         $nilaiC1 = array("1", "1", "1", "2", "1"); //manual di excel
-        $nilaiC2 = array("5", "2", "2", "5", "2"); //manual di excel
+        $nilaiC2 = array("4", "2", "2", "5", "2"); //manual di excel
         $thresholdC1 = round(array_sum($nilaiC1) / count($nilaiC1), 1);
         $thresholdC2 = round(array_sum($nilaiC2) / count($nilaiC2), 1);
         $thresholdC1_New = 0;

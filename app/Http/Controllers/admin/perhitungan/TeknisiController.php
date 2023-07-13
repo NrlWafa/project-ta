@@ -27,26 +27,24 @@ class TeknisiController extends Controller
         $thresholdC1_New = 0;
         $thresholdC2_New = 0;
 
-        $teknisi = DB::table('Teknisi')
+        $teknisi = Teknisi::query()
             ->join(
                 'pelamar',
-                'Teknisi.id_pelamar',
+                'teknisi.id_pelamar',
                 '=',
                 'pelamar.id'
             )
             ->select(
-                'Teknisi.id',
-                'Teknisi.id_pelamar',
-                'Teknisi.pend_formal',
-                'Teknisi.pend_nonformal',
-                'Teknisi.usia',
-                'Teknisi.lama_kerja',
-                'Teknisi.komp',
-                'Teknisi.jarak_c1',
-                'Teknisi.jarak_c2',
-                'Teknisi.iterasi',
+                'teknisi.id',
+                'teknisi.id_pelamar',
+                'teknisi.pend_formal',
+                'teknisi.pend_nonformal',
+                'teknisi.usia',
+                'teknisi.lama_kerja',
+                'teknisi.komp',
                 'pelamar.id_user',
                 'pelamar.jabatan_lamaran',
+                'pelamar.nama_lengkap'
             )
             ->get();
 
@@ -61,7 +59,8 @@ class TeknisiController extends Controller
             'thresholdC2_New',
             'i'
         ),  [
-            "title" => "P. Teknisi"
+            "title" => "P. Teknisi",
+
         ]);
     }
 
@@ -85,7 +84,7 @@ class TeknisiController extends Controller
         $status = []; // Array untuk menyimpan status setiap iterasi
 
         while (($thresholdC1_New != $thresholdC1) && (($thresholdC2_New != $thresholdC2))) {
-            $admin = Admin::query()
+            $teknisi = Teknisi::query()
                 ->join(
                     'pelamar',
                     'teknisi.id_pelamar',

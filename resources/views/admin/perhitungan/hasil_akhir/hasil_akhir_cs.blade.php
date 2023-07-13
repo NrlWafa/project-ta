@@ -37,15 +37,13 @@
                                     <td>{{ $row->pend_nonformal }}</td>
                                     <td>{{ $row->usia }}</td>
                                     <td>{{ $row->lama_kerja }}</td>
-                                    {{-- <td>
+                                    <td>
                                         {{ round(
                                             sqrt(
                                                 pow($row->pend_formal - $nilaiC1[0], 2) +
                                                     pow($row->pend_nonformal - $nilaiC1[1], 2) +
                                                     pow($row->usia - $nilaiC1[2], 2) +
-                                                    pow($row->lama_kerja - $nilaiC1[3], 2) +
-                                                    pow($row->satpam - $nilaiC1[4], 2) +
-                                                    pow($row->tinggi_badan - $nilaiC1[5], 2),
+                                                    pow($row->lama_kerja - $nilaiC1[3], 2),
                                             ),
                                             3,
                                         ) }}
@@ -56,13 +54,11 @@
                                                 pow($row->pend_formal - $nilaiC2[0], 2) +
                                                     pow($row->pend_nonformal - $nilaiC2[1], 2) +
                                                     pow($row->usia - $nilaiC2[2], 2) +
-                                                    pow($row->lama_kerja - $nilaiC2[3], 2) +
-                                                    pow($row->satpam - $nilaiC2[4], 2) +
-                                                    pow($row->tinggi_badan - $nilaiC2[5], 2),
+                                                    pow($row->lama_kerja - $nilaiC2[3], 2),
                                             ),
                                             3,
                                         ) }}
-                                    </td> --}}
+                                    </td>
 
                                     {{-- Untuk hasil keputusan "Status" --}}
                                     @php

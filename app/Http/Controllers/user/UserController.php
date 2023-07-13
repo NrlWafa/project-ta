@@ -210,8 +210,6 @@ class UserController extends Controller
                 ]
             );
 
-
-
             $bukti_pend_non = $req->file('bukti_pend_non');
 
             if ($bukti_pend_non) {
@@ -223,7 +221,6 @@ class UserController extends Controller
                 // Lakukan tindakan alternatif jika foto tidak diunggah
                 $bukti_pend_non_nama = null; // Atau berikan nilai default sesuai kebutuhan
             }
-
 
             // Kartu Keluarga
             $foto_kk = $req->file('foto_kk');
@@ -540,9 +537,9 @@ class UserController extends Controller
                 $konversi_t_lama_kerja = "5";
             }
 
-            if ($konversi_t_komp == "Tidak Ada") {
+            if ($konversi_t_komp == "Tidak") {
                 $konversi_t_komp = "1";
-            } else if ($konversi_t_komp == "Ada") {
+            } else if ($konversi_t_komp == "Ya") {
                 $konversi_t_komp = "2";
             }
 
@@ -607,9 +604,9 @@ class UserController extends Controller
                 $konversi_h_lama_kerja = "5";
             }
 
-            if ($konversi_h_komp == "Tidak Ada") {
+            if ($konversi_h_komp == "Tidak") {
                 $konversi_h_komp = "1";
-            } else if ($konversi_h_komp == "Ada") {
+            } else if ($konversi_h_komp == "Ya") {
                 $konversi_h_komp = "2";
             }
 
@@ -674,9 +671,9 @@ class UserController extends Controller
                 $konversi_o_lama_kerja = "5";
             }
 
-            if ($konversi_o_komp == "Tidak Ada") {
+            if ($konversi_o_komp == "Tidak") {
                 $konversi_o_komp = "1";
-            } else if ($konversi_o_komp == "Ada") {
+            } else if ($konversi_o_komp == "Ya") {
                 $konversi_o_komp = "2";
             }
 
@@ -704,15 +701,15 @@ class UserController extends Controller
 
             //Kondisi DRIVER
             if ($konversi_d_pend_formal == "SLTA") {
-                $konversi_d_pend_formal = "0";
-            } else if ($konversi_d_pend_formal == "D3") {
                 $konversi_d_pend_formal = "1";
-            } else if ($konversi_d_pend_formal == "S1") {
+            } else if ($konversi_d_pend_formal == "D3") {
                 $konversi_d_pend_formal = "2";
-            } else if ($konversi_d_pend_formal == "S2") {
+            } else if ($konversi_d_pend_formal == "S1") {
                 $konversi_d_pend_formal = "3";
-            } else if ($konversi_d_pend_formal == "S3") {
+            } else if ($konversi_d_pend_formal == "S2") {
                 $konversi_d_pend_formal = "4";
+            } else if ($konversi_d_pend_formal == "S3") {
+                $konversi_d_pend_formal = "5";
             }
 
             if ($konversi_d_pend_nonformal == "Tidak Ada") {
@@ -722,7 +719,7 @@ class UserController extends Controller
             }
 
             if ($konversi_d_usia == "31-35 Tahun") {
-                $konversi_d_usia = "0";
+                $konversi_d_usia = "3";
             } else if ($konversi_d_usia == "25-30 Tahun") {
                 $konversi_d_usia = "2";
             } else if ($konversi_d_usia == "18-24 Tahun") {
@@ -742,13 +739,13 @@ class UserController extends Controller
             }
 
             if ($konversi_d_sim == "A") {
-                $konversi_d_sim = "1";
+                $konversi_d_sim = "2";
             } else if ($konversi_d_sim == "B1") {
                 $konversi_d_sim = "3";
             } else if ($konversi_d_sim == "B2") {
                 $konversi_d_sim = "4";
             } else if ($konversi_d_sim == "C") {
-                $konversi_d_sim = "2";
+                $konversi_d_sim = "1";
             }
 
             //Array (Simpan Data) DRIVER
@@ -757,7 +754,7 @@ class UserController extends Controller
                 'id_pelamar' => $pelamar->id,
                 'pend_formal' => $konversi_d_pend_formal,
                 'pend_nonformal' => $konversi_d_pend_nonformal,
-                'usia' => $req->$konversi_d_usia,
+                'usia' => $konversi_d_usia,
                 'lama_kerja' => $konversi_d_lama_kerja,
                 'sim' => $konversi_d_sim,
                 'jarak_c1' => $req->input('jarak_c1'),
@@ -812,9 +809,9 @@ class UserController extends Controller
                 $konversi_a_lama_kerja = "5";
             }
 
-            if ($konversi_a_komp == "Tidak Ada") {
+            if ($konversi_a_komp == "Tidak") {
                 $konversi_a_komp = "1";
-            } else if ($konversi_a_komp == "Ada") {
+            } else if ($konversi_a_komp == "Ya") {
                 $konversi_a_komp = "2";
             }
 

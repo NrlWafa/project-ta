@@ -27,27 +27,24 @@ class OperatorController extends Controller
         $thresholdC1_New = 0;
         $thresholdC2_New = 0;
 
-        $operator = DB::table('Operator')
-
+        $operator = Operator::query()
             ->join(
                 'pelamar',
-                'Operator.id_pelamar',
+                'operator.id_pelamar',
                 '=',
                 'pelamar.id'
             )
             ->select(
-                'Operator.id',
-                'Operator.id_pelamar',
-                'Operator.pend_formal',
-                'Operator.pend_nonformal',
-                'Operator.usia',
-                'Operator.lama_kerja',
-                'Operator.komp',
-                'Operator.jarak_c1',
-                'Operator.jarak_c2',
-                'Operator.iterasi',
+                'operator.id',
+                'operator.id_pelamar',
+                'operator.pend_formal',
+                'operator.pend_nonformal',
+                'operator.usia',
+                'operator.lama_kerja',
+                'operator.komp',
                 'pelamar.id_user',
                 'pelamar.jabatan_lamaran',
+                'pelamar.nama_lengkap'
             )
             ->get();
 
@@ -62,7 +59,8 @@ class OperatorController extends Controller
             'thresholdC2_New',
             'i'
         ),  [
-            "title" => "P. Operator"
+            "title" => "P. Operator",
+
         ]);
     }
 
@@ -110,10 +108,53 @@ class OperatorController extends Controller
             $j = 0;
             $k = 0;
 
-
             if ($iterasi != 1) {
                 $thresholdC1 = $thresholdC1_New;
             }
+
+            // mendefinisikan variabel-variabel ini dengan menginisialisasi array kosong sebelum penggunaannya
+            $pend_formal_C2 = [];
+            $pend_nonformal_C2 = [];
+            $usia_C2 = [];
+            $lama_kerja_C2 = [];
+            $komp_C2 = [];
+
+            // kondisi untuk memeriksa apakah array tersebut kosong atau tidak.
+            // Jika array kosong, maka berikan nilai default sebelum melakukan perhitungan
+            // akan ada nilai default [0] yang diberikan jika array tersebut kosong, sehingga pembagian tidak akan terjadi dengan nol.
+            if (empty($pend_formal_C1)) {
+                $pend_formal_C1 = [0];
+            }
+            if (empty($pend_nonformal_C1)) {
+                $pend_nonformal_C1 = [0];
+            }
+            if (empty($usia_C1)) {
+                $usia_C1 = [0];
+            }
+            if (empty($lama_kerja_C1)) {
+                $lama_kerja_C1 = [0];
+            }
+            if (empty($komp_C1)) {
+                $komp_C1 = [0];
+            }
+
+
+            if (empty($pend_formal_C2)) {
+                $pend_formal_C2 = [0];
+            }
+            if (empty($pend_nonformal_C2)) {
+                $pend_nonformal_C2 = [0];
+            }
+            if (empty($usia_C2)) {
+                $usia_C2 = [0];
+            }
+            if (empty($lama_kerja_C2)) {
+                $lama_kerja_C2 = [0];
+            }
+            if (empty($komp_C2)) {
+                $komp_C2 = [0];
+            }
+
 
             foreach ($operator as $row) {
                 $jarakC1 = pow($row->pend_formal - $nilaiC1[0], 2) +
@@ -162,6 +203,7 @@ class OperatorController extends Controller
                 $usia_C1_bobot,
                 $lama_kerja_C1_bobot,
                 $komp_C1_bobot
+
             );
             $thresholdC1_New = round(($pend_formal_C1_bobot +
                 $pend_nonformal_C1_bobot +
@@ -184,7 +226,7 @@ class OperatorController extends Controller
                 $pend_nonformal_C2_bobot +
                 $usia_C2_bobot +
                 $lama_kerja_C2_bobot +
-                $komp_C2_bobot) / 5, 1); // Sesuaikan dengan jumlah kualifikasi yg ada di excel
+                $komp_C2_bobot) / 4, 1); // Sesuaikan dengan jumlah kualifikasi yg ada di excel
             if ($iterasi == 6) {
                 // coding untuk mengatasi iterasi yang terlalu panjang
                 $thresholdC1 = 1;
@@ -194,8 +236,14 @@ class OperatorController extends Controller
                 //unset($pend_formal_C1);
             }
 
+
             $operator = DB::table('operator')
-                ->join('pelamar', 'operator.id_pelamar', '=', 'pelamar.id')
+                ->join(
+                    'pelamar',
+                    'operator.id_pelamar',
+                    '=',
+                    'pelamar.id'
+                )
                 ->select(
                     'operator.id',
                     'operator.id_pelamar',
@@ -210,7 +258,7 @@ class OperatorController extends Controller
                 )
                 ->get();
 
-            return view("admin.perhitungan.hasil_akhir.hasil_akhir_operator", compact('satpam', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
+            return view("admin.perhitungan.hasil_akhir.hasil_akhir_operator", compact('operator', 'nilaiC1', 'nilaiC2', 'status', 'iterasi'), [
                 "title" => "P. Operator"
             ]);
         }

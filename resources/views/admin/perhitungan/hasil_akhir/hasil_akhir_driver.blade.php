@@ -36,14 +36,14 @@
                                     <td>{{ $row->lama_kerja }}</td>
                                     <td>{{ $row->sim }}</td>
 
-                                    {{-- <td>
+                                    <td>
                                         {{ round(
                                             sqrt(
                                                 pow($row->pend_formal - $nilaiC1[0], 2) +
                                                     pow($row->pend_nonformal - $nilaiC1[1], 2) +
                                                     pow($row->usia - $nilaiC1[2], 2) +
                                                     pow($row->lama_kerja - $nilaiC1[3], 2) +
-                                                    pow($row->komp - $nilaiC1[4], 2),
+                                                    pow($row->sim - $nilaiC1[4], 2),
                                             ),
                                             3,
                                         ) }}
@@ -55,11 +55,11 @@
                                                     pow($row->pend_nonformal - $nilaiC2[1], 2) +
                                                     pow($row->usia - $nilaiC2[2], 2) +
                                                     pow($row->lama_kerja - $nilaiC2[3], 2) +
-                                                    pow($row->komp - $nilaiC2[4], 2),
+                                                    pow($row->sim - $nilaiC2[4], 2),
                                             ),
                                             3,
                                         ) }}
-                                    </td> --}}
+                                    </td>
 
                                     {{-- Untuk hasil keputusan "Status" --}}
                                     @php
@@ -86,7 +86,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    <a href="{{ url('Data_Admin') }}" class="btn btn-danger">Kembali</a>
+                    <a href="{{ url('Data_Driver') }}" class="btn btn-danger">Kembali</a>
                 </div>
             </div>
         </div>

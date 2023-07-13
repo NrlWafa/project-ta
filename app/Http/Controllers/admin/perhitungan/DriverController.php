@@ -27,28 +27,24 @@ class DriverController extends Controller
         $thresholdC1_New = 0;
         $thresholdC2_New = 0;
 
-        $driver = DB::table('Driver')
-
+        $driver = Driver::query()
             ->join(
                 'pelamar',
-                'Driver.id_pelamar',
+                'driver.id_pelamar',
                 '=',
                 'pelamar.id'
             )
             ->select(
-                'Driver.id',
-                'Driver.id_pelamar',
-                'Driver.pend_formal',
-                'Driver.pend_nonformal',
-                'Driver.usia',
-                'Driver.lama_kerja',
-                'Driver.sim',
-                'Driver.jarak_c1',
-                'Driver.jarak_c2',
-                'Driver.iterasi',
+                'driver.id',
+                'driver.id_pelamar',
+                'driver.pend_formal',
+                'driver.pend_nonformal',
+                'driver.usia',
+                'driver.lama_kerja',
+                'driver.sim',
                 'pelamar.id_user',
                 'pelamar.jabatan_lamaran',
-
+                'pelamar.nama_lengkap'
             )
             ->get();
 
@@ -63,7 +59,8 @@ class DriverController extends Controller
             'thresholdC2_New',
             'i'
         ),  [
-            "title" => "P. Driver"
+            "title" => "P. Driver",
+
         ]);
     }
 

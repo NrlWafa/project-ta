@@ -22,7 +22,7 @@
                                 <th>Pendidikan Non Formal</th>
                                 <th>Usia</th>
                                 <th>Pengalaman Kerja</th>
-                                <th>Mengoperasikan simuter</th>
+                                <th>Memiliki SIM</th>
                                 <th>Jarak C1</th>
                                 <th>Jarak C2</th>
                                 <th>Iterasi</th>
@@ -61,6 +61,9 @@
                                     if (empty($lama_kerja_C1)) {
                                         $lama_kerja_C1 = [0];
                                     }
+                                    if (empty($sim_C1)) {
+                                        $sim_C1 = [0];
+                                    }
                                 
                                     if (empty($pend_formal_C2)) {
                                         $pend_formal_C2 = [0];
@@ -73,9 +76,6 @@
                                     }
                                     if (empty($lama_kerja_C2)) {
                                         $lama_kerja_C2 = [0];
-                                    }
-                                    if (empty($sim_C1)) {
-                                        $sim_C1 = [0];
                                     }
                                     if (empty($sim_C2)) {
                                         $sim_C2 = [0];
