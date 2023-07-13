@@ -26,8 +26,8 @@
                                 <th>Mengoperasikan Komputer</th>
                                 <th>Jarak C1</th>
                                 <th>Jarak C2</th>
+                                <th>Keputusan</th>
                                 <th>Iterasi</th>
-                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
