@@ -31,7 +31,9 @@
             </div>
 
             <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-                <p class="text-center text-3xl font-weight-bold">PT Yaza Pratama</p>
+                <p class="text-center text-3xl font-weight-bold">Politeknik Negeri Banjarmasin</p>
+                <p class="text-center text-3xl font-weight-bold">Program Studi Teknik Informatika</p>
+
 
 
 
@@ -67,9 +69,6 @@
                     <button name="submit" type="submit"
                         class="text-center bg-black text-white font-bold text-lg hover:bg-blue-700 p-2 mt-8">Log
                         In</button>
-
-                    <p class="text-center"> Belum memiliki akun? <strong><a href="SignIn">Sign
-                                In</a></strong> </p>
                 </form>
             </div>
         </div>

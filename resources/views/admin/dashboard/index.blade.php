@@ -43,25 +43,15 @@
             </div>
             <!-- /.col -->
 
-            {{-- <div class="col-12 col-sm-6 col-md-3">
-                <div class="info-box mb-3">
-                    <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text">Total User</span>
-                        <span class="info-box-number"> {{ $user }} </span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-                <!-- /.info-box -->
-            </div> --}}
-
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="info-box mb-3">
                     <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Total User</span>
-                        <span class="info-box-number">{{ $user }}</span>
+                        <span class="info-box-text">Total Data Masuk</span>
+                        {{-- <span class="info-box-number">{{ $user }}</span> --}}
+
+                        <h6>{{ $surat_masuk_count }}</h6>
+                        {{-- <span><a href="{{ route('Masuk.index') }}">Kelola</a></span> --}}
 
                     </div>
                     <!-- /.info-box-content -->
@@ -75,8 +65,11 @@
                     <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Total Admin</span>
-                        <span class="info-box-number">{{ $admin }}</span>
+                        <span class="info-box-text">Total Data keluar</span>
+                        {{-- <span class="info-box-number">{{ $admin }}</span> --}}
+
+                        <h6>{{ $surat_keluar_count }}</h6>
+                        {{-- <span><a href="{{ route('Data_Keluar.index') }}"></a></span> --}}
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -85,44 +78,6 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Data Pelamar</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID User</th>
-                            <th>Nama</th>
-                            <th>Formasi Pekerjaan</th>
-                            <th>No Handphone</th>
-                            <th>Tanggal</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($pelamar as $pel)
-                            <tr>
-                                <td>{{ $pel->id_user }}</td>
-                                <td>{{ $pel->nama_lengkap }}</td>
-                                <td>{{ $pel->jabatan_lamaran }}</td>
-                                <td>{{ $pel->no_hp }}</td>
-                                <td>{{ date('d F Y', strtotime($pel->created_at)) }}</td>
-                                <td><a href="{{ url('Dashboard_Detail_Pelamar/' . $pel->id) }}"
-                                        class="btn-sm btn-primary">Lihat
-                                        Detail</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-
-                </table>
-            </div>
-            <!-- /.card-body -->
-        </div>
     @endsection
     @section('script')
         <script>

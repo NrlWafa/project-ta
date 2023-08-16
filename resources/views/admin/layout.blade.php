@@ -98,7 +98,7 @@
                         <li class="nav-header">MENU</li>
                         <li class="nav-item">
                             <a href="{{ url('admin') }}"
-                                class="nav-link {{ $title === 'Dashboard' ? 'active' : '' }}">
+                                class="nav-link {{ Request()->routeIs('dashboard') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -106,87 +106,33 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('Pengguna') }}"
-                                class="nav-link {{ $title === 'Data Pengguna' ? 'active' : '' }}">
+                            <a href="{{ url('Data_UKM') }}"
+                                class="nav-link {{ Request()->routeIs('ukm.*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>
-                                    Data Pengguna
+                                    Unit Kegiatan Mahasiswa
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('Daftar_Pelamar') }}"
-                                class="nav-link {{ $title === 'Data Pelamar' ? 'active' : '' }}">
+                            <a href="{{ url('Data_Anggota') }}"
+                                class="nav-link {{ Request()->routeIs('anggota.*') ? 'active' : '' }}"">
                                 <i class="nav-icon fas fa-book-medical"></i>
                                 <p>
-                                    Data Pelamar
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-header">PERHITUNGAN</li>
-                        <li class="nav-item">
-                            <a href="{{ url('Data_Admin') }}"
-                                class="nav-link {{ $title === 'P. Admin' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    P. Admin
+                                    Daftar Anggota UKM
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('Data_CleaningService') }}"
-                                class="nav-link {{ $title === 'P. Cleaning Service' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
+                            <a href="{{ url('Data_Mahasiswa') }}"
+                                class="nav-link {{ Request()->routeIs('mahasiswa.*') ? 'active' : '' }}"">
+                                <i class="nav-icon fas fa-book-medical"></i>
                                 <p>
-                                    P. Cleaning Service
+                                    Daftar Mahasiswa
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ url('Data_Driver') }}"
-                                class="nav-link {{ $title === 'P. Driver' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    P. Driver
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('Data_Helper') }}"
-                                class="nav-link {{ $title === 'P. Helper' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    P. Helper
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('Data_Operator') }}"
-                                class="nav-link {{ $title === 'P. Operator' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    P. Operator
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('Data_Satpam') }}"
-                                class="nav-link {{ $title === 'P. Satpam' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    P. Satpam
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('Data_Teknisi') }}"
-                                class="nav-link {{ $title === 'P. Teknisi' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-clipboard-list"></i>
-                                <p>
-                                    P. Teknisi
-                                </p>
-                            </a>
-                        </li>
+
 
                     </ul>
                 </nav>
@@ -208,9 +154,9 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; By Hana Sayyida Fitri & Nurul Wafa</strong>
+            <strong>Copyright &copy; By Nurul Wafa</strong>
             <div class="float-right d-none d-sm-inline-block">
-                TA - Politeknik Negeri Banjarmasin
+                Politeknik Negeri Banjarmasin
             </div>
         </footer>
 
